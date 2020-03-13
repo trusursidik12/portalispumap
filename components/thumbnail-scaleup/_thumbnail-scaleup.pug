@@ -1,0 +1,17 @@
+//- Thumbnail scaleup
+	@param {object} data - thumbnail data object
+	@param {array} data.img - thumbnail image params (path, width, height)
+	@param {string} data.title - thumbnail title
+	@param {string} data.description - thumbnail description text
+	@param {string} data.link - thumbnail link
+	@param {string} data.btnText - thumbnail button text
+mixin thumbnail-scaleup( data )
+	// Thumbnail scaleup
+	figure.thumbnail.thumbnail-scaleup&attributes( attributes )
+		.thumbnail-scaleup-img
+			+img( data.img )
+		figcaption.thumbnail-scaleup-caption
+			.thumbnail-scaleup-content
+				h5.thumbnail-scaleup-title= data.title
+				.thumbnail-scaleup-description= data.description
+			a.btn.btn-secondary.thumbnail-scaleup-btn( href= data.link ? data.link : '#' )= data.btnText ? data.btnText : 'Take a look'

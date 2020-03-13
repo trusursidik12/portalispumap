@@ -1,0 +1,21 @@
+include ../blurb/_blurb
+
+// Blurb ordered type #3
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blurb Ordered Sample', category:'blurb', reload:false, id:'blurb-ordered-sample-3' } )
+	.container
+		.row.row-30.justify-content-center
+			.col-auto
+				+blurb-minimal({
+					title: 'Bootstrap 4 framework',
+					embed: '<span class="blurb-number h2">01</span>'
+				})
+			.col-auto
+				+blurb-minimal({
+					title: 'Bootstrap 4 framework',
+					embed: '<span class="blurb-number h2">02</span>'
+				}).blurb-secondary.text-center
+			.col-auto
+				+blurb-minimal({
+					title: 'Bootstrap 4 framework',
+					embed: '<span class="blurb-number h2">03</span>'
+				}).blurb-primary.text-right

@@ -1,0 +1,46 @@
+include ../person/_person
+
+// Person sample
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Person Sample', category:'person', reload:false, id:'person-sample' } )
+	.container.text-center
+		h2.text-center Member boxes type #3
+		.row.row-30
+			.col-sm-6.col-lg-3
+				+person({
+					img: 'persons/person-04-290x290',
+					title: 'Mark Rogers',
+					subtitle: 'Lead Designer',
+					links: [
+						{ iconClass: 'int-twitter' }
+					]
+				})
+
+			.col-sm-6.col-lg-3
+				+person({
+					img: 'persons/person-05-290x290',
+					title: 'Edward Rivera',
+					subtitle: 'Senior Front End Developer',
+					links: [
+						{ iconClass: 'int-twitter' }
+					]
+				})
+
+			.col-sm-6.col-lg-3
+				+person({
+					img: 'persons/person-06-290x290',
+					title: 'John Wilson',
+					subtitle: 'CEO, Founder, Creative Director',
+					links: [
+						{ iconClass: 'int-twitter' }
+					]
+				})
+
+			.col-sm-6.col-lg-3
+				+person({
+					img: 'persons/person-07-290x290',
+					title: 'Lisa Baker',
+					subtitle: 'Head of Marketing',
+					links: [
+						{ iconClass: 'int-twitter' }
+					]
+				})

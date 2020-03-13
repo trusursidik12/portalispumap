@@ -1,0 +1,30 @@
+include ../quote/_quote
+
+// Quote minimal
+section.section.section-lg.bg-900.context-dark.novi-background( data-preset!={ title:'Quote Minimal', category:'quote', reload:false, id:'quote-minimal' } )
+	.container
+		h2.text-center Testimonials type #4
+		.rating-head.text-center
+			h2.rating-head-title 4.89/5
+			h6.rating-head-subtitle Rating on TrustPilot
+			+rating
+		hr.divider.divider-sm
+		.row.row-40.row-md-50
+			.col-sm-6.col-lg-4
+				+quote-minimal({
+					text:     quote1.text,
+					name:     quote1.name,
+					position: quote1.position
+				})
+			.col-sm-6.col-lg-4
+				+quote-minimal({
+					text:     quote2.text,
+					name:     quote2.name,
+					position: quote2.position
+				})
+			.col-sm-6.col-lg-4
+				+quote-minimal({
+					text:     quote3.text,
+					name:     quote3.name,
+					position: quote3.position
+				})

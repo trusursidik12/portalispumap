@@ -1,0 +1,19 @@
+// Base
+.post-inline {
+	max-width: none;
+	* + .post-meta { margin-top: 14px; }
+}
+
+
+// Spacing
+.post-inline + .post-inline {
+	margin-top: px-to-rem( 30px );
+}
+
+
+// Media
+@include media-breakpoint-up(md) {
+	.post-inline + .post-inline {
+		margin-top: px-to-rem( 50px );
+	}
+}

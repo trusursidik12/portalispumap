@@ -1,0 +1,19 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.jumbotron {
+	padding: 7.8% 4%;
+	border-radius: $border-radius;
+	background-color: $gray-200;
+}
+
+
+// Modifying
+.jumbotron-lg {
+	padding: 13% 8.6%;
+}

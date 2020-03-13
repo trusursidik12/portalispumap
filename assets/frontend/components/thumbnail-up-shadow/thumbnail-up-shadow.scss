@@ -1,0 +1,21 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+
+// Base
+.thumbnail-up-shadow {
+	display: block;
+	transition: $transition-base;
+
+	> img {
+		width: 100%;
+	}
+
+	&:hover,
+	&:focus {
+		transform: translateY( -10px );
+		box-shadow: $box-shadow-sm;
+	}
+}

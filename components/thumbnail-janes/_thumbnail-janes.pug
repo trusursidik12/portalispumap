@@ -1,0 +1,17 @@
+//- Thumbnail janes
+	@param {object} data - thumbnail data object
+	@param {array} data.img - thumbnail image params (path, width, height)
+	@param {string} data.title - thumbnail title
+	@param {string} data.description - thumbnail description text
+	@param {string} data.link - thumbnail link
+	@param {string} data.btnText - thumbnail button text
+mixin thumbnail-janes( data )
+	// Thumbnail janes
+	figure.thumbnail-janes&attributes( attributes )
+		.thumbnail-janes-img
+			+img( data.img )
+		figcaption.thumbnail-janes-caption
+			.thumbnail-janes-content
+				h5.thumbnail-janes-title= data.title
+				.thumbnail-janes-description= data.description
+			a.btn.btn-primary.thumbnail-janes-btn( href= data.link ? data.link : '#' )= data.btnText ? data.btnText : 'Take a look'

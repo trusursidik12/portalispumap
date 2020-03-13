@@ -1,0 +1,43 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "default";
+
+// Crutch for Ken Burns effect
+.rev_slider img, .tp-simpleresponsive img {
+	left: 0;
+}
+
+// Preload screen
+.rev_slider_wrapper {
+	height: calc( 100vh - 60px );
+}
+// Set font-size to inherit
+.rev_slider .tp-caption.rev_row {
+	font-size: inherit !important;
+	line-height: inherit !important;
+}
+
+
+// Media
+@include media-breakpoint-up( xl ) {
+	.rev_slider_wrapper {
+		height: calc( 100vh - 80px );
+	}
+}
+
+
+// Novi
+[data-x-mode] {
+	.rev_slider_wrapper,
+	.tp-fullwidth-forcer {
+		max-height: calc( 100vh - 60px ) !important;
+	}
+}
+
+// Components
+@import "revolution-arrows";
+@import "revolution-bullets";
+@import "revolution-preloader";

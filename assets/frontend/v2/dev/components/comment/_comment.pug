@@ -1,0 +1,33 @@
+//- Comment
+	@param {object} obj - data object
+	@param {string} obj.img - comment image
+	@param {string} obj.name - meta name
+	@param {string} obj.time - meta time
+	@param {string} obj.text - quote text
+mixin comment( obj )
+	.comment&attributes( attributes )
+		.media.media-md.flex-column.flex-sm-row
+			.media-left
+				.mt-1.d-none.d-sm-inline-block
+					if ( obj.img )
+						+img( obj.img ).comment-image
+					else
+						.comment-icon.int-user.novi-icon
+			.media-body
+				.comment-panel
+					div
+						.media.media-xs.align-items-center
+							.media-left.d-sm-none
+								if ( obj.img )
+									+img( obj.img ).comment-image
+								else
+									.comment-icon.int-user.novi-icon
+							.media-body
+								ul.comment-meta
+									li.comment-meta-item='by '
+										span.font-weight-medium= obj.name
+									li.comment-meta-item='Posted '
+										time.font-weight-medium( datetime= obj.time.date )= obj.time.text
+					a.comment-link( href='#' ) Reply
+				.comment-text= obj.text
+		block

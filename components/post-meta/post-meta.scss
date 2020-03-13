@@ -1,0 +1,134 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Variables
+$post-meta-fsz: $font-size-sm;
+$post-meta-primary: $primary;
+$post-meta-secondary: $secondary;
+$post-meta-dark: $dark;
+$post-meta-light: $light;
+$post-meta-radius: $border-radius;
+
+
+// Base
+.post-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-size: $post-meta-fsz;
+	line-height: 1;
+	@include group( 20px, 8px );
+}
+
+.post-meta-item {
+	display: inline-flex;
+	align-items: center;
+
+	> * {
+		vertical-align: middle;
+	}
+}
+
+.post-meta-link,
+.post-meta-text {
+	font-weight: 500;
+}
+
+.post-meta-link {
+	font-weight: 500;
+	color: inherit;
+	transition: $transition-base;
+
+	&:hover,
+	&:focus {
+		color: $post-meta-primary;
+	}
+}
+
+.post-meta-link-primary {
+	color: $post-meta-primary;
+
+	&:hover,
+	&:focus {
+		color: $post-meta-secondary;
+	}
+}
+
+.post-meta-linkbox {
+	display: inline-block;
+	padding: 4px 6px;
+	background-color: $post-meta-light;
+	border-radius: $post-meta-radius;
+
+	> * { vertical-align: middle; }
+}
+
+.post-meta-linkbox-primary {
+	color: color-yiq( $post-meta-primary );
+	background-color: $post-meta-primary;
+
+	&:hover,
+	&:focus {
+		color: color-yiq( $post-meta-secondary );
+		background-color: $post-meta-secondary;
+	}
+}
+
+.post-meta-icon {
+	color: $post-meta-dark;
+	margin-right: .5em;
+}
+
+
+// Spacing
+* + .post-meta { margin-top: 15px; }
+
+
+// Post meta large
+.post-meta-lg {
+	@include groupY( 16px );
+}
+
+// Post center
+.post-text-center {
+	.post-meta {
+		justify-content: center;
+	}
+}
+
+// Context dark
+.context-dark {
+	.post-meta-icon {
+		color: inherit;
+		opacity: .8;
+	}
+
+	.post-coment-boxed {
+		background-color: rgba( $post-meta-light, .2 );
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.post-meta-linkbox {
+		padding: 11px 19px;
+	}
+
+	.post-meta-between {
+		.post-meta-item:last-child:not( :only-child ) {
+			flex-grow: 1;
+			justify-content: flex-end;
+		}
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	* + .post-meta { margin-top: 24px; }
+	* + .post-meta-footer { margin-top: 40px; }
+}

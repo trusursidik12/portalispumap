@@ -1,0 +1,19 @@
+include ../blurb/_blurb
+
+// Mailform features
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Mailform Features', category:'blurb', reload:false, id:'mailform-features' } )
+	.container
+		.row.row-40.flex-md-row-reverse.justify-content-xl-between
+			.col-md-10.col-lg-5.col-xl-4.blurb-area
+				+blurb-inline({
+					embed: '<span class="icon icon-circle icon-md icon-primary mdi mdi-emoticon novi-icon"></span>',
+					title: 'User-Friendly Customization',
+					text: 'The script comes with ready-made presets, which will let you customize the form with comfort. The script also provides full customization of an email template.'
+				})
+				+blurb-inline({
+					embed: '<span class="icon icon-circle icon-md icon-primary-filled mdi mdi-web novi-icon"></span>',
+					title: 'CSS Stylization',
+					text: 'Stylize practically all the form pattern attributes with ease. The script features a fully fledged CSS API built specifically for this purpose.'
+				})
+			.col-md-8.col-lg-7
+				+img( 'features/feature-03-700x478.png' ).shadow-sm

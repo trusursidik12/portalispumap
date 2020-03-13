@@ -1,0 +1,64 @@
+// Plugin inputs sample
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Plugin Inputs Sample', category:'input sample', reload:true, id:'plugin-inputs-sample' } )
+	.container
+		.row.row-30.justify-content-center
+			.col-md-6
+				h3 Select
+				.row.novi-disabled
+					.col-12
+						.form-group
+							label( for='simple-select' ) Simple select:
+							.select-wrap
+								select.select2( id='simple-select', name='country', data-select2-options!={ placeholder: 'Select country' } )
+									option( label='placeholder' )
+									option USA
+									option UK
+									option Ukraine
+									option Australia
+									option Korea
+									option Japan
+									option Germany
+									option Belarus
+									option Poland
+						.form-group
+							label( for='multiple-select' ) Multiple select:
+							.select-wrap
+								select.select2( id='multiple-select', name='country', multiple, data-select2-options!={ placeholder: 'Select country' } )
+									option( label='placeholder' )
+									option USA
+									option UK
+									option Ukraine
+									option Australia
+									option Korea
+									option Japan
+									option Germany
+									option Belarus
+									option Poland
+
+			.col-md-6
+				h3 Input type time and date
+				.row.row-22.novi-disabled
+					.col-12
+						.form-group
+							label( for='sample-date' ) Date:
+							.datetimepicker-group
+								.input-group
+									input.form-control( id='sample-date', type='text', name='sample-date', placeholder='Select date', data-datetimepicker!={ format: 'L' } )
+									.input-group-append
+										span.input-group-text.input-group-text-nodivider.int-calendar.novi-icon
+					.col-lg-6
+						.form-group
+							label( for='sample-time-start' ) Required time interval start:
+							.datetimepicker-group
+								.input-group
+									input.form-control( id='sample-time-start', type='text', name='sample-time-start', placeholder='Select time', data-datetimepicker!={ format: 'LT' } )
+									.input-group-append
+										span.input-group-text.input-group-text-nodivider.int-clock.novi-icon
+					.col-lg-6
+						.form-group
+							label( for='sample-time-end' ) Required time interval end:
+							.datetimepicker-group
+								.input-group
+									input.form-control( id='sample-time-end', type='text', name='sample-time-end', placeholder='Select time', data-datetimepicker!={ format: 'LT' } )
+									.input-group-append
+										span.input-group-text.input-group-text-nodivider.int-clock.novi-icon

@@ -1,0 +1,95 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+
+// Base
+.product-overview-price {
+	> * + * {
+		margin-left: 14px;
+	}
+}
+
+.product-overview-rating {
+	display: flex;
+	align-items: center;
+}
+
+.product-overview-review {
+	font-size: $font-size-sm;
+	font-weight: 400;
+}
+
+.product-overview-quality {
+	display: flex;
+	align-items: flex-end;
+}
+
+
+// Spacing
+* + .product-overview-name {
+	margin-top: px-to-rem( 28px );
+}
+
+* + .product-overview-price {
+	margin-top: 10px;
+}
+
+* + .product-overview-rating {
+	margin-top: px-to-rem( 20px );
+}
+
+* + .product-overview-item {
+	margin-top: px-to-rem( 40px );
+}
+
+* + .product-overview-description {
+	margin-top: px-to-rem( 40px );
+}
+
+.product-overview-title + * {
+	margin-top: 10px;
+}
+
+
+// Media
+@include media-breakpoint-down(xs) {
+	.product-overview-gallery {
+		display: flex;
+		flex-wrap: nowrap;
+		width: 100%;
+		margin: 0;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+
+		> [ class*='col-' ] {
+			max-width: 37%;
+			flex: 0 0 37%;
+			padding: 0;
+
+			+ [ class*='col-' ] {
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	* + .product-overview-item {
+		margin-top: px-to-rem( 50px );
+	}
+
+	* + .product-overview-description {
+		margin-top: px-to-rem( 50px );
+	} 
+}
+
+@include media-breakpoint-up(xl) {
+	* + .product-overview-description {
+		margin-top: px-to-rem( 70px );
+	}
+}

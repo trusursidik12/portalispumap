@@ -1,0 +1,61 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.thumbnail-zoom {
+	position: relative;
+	display: inline-block;
+
+	&:before {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		width: 2rem;
+		height: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1rem;
+		font-family: 'Intense Icons';
+		line-height: 1;
+		color: rgba( $white, .8 );
+		background-color: rgba( $primary, .2 );
+		content: '\e919';
+		border-radius: 50%;
+		transition: $transition-base;
+	}
+}
+
+
+// Desktop context
+.desktop {
+	.thumbnail-zoom {
+		&:before {
+			opacity: 0;
+			transform: scale( .5 );
+		}
+
+		&:hover {
+			&:before {
+				opacity: 1;
+				transform: scale( 1 );
+			}
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( sm ) {
+	.thumbnail-zoom {
+		&:before {
+			width: 3rem;
+			height: 3rem;
+			font-size: 1.5rem;
+		}
+	}
+}

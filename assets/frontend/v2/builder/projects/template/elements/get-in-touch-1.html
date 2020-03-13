@@ -1,0 +1,39 @@
+<section class='section section-lg bg-transparent novi-background'>
+  <div class='container'>
+    <div class='row row-20 justify-content-center novi-disabled'>
+      <div class='col-md-9 col-lg-8 col-xl-7'>
+        <h2>Get in Touch</h2>
+        <form class='rd-mailform' data-form-output='form-captcha-output' data-form-type='contact' method='post' action='components/rd-mailform/rd-mailform.php'>
+          <div class='row row-20 gutters-20 novi-disabled'>
+            <div class='col-xs-6'>
+              <div class='form-group'><label for='input-name'>Name:</label>
+                <div class='position-relative'><input class='form-control' id='input-name' type='text' name='name' placeholder='Your name' data-constraints='@Required' /></div>
+              </div>
+            </div>
+            <div class='col-xs-6'>
+              <div class='form-group'><label for='input-email'>E-mail:</label>
+                <div class='position-relative'><input class='form-control' id='input-email' type='email' name='email' placeholder='Your e-mail address' data-constraints='@Email @Required' /></div>
+              </div>
+            </div>
+            <div class='col-12'>
+              <div class='form-group'><label for='input-question'>Question:</label>
+                <div class='position-relative'><textarea class='form-control' id='input-question' name='question' placeholder='Your question' data-constraints='@Required'></textarea></div>
+              </div>
+            </div>
+            <div class='col-12'><label>Captcha:</label>
+              <div>
+                <div class='form-group d-inline-block'>
+                  <div class='recaptcha' id='captcha' data-sitekey='6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt' data-auto-size=''></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='offset-md'>
+            <div class='group-20'><button class='btn btn-lg btn-primary' type='submit'>Submit</button> <button class='btn btn-lg btn-dark' type='reset'>Reset</button></div>
+          </div>
+        </form>
+        <div class='form-output snackbar snackbar-secondary' id='form-captcha-output'></div>
+      </div>
+    </div>
+  </div>
+</section>

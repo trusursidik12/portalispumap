@@ -1,0 +1,42 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.thumbnail-gumba {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.thumbnail-gumba-image {
+	width: 100%;
+	transition: .3s;
+	transform: scale(1.1);
+}
+
+.thumbnail-gumba-title {
+	position: absolute;
+	color: $white;
+	transition: .3s;
+	will-change: transform;
+}
+
+
+// Contexts
+.desktop {
+	.thumbnail-gumba:hover {
+		.thumbnail-gumba-image {
+			transform: none;
+		}
+		.thumbnail-gumba-title {
+			transform: scale(1.1);
+		}
+	}
+}

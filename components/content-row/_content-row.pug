@@ -1,0 +1,28 @@
+//- Content row
+	@param {object} data - object data
+	@param {string} data.img - content row img
+	@param {string} data.title - content row title
+	@param {string} data.text - content row description text
+	@param {string} data.link - content row link
+mixin content-row( data )
+	// Content row
+	.content-row&attributes( attributes )
+		.content-row-item
+			+img( data.img )
+		.content-row-item.content-row-body
+			h4.content-row-title= data.title
+			.content-row-text= data.text
+		.content-row-item
+			a.btn.btn-lg.content-row-btn.rounded-0( href= data.link ? data.link : '#' ) Get Tickets
+
+//- Content row 2
+	@param {object} data - object data
+	@param {string} data.title - content row title
+	@param {string} data.link - content row link
+mixin content-row-2( data )
+	// Content row
+	.content-row&attributes( attributes )
+		.content-row-item.content-row-body
+			h6.content-row-title= data.title
+		.content-row-item
+			a.btn.btn-lg.btn-dark.content-row-btn.rounded-0( href= data.link ? data.link : '#' ) Get Tickets

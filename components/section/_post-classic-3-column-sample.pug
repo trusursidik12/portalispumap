@@ -1,0 +1,36 @@
+include ../post/_post
+
+// Post classic 3 column
+section.section.section-md.bg-transparent.novi-background( data-preset!={ title:'Post Classic 3 Column', category:'blog', reload:false, id:'post-classic-3-column' } )
+	.container
+		.row.row-40.justify-content-center
+			.col-xs-10.col-md-6.col-lg-4
+				+post-classic-2({
+					title:    post1.title,
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-09-400x257',
+					postText: post1.textShort,
+					coments:  '25'
+				}).post-sm
+			.col-xs-10.col-md-6.col-lg-4
+				+post-classic-2({
+					title:    post2.title,
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-05-400x257',
+					postText: post2.textShort,
+					coments:  '25'
+				}).post-sm
+			.col-xs-10.col-md-6.col-lg-4
+				+post-classic-2({
+					title:    post3.titleShort,
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-08-400x257',
+					postText: post3.textShort,
+					coments:  '25'
+				}).post-sm

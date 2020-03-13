@@ -1,0 +1,162 @@
+html {
+	font-size: 13px;
+
+	@include media-breakpoint-up( md ) {
+		font-size: 14px;
+	}
+
+	@include media-breakpoint-up( xl ) {
+		font-size: 16px;
+	}
+}
+
+// Headings
+#{headings()} {
+	margin: 0;
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+h1, .h1 {
+	font-size: 28px;
+	line-height: 1.2;
+
+	@include media-breakpoint-up( md ) {
+		font-size: 32px;
+	}
+
+	@include media-breakpoint-up( lg ) {
+		font-size: 46px;
+		line-height: $h1-line-height;
+	}
+
+	@include media-breakpoint-up( xxl ) {
+		font-size: $h1-font-size;
+	}
+}
+
+h2, .h2 {
+	font-size: 24px;
+	line-height: 1.2;
+
+	@include media-breakpoint-up( md ) {
+		font-size: 26px;
+	}
+
+	@include media-breakpoint-up( lg ) {
+		font-size: 36px;
+		line-height: $h2-line-height;
+	}
+
+	@include media-breakpoint-up( xxl ) {
+		font-size: $h2-font-size;
+	}
+}
+
+h3, .h3 {
+	font-size: 21px;
+	line-height: 1.25;
+
+	@include media-breakpoint-up( md ) {
+		font-size: 24px;
+	}
+
+	@include media-breakpoint-up( lg ) {
+		font-size: 30px;
+		line-height: $h3-line-height;
+	}
+
+	@include media-breakpoint-up( xxl ) {
+		font-size: $h3-font-size;
+	}
+}
+
+h4, .h4 {
+	font-size: 20px;
+	line-height: $h4-line-height;
+
+	@include media-breakpoint-up( md ) {
+		font-size: 21px;
+	}
+
+	@include media-breakpoint-up( lg ) {
+		font-size: 26px;
+	}
+	@include media-breakpoint-up( xxl ) {
+		font-size: $h4-font-size;
+	}
+}
+
+h5, .h5 {
+	font-size: 19px;
+	line-height: 1.35;
+
+	@include media-breakpoint-up( lg ) {
+		font-size: $h5-font-size;
+		line-height: $h5-line-height;
+	}
+}
+
+h6, .h6 {
+	font-size: 18px;
+	line-height: $h6-line-height;
+
+	@include media-breakpoint-up( lg ) {
+		font-size: $h6-font-size;
+	}
+}
+
+// Link
+a {
+	transition: color .2s;
+}
+
+.link-inherit {
+	color: inherit;
+
+	&:hover {
+		color: $secondary;
+	}
+}
+
+// Emphasis
+mark,
+.mark {
+	color: color-yiq( $mark-bg );
+}
+
+
+// Underline text
+u {
+	text-decoration: none;
+	border-bottom: 2px solid rgba( $secondary, .4 );
+}
+
+
+// Bold text
+strong {
+	font-weight: $font-weight-bold;
+}
+
+
+// Context Dark
+.context-dark {
+	a:not([class]) {
+		color: $primary;
+
+		&:hover {
+			color: darken($primary, 10%);
+		}
+	}
+
+	&,
+	#{headings()} {
+		color: $white;
+	}
+}

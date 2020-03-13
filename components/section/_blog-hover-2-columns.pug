@@ -1,0 +1,61 @@
+include ../post/_post
+include ../pag/_pag
+
+// Hover layout 2 columns
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blog Hovered', category:'blog', reload:false, id:'blog-hovered' } )
+	.container
+		h1.text-center Hover layout
+		.row.row-40.row-md-60
+			.col-md-6
+				+post-hover({
+					title:    'Top 10 essential design trends',
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-06-620x398',
+					postText: 'This year may bring us a lot of surprises as standards in web design change and we experience lots of new trends. You can take these...',
+					coments:  '25'
+				}).post-sm
+
+			.col-md-6
+				+post-hover({
+					title:    '15 impressive examples of one-page website',
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-05-620x398',
+					postText: 'Nowadays, designing a landing page is way more difficult. The only challenge you face is getting all the necessary information on...',
+					coments:  '25'
+				}).post-sm
+
+			.col-md-6
+				+post-hover({
+					title:    'Different sides of the dark UI',
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 10, 2019',
+					img:      'image-20-620x398',
+					postText: 'Dark design is and always will be a trend. The level of darkness will always vary, but basically, it’s really hard to screw up a simple...',
+					coments:  '25'
+				}).post-sm
+
+			.col-md-6
+				+post-hover({
+					title:    'Best examples of online portfolio by 10 designers',
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-08-620x398',
+					postText: 'Out of all of the creative people in the world, designers have a very clear vision of what their online portfolio should look like. Their line of work...',
+					coments:  '25'
+				}).post-sm
+
+			.col-12
+				+pag-simple([
+					{ value: '1', actionClass: 'active' },
+					{ value: '2' },
+					{ value: '3' },
+					{ value: '..', class: 'inactive' },
+					{ value: '24' },
+					{ next: true }
+				]).justify-content-center

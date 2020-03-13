@@ -1,0 +1,58 @@
+include ../rating/_rating
+
+//- Product
+	@param {object} obj - data object
+	@param {string} obj.img - image name or path
+	@param {string} obj.title - name of product
+	@param {string} obj.price - price of product
+	@param {string} obj.priceOld - old price of product
+	@param {boolean} obj.productNew - badge new of product
+mixin product( obj )
+	// Product
+	article.product&attributes( attributes )
+		.product-figure
+			+img( obj.img ).product-image
+			.product-link
+				a.icon.icon-circle.icon-xs.icon-primary-filled.int-cart.novi-icon( href='product-page.html' )
+			if( obj.productNew === true )
+				span.badge.badge-dark.product-badge New
+			if( obj.priceOld )
+				span.badge.badge-danger.product-badge= Math.floor(( obj.price / obj.priceOld ) * 100) - 100 + '%'
+		.product-title.h6
+			a( href='product-page.html' )= obj.title
+		.product-price
+			if( obj.priceOld )
+				del= '$' + obj.priceOld
+			span= '$' + obj.price
+
+
+//- Product horizontal
+	@param {object} obj - data object
+	@param {string} obj.img - image name or path
+	@param {string} obj.title - name of product
+	@param {string} obj.text - description of product
+	@param {string} obj.price - price of product
+	@param {string} obj.priceOld - old price of product
+	@param {boolean} obj.productNew - badge new of product
+mixin product-horizontal( obj )
+	// Product horizontal
+	article.product.product-horizontal&attributes( attributes )
+		.media.media-lg.flex-column.flex-xs-row.align-items-xs-center
+			.media-left
+				.product-figure
+					a( href='product-page.html' )
+						+img( obj.img ).product-image
+					if( obj.productNew === true )
+						span.badge.badge-dark.product-badge New
+					if( obj.priceOld )
+						span.badge.badge-danger.product-badge= Math.floor(( obj.price / obj.priceOld ) * 100) - 100 + '%'
+			.media-body
+				+rating.rating-orange.product-rating
+				.product-title.h6
+					a( href='product-page.html' )= obj.title
+				.product-price
+					if( obj.priceOld )
+						del= '$' + obj.priceOld
+					span= '$' + obj.price
+				.product-text= obj.text
+				a.btn.btn-primary.product-btn( href='product-page.html' ) Add to Cart

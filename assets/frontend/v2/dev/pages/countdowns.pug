@@ -1,0 +1,15 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Countdowns';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_countdown-simple-sample
+	include ../components/section/_countdown-boxed-sample
+	include ../components/section/_countdown-rounded-sample
+	include ../components/section/_countdown-inline-sample
+	include ../components/footer/_footer-default

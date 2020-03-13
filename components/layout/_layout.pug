@@ -1,0 +1,13 @@
+//- Layout
+	@param {object} obj - data object
+	@param {string} obj.img - image name or path
+	@param {string} obj.title - name of layout
+mixin layout( obj )
+	// Layout
+	article.layout&attributes( attributes )
+		a.layout-figure.thumbnail-up-shadow( href= obj.link ? obj.link : '#' )
+			+img( obj.img )
+		.layout-title.h6
+			a.layout-title-link( href= obj.link ? obj.link : '#' )= obj.title
+			if obj.commingSoon
+				span.badge.badge-warning.ml-2 soon

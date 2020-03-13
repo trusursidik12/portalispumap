@@ -1,0 +1,14 @@
+include ../breadcrumb/_breadcrumb
+
+// Search section
+section.section.bg-secondary.context-dark.service-section.service-section-breadcrumb.novi-background( data-preset!={ title:'Search Section', category:'form, service', reload:true, id:'search-section' } )
+	.container
+		+breadcrumb( breadcrumbs )
+		.row.row-15.service-section-row.justify-content-between.align-items-center
+			.col-md-8.col-lg-6.col-xl-5
+				h2 Search results
+			.col-md-8.col-lg-6
+				form.form-inline.group-15.novi-disabled( action='search-results.html', method='GET', data-rd-search!={ output: '.rd-search-results', mode: 'submit' } )
+					.form-inline-group
+						input.form-control( type='text', placeholder='Enter a keyword', autocomplete='off', name='s' )
+					button.btn.btn-lg.btn-primary Search

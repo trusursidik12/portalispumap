@@ -1,0 +1,19 @@
+// Spline chart
+-
+	var dSplineValues = [];
+	for ( let i = 0; i < 14; i += 0.5 ) {
+		dSplineValues.push( [ i, Math.sin( i ) ] );
+	};
+
+	var dataSpline = [
+		{
+			label: "Spline",
+			data: dSplineValues,
+			lines: {
+				show: true,
+				fill: true
+			}
+		}
+	];
+
+.flotchart-container( data-flotchart-data= dataSpline )

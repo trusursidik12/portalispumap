@@ -1,0 +1,52 @@
+include ../thumbnail-connor/_thumbnail-connor
+include ../thumbnail/_thumbnail-content-sample
+
+// Portfolio connor
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Portfolio Connor', category:'thumbnail, gallery, isotope', reload:true, id:'portfolio-connor' } )
+	.container.text-center
+		h1 Portfolio connor
+		.isotope-wrap.isotope-line
+			.isotope-filters
+				.isotope-filter.active( data-isotope-filter="*" ) All
+				.isotope-filter( data-isotope-filter=".design" ) Design
+				.isotope-filter( data-isotope-filter=".development" ) Development
+				.isotope-filter( data-isotope-filter=".marketing" ) Marketing
+			.isotope.row.row-30.row-xl-80
+				.col-md-6.isotope-item.development
+					+thumbnail-connor({
+						img:         'image-07-640x420',
+						title:       thumbnail1.title,
+						description: thumbnail1.text
+					})
+				.col-md-6.isotope-item.marketing
+					+thumbnail-connor({
+						img:         'image-06-640x420',
+						title:       thumbnail2.title,
+						description: thumbnail2.text
+					})
+
+				.col-md-6.isotope-item.development
+					+thumbnail-connor({
+						img:         'image-13-640x420',
+						title:       thumbnail3.title,
+						description: thumbnail3.text
+					})
+				.col-md-6.isotope-item.design
+					+thumbnail-connor({
+						img:         'image-05-640x420',
+						title:       thumbnail4.title,
+						description: thumbnail4.text
+					})
+
+				.col-md-6.isotope-item.marketing
+					+thumbnail-connor({
+						img:         'image-17-640x420',
+						title:       thumbnail5.title,
+						description: thumbnail5.text
+					})
+				.col-md-6.isotope-item.design
+					+thumbnail-connor({
+						img:         'image-14-640x420',
+						title:       thumbnail6.title,
+						description: thumbnail6.text
+					})

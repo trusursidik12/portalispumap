@@ -1,0 +1,18 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	-
+		pageName = 'RD Navbar';
+		pageClass = 'bg-800 context-dark'
+
+block page
+	+rd-navbar.navbar-dark
+
+	include ../components/section/_intro-rd-navbar
+	include ../components/section/_feature-rd-navbar-overview
+	include ../components/section/_feature-rd-navbar-opportunities
+	include ../components/section/_feature-rd-navbar-browser
+	include ../components/section/_feature-rd-navbar-characteristics
+	include ../components/section/_feature-rd-navbar-license
+	include ../components/footer/_footer-default

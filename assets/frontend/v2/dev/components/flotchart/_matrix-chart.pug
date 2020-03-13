@@ -1,0 +1,38 @@
+// Matrix chart
+-
+	var dataM1 = [];
+	for ( let i = 0; i < 14; i += 0.6 ) {
+		dataM1.push( [ i, Math.cos( i ) ] );
+	};
+
+	var dataM2 = [];
+	for ( let i = 0; i < 14; i += 0.6 ) {
+		dataM2.push( [ i, Math.sin( i ) ] );
+	};
+
+	var dataMatrix = [
+		{
+			label: "Matrix1",
+			data: dataM1,
+			lines: {
+				show: true
+			},
+			points: {
+				show: true,
+				radius: 4
+			}
+		},
+		{
+			label: "Matrix2",
+			data: dataM2,
+			lines: {
+				show: true
+			},
+			points: {
+				show: true,
+				radius: 4
+			}
+		}
+	]
+
+.flotchart-container( data-flotchart-data= dataMatrix )

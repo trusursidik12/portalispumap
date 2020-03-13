@@ -1,0 +1,31 @@
+// Base
+.accordion-boxed {
+	.accordion-item {
+		border: $border-width solid $border-color;
+		border-radius: $accordion-border-radius;
+		transition: $transition-base;
+	}
+
+	.accordion-item.active,
+	.accordion-item:hover {
+		box-shadow: inset 0 0 0 2px $accordion-border-color;
+	}
+
+	.accordion-item + .accordion-item {
+		margin-top: 20px;
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.accordion-body {
+		padding: 20px;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.accordion-body {
+		padding: 63px 109px 106px;
+	}
+}

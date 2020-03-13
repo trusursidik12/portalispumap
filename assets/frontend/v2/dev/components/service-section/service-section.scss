@@ -1,0 +1,121 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Variables
+$servise-section-divider: 1px solid $border-color;
+
+
+// Base
+.service-section {
+	padding: 50px 0;
+
+	.button-group {
+		@include group( 30px, 20px )
+	}
+
+	* + .button-group { margin-top: px-to-rem( 25px ) }
+}
+
+
+// Media
+* + .service-section-rights { margin-top: 30px }
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.service-section {
+		padding: 60px 0;
+
+		.breadcrumb + h1 { margin-top: 50px }
+	}
+
+	.service-section-breadcrumb {
+		padding: 52px 0 100px;
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.service-section {
+		padding: 80px 0;
+
+		.breadcrumb + h1 { margin-top: 70px }
+	}
+
+	.service-section-xl {
+		padding: 100px 0;
+	}
+
+	.service-section-breadcrumb {
+		padding: 52px 0 120px;
+	}
+
+	.service-section-divided {
+		.service-section-col {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		.service-section-col-divider {
+			&:before {
+				display: block;
+				width: 0;
+				height: 100%;
+				margin-left: auto;
+				margin-right: auto;
+				content: '';
+				border-left: $servise-section-divider;
+			}
+		}
+	}
+
+	* + .service-section-rights { margin-top: 100px }
+	.countdown-simple + p { margin-top: 30px }
+
+	.context-dark {
+		&.service-section-divided,
+		.service-section-divided {
+			.service-section-col-divider {
+				&:before {
+					border-color: inherit;
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.service-section-xl {
+		padding: 150px 0;
+	}
+
+	.service-section-breadcrumb {
+		padding: 52px 0 140px;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.service-section {
+		* + h4 { margin-top: 28px }
+		h4 + p { margin-top: 27px }
+		* + .button-group { margin-top: 51px }
+		* + .service-section-rights { margin-top: 128px }
+		* + .service-section-countdown { margin-top: 34px }
+		* + .service-section-row { margin-top: 90px }
+		h5 + .service-section-countdown { margin-top: 56px }
+		.breadcrumb + h1 { margin-top: 94px }
+		.countdown-simple + p { margin-top: 54px }
+	}
+
+	.service-section-xl {
+		padding: 325px 0;
+	}
+
+	.service-section-breadcrumb {
+		padding: 52px 0 154px;
+	}
+}

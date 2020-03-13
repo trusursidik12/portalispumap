@@ -1,0 +1,85 @@
+include ../person/_person
+
+// Our team
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Our Team', category:'person, isotope', reload:true, id:'our-team-2' } )
+	.container
+		h1= pageName
+		.isotope-wrap.isotope-line
+			.isotope-filters
+				.isotope-filter.active( data-isotope-filter="*" ) All
+				.isotope-filter( data-isotope-filter=".design" ) Design
+				.isotope-filter( data-isotope-filter=".development" ) Development
+				.isotope-filter( data-isotope-filter=".marketing" ) Marketing
+			.isotope.row.row-30.row-md-50.row-xl-70( data-lightgallery )
+				.col-xs-6.col-md-4.col-lg-3.isotope-item.design
+					+person({
+						img: 'persons/person-04-290x290',
+						title: 'Mark Rogers',
+						subtitle: 'Lead Designer',
+						links: [
+							{ iconClass: 'int-twitter' }
+						]
+					})
+				.col-xs-6.col-md-4.col-lg-3.isotope-item.development
+					+person({
+						img: 'persons/person-05-290x290',
+						title: 'Edward Rivera',
+						subtitle: 'Senior Front End Developer',
+						links: [
+							{ iconClass: 'int-twitter' }
+						]
+					})
+				.col-xs-6.col-md-4.col-lg-3.isotope-item.design
+					+person({
+						img: 'persons/person-06-290x290',
+						title: 'Lisa Baker',
+						subtitle: 'Head of Marketing',
+						links: [
+							{ iconClass: 'int-twitter' }
+						]
+					})
+				.col-xs-6.col-md-4.col-lg-3.isotope-item.marketing
+					+person({
+						img: 'persons/person-07-290x290',
+						title: 'Jose Jackson',
+						subtitle: 'Senior Copywriter',
+						links: [
+							{ iconClass: 'int-twitter' }
+						]
+					})
+				.col-xs-6.col-md-4.col-lg-3.isotope-item.marketing
+					+person({
+						img: 'persons/person-09-290x290',
+						title: 'Jean Hall',
+						subtitle: 'Back End Developer',
+						links: [
+							{ iconClass: 'int-twitter' }
+						]
+					})
+				.col-xs-6.col-md-4.col-lg-3.isotope-item.development
+					+person({
+						img: 'persons/person-08-290x290',
+						title: 'John Wilson',
+						subtitle: 'CEO, Founder, Creative Director',
+						links: [
+							{ iconClass: 'int-twitter' }
+						]
+					})
+				.col-xs-6.col-md-4.col-lg-3.isotope-item.design
+					+person({
+						img: 'persons/person-01-290x290',
+						title: 'Daniel Reed',
+						subtitle: 'UX Designer',
+						links: [
+							{ iconClass: 'int-twitter' }
+						]
+					})
+				.col-xs-6.col-md-4.col-lg-3.isotope-item.marketing
+					+person({
+						img: 'persons/person-10-290x290',
+						title: 'Alex Davis',
+						subtitle: 'SEO & SMM specialist',
+						links: [
+							{ iconClass: 'int-twitter' }
+						]
+					})

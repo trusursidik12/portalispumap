@@ -1,0 +1,2 @@
+.service {	padding: 8.5% 10%;	font-size: 1.0625rem;	border-radius: 0.375rem;	box-shadow: 5px 8px 28px rgba(23, 23, 36, 0.1);	transition: .3s ease;}.service-list-item::before {	content: '\2022';	margin-right: .5em;}* + .service {	margin-top: 2.5rem;}* + .service-list {	margin-top: 1.25rem;}.service-title + .service-divider {	margin-top: 1.25rem;}.service-divider + .service-list {	margin-top: 1.875rem;}.desktop .service:hover {	box-shadow: 5px 18px 48px rgba(23, 23, 36, 0.1);	transform: translateY(-10px);}
+/*# sourceMappingURL=service.css.map */

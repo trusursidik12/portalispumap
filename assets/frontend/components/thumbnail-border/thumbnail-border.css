@@ -1,0 +1,2 @@
+.thumbnail-border {	display: inline-block;	border: 2px solid transparent;	transition: all 0.2s ease-in-out;}.thumbnail-border:hover, .thumbnail-border:focus {	border-color: rgba(107, 57, 189, 0.5);	box-shadow: 5px 8px 28px rgba(23, 23, 36, 0.1);}
+/*# sourceMappingURL=thumbnail-border.css.map */

@@ -1,0 +1,52 @@
+include ../thumbnail-upward/_thumbnail-upward
+include ../thumbnail/_thumbnail-content-sample
+
+// Portfolio Mike
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Portfolio Mike', category:'thumbnail, gallery, isotope', reload:true, id:'portfolio-mike' } )
+	.container.text-center
+		h1 Portfolio Mike
+		.isotope-wrap.isotope-line
+			.isotope-filters
+				.isotope-filter.active( data-isotope-filter="*" ) All
+				.isotope-filter( data-isotope-filter=".design" ) Design
+				.isotope-filter( data-isotope-filter=".development" ) Development
+				.isotope-filter( data-isotope-filter=".marketing" ) Marketing
+			.isotope.row.row-40.row-xl-80
+				.col-sm-6.isotope-item.development
+					+thumbnail-upward({
+						img:         'image-07-640x420',
+						title:       thumbnail1.title,
+						description: thumbnail1.text
+					})
+				.col-sm-6.isotope-item.marketing
+					+thumbnail-upward({
+						img:         'image-06-640x420',
+						title:       thumbnail2.title,
+						description: thumbnail2.text
+					})
+
+				.col-sm-6.isotope-item.development
+					+thumbnail-upward({
+						img:         'image-13-640x420',
+						title:       thumbnail3.title,
+						description: thumbnail3.text
+					})
+				.col-sm-6.isotope-item.design
+					+thumbnail-upward({
+						img:         'image-05-640x420',
+						title:       thumbnail4.title,
+						description: thumbnail4.text
+					})
+
+				.col-sm-6.isotope-item.marketing
+					+thumbnail-upward({
+						img:         'image-17-640x420',
+						title:       thumbnail5.title,
+						description: thumbnail5.text
+					})
+				.col-sm-6.isotope-item.design
+					+thumbnail-upward({
+						img:         'image-14-640x420',
+						title:       thumbnail6.title,
+						description: thumbnail6.text
+					})

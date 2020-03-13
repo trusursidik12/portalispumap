@@ -1,0 +1,74 @@
+include ../input/_input
+
+// Login register
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Login Register', category:'one screen page, form', reload:true, id:'login-register' } )
+	.container
+		.row.row-40.justify-content-center.novi-disabled
+			.col-md-8.col-lg-6.col-xl-5.col-xxl-4
+				h1.text-center Sign in
+				.tab
+					ul.nav.nav-classic.justify-content-center( role='tablist' )
+						li.nav-item: a.nav-link.h4.active( data-toggle='tab', href='#login', role='tab', aria-selected='true' ) Login
+						li.nav-item: a.nav-link.h4( data-toggle='tab', href='#register', role='tab', aria-selected='false' ) Registration
+					.tab-content
+						#login.tab-pane.fade.show.active( role='tabpanel' )
+							form.rd-mailform
+								.form-group
+									.input-group
+										.input-group-prepend
+											span.input-group-text.int-user.novi-icon
+										input.form-control( type='text', name='login', placeholder='Your login', data-constraints='@Required' )
+								.form-group
+									.input-group
+										.input-group-prepend
+											span.input-group-text.int-user.novi-icon
+										input.form-control.input-password.password-login( type='text', name='password', placeholder='Password', data-constraints='@Required' )
+										.input-group-append
+											span.input-group-text.input-group-text-nodivider.input-password-icon( data-multi-switch!= {
+												targets: '.password-login'
+											})
+								button.btn.btn-block.btn-lg.btn-primary( type='submit' ) Sign in
+								.offset-sm.group-15.small
+									div
+										u.font-weight-medium
+											a.link-inherit( href='#' ) Forgot your password?
+									div Haven’t an account? #[u.font-weight-medium #[a.link-inherit( href='register.html' ) Sign up here.]]
+
+						#register.tab-pane.fade( role='tabpanel' )
+							form.rd-mailform
+								.form-group
+									.input-group
+										.input-group-prepend
+											span.input-group-text.int-user.novi-icon
+										input.form-control( type='text', name='name', placeholder='Your name', data-constraints='@Required' )
+								.form-group
+									.input-group
+										.input-group-prepend
+											span.input-group-text.int-user.novi-icon
+										input.form-control( type='email', name='email', placeholder='E-mail', data-constraints='@Email @Required' )
+								.form-group
+									.input-group
+										.input-group-prepend
+											span.input-group-text.int-user.novi-icon
+										input.form-control.input-password.password-register-1( type='text', name='password', placeholder='Password', data-constraints='@Required' )
+										.input-group-append
+											span.input-group-text.input-group-text-nodivider.input-password-icon( data-multi-switch!= {
+												targets: '.password-register-1'
+											})
+								.form-group
+									.input-group
+										.input-group-prepend
+											span.input-group-text.int-user.novi-icon
+										input.form-control.input-password.password-register-2( type='text', name='password', placeholder='Confirm password', data-constraints='@Required' )
+										.input-group-append
+											span.input-group-text.input-group-text-nodivider.input-password-icon( data-multi-switch!= {
+												targets: '.password-register-2'
+											})
+								.offset-xs
+									+checkbox( {
+										id: 'check1'
+									} )
+										| I agree with the
+										u.font-weight-medium
+											a.link-inherit( href='#' ) Terms of use.
+								button.btn.btn-block.btn-lg.btn-secondary( type='submit' ) Sign in

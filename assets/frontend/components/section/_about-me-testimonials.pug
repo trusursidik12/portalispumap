@@ -1,0 +1,51 @@
+include ../quote/_quote
+
+// Testimonials
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Testimonials', category:'quote', reload:true, id:'testimonials-2' } )
+	.container
+		.row.justify-content-center.novi-disabled
+			.col-lg-10
+				h2 What clients say
+				.owl-carousel.owl-style-2( data-owl= { dots: true }, data-items='1', data-md-items='2' )
+					+quote({
+						text:     quote1.text,
+						img:      'persons/person-01-64x64',
+						name:     quote1.name,
+						position: quote1.position,
+						rating:   false
+					})
+					+quote({
+						text:     quote2.text,
+						img:      'persons/person-02-64x64',
+						name:     quote2.name,
+						position: quote2.position,
+						rating:   false
+					})
+					+quote({
+						text:     quote3.text,
+						img:      'persons/person-03-64x64',
+						name:     quote3.name,
+						position: quote3.position,
+						rating:   false
+					})
+					+quote({
+						text:     quote4.text,
+						img:      'persons/person-01-64x64',
+						name:     quote4.name,
+						position: quote4.position,
+						rating:   false
+					})
+					+quote({
+						text:     quote5.text,
+						img:      'persons/person-02-64x64',
+						name:     quote5.name,
+						position: quote5.position,
+						rating:   false
+					})
+					+quote({
+						text:     quote6.text,
+						img:      'persons/person-03-64x64',
+						name:     quote6.name,
+						position: quote6.position,
+						rating:   false
+					})

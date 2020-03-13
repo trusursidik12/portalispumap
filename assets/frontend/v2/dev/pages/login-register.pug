@@ -1,0 +1,14 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	-
+		pageName = 'Login / register';
+		pageId = 'login-register';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb-no-title
+	include ../components/section/_login-register
+	include ../components/footer/_footer-default

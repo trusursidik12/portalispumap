@@ -1,0 +1,59 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+// Variables
+$dt-font-weight: 400;
+
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+dt {
+	color: $gray-900;
+}
+
+
+// Spacing
+dl + dl { margin-top: 15px; }
+h1 + dl { margin-top: 20px; }
+
+
+// Horizontal description list
+p + .dl-horizontal { margin-top: px-to-rem( 30px ) }
+.dl-horizontal + .dl-horizontal { margin-top: px-to-rem( 6px ) }
+
+
+// Context dark
+.context-dark {
+	dt { color: inherit; }
+	dd { color: $gray-400; }
+}
+
+// Media
+@include media-breakpoint-up( sm ) {
+	.dl-horizontal {
+		display: flex;
+		flex-wrap: wrap;
+
+		dt {
+			flex-shrink: 0;
+			width: 45%;
+			padding-right: 10px;
+		}
+
+		dd {
+			flex-grow: 1;
+			width: 55%;
+		}
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	dl + dl { margin-top: 33px; }
+	h1 + dl { margin-top: 56px; }
+	p + .dl-horizontal { margin-top: px-to-rem( 40px ) }
+	.dl-horizontal + .dl-horizontal { margin-top: px-to-rem( 3px ) }
+}

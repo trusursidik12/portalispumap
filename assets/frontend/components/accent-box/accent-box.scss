@@ -1,0 +1,55 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.accent-box {
+	padding: px-to-rem( 40px, 30px );
+	border-radius: $border-radius-lg;
+	background-color: $white;
+	box-shadow: $box-shadow-sm;
+}
+
+
+// Spacing
+* + .accent-box {
+	margin-top: px-to-rem( 40px );
+}
+
+* + .accent-box-text {
+	margin-top: px-to-rem( 28px );
+}
+
+* + .accent-box-form {
+	margin-top: px-to-rem( 30px );
+}
+
+* + .accent-box-btn {
+	margin-top: px-to-rem( 40px );
+}
+
+.accent-box-text + .accent-box-form,
+.accent-box-btn + .accent-box-text {
+	margin-top: px-to-rem( 40px );
+}
+
+
+// Media
+@include media-breakpoint-up(md) {
+	* + .accent-box {
+		margin-top: px-to-rem( 60px );
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.accent-box {
+		padding: px-to-rem( 60px );
+	}
+
+	* + .accent-box {
+		margin-top: px-to-rem( 80px );
+	}
+}

@@ -1,0 +1,18 @@
+// Badge tag container
+.tag-container {
+	@include group( 4px );
+}
+
+
+// Spacing
+* + .tag-container { margin-top: 25px; }
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	* + .tag-container { margin-top: 30px; }
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .tag-container { margin-top: 40px; }
+}

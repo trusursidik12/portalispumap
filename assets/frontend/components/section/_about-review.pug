@@ -1,0 +1,56 @@
+include ../review/_review
+
+// In the press
+section.section.section-lg.bg-900.context-dark.novi-background( data-preset!={ title:'Reviews', category:'quote', reload:true, id:'reviews' } )
+	.container
+		h1 Reviews
+		// Owl Carousel
+		.owl-carousel( data-owl= { dots: true }, data-items='1', data-md-items='2', data-xl-items='3')
+			+review({
+				text: 'The smartest and most flexible bootstrap template by TemplateMonster you\'ve ever seen. Create exactly what you need with our powerful bootstrap toolkit.',
+				name: 'John Doe',
+				time: {
+					date: '2019-05-16',
+					text: 'May 16, 2019'
+				}
+			})
+			+review({
+				text: 'The smartest and most flexible bootstrap template by TemplateMonster you\'ve ever seen.',
+				name: 'John Doe',
+				time: {
+					date: '2019-06-16',
+					text: 'June 16, 2019'
+				}
+			})
+			+review({
+				text: 'The smartest and most flexible bootstrap template by TemplateMonster you\'ve ever seen. Create exactly what you need with our.',
+				name: 'John Doe',
+				time: {
+					date: '2019-07-16',
+					text: 'July 16, 2019'
+				}
+			})
+			+review({
+				text: 'The smartest and most flexible bootstrap template by TemplateMonster you\'ve ever seen. Create exactly what you need with our powerful bootstrap toolkit.',
+				name: 'John Doe',
+				time: {
+					date: '2019-08-16',
+					text: 'August 16, 2019'
+				}
+			})
+			+review({
+				text: 'The smartest and most flexible bootstrap template by TemplateMonster you\'ve ever seen.',
+				name: 'John Doe',
+				time: {
+					date: '2019-09-16',
+					text: 'September 16, 2019'
+				}
+			})
+			+review({
+				text: 'The smartest and most flexible bootstrap template by TemplateMonster you\'ve ever seen. Create exactly what you need with our.',
+				name: 'John Doe',
+				time: {
+					date: '2019-10-16',
+					text: 'October 16, 2019'
+				}
+			})

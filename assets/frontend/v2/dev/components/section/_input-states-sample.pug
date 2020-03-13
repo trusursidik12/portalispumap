@@ -1,0 +1,39 @@
+// Input states
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Input States Sample', category:'input sample', reload:false, id:'input-states-sample' } )
+	.container
+		.row.row-40.justify-content-center.novi-disabled
+			.col-md-6
+				h2.text-center Input
+				.form-group
+					label( for='input-styles1' ) Focused
+					.position-relative
+						input.form-control( id='input-styles1', type='email', placeholder='Enter text' )
+				.form-group
+					label( for='input-styles2' ) Normal
+					.position-relative
+						input.form-control( id='input-styles2', type='email', placeholder='Enter text' )
+				.form-group.form-group-disabled
+					label( for='input-styles3' ) Disabled
+					.position-relative
+						input.form-control( id='input-styles3', type='email', placeholder='Enter text', disabled )
+
+			.col-md-6
+				h2.text-center Input with icon
+				.form-group
+					label( for='inputGroup1' ) Focused
+					.input-group
+						.input-group-prepend
+							span.input-group-text.int-email.novi-icon
+						input.form-control( id='inputGroup1', type='email', placeholder='Input placeholder' )
+				.form-group
+					label( for='inputGroup2' ) Normal
+					.input-group
+						.input-group-prepend
+							span.input-group-text.int-email.novi-icon
+						input.form-control( id='inputGroup2', type='email', placeholder='Input placeholder' )
+				.form-group.form-group-disabled
+					label( for='inputGroup3' ) Disabled
+					.input-group
+						.input-group-prepend
+							span.input-group-text.int-email.novi-icon
+						input.form-control( id='inputGroup3', type='email', placeholder='Input placeholder' )

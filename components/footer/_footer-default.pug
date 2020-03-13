@@ -1,0 +1,43 @@
+include ../logo/_logo
+include ../rights/_rights
+
+// Footer default
+footer.section.footer.footer-sm.bg-800.text-400.context-dark.novi-background( data-preset!={ title:'Footer Default', category:'footer', reload:false, id:'footer-default' } )
+	.container
+		.row.row-30.justify-content-xxl-between.novi-disabled
+			.col-lg-5
+				+logo
+				p.small Get the most for your website with Intense Multipurpose Website Template, valued by over 3,000 customers worldwide. With a great number of pages, components, elements, and blocks, this responsive Bootstrap 4 template is definitely worth your attention.
+			.col-md-11.col-lg-7.col-xxl-6
+				p.small 178 West 27th Street, Suite 527, New York NY 10012, United States
+				.row.row-20
+					.col-auto.col-sm-4
+						.media.media-xxs.text-white
+							.media-left
+								span.icon.icon-xs.int-phone.novi-icon
+							.media-body
+								ul.list.list-contact
+									li.list-contact-item: a.list-contact-link( href='tel:#' ) +1 234 567 8901
+									li.list-contact-item: a.list-contact-link( href='tel:#' ) +1 234 567 8902
+					.col-auto.col-sm-4
+						ul.list.list-xs.small
+							li.list-item Mon-Fri: 8am - 6pm
+							li.list-item Sat-Sun: 8am - 4pm
+							li.list-item Holidays: closed
+					.col-auto.col-sm-4
+						ul.list.list-lg.small.text-white
+							li.list-item: a.link.link-contrast.link-secondary( href='mailto:#' ) mail@demolink.org
+							li.list-item: a.link.link-contrast.link-secondary( href='mailto:#' ) info@demolink.org
+
+		hr.divider.footer-divider
+
+		.row.row-15.align-items-center.justify-content-between.footer-panel.novi-disabled
+			.col-auto
+				+rights
+			.col-auto
+				.group-30.d-flex.text-white
+					a.icon.icon-xs.icon-social.int-youtube.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-facebook.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-instagram.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-twitter.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-linkedin.novi-icon( href='#' )

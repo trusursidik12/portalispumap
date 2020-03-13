@@ -1,0 +1,17 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Calls to action';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_cta-sample-type-1
+	include ../components/section/_cta-sample-type-2
+	include ../components/section/_cta-sample-type-3
+	include ../components/section/_cta-sample-type-4
+	include ../components/section/_cta-sample-type-5
+	include ../components/section/_cta-sample-type-6
+	include ../components/footer/_footer-default

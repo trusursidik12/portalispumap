@@ -1,0 +1,9 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+$dropdown-border-color: $border-color;
+
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/dropdown";

@@ -1,0 +1,14 @@
+.widget.widget-search
+	h6.widget-title About us
+	.widget-body
+		form.widget-search-form( action='search-results.html', method='GET', data-rd-search!={
+			output: '.widget-search-results',
+			mode: 'live',
+			liveResults: 3,
+			template: '<h6 class="search-title"><a target="_top" href="#{href}" class="search-link">#{title}</a></h6><p>...#{token}...</p>'
+		})
+			.input-group
+				input.form-control( type='text', placeholder='Search...', autocomplete='off', name='s' )
+				.input-group-append
+					button.widget-search-btn.input-group-text.input-group-text-nodivider.int-search.novi-icon
+		.widget-search-results

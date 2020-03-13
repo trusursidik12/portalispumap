@@ -1,0 +1,144 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Variables
+$post-dark: $gray-900;
+$post-light: $gray-200;
+$post-primary: $primary;
+$post-secondary: $secondary;
+$post-radius: $border-radius;
+$post-shadow: $box-shadow-sm;
+
+$post-meta-fsz: $font-size-sm;
+$post-tag-border-color: rgba( $secondary, .4 );
+
+
+// Base
+.post-img-link {
+	display: inline-block;
+	transition: $transition-base;
+
+	&:hover {
+		box-shadow: $box-shadow-sm;
+	}
+}
+
+.post-title a {
+	color: $post-dark;
+
+	&:hover,
+	&:focus {
+		color: $post-primary;
+	}
+}
+
+.post-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-size: $post-meta-fsz;
+	line-height: 1;
+	@include group( 20px, 8px );
+
+	> li {
+		display: inline-flex;
+		align-items: center;
+
+		> * {
+			vertical-align: middle;
+		}
+	}
+}
+
+.post-tags {
+	display: inline-block;
+	font-weight: $font-weight-normal;
+}
+
+.post-tag {
+	color: inherit;
+	vertical-align: middle;
+	border-bottom: 2px solid transparent;
+	transition: $transition-base;
+
+	&:hover,
+	&:focus {
+		color: inherit;
+		border-color: $post-tag-border-color;
+	}
+}
+
+.post-icon {
+	padding-right: .5em;
+	color: $post-dark;
+}
+
+.post-link {
+	font-size: $post-meta-fsz;
+}
+
+
+// Spacing
+* + .post-title { margin-top: 15px; }
+* + .post-img-link { margin-top: 15px; }
+* + .post-text { margin-top: 15px; }
+* + .post-btn { margin-top: 20px; }
+* + .post-time { margin-top: 8px; }
+
+
+// Modifying
+.post-text-center {
+	text-align: center;
+}
+
+// Context dark
+.context-dark {
+	.post-title a {
+		color: inherit;
+
+		&:hover,
+		&:focus {
+			color: $post-primary;
+		}
+	}
+
+	.post-img-link {
+		&:hover {
+			opacity: .85;
+		}
+	}
+}
+
+// Media
+@include media-breakpoint-up( lg ) {
+	* + .post-title { margin-top: 24px; }
+	* + .post-img-link { margin-top: 25px; }
+	* + .post-text { margin-top: 25px; }
+	* + .post-btn { margin-top: 29px; }
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .post-title { margin-top: 36px; }
+	* + .post-img-link { margin-top: 37px; }
+	* + .post-text { margin-top: 30px; }
+	.post-meta + .post-text { margin-top: 36px; }
+	* + .post-btn { margin-top: 37px; }
+}
+
+
+// Layouts
+@import "post-container";
+@import "post-sm";
+@import "post-boxed";
+@import "post-thumbnail";
+@import "post-side";
+@import "post-number";
+@import "post-hover";
+@import "post-creative";
+@import "post-simple";
+@import "post-inline";

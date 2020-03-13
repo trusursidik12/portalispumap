@@ -1,0 +1,176 @@
+// Mixins
+@mixin bg-variant($parent, $color) {
+	#{$parent} {
+		background-color: $color;
+	}
+	a#{$parent},
+	button#{$parent} {
+		@include hover-focus {
+			background-color: darken($color, 10%);
+		}
+	}
+}
+
+@mixin bg-gradient-variant($parent, $color) {
+	#{$parent} {
+		background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x;
+	}
+}
+
+@mixin bg-adjacent() {
+	&:not([style*='background-']) + &:not([style*='background-']) {
+		padding-top: 0;
+	}
+}
+
+// Bootstrap styles
+@each $color, $value in $theme-colors {
+	@include bg-variant(".bg-#{$color}", $value);
+}
+
+@if $enable-gradients {
+	@each $color, $value in $theme-colors {
+		@include bg-gradient-variant(".bg-gradient-#{$color}", $value);
+	}
+}
+
+.bg-white {
+	background-color: $white;
+}
+
+.bg-transparent {
+	background-color: transparent;
+}
+
+// Theme color light backgrounds
+@each $color, $value in $theme-colors {
+	.bg-#{$color}-light {
+		background: adjust-color( $value, $hue: 1deg, $saturation: 39%, $lightness: 45% );
+	}
+
+	.bg-#{$color} {
+		@include bg-adjacent();
+	}
+}
+
+
+// Gray backgrounds
+@each $color, $value in $grays {
+	@include bg-variant(".bg-#{$color}", $value);
+
+	.bg-#{$color} {
+		@include bg-adjacent();
+	}
+}
+
+
+// Transparent background
+.bg-transparent {
+	@include bg-adjacent();
+}
+
+
+// Image background
+.bg-image {
+	background-position: center center;
+	background-size: cover;
+}
+
+
+// Colored overlay
+@each $name, $color in $theme-colors {
+	[class*='overlay-#{$name}'] {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: $color;
+			pointer-events: none;
+			opacity: .5;
+		}
+
+		.container {
+			position: relative;
+		}
+	}
+
+	.overlay-#{$name} {
+		&-02 {
+			&::before {
+				opacity: .2;
+			}
+		}
+
+		&-03 {
+			&::before {
+				opacity: .3;
+			}
+		}
+
+		&-06 {
+			&::before {
+				opacity: .6;
+			}
+		}
+
+		&-07 {
+			&::before {
+				opacity: .7;
+			}
+		}
+
+		&-08 {
+			&::before {
+				opacity: .8;
+			}
+		}
+	}
+}
+
+
+// Background layer
+.section-layer {
+	&,
+	.container {
+		position: relative;
+	}
+}
+
+.bg-layer {
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+
+// Animated Background Gradient
+.bg-gradient-animated {
+	background-size: 400% auto;
+	background-position: 100% 50%;
+	background-image: linear-gradient( 90deg, #b2edff 0%, #e9dbff 25%, #c1ffe1 50%, #b2edff 75%, #e9dbff 100% );
+	animation: gradientMotion 20s infinite linear;
+}
+
+@each $name, $value in $gradients {
+	.bg-gradient-#{$name} {
+		background-image: $value;
+	}
+}
+
+@keyframes gradientMotion {
+	0% {
+		background-position-x: 100%;
+	}
+
+	100% {
+		background-position-x: 0;
+	}
+}

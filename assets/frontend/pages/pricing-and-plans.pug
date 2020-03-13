@@ -1,0 +1,17 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+include ../components/pricing-list/_pricing-list
+
+block variables
+	- pageName = 'Pricing and plans';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_pricing-box-sample
+	include ../components/section/_pricing-box-sample-2
+	include ../components/section/_pricing-column-sample
+	include ../components/section/_pricing-table-sample
+	include ../components/section/_pricing-list-sample
+	include ../components/footer/_footer-default

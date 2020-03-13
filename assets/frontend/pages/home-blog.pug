@@ -1,0 +1,16 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar-blog
+
+block variables
+	-
+		pageName = 'Blog';
+		pageId = 'home-blog';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_home-blog-content-1
+	include ../components/section/_home-blog-2-columns
+	include ../components/section/_home-blog-3-columns
+	include ../components/section/_home-blog-modern-1
+	include ../components/footer/_footer-blog

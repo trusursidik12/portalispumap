@@ -1,0 +1,74 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Variables
+$fig-caption-fsz: $font-size-base * .71;
+
+
+// Base
+.figure-caption {
+	display: block;
+	font-size: $fig-caption-fsz;
+}
+
+
+// Spacing
+* + .figure-caption { margin-top: px-to-rem( 11px ); }
+
+
+// Figure float
+.figure-float {
+	max-width: 50%;
+
+	&:first-child {
+		margin-top: 10px;
+	}
+}
+
+.figure-float-left {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+
+.figure-float-right {
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+* + .figure-float { margin-top: 7px; }
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.figure-float-left {
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+
+	.figure-float-right {
+		margin-left: 20px;
+		margin-bottom: 20px;
+	}
+
+	* + .figure-float { margin-top: 20px; }
+}
+
+@include media-breakpoint-up( xl ) {
+	.figure-float-left {
+		margin-right: 58px;
+		margin-bottom: 40px;
+	}
+
+	.figure-float-right {
+		margin-left: 58px;
+		margin-bottom: 40px;
+	}
+
+	* + .figure-float { margin-top: 40px; }
+}

@@ -1,0 +1,14 @@
+// Call to action type #3
+section.section.section-lg.text-center.context-dark.bg-image.novi-background( style='background-image: url("images/image-03-1920x583.jpg")', data-preset!={ title:'Call To Action', category:'call to action', reload:false, id:'call-to-action-3' } )
+	.container
+		.row.justify-content-center.novi-disabled
+			.col-md-9.col-lg-7.col-xl-6
+				h2 Call to action type #3
+				p Trying to stay on top of it all? Get the best tools, resources and inspiration sent to your inbox every Wednesday.
+
+				form.rd-mailform.form-inline.justify-content-center.group-20.novi-disabled( data-form-output='cta-form-output', data-form-type='subscribe', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.form-inline-group
+						input.form-control( type='email', name='email', placeholder='Enter your email address', data-constraints='@Email @Required' )
+					button.btn.btn-lg.btn-primary( type='submit' ) Subscribe
+
+				#cta-form-output.form-output.snackbar.snackbar-secondary

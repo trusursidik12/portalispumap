@@ -1,0 +1,50 @@
+include ../offer-box/_offer-box
+
+// Offer box light
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Offer Box Light Sample', category:'offer box', reload:false, id:'offer-box-light-sample' } )
+	.container
+		h2.text-center Offer boxes type #2
+		.row.row-30
+			.col-sm-6.col-lg-3
+				+offer-box-light({
+					title: 'Senior web <br>designer',
+					text: 'We are looking for senior designers who are problem-solvers creating interfaces that elegantly merge form and function.',
+					list: [
+						{ listIcon: 'int-marker', listItem: 'New York' },
+						{ listIcon: 'int-clock', listItem: 'Full Time' },
+						{ listIcon: 'int-calendar', listItem: 'March 12, 2019' }
+					]
+				})
+
+			.col-sm-6.col-lg-3
+				+offer-box-light({
+					title: 'Senior UI/UX <br>graphic designer',
+					text: 'Intense is seeking a Senior UI/UX Graphic Designer to join our growing team. This position will have a core focus on developing.',
+					list: [
+						{ listIcon: 'int-marker', listItem: 'New York' },
+						{ listIcon: 'int-clock', listItem: 'Full Time' },
+						{ listIcon: 'int-calendar', listItem: 'March 12, 2019' }
+					]
+				})
+
+			.col-sm-6.col-lg-3
+				+offer-box-light({
+					title: 'Full stack <br>developer',
+					text: 'We need a Full Stack Developer who will be  responsible for developing, implementing and maintaining IT software.',
+					list: [
+						{ listIcon: 'int-marker', listItem: 'New York' },
+						{ listIcon: 'int-clock', listItem: 'Full Time' },
+						{ listIcon: 'int-calendar', listItem: 'March 12, 2019' }
+					]
+				})
+
+			.col-sm-6.col-lg-3
+				+offer-box-light({
+					title: 'Front end <br>developer',
+					text: 'We are looking for a versatile developer experienced with Front End Web Development, but also familiar with Back-End.',
+					list: [
+						{ listIcon: 'int-marker', listItem: 'New York' },
+						{ listIcon: 'int-clock', listItem: 'Full Time' },
+						{ listIcon: 'int-calendar', listItem: 'March 12, 2019' }
+					]
+				})

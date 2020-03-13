@@ -1,0 +1,2 @@
+.pricing-list + .pricing-list {	margin-top: 23px;	padding-top: 20px;	border-top: 1px solid #e8e8e9;}.pricing-list-description {	font-size: 1.0625rem;}@media (min-width: 576px) {	.pricing-list {		display: flex;		flex-direction: row-reverse;		justify-content: space-between;	}	.pricing-list-content {		padding-right: 25px;	}	* + .pricing-list-description {		margin-top: 2px;	}}
+/*# sourceMappingURL=pricing-list.css.map */

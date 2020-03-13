@@ -1,0 +1,57 @@
+<section class='section section-lg bg-transparent novi-background'>
+  <div class='container'>
+    <div class='row justify-content-center novi-disabled'>
+      <div class='col-md-8 col-xl-7'>
+        <h2 class='text-center'>Make an appointment</h2>
+        <form class='rd-mailform' data-form-output='form-output-global' data-form-type='contact' method='post' action='components/rd-mailform/rd-mailform.php'>
+          <div class='row row-15 gutters-20 novi-disabled'>
+            <div class='col-12'>
+              <div class='form-group'><label for='input-name'>Name:</label>
+                <div class='position-relative'><input class='form-control' id='input-name' type='text' name='name' placeholder='Your name' data-constraints='@Required' /></div>
+              </div>
+            </div>
+            <div class='col-12'>
+              <div class='form-group'><label for='input-email'>E-mail:</label>
+                <div class='position-relative'><input class='form-control' id='input-email' type='email' name='email' placeholder='Your e-mail address' data-constraints='@Email @Required' /></div>
+              </div>
+            </div>
+            <div class='col-12'>
+              <div class='form-group'><label for='input-date'>Date:</label>
+                <div class='datetimepicker-group'>
+                  <div class='input-group'><input class='form-control' id='input-date' type='text' name='date' placeholder='Select date' data-datetimepicker='{"format":"L"}' data-constraints='@Required' />
+                    <div class='input-group-append'><span class='input-group-text input-group-text-nodivider int-calendar novi-icon'></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='col-md-6'>
+              <div class='form-group'><label for='input-time-start'>Required time interval start:</label>
+                <div class='datetimepicker-group'>
+                  <div class='input-group'><input class='form-control' id='input-time-start' type='text' name='time-start' placeholder='Select time' data-datetimepicker='{"format":"LT"}' data-constraints='@Required' />
+                    <div class='input-group-append'><span class='input-group-text input-group-text-nodivider int-clock novi-icon'></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='col-md-6'>
+              <div class='form-group'><label for='input-time-end'>Required time interval start:</label>
+                <div class='datetimepicker-group'>
+                  <div class='input-group'><input class='form-control' id='input-time-end' type='text' name='time-end' placeholder='Select time' data-datetimepicker='{"format":"LT"}' data-constraints='@Required' />
+                    <div class='input-group-append'><span class='input-group-text input-group-text-nodivider int-clock novi-icon'></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='col-md-12'>
+              <div class='form-group'><label for='input-question'>Question:</label>
+                <div class='position-relative'><textarea class='form-control' id='input-question' name='question' placeholder='Your question' data-constraints='@Required'></textarea></div>
+              </div>
+            </div>
+            <div class='col-md-12 mt-3'><button class='btn btn-lg btn-primary' type='submit'>Submit</button></div>
+          </div>
+        </form>
+        <div class='form-output snackbar snackbar-secondary' id='form-output-global'></div>
+      </div>
+    </div>
+  </div>
+</section>

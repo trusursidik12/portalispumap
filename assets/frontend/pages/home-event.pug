@@ -1,0 +1,22 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar-event
+
+block variables
+	-
+		pageName = 'Event';
+		pageId = 'home-event';
+		logo.default = 'logo-default-gray-114x27.svg';
+		logo.inverse = 'logo-inverse-gray-114x27.svg';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_home-event-intro
+	include ../components/section/_home-event-video
+	include ../components/section/_home-event-offer-boxes
+	include ../components/section/_home-event-persons
+	include ../components/section/_home-event-workshops
+	include ../components/section/_home-event-tickets
+	include ../components/section/_home-event-venue
+	include ../components/section/_home-event-contacts
+	include ../components/footer/_footer-event

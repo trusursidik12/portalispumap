@@ -1,0 +1,102 @@
+include ../service/_service
+
+// About me
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'About Me', category:'content box', reload:false, id:'about-me-1' } )
+	.container
+		.row.row-50.row-md-70.row-lg-100.row-xl-130.justify-content-center
+			.col-md-10.col-lg-9.col-xl-8
+				h1.text-primary Delivering cutting-edge
+					br
+					| design experiences
+				+img( 'image-25-840x600' )
+
+			.col-md-10.col-lg-9.col-xl-8
+				h6.text-secondary Who I am
+				h2 I’m Ralph Peterson, a twenty-six-year-old product designer from Los Angeles, CA, currently co-leading a design team at Intense web design studio.
+				p The digital world is my sandbox and I’m always hungry to create new user experiences. My long-term goal is to make technology easy to use and accessible to everyone. The motivation that drives me daily is to work with people and brands that inspire me.
+				p I love to document my journey and share most of my design work on #[u.font-weight-medium #[a( href='#' ) Dribbble]] and #[u.font-weight-medium #[a( href='#' ) Behance]], my thoughts on #[u.font-weight-medium #[a( href='#' ) Twitter]], daily updates on #[u.font-weight-medium #[a( href='#' ) Instagram]] and articles on Medium. When not working, I usually play anything on PlayStation or Steam.
+				.offset-sm
+					.group-30.d-inline-flex.text-900
+						a.icon.icon-sm.icon-social.int-youtube.novi-icon( href='#' )
+						a.icon.icon-sm.icon-social.int-facebook.novi-icon( href='#' )
+						a.icon.icon-sm.icon-social.int-instagram.novi-icon( href='#' )
+						a.icon.icon-sm.icon-social.int-twitter.novi-icon( href='#' )
+						a.icon.icon-sm.icon-social.int-linkedin.novi-icon( href='#' )
+
+			.col-md-10.col-lg-9.col-xl-8
+				h6.text-secondary What’s my mission?
+				h2 To design functional digital experiences and engaging brands.
+				p The digital world is my sandbox and I’m always hungry to create new user experiences. My long-term goal is to make technology easy to use and accessible to everyone. The motivation that drives me daily is to work with people and brands that inspire me.
+
+			.col-md-10.col-lg-9.col-xl-8
+				h6.text-secondary What’s my focus?
+				.row.row-30.row-md-40
+					.col-xs-6
+						+service({
+							title: 'Brand',
+							list: [
+								{ text: 'Brand identity direction' },
+								{ text: 'Visual communication' },
+								{ text: 'Systems & guides' }
+							]
+						})
+					.col-xs-6
+						+service({
+							title: 'Design',
+							list: [
+								{ text: 'Digital product design' },
+								{ text: 'Responsive web design' },
+								{ text: 'Mobile UI/UX design' }
+							]
+						})
+					.col-xs-6
+						+service({
+							title: 'Social',
+							list: [
+								{ text: 'Creative direction' },
+								{ text: 'Social media strategy' },
+								{ text: 'Content strategy' }
+							]
+						})
+					.col-xs-6
+						+service({
+							title: 'Concept',
+							list: [
+								{ text: 'Conceptual UI / UX' },
+								{ text: 'New products & services' },
+								{ text: 'Product design vision' }
+							]
+						})
+
+			.col-md-10.col-lg-9.col-xl-8
+				h6.text-secondary What’s my vision?
+				h2 Lead by example, help others, educate and inspire
+				p I always believe in sharing and collaboration. I want to share my experiences and ideas with fellow designers. I believe in collaboration over the competition because design is all about enjoying the path. I wish to make design and technology accessible to everyone.
+
+			.col-md-10.col-lg-9.col-xl-8
+				h6.text-secondary Awards:
+				h2 My victory in international competitions
+				ul.list.list-xs
+					li.list-item
+						time.h6( datetime='2018' ) 2018
+						|  – MAGNUM 30 under 30, Winner
+					li.list-item
+						time.h6( datetime='2016' ) 2016
+						|  – The Other Hundred, 1st Prize
+					li.list-item
+						time.h6( datetime='2016' ) 2016
+						|  – American Photography 30, Selected Winner
+					li.list-item
+						time.h6( datetime='2015' ) 2015
+						|  – Leica Oskar Barnack Award, Winner Newcomer
+					li.list-item
+						time.h6( datetime='2014' ) 2014
+						|  – PDN Photo Annual - Student Work, Winner
+					li.list-item.font-weight-light
+						time.h6( datetime='2014' ) 2014
+						|  – AOP Student Awards, Finalist
+
+			.col-md-10.col-lg-9.col-xl-8
+				h1 Work inquiry, question or
+					| #[br.d-none.d-xs-block]
+					| something else? #[u #[a( href='mailto:#' ) Email me]].

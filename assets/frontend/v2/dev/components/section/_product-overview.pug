@@ -1,0 +1,103 @@
+include ../rating/_rating
+include ../checkbox-color/_checkbox-color
+include ../checkbox-tag/_checkbox-tag
+
+// Product overview
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Product Overview', category:'shop', reload:true, id:'product-overview' } )
+	.container
+		.row.row-50.novi-disabled
+			.col-sm-4.col-lg-7
+				.row.row-sm-20.gutters-20.product-overview-gallery( data-lightgallery )
+					.col-sm-12.col-lg-6
+						a.thumbnail-up-shadow.lightgallery-item( href='images/products/product-13-710x910.jpg' )
+							+img( 'products/product-13-355x455' )
+					.col-sm-12.col-lg-6
+						a.thumbnail-up-shadow.lightgallery-item( href='images/products/product-14-710x910.jpg' )
+							+img( 'products/product-14-355x455' )
+					.col-sm-12.col-lg-6
+						a.thumbnail-up-shadow.lightgallery-item( href='images/products/product-15-710x910.jpg' )
+							+img( 'products/product-15-355x455' )
+					.col-sm-12.col-lg-6
+						a.thumbnail-up-shadow.lightgallery-item( href='images/products/product-16-710x910.jpg' )
+							+img( 'products/product-16-355x455' )
+					.col-sm-12.col-lg-6
+						a.thumbnail-up-shadow.lightgallery-item( href='images/products/product-17-710x910.jpg' )
+							+img( 'products/product-17-355x455' )
+			.col-sm-8.col-lg-5
+				.product-overview.pl-xxl-5
+					.product-overview-item
+						.small.font-weight-normal iPhone Cases
+						h3.product-overview-name Phone case with chain
+						.product-overview-price
+							del $38
+							span $34
+						.product-overview-rating
+							+rating.rating-orange
+							a.product-overview-review.ml-4( href='#reviews', data-anchor-link='' ) 3 customer reviews
+						.product-overview-item
+							h6.product-overview-title Select size:
+							.group-10.d-flex.flex-wrap
+								+radio-tag({ name: 'productSize', disabled: true }) XS
+								+radio-tag({ name: 'productSize' }) S
+								+radio-tag({ name: 'productSize' }) S Tall
+								+radio-tag({ name: 'productSize', disabled: true }) M
+								+radio-tag({ name: 'productSize' }) M Tall
+								+radio-tag({ name: 'productSize' }) L
+								+radio-tag({ name: 'productSize' }) L Tall
+								+radio-tag({ name: 'productSize' }) XL
+								+radio-tag({ name: 'productSize' }) XL Tall
+								+radio-tag({ name: 'productSize' }) 2XL
+								+radio-tag({ name: 'productSize' }) 2XL Tall
+								+radio-tag({ name: 'productSize', disabled: true }) 3X
+								+radio-tag({ name: 'productSize', disabled: true }) 3X Tall
+								+radio-tag({ name: 'productSize', disabled: true }) 4XL
+								+radio-tag({ name: 'productSize', disabled: true }) 4XL Tall
+					.product-overview-item
+						h6.product-overview-title Select color:
+						.group-10.d-flex.flex-wrap
+							+radio-color({ name: 'productColor' })
+							+radio-color({ name: 'productColor' }).checkbox-color-primary
+							+radio-color({ name: 'productColor' }).checkbox-color-secondary
+							+radio-color({ name: 'productColor' }).checkbox-color-warning
+							+radio-color({ name: 'productColor' }).checkbox-color-danger
+							+radio-color({ name: 'productColor' }).checkbox-color-dark
+							+radio-color({ name: 'productColor' }).checkbox-color-info
+							+radio-color({ name: 'productColor' }).checkbox-color-success
+					.product-overview-item
+						.d-flex.flex-wrap.align-items-end.group-20
+							.form-group
+								label.d-block( for='input-quality' ) Qty:
+								input.form-control.form-control-inline( id='input-quality', data-spinner, type='number', name='spinner', value='1' )
+							.flex-grow-1
+								a.btn.btn-block.btn-lg.btn-dark( href='cart.html' )
+									span.btn-icon.int-cart.novi-icon
+									span Add to Cart
+					.product-overview-description
+						p This iridescent phone case with a silver chain is a perfect choice for any lady looking for quality phone protection. This phone case:
+						ul.list.list-marked
+							li.list-item Is bright & lightweight;
+							li.list-item Fits any phone or smartphone;
+							li.list-item Offers full protection;
+							li.list-item Has additional inside pockets;
+							li.list-item Comes with a branded dust bag.
+						.accordion.accordion-classic
+							.accordion-item.accordion-1
+								a.accordion-header( href='#', data-multi-switch!={
+									targets: '.accordion-1'
+								} ) Size & fit
+								.accordion-body.accordion-1( data-multi-switch-target-slide )
+									ul.list.list-marked
+										li.list-item Designed to fit your daily style;
+										li.list-item Use our guide to pick the best purchase option.
+
+							.accordion-item.accordion-2
+								a.accordion-header( href='#', data-multi-switch!={
+									targets: '.accordion-2',
+									state: true
+								} ) Free shipping & returns
+								.accordion-body.accordion-2( data-multi-switch-target-slide )
+									p Free worldwide shipping and 30-day free returns, only with us. We offer 3 different shipping options:
+									ul.list.list-marked
+										li.list-item Standard / arrives 2-4 business days
+										li.list-item Two-day / arrives 2-3 business days
+										li.list-item Next-day / arrives 1-2 business days

@@ -1,0 +1,36 @@
+include _navigation
+
+mixin rd-navbar
+	//RD Navbar
+	header.section.rd-navbar-wrap( data-preset!={ title:'Navbar Consulting', category:'header', reload:true, id:'navbar-consulting' } )
+		nav.rd-navbar.navbar-consulting&attributes( attributes )
+			.navbar-container
+				.navbar-cell.navbar-sidebar
+					+navigation( menu )
+
+				.navbar-cell
+					.navbar-panel
+						button.navbar-switch.int-hamburger.novi-icon( data-multi-switch!= {
+							targets: '.rd-navbar',
+							scope:   '.rd-navbar',
+							isolate: '[data-multi-switch]'
+						})
+
+						.navbar-logo
+							a.navbar-logo-link( href= homePage.link )
+								+img( logo.default ).navbar-logo-default( alt= logo.name )
+								+img( logo.inverse ).navbar-logo-inverse( alt= logo.name )
+
+				.navbar-cell
+					.navbar-subpanel
+						.navbar-subpanel-item
+							button.navbar-button.navbar-info-button.mdi-dots-vertical.novi-icon( data-multi-switch!= {
+								targets: '.rd-navbar',
+								scope:   '.rd-navbar',
+								class:   'navbar-info-active',
+								isolate: '[data-multi-switch]'
+							})
+
+							.navbar-info
+								a.navbar-info-link( href='tel:#' ) #[span.navbar-info-icon.int-phone.novi-icon] +1&nbsp;234&nbsp;567&nbsp;8901
+								button.btn.btn-secondary.navbar-action-button Let’s Chat

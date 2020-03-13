@@ -1,0 +1,17 @@
+//- Thumbnail louis
+	@param {object} data - thumbnail data object
+	@param {array} data.img - thumbnail image params (path, width, height)
+	@param {string} data.title - thumbnail title
+	@param {string} data.link - thumbnail link
+	@param {string} data.text - thumbnail text text
+	@param {string} data.btnText - thumbnail button text
+mixin thumbnail-louis( data )
+	// Thumbnail louis
+	figure.thumbnail.thumbnail-louis.novi-background&attributes( attributes )
+		+img( data.img ).thumbnail-louis-image
+		figcaption.thumbnail-louis-caption.novi-background
+			.group-20.d-flex.justify-content-between
+				.thumbnail-louis-title= data.title
+				a.link( href='portfolio-wide-vertical.html' )
+					| Learn more
+					span.link-icon.int-arrow-right.novi-icon

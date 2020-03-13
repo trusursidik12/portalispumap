@@ -1,0 +1,33 @@
+include ../comment/_comment
+
+// Comments bordered
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Comments Bordered Sample', category:'comment', reload:false, id:'comments-bordered-sample' } )
+	.container
+		h2.text-center Comments bordered
+		.row.row-30.justify-content-center.novi-disabled
+			.col-lg-10.col-xl-8
+				+comment({
+					name: 'Adam Smith',
+					time: {
+						date: '2019-09-16',
+						text: 'September 16, 2019'
+					},
+					text: 'Thank you for such an informative post! It will surely be of great use to me in my future work.'
+				}).comment-bordered
+					+comment({
+						img:   'persons/person-04-60x60',
+						name: 'Mark Rogers',
+						time: {
+							date: '2019-09-18',
+							text: 'September 18, 2019'
+						},
+						text: 'You’re welcome! I’m going to post more on this topic soon.'
+					}).comment-bordered
+				+comment({
+					name: 'John Peters',
+					time: {
+						date: '2019-09-26',
+						text: 'September 26, 2019'
+					},
+					text: 'Your every post contains a lot of great tips and lifehacks! Thank you for sharing all this useful information with your readers.'
+				}).comment-bordered

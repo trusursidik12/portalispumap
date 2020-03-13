@@ -1,0 +1,12 @@
+//- Review
+	@param {object} obj - data object
+	@param {string} obj.text - review text
+	@param {string} obj.name - name of author
+	@param {string} obj.position - position of author
+mixin review( obj )
+	// Review
+	article.review&attributes( attributes )
+		.review-text.h4: q= obj.text
+		.review-info
+			.review-author-name.h6= obj.name
+			.review-time: time( datetime= obj.time.date )= obj.time.text

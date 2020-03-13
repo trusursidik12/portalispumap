@@ -1,0 +1,28 @@
+include ../quote/_quote
+
+// Quote classic
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Quote Classic Sample', category:'quote', reload:false, id:'quote-classic-sample' } )
+	.container
+		h2.text-center Testimonials type #5
+		.row.row-40.row-md-50
+			.col-sm-6.col-lg-4
+				+quote-classic({
+					text:     quote1.text,
+					img:      'persons/person-01-100x100',
+					name:     quote1.name,
+					position: quote1.position
+				}).text-center
+			.col-sm-6.col-lg-4
+				+quote-classic({
+					text:     quote2.text,
+					img:      'persons/person-02-100x100',
+					name:     quote2.name,
+					position: quote2.position
+				}).text-center
+			.col-sm-6.col-lg-4
+				+quote-classic({
+					text:     quote3.text,
+					img:      'persons/person-03-100x100',
+					name:     quote3.name,
+					position: quote3.position
+				}).text-center

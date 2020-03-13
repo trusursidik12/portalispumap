@@ -1,0 +1,39 @@
+include ../logo/_logo
+include ../rights/_rights
+
+// Footer store
+footer.section.footer.footer-xl.bg-200.mx-4.novi-background( data-preset!={ title:'Footer Store', category:'footer', reload:true, id:'footer-store' } )
+	.container
+		.row.row-40.row-md-50.justify-content-md-between.justify-content-xl-end
+			.col-6.col-md-3
+				ul.list.list-xl.small.font-weight-normal
+					li.list-item: a.list-link( href='grid-shop-left-sidebar.html' ) Store
+					li.list-item: a.list-link( href='#' ) Support
+					li.list-item: a.list-link( href='about-us.html' ) About
+					li.list-item: a.list-link( href='careers.html' ) Careers
+			.col-6.col-md-3
+				ul.list.list-xl.small.font-weight-normal
+					li.list-item: a.list-link( href='#' ) Cookies
+					li.list-item: a.list-link( href='privacy-policy.html' ) Privacy Policy
+					li.list-item: a.list-link( href='#' ) Data-retention policy
+					li.list-item: a.list-link( href='#' ) Code of Conduct
+			.col-md-6.col-lg-5.offset-lg-1
+				h6 Discover the latest trends
+				form.rd-mailform.input-group( data-form-output='form-output-footer-store', data-form-type='subscribe', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.form-group-icon.novi-disabled
+						input.form-control( type='email', name='email', placeholder='Enter your email address', data-constraints='@Email @Required' )
+						button.form-group-icon-btn.int-arrow-right.novi-icon
+				#form-output-footer-store.form-output.snackbar.snackbar-primary
+
+		.row.row-20.align-items-end.novi-disabled
+			.col-md-7
+				.group-20.d-inline-flex.flex-wrap.align-items-end
+					+logo.pb-1
+					+rights.mt-0
+			.col-md-5
+				.group-30.d-inline-flex.text-900
+					a.icon.icon-xs.icon-social.int-youtube.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-facebook.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-instagram.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-twitter.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-linkedin.novi-icon( href='#' )

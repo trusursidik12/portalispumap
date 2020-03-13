@@ -1,0 +1,18 @@
+include ../offer-box/_offer-box
+
+// Offer
+section.section.section-xl.bg-transparent.novi-background( data-preset!={ title:'Offers', category:'offer box', reload:false, id:'offer-2' } )
+	.container
+		.row.justify-content-center.row-40.row-lg-50.row-xl-70.row-xxl-90
+			.col-md-6( data-animate!={ class: 'fadeInLeft' } )
+				+offer-box-divided({
+					subtitle: 'Speakers',
+					title: 'Let your voice be heard at Design Systems New York',
+					text: 'We are always open to those who want to share knowledge. Participate in the call for papers by filling out a short form. Deadline: 1st September'
+				})
+			.col-md-6( data-animate!={ class: 'fadeInRight' } )
+				+offer-box-divided({
+					subtitle: 'Sponsors',
+					title:    'Bring your organisation closer to our community',
+					text:     'Support our event and help promoting knowledge-sharing accross brilliant minds.'
+				})

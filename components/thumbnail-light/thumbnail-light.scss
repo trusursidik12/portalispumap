@@ -1,0 +1,17 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+
+// Base
+.thumbnail-light {
+	display: inline-block;
+	transition: $transition-base;
+
+	&:hover,
+	&:focus {
+		opacity: .7;
+		box-shadow: $box-shadow-sm;
+	}
+}

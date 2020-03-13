@@ -1,0 +1,29 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.divider-layout + .divider-layout {
+	margin-top: px-to-rem( 35px );
+	padding-top: px-to-rem( 35px );
+	border-top: 1px solid $border-color;
+}
+
+
+// Spacing
+* + .divider-layout { margin-top: px-to-rem( 25px ); }
+
+
+// Media
+@include media-breakpoint-up( xxl ) {
+	.divider-layout + .divider-layout {
+		margin-top: px-to-rem( 81px );
+		padding-top: px-to-rem( 68px );
+	}
+
+	* + .divider-layout { margin-top: px-to-rem( 68px ); }
+}

@@ -1,0 +1,54 @@
+include ../progress-linear/_progress-liear
+include ../counter/_counter
+
+// Skills and counters
+section.section.section-lg.overlay-dark-08.context-dark.bg-image.novi-background( style='background-image: linear-gradient(#171724 0%, transparent 51.86%), url( images/image-19-1920x1247.jpg )', data-preset!={ title:'Skills', category:'infographics', reload:true, id:'skills-2' } )
+	.container
+		.row.row-50.row-lg-80.row-xl-100.row-xxl-150.novi-disabled
+			.col-12
+				.row.row-40.justify-content-lg-between.novi-disabled
+					.col-md-5( data-animate!={ class: 'fadeInUp' } )
+						h2 Skills and experience that shape eCommerce
+						p Our team combines expertise with unique set of skills for our clients’ success.
+					.col-md-7.col-lg-6.progress-linear-area
+						+progress-linear({
+							title: 'Creative Thinking',
+							value: '75',
+							text: 'Many of the problems we face require creative approach and thinking.'
+						}).progress-linear-lg.progress-linear-shamrock-blue
+						+progress-linear({
+							title: 'Communication',
+							value: '99',
+							text: 'Effective communication plays one of the primary roles in our work.'
+						}).progress-linear-lg.progress-linear-blue-violet
+						+progress-linear({
+							title: 'Research',
+							value: '45',
+							text: 'We carry out a vast amount of research to provide efficient solutions.'
+						}).progress-linear-lg.progress-linear-electric-violet
+			.col-12
+				.row.row-40.justify-content-lg-between.novi-disabled
+					.col-md-5( data-animate!={ class: 'fadeInUp' } )
+						h2 We've helped businesses increase their revenue on average by 90% in their first year with us!
+						p Here are some statistics showing the results of our recent projects.
+					.col-md-7.col-lg-6
+						.row.row-40
+							.col-auto.col-xs-6
+								+counter({
+									prefix: '$',
+									value: 2,
+									postfix: 'm+',
+									title: 'Amount of Increased <br>Revenue'
+								})
+							.col-auto.col-xs-6
+								+counter({
+									value: 2478,
+									title: 'Regular Clients and <br>Partners'
+								})
+							.col-auto.col-xs-6
+								+counter({
+									prefix: '+',
+									value: 83,
+									postfix: '%',
+									title: 'Avg. Annual Increase <br>in Traffic'
+								})

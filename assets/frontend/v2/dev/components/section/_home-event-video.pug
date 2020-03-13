@@ -1,0 +1,19 @@
+include ../video/_video
+
+// Intro video
+section.section.section-xl.section-layer.context-dark.pb-0( data-preset!={ title:'Intro', category:'content box, media', reload:true, id:'intro-9' } )
+	.bg-layer.bg-dark.novi-background( style='bottom: 36%' )
+	.container
+		.row.justify-content-center.row-40.row-lg-50.row-xl-70.row-xxl-90
+			.col-12( data-animate!={ class: 'fadeInUp' } )
+				.row.novi-disabled
+					.col-md-10.col-xl-9
+						h3 Design Systems New York is a non-profit community conference to share experiences, ideas and approaches on Design Systems
+						ul.list.list-xs
+							li.text-contrast Workshops — 22th November
+							li.text-contrast Conference — 23th November
+			.col-md-10.col-xl-8( data-lightgallery, data-animate!={ class: 'fadeIn' } )
+				+video({
+					img: 'image-45-840x473',
+					video: 'video/bg-video-3.mp4'
+				})

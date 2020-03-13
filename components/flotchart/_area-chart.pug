@@ -1,0 +1,19 @@
+// Area chart
+-
+	var dataAreaValues = [];
+	for ( let i = 0; i < 14; i += 0.1 ) {
+		dataAreaValues.push( [ i, Math.sqrt( i * 10 ) ] );
+	};
+
+	var dataArea = [
+		{
+			label: "Area",
+			data: dataAreaValues,
+			lines: {
+				show: true,
+				fill: true
+			}
+		}
+	];
+
+.flotchart-container( data-flotchart-data= dataArea )

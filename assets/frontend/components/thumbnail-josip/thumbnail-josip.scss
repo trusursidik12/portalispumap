@@ -1,0 +1,85 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Variables
+$thumbnail-josip-bg: $primary;
+$thumbnail-josip-color: $white;
+$thumbnail-caption-fsz: $font-size-sm;
+
+
+// Base
+.thumbnail-josip {
+	position: relative;
+	display: inline-block;
+	max-width: 450px;
+	overflow: hidden;
+	transition: transform 0.4s;
+
+}
+
+.thumbnail-josip-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transition: inherit;
+	background-color: rgba( $thumbnail-josip-bg, .9 );
+	color: $thumbnail-josip-color;
+}
+
+.thumbnail-josip-inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding: 15px;
+	text-align: left;
+	@include group( 10px );
+}
+
+.thumbnail-josip-title {
+	color: inherit;
+}
+
+.thumbnail-josip-description {
+	font-size: $font-size-sm;
+}
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.thumbnail-josip {
+		max-width: 100%;
+	}
+}
+@include media-breakpoint-up( lg ) {
+	.thumbnail-josip-inner {
+		padding: 20px;
+	}
+
+	.desktop {
+		.thumbnail-josip-img {
+			transition: inherit;
+		}
+
+		.thumbnail-josip-caption {
+			background-color: $thumbnail-josip-bg;
+			transform: translateY( 100% );
+		}
+
+		.thumbnail-josip:hover {
+			.thumbnail-josip-img {
+				transform: translateY( -30px );
+			}
+
+			.thumbnail-josip-caption {
+				transform: translateY( 0 );
+			}
+		}
+	}
+}

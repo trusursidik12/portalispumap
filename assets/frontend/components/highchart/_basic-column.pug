@@ -1,0 +1,55 @@
+-
+	var basicColumn = {
+		chart: {
+			type: 'column',
+			marginTop: 30,
+			marginBottom: 30
+		},
+		credits: false,
+		colors: [ '#31c77f', '#31c77f', '#6b39bd', '#6b39bd', '#28A8FF', '#28A8FF' ],
+		title: {
+			text: null
+		},
+		legend: {
+			enabled: false
+		},
+		xAxis: {
+			lineWidth: 0,
+			tickColor: '#999',
+			tickLength: 5,
+			labels: {
+				style: {
+					color: '#999'
+				}
+			}
+		},
+		yAxis: {
+			max: 20,
+			gridLineWidth: 0,
+			title: {
+				text: null
+			},
+			labels: {
+				enabled: false
+			}
+		},
+		tooltip: {
+			headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+			pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+											'<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+			footerFormat: '</table>',
+			shared: true,
+			useHTML: true
+		},
+		plotOptions: {
+			column: {
+				colorByPoint: true,
+				borderColor: 'transparent'
+			}
+		},
+		series: [{
+			name: 'Tokyo',
+			data: [12, 14, 20, 19, 8, 12, 14, 20, 5, 16, 8, 12, 14, 20, 19, 5, 16, 8, 12, 14, 20, 19, 5, 16, 8 ]
+		}]
+	}
+.highcharts-container.highcharts-container-lg( data-highcharts-options= basicColumn )

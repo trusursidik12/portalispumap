@@ -1,0 +1,14 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	-
+		pageName = 'Blog hover 2 columns';
+		pageId = 'blog-hover-2-columns';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb-no-title
+	include ../components/section/_blog-hover-2-columns
+	include ../components/footer/_footer-default

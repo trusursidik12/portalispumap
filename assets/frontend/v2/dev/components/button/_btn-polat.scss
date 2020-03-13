@@ -1,0 +1,64 @@
+// Polat Effect
+.btn-polat-up,
+.btn-polat-left {
+	position: relative;
+	overflow: hidden;
+
+	.btn-text {
+		display: block;
+		width: 100%;
+		height: 100%;
+		transition: 0.3s;
+	}
+
+	.btn-icon {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		transition: left, top;
+		transition-duration: .3s;
+
+		&:before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+.btn-polat-up {
+	.btn-icon {
+		left: 0;
+		top: -100%;
+	}
+
+	&:hover {
+		.btn-icon {
+			top: 0;
+		}
+
+		.btn-text {
+			transform: translateY(300%);
+		}
+	}
+}
+
+.btn-polat-left {
+	.btn-icon {
+		top: 0;
+		left: -100%;
+	}
+
+	&:hover {
+		.btn-icon {
+			left: 0;
+		}
+
+		.btn-text {
+			transform: translateX(200%);
+		}
+	}
+}

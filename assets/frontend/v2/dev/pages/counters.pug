@@ -1,0 +1,17 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Counters';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_counter-sample-type-1
+	include ../components/section/_counter-sample-type-2
+	include ../components/section/_counter-icon-sample-1
+	include ../components/section/_counter-icon-sample-2
+	include ../components/section/_counter-boxed-sample-1
+	include ../components/section/_counter-boxed-sample-2
+	include ../components/footer/_footer-default

@@ -1,0 +1,24 @@
+// Pie chart
+-
+	var
+		dataPie = [
+			{ label: "Series1",  data: 10 },
+			{ label: "Series2",  data: 30 },
+			{ label: "Series3",  data: 90 },
+			{ label: "Series4",  data: 70 }
+		],
+		optionsPie = {
+			colors: ['#6b39bd', '#28A8FF', '#31c77f', '#F19711', '#E72660', '#C728FF'], // same in script.js
+			grid: {
+				show: false,
+				hoverable: true,
+				clickable: true
+			},
+			series: {
+				pie: {
+					show: true
+				}
+			}
+		}
+
+.flotchart-container.flotchart-container-pie( data-flotchart-data= dataPie, data-flotchart-options= optionsPie )

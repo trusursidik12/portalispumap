@@ -1,0 +1,68 @@
+include ../post/_post
+include ../rights/_rights
+
+// Footer consulting
+footer.section.footer.bg-800.text-400.context-dark.novi-background( data-preset!={ title:'Footer Consulting', category:'footer', reload:false, id:'footer-consulting' } )
+	.container
+		.row.row-30.justify-content-xl-between.novi-disabled
+			.col-md-10.col-lg-6
+				h4 Discover the freshest eCommerce tips & tricks
+				p.mt-3 Get the weekly selection of the best and easy-to-understand recommendations from our eCommerce consulting team.
+			.col-md-10.col-lg-6.col-xl-5
+				form.rd-mailform.form-inline.group-20.mt-lg-3.novi-disabled( data-form-output='footer-consulting-form-output', data-form-type='subscribe', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.form-inline-group
+						input.form-control( type='email', name='email', placeholder='Enter your email address', data-constraints='@Email @Required' )
+					button.btn.btn-lg.btn-primary( type='submit' ) Subscribe
+
+				#footer-consulting-form-output.form-output.snackbar.snackbar-secondary
+
+		hr.divider.footer-divider
+
+		.row.row-30.justify-content-xl-between.novi-disabled
+			.col-md-10.col-lg-6
+				.row.row-20
+					.col-auto.col-sm-4
+						h6 What we do
+						ul.list.list-xl.small.font-weight-normal
+							li.list-item: a.list-link( href='#' ) eCommerce strategy
+							li.list-item: a.list-link( href='#' ) B2B solutions
+							li.list-item: a.list-link( href='#' ) Digital marketing
+							li.list-item: a.list-link( href='#' ) CRM consulting
+							li.list-item: a.list-link( href='#' ) eCommerce design
+					.col-auto.col-sm-4
+						h6 Quick links
+						ul.list.list-xl.small.font-weight-normal
+							li.list-item: a.list-link( href='portfolio-grid-horizontal.html' ) Portfolio
+							li.list-item: a.list-link( href='blog-classic-with-sidebar.html' ) Blog
+							li.list-item: a.list-link( href='#' ) Books & guides
+							li.list-item: a.list-link( href='#' ) Apps & partners
+					.col-auto.col-sm-4
+						h6 Who we are
+						ul.list.list-xl.small.font-weight-normal
+							li.list-item: a.list-link( href='about-us.html' ) About us
+							li.list-item: a.list-link( href='our-team.html' ) Our team
+			.col-md-8.col-lg-6.col-xl-5
+				.post-inline-group.post-area
+					+post-inline({
+						img:   'image-09-180x116',
+						title: 'Starting your first online store: 5 mistakes to avoid',
+						date:  'September 16, 2019'
+					}).post-sm
+					+post-inline({
+						img:   'image-05-180x116',
+						title: '10 secrets of successful eCommerce startups',
+						date:  'September 16, 2019'
+					}).post-sm
+
+		hr.divider.footer-divider
+
+		.row.row-15.align-items-center.justify-content-between.footer-panel.novi-disabled
+			.col-auto
+				+rights
+			.col-auto
+				.group-30.d-flex.text-white
+					a.icon.icon-xs.icon-social.int-youtube.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-facebook.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-instagram.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-twitter.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-linkedin.novi-icon( href='#' )

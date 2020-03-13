@@ -1,0 +1,77 @@
+include ../multiswitch/_multiswitch
+include ../pricing/_pricing
+
+// Pricing box
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Pricing Box', category:'price', reload:true, id:'pricing-box' } )
+	.container
+		.row.justify-content-center
+			.col-md-6
+				h1.text-center Your full stack of brand building tools
+		.plans
+			.plans-switcher
+				.plans-switcher-text Monthly billing
+				div
+					+switch-toggle({ targets: '.switch-container-1' }).plans-toggle
+				div
+					.plans-switcher-text Annual billing
+					.plans-switcher-subtext Save up to 20%
+
+			.plans-switch-container.switch-container.switch-container-1
+				.switch-inner
+					.row.row-30.align-items-end.novi-disabled
+						.col-lg-4
+							+pricing-box({
+								title: 'Pro',
+								subtitle: 'Ideal for getting started',
+								price: '15',
+								list: [ '8 social accounts', '100 scheduled posts', '1 user' ]
+							})
+
+						.col-lg-4
+							+pricing-box({
+								label: 'Most popular',
+								title: 'Premium',
+								subtitle: 'Ideal for getting started',
+								price: '55',
+								list: [ '8 social accounts', '100 scheduled posts', '1 user' ]
+							}).pricing-box-accent-secondary
+
+						.col-lg-4
+							+pricing-box({
+								title: 'Business',
+								subtitle: 'Ideal for getting started',
+								price: '85',
+								list: [ '8 social accounts', '100 scheduled posts', '1 user' ]
+							})
+
+				.switch-inner
+					.row.row-30.align-items-end.novi-disabled
+						.col-lg-4
+							+pricing-box({
+								title: 'Pro',
+								subtitle: 'Ideal for getting started',
+								price: '10',
+								list: [ '8 social accounts', '100 scheduled posts', '1 user' ]
+							})
+
+						.col-lg-4
+							+pricing-box({
+								label: 'Most popular',
+								title: 'Premium',
+								subtitle: 'Ideal for getting started',
+								price: '50',
+								list: [ '8 social accounts', '100 scheduled posts', '1 user' ]
+							}).pricing-box-accent-secondary
+
+						.col-lg-4
+							+pricing-box({
+								title: 'Business',
+								subtitle: 'Ideal for getting started',
+								price: '80',
+								list: [ '8 social accounts', '100 scheduled posts', '1 user' ]
+							})
+
+			.plans-description
+				span At the end of your trial, you may downgrade to our basic Free plan:
+				br
+				span.font-weight-normal 3 social accounts, 10 scheduled posts, 1 user.

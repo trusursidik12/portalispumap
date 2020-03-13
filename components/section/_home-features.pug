@@ -1,0 +1,78 @@
+include ../blurb/_blurb
+
+// Features
+section.section.section-lg.bg-secondary.context-dark.novi-background( data-preset!={ title:'Features', category:'blurb', reload:false, id:'features-3' } )
+	.container
+		.row.row-30.justify-content-lg-between.novi-disabled
+			.col-md-4
+				.sticky.sticky-top
+					h6.text-primary Take full control of your site
+					ul.list.list-lg
+						li.list-item: a.live-anchor( href='#Design', data-live-anchor ) Design
+						li.list-item: a.live-anchor( href='#Development', data-live-anchor ) Development
+						li.list-item: a.live-anchor( href='#Customization', data-live-anchor ) Customization
+			.col-md-8.col-lg-7
+				.row.row-50.row-lg-80.row-xl-100.row-xxl-150.novi-disabled
+					.col-12#Design
+						h4( data-animate!={ class: 'fadeInRight' } ) A extensive range of web design features that make Intense the best template for your website
+						.row.row-offset-lg.row-30.row-md-50.row-xl-70.justify-content-xl-between
+							.col-xs-6.col-md-6.col-xxl-5( data-animate!={ class: 'fadeInUp' } )
+								+blurb({
+									embed: '<span class="blurb-icon ith-layers novi-icon"></span>',
+									title: '60+ reusable elements',
+									text:  'Intense has a set of more than 60 UI elements designed to make your website attractive and feature-rich.'
+								})
+							.col-xs-6.col-md-6.col-xxl-5( data-animate!={ class: 'fadeInUp' } )
+								+blurb({
+									embed: '<span class="blurb-icon ith-font novi-icon"></span>',
+									title: 'Unlimited Google fonts',
+									text:  'The template includes a vast range of fonts from Google Fonts library that can be easily switched and replaced.'
+								})
+							.col-xs-6.col-md-6.col-xxl-5.align-self-center( data-animate!={ class: 'fadeInUp' } )
+								+blurb({
+									embed: '<span class="blurb-icon ith-effect novi-icon"></span>',
+									title: 'Various hover effects and animations',
+									text:  'Thanks to stunning animations and effects, a website built with Intense will always impress your visitors.'
+								})
+							.col-xs-6.col-md-6.col-xxl-5( data-animate!={ class: 'fadeInUp' } )
+								+blurb({
+									embed: '<span class="blurb-icon ith-pages novi-icon"></span>',
+									title: 'Blog and shop pages',
+									text:  'Post your latest news and integrate eCommerce features with our pre-designed blog & shop pages.'
+								}).blurb-boxed.blurb-primary
+					.col-12#Development
+						h4( data-animate!={ class: 'fadeInRight' } ) The latest web development technologies combined to help you create an outstanding website
+						.row.row-offset-lg.row-30.row-md-50.row-xl-70.justify-content-xl-between
+							.col-xs-6.col-md-6.col-xxl-5( data-animate!={ class: 'fadeInUp' } )
+								+blurb({
+									embed: '<span class="blurb-icon ith-devices novi-icon"></span>',
+									title: 'Bootstrap 4 framework',
+									text:  'Intense has a set of more than 60 UI elements designed to make your website attractive and feature-rich.'
+								}).blurb-boxed.blurb-dark
+							.col-xs-6.col-md-6.col-xxl-5.align-self-center( data-animate!={ class: 'fadeInUp' } )
+								+blurb({
+									embed: '<span class="blurb-icon ith-settings novi-icon"></span>',
+									title: 'HTML and CSS compiling by Pug and Sass',
+									text:  'To simplify and improve the development of your website, Intense uses Pug and Sass code compiling.'
+								})
+							.col-xs-6.col-md-6.col-xxl-5.align-self-center( data-animate!={ class: 'fadeInUp' } )
+								+blurb({
+									embed: '<span class="blurb-icon ith-console novi-icon"></span>',
+									title: 'Fully component approach to code',
+									text:  'We used a component approach to code to make the usage of Intense easier for all other developers.'
+								})
+					.col-12#Customization
+						h4( data-animate!={ class: 'fadeInRight' } ) With Intense, creating customizable and fully responsive websites is easier than ever
+						.row.row-offset-lg.row-30.row-md-50.row-xl-70.justify-content-xl-between
+							.col-xs-6.col-md-6.col-xxl-5.align-self-center( data-animate!={ class: 'fadeInUp' } )
+								+blurb({
+									embed: '<span class="blurb-icon ith-devices novi-icon"></span>',
+									title: 'Responsive Layout',
+									text:  'All pages of Intense are completely responsive guaranteeing that your website will look great on any device.'
+								})
+							.col-xs-6.col-md-6.col-xxl-5( data-animate!={ class: 'fadeInUp' } )
+								+blurb({
+									embed: '<span class="blurb-icon ith-pages novi-icon"></span>',
+									title: 'Rich UI Kit',
+									text:  'Our template supports full customization due to the rich UI kit with lots of blocks and sections.'
+								}).blurb-boxed.blurb-primary

@@ -1,0 +1,181 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.quote-body {
+	padding: 10% 10% 9%;
+	border: 1px solid $border-color;
+	border-radius: $border-radius;
+	background-color: $white;
+}
+
+.quote-text q {
+	&:before {
+		content: '“';
+	}
+
+	&:after {
+		content: '”';
+	}
+}
+
+.quote-author {
+	font-size: $font-size-sm;
+}
+
+.quote-author-image {
+	border-radius: 50%;
+	box-shadow: $box-shadow;
+}
+
+.quote-author-name {
+	font-weight: 500;
+}
+
+
+// Spacing
+* + .quote-text {
+	margin-top: px-to-rem(25px);
+}
+
+* + .quote-rating {
+	margin-top: px-to-rem( 40px );
+}
+
+* + .quote-author {
+	margin-top: px-to-rem( 30px );
+}
+
+.quote-body + .quote-author {
+	margin-top: px-to-rem( 40px );
+	margin-left: 10%;
+}
+
+
+// Quote cloud
+.quote-cloud {
+	.quote-body {
+		position: relative;
+
+		&::after {
+			display: none;
+		}
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: '';
+			bottom: -1px;
+			left: 22.5%;
+			width: 20px;
+			height: 20px;
+			background: inherit;
+			border-style: solid;
+			border-width: 0 0 1px 1px;
+			border-color: inherit;
+			transform-origin: 0 50%;
+			transform: translateY(100%) skewY(-45deg);
+		}
+	}
+}
+
+.quote-cloud-shadow {
+	.quote-body {
+		box-shadow: $box-shadow-sm;
+		border-color: transparent;
+	}
+}
+
+
+// Quote boxed
+.quote-boxed {
+	.quote-body {
+		padding-top: 0;
+		padding-bottom: 13%;
+		margin-top: 45px;
+		border-color: transparent;
+		box-shadow: $box-shadow-sm;
+	}
+
+	.quote-author-image {
+		margin-bottom: -15px;
+		transform: translateY(-50%);
+		box-shadow: none;
+	}
+
+	.quote-rating {
+		margin-top: 0;
+	}
+}
+
+
+// Quote minimal
+.quote-minimal {
+	.quote-author {
+		@include groupX(10px);
+
+		> * {
+			display: inline-block;
+		}
+	}
+}
+
+
+// Quote centered
+.quote-centered {
+	text-align: center;
+
+	.quote-author-image {
+		box-shadow: none;
+	}
+}
+
+
+// Contexts
+.context-dark {
+	.quote-body {
+		border-color: $gray-700;
+		background: $gray-900;
+	}
+
+	.quote-author-position {
+		color: $gray-400;
+	}
+}
+
+
+// Theming
+@each $color, $value in $theme-colors {
+	.quote-#{$color} {
+		.quote-body {
+			color: color-yiq($value);
+			background-color: $value;
+			border-color: transparent;
+
+			.quote-author-position {
+				color: inherit;
+			}
+		}
+
+		.rating {
+			color: color-yiq($value, $primary, $white);
+		}
+
+		.quote-text {
+			color: color-yiq($value, $headings-color, $white);
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(lg) {
+	* + .quote-rating {
+		margin-top: px-to-rem( 50px );
+	}
+}

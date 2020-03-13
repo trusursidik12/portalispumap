@@ -1,0 +1,65 @@
+// Base
+.tab-scale,
+.tab-scale-horizontal {
+	.tab-content {
+		padding-top: 25px;
+	}
+}
+
+
+// Spacing
+* + .tab-scale,
+* + .tab-scale-horizontal {
+	margin-top: 30px;
+}
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.tab-scale-horizontal {
+		display: flex;
+
+		.tab-embed {
+			max-width: 40%;
+			min-width: 32%;
+		}
+
+		.tab-content {
+			padding-top: 0;
+			padding-left: 30px;
+		}
+	}
+
+	* + .tab-scale,
+	* + .tab-scale-horizontal {
+		margin-top: 35px;
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	* + .tab-scale,
+	* + .tab-scale-horizontal {
+		margin-top: 55px;
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.tab-scale {
+		.tab-content {
+			padding-top: 30px;
+		}
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.tab-scale {
+		.tab-content {
+			padding-top: 38px;
+		}
+	}
+
+	* + .tab-scale,
+	* + .tab-scale-horizontal {
+		margin-top: 77px;
+	}
+}

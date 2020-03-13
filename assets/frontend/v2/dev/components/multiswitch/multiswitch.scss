@@ -1,0 +1,202 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+$switch-toggle-width: 60px;
+$switch-toggle-height: 26px;
+$switch-toggle-slider-size: $switch-toggle-height;
+$switch-toggle-border-radius: $rounded-pill;
+$switch-toggle-color: $primary;
+$switch-toggle-bg: $gray-900;
+$switch-toggle-hover-bg: $secondary;
+
+$switch-toggle-thin-width: 44px;
+$switch-toggle-thin-height: 14px;
+$switch-toggle-thin-slider-size: 24px;
+$switch-toggle-thin-border-radius: $rounded-pill;
+$switch-toggle-thin-color: $white;
+$switch-toggle-thin-bg: $gray-300;
+$switch-toggle-thin-shadow: 2px 4px 13px rgba( $gray-900, 0.15 );
+$switch-toggle-thin-active-bg: $primary;
+
+// browser render fix
+$switch-multiplier: 1;
+@if ( $switch-toggle-height == $switch-toggle-slider-size ) {
+	$switch-multiplier: 1.1;
+}
+
+@import "../bootstrap/scss/mixins";
+
+// Switch item
+.switch-item {
+	width: 180px;
+	max-width: 100%;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: $font-weight-normal;
+}
+
+.switch-item-label {
+	padding-right: 15px;
+}
+
+// Media
+@include media-breakpoint-up( xxl ) {
+	.switch-item-label {
+		padding-right: 20px;
+	}
+}
+
+// Switch toggle
+.switch-toggle {
+	position: relative;
+	width: $switch-toggle-width;
+	height: $switch-toggle-height;
+	flex-shrink: 0;
+	display: inline-block;
+	cursor: pointer;
+
+	.guide {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: $switch-toggle-bg;
+		border-radius: $switch-toggle-border-radius;
+		transition: .25s;
+	}
+
+	.slider {
+		position: absolute;
+		top: ( $switch-toggle-height - $switch-toggle-slider-size )/2;
+		left: ( $switch-toggle-height - $switch-toggle-slider-size * $switch-multiplier )/2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: $switch-toggle-slider-size;
+		width: $switch-toggle-slider-size;
+		background: $switch-toggle-color;
+		border-radius: $switch-toggle-border-radius;
+		transition: .25s;
+	}
+
+	&.active {
+		.slider {
+			left: $switch-toggle-width - $switch-toggle-slider-size - ( $switch-toggle-height - $switch-toggle-slider-size * $switch-multiplier )/2;
+		}
+	}
+
+	&:hover {
+		.slider {
+			background: $switch-toggle-hover-bg;
+		}
+	}
+
+	&-disabled {
+		opacity: 0.3;
+		pointer-events: none;
+	}
+}
+
+// Switch toggle thin
+.switch-toggle-thin {
+	position: relative;
+	width: $switch-toggle-thin-width;
+	height: $switch-toggle-thin-height;
+	flex-shrink: 0;
+	display: inline-block;
+	cursor: pointer;
+
+	.guide {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: $switch-toggle-thin-bg;
+		border-radius: $switch-toggle-thin-border-radius;
+		transition: .25s;
+	}
+
+	.slider {
+		position: absolute;
+		top: ( $switch-toggle-thin-height - $switch-toggle-thin-slider-size )/2;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: $switch-toggle-thin-slider-size;
+		width: $switch-toggle-thin-slider-size;
+		background: $switch-toggle-thin-color;
+		border-radius: $switch-toggle-thin-border-radius;
+		box-shadow: $switch-toggle-thin-shadow;
+		transition: .25s;
+	}
+
+	&.active {
+		.guide {
+			background-color: rgba( $switch-toggle-thin-active-bg, .3 );
+		}
+
+		.slider {
+			left: $switch-toggle-thin-width - $switch-toggle-thin-slider-size;
+			background-color: $switch-toggle-thin-active-bg;
+		}
+	}
+
+	&:hover {
+		.slider {
+			transform: scale( 1.2 );
+		}
+	}
+
+	&-disabled {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}
+
+.switch-container {
+	position: relative;
+
+	.switch-inner {
+		&:first-child {
+			transition: $transition-base;
+		}
+
+		&:last-child {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			transition: $transition-base;
+		}
+	}
+
+	&.active {
+		.switch-inner {
+			&:first-child {
+				visibility: hidden;
+				opacity: 0;
+				pointer-events: none;
+			}
+
+			&:last-child {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+			}
+		}
+	}
+}
+
+[data-multi-switch]:before {
+	pointer-events: none;
+}

@@ -1,0 +1,120 @@
+// Variables
+$pricing-column-fsz: $font-size-sm;
+$pricing-column-main-color: $secondary;
+$pricing-column-shadow: $box-shadow-sm;
+$pricing-column-border-color: $border-color;
+$pricing-column-accent-bg: $white;
+
+$pricing-column-value-fsz: $h2-font-size;
+$pricing-column-value-lh: $h2-line-height;
+$pricing-column-value-color: $headings-color;
+
+$pricing-column-label-bg: $pricing-column-main-color;
+$pricing-column-label-fsz: $font-size-base * .71;
+$pricing-column-divider-color: $gray-900;
+$pricing-column-link-hover: $gray-400;
+
+$pricing-column-inset: 40px;
+
+// Pricing column
+.pricing-column {
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px 15px;
+	font-size: $pricing-column-fsz;
+	border: 1px solid $pricing-column-border-color;
+}
+
+.pricing-column-label {
+	display: inline-block;
+	padding: 2px 10px;
+	font-size: $pricing-column-label-fsz;
+	font-weight: 500;
+	color: color-yiq( $pricing-column-label-bg );
+	background-color: $pricing-column-label-bg;
+	border-radius: $border-radius-sm;
+}
+
+.pricing-column-divider {
+	border-bottom: 2px solid $pricing-column-divider-color;
+}
+
+.pricing-column-value {
+	font-size: $pricing-column-value-fsz;
+	line-height: $pricing-column-value-lh;
+	font-weight: $headings-font-weight;
+	color: $pricing-column-value-color;
+}
+
+.pricing-column-postfix {
+	font-size: .55em;
+}
+
+.pricing-column-value-meta {
+	color: $pricing-column-main-color;
+	font-weight: $font-weight-normal;
+}
+
+.pricing-column-links {
+	text-align: center;
+}
+
+.pricing-column-link {
+	padding-left: 0.3em;
+	font-weight: $font-weight-normal;
+	color: $pricing-column-main-color;
+
+	&:hover,
+	&:focus {
+		color: $pricing-column-link-hover;
+	}
+}
+
+* + .pricing-column-title { margin-top: 6px; }
+* + .pricing-column-divider { margin-top: 15px; }
+* + .pricing-column-value { margin-top: 25px; }
+* + .pricing-column-list { margin-top: 15px; }
+* + .pricing-column-btn { margin-top: 15px; }
+* + .pricing-column-links { margin-top: 15px; }
+
+
+// Accent pricing box
+.pricing-column-accent {
+	position: relative;
+	z-index: 1;
+	border: none;
+	background-color: $pricing-column-accent-bg;
+	box-shadow: $pricing-column-shadow;
+}
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.pricing-column {
+		margin-left: -1px;
+	}
+
+	.pricing-column-accent {
+		margin: -$pricing-column-inset -1px 0;
+		padding-bottom: ( 30px + $pricing-column-inset );
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.pricing-column {
+		padding: 35px 40px;
+	}
+
+	.pricing-column-accent {
+		padding: 35px 40px ( 30px + $pricing-column-inset );
+	}
+
+	* + .pricing-column-title { margin-top: 11px; }
+	* + .pricing-column-subtitle { margin-top: 2px; }
+	* + .pricing-column-divider { margin-top: 14px; }
+	* + .pricing-column-value { margin-top: 35px; }
+	* + .pricing-column-list { margin-top: 26px; }
+	* + .pricing-column-btn { margin-top: 36px; }
+	* + .pricing-column-links { margin-top: 22px; }
+}

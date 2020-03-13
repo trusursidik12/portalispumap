@@ -1,0 +1,20 @@
+include ../person/_person
+
+// Contact me
+section.section.section-lg.bg-transparent.text-center.novi-background( data-preset!={ title:'Content Me', category:'person', reload:false, id:'content-me' } )
+	.container
+		.row.justify-content-center.novi-disabled
+			.col-sm-8.col-md-6.col-lg-7.col-xxl-8
+				+person({
+					img: 'persons/person-06-400x400',
+					title: 'Hello, I’m John Wilson.<br> I’m the CEO, founder & creative director of Intense.',
+					mailText: 'jwilson@demolink.org',
+					tel: '+1 234 567 8901',
+					links: [
+						{ iconClass: 'int-youtube' },
+						{ iconClass: 'int-facebook' },
+						{ iconClass: 'int-instagram' },
+						{ iconClass: 'int-twitter' },
+						{ iconClass: 'int-linkedin' }
+					]
+				}).person-rounded.person-xl

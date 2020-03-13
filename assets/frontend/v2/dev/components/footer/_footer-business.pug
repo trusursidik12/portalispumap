@@ -1,0 +1,53 @@
+include ../logo/_logo
+include ../rights/_rights
+
+// Footer business
+footer.section.footer.bg-800.text-400.context-dark.novi-background( data-preset!={ title:'Footer Business', category:'footer', reload:false, id:'footer-business' } )
+	.container
+		.row.row-30
+			.col-sm-5.col-lg-3
+				+logo
+				.offset-sm.group-30.d-flex.text-white
+					a.icon.icon-xs.icon-social.int-youtube.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-facebook.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-instagram.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-twitter.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-linkedin.novi-icon( href='#' )
+				.offset-sm.media.media-xxs.text-white
+					.media-left
+						span.icon.icon-xs.int-phone
+					.media-body
+						ul.list.list-contact
+							li.list-contact-item: a.list-contact-link( href='tel:#' ) +1 234 567 8901
+							li.list-contact-item: a.list-contact-link( href='tel:#' ) +1 234 567 8902
+			.col-auto.col-xs-6.col-sm-4.col-md-3.col-lg-2
+				h6 What we do
+				ul.list.list-xl.small.font-weight-normal
+					li.list-item: a.list-link( href='#' ) Desktop apps
+					li.list-item: a.list-link( href='#' ) Mobile apps
+					li.list-item: a.list-link( href='#' ) DB management
+					li.list-item: a.list-link( href='#' ) Backend development
+					li.list-item: a.list-link( href='#' ) Consulting
+			.col-auto.col-xs-6.col-sm-3.col-lg-2
+				h6 Navigation
+				ul.list.list-xl.small.font-weight-normal
+					li.list-item: a.list-link( href='about-us.html' ) About us
+					li.list-item: a.list-link( href='our-team.html' ) Our team
+					li.list-item: a.list-link( href='blog-classic-with-sidebar.html' ) Blog
+					li.list-item: a.list-link( href='portfolio-grid-horizontal.html' ) Portfolio
+
+			.col-md-9.col-lg-5
+				h4 Newsletter subscription
+				p.mt-3.small Trying to stay on top of it all? Get the best tools, resources and tips on software development sent to your inbox weekly.
+				.offset-xs
+					form.rd-mailform.form-inline.group-20.novi-disabled( data-form-output='footer-business-form-output', data-form-type='subscribe', method='post', action='components/rd-mailform/rd-mailform.php' )
+						.form-inline-group
+							input.form-control( type='email', name='email', placeholder='Enter your email address', data-constraints='@Email @Required' )
+						button.btn.btn-lg.btn-primary( type='submit' ) Subscribe
+
+					#footer-business-form-output.form-output.snackbar.snackbar-secondary
+
+		hr.divider.footer-divider
+
+		.footer-panel
+			+rights

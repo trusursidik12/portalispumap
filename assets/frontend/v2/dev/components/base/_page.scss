@@ -1,0 +1,72 @@
+// Page styles
+body {
+	overflow-x: hidden;
+}
+
+html:not(.components-ready) * {
+	transition: 0s;
+}
+
+.page {
+	position: relative;
+	min-height: 100vh;
+	opacity: 0;
+
+	&.page-revealed {
+		opacity: 1;
+	}
+}
+
+html .page {
+	transition: opacity .25s;
+}
+
+html.components-ready .page {
+	transition: opacity .25s, padding .2s ease-in-out;
+}
+
+.page-bg {
+	position: relative;
+	z-index: 0;
+}
+
+.page-image {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: -1;
+
+	> * {
+		opacity: .15;
+		width: 100%;
+	}
+
+	&::after {
+	  position: absolute;
+	  content: '';
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+		background-image: linear-gradient( 180deg, transparent 0%, $body-bg 100% );
+	}
+}
+
+
+// Contexts
+@each $color, $value in $theme-colors {
+	.bg-#{$color} {
+		.page-image::after {
+			background-image: linear-gradient( 180deg, transparent 0%, $value 100% );
+		}
+	}
+}
+
+@each $color, $value in $grays {
+	.bg-#{$color} {
+		.page-image::after {
+			background-image: linear-gradient( 180deg, transparent 0%, $value 100% );
+		}
+	}
+}

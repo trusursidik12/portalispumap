@@ -1,0 +1,126 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Variables
+$thumbnail-bg: $white;
+$thumbnail-color: $body-color;
+$thumbnail-radius: $border-radius;
+$thumbnail-shadow: 5px 8px 48px rgba( $gray-900, 0.15 );
+$thumbnail-caption-fsz: $font-size-sm;
+
+
+// Base
+.thumbnail-tamaz {
+	position: relative;
+	z-index: 0;
+	display: inline-block;
+	max-width: 450px;
+	padding: 15px 15px 20px;
+	text-align: left;
+
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $thumbnail-bg;
+		z-index: -1;
+		content: '';
+		border-radius: $thumbnail-radius;
+		box-shadow: $thumbnail-shadow;
+	}
+}
+
+.thumbnail-tamaz-caption {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	padding-top: 15px;
+	color: $thumbnail-color;
+	@include group( 10px );
+}
+
+.thumbnail-tamaz-description {
+	font-size: $thumbnail-caption-fsz;
+}
+
+.thumbnail-tamaz-btn {
+	flex-shrink: 0;
+}
+
+
+// Media
+@include media-breakpoint-up(sm) {
+	.thumbnail-tamaz {
+		max-width: 100%;
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.thumbnail-tamaz-caption {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+
+	.thumbnail-tamaz-content {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.thumbnail-tamaz-title,
+	.thumbnail-tamaz-description {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.desktop {
+		.thumbnail-tamaz {
+			padding: 0;
+
+			&:before {
+				z-index: -1;
+				opacity: 0;
+				transition: .3s;
+			}
+		}
+
+		.thumbnail-tamaz-caption {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			left: 0;
+			padding-top: 30px;
+			opacity: 0;
+			transition: .1s;
+		}
+
+		.thumbnail-tamaz:hover {
+			z-index: 1;
+
+			&:before {
+				top: -20px;
+				right: -20px;
+				bottom: -130px;
+				left: -20px;
+				opacity: 1;
+			}
+
+			.thumbnail-tamaz-caption {
+				opacity: 1;
+				transform: translateY( 0px );
+				transition: opacity .3s .2s;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	* + .thumbnail-tamaz-description { margin-top: 5px; }
+}

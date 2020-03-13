@@ -1,0 +1,197 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Variables
+$icon-size: (
+	( 'xs', 70px, 18px ),
+	( 'sm', 84px, 24px ),
+	( 'md', 96px, 36px ),
+	( 'lg', 108px, 48px ),
+	( 'xl', 124px, 64px )
+);
+
+
+// Base
+.icon {
+	font-weight: 400;
+}
+
+a.icon,
+button.icon {
+	transition: .25s;
+}
+
+
+// Modifiers
+.icon-rect,
+.icon-round,
+.icon-circle {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 2em;
+	height: 2em;
+	line-height: 1;
+	vertical-align: middle;
+	box-shadow: $box-shadow-sm;
+}
+
+.icon-round {
+	border-radius: $border-radius;
+}
+
+.icon-circle {
+	border-radius: 50%;
+}
+
+.icon-question {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 2em;
+	height: 2em;
+	font-size: 1.5em;
+	border-radius: 50%;
+	border: 2px solid;
+}
+
+.page a.icon-social {
+	color: inherit;
+
+	&:hover {
+		color: $primary;
+	}
+
+	&.mdi-instagram,
+	&.fa-instagram,
+	&.int-instagram {
+		background: radial-gradient( circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF );
+		-webkit-background-clip: text;
+
+		&:hover {
+			color: transparent;
+		}
+	}
+
+	&.mdi-youtube,
+	&.fa-youtube,
+	&.fa-youtube-play,
+	&.fa-youtube-play-square,
+	&.int-youtube {
+		&:hover {
+			color: #fe0000;
+		}
+	}
+
+	&.mdi-facebook,
+	&.mdi-facebook-box,
+	&.fa-facebook,
+	&.fa-facebook-f,
+	&.fa-facebook-official,
+	&.fa-facebook-square,
+	&.int-facebook {
+		&:hover {
+			color: #4267b2;
+		}
+	}
+
+	&.mdi-twitter,
+	&.mdi-twitter-box,
+	&.fa-twitter,
+	&.fa-twitter-square,
+	&.int-twitter {
+		&:hover {
+			color: #1da1f2;
+		}
+	}
+
+	&.mdi-linkedin,
+	&.mdi-linkedin-box,
+	&.fa-linkedin,
+	&.fa-linkedin-square,
+	&.int-linkedin {
+		&:hover {
+			color: #2867b2;
+		}
+	}
+
+	&.mdi-behance,
+	&.fa-behance,
+	&.fa-behance-square,
+	&.int-behance {
+		&:hover {
+			color: #1769FF;
+		}
+	}
+
+	&.mdi-dribbble,
+	&.mdi-dribbble-box,
+	&.fa-dribble,
+	&.int-dribble {
+		&:hover {
+			color: #E84C88;
+		}
+	}
+}
+
+
+// Sizing
+@each $postfix, $size, $font-size in $icon-size {
+	.icon-#{$postfix} {
+		font-size: px-to-rem( $font-size );
+
+		&.icon-rect,
+		&.icon-round,
+		&.icon-circle {
+			width: px-to-rem( $size );
+			height: px-to-rem( $size );
+		}
+	}
+}
+
+
+// Theming
+@each $color, $value in $theme-colors {
+	.icon-#{$color} {
+		color: $value;
+	}
+
+	.icon-#{$color}-filled {
+		color: color-yiq($value);
+		background-color: $value;
+	}
+
+	a,
+	button {
+		&.icon-#{$color} {
+			&:hover {
+				color: if( get-yiq( $value ) < 30, lighten( $value, 10% ), darken( $value, 10% ) );
+			}
+		}
+
+		&.icon-#{$color}-filled {
+			&:hover {
+				background: if( get-yiq( $value ) < 30, lighten( $value, 10% ), darken( $value, 10% ) );
+				color: $white;
+			}
+		}
+	}
+}
+
+@each $name, $value in $gradients {
+	.icon-#{$name} {
+		background: $value;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.icon-#{$name}-filled {
+		background: $value;
+		color: $white;
+	}
+}

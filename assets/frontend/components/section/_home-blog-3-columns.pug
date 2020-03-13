@@ -1,0 +1,44 @@
+include ../post/_post
+
+// Home blog 3 columns
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Home Blog 3 Columns', category:'blog', reload:false, id:'home-blog-3-columns' } )
+	.container
+		.row.row-40.row-lg-80.row-xxl-110.justify-content-center
+			.col-xs-10.col-md-6.col-lg-4( data-animate!={ class: 'fadeInUpBig' } )
+				+post-classic-3({
+					title:    post1.titleShort,
+					label:    'HTML',
+					img:      'persons/person-06-400x257'
+				}).post-sm
+			.col-xs-10.col-md-6.col-lg-4( data-animate!={ class: 'fadeInUpBig', delay: '0.15s' } )
+				+post-classic-3({
+					title:    post2.titleShort2,
+					label:    'HTML',
+					img:      'image-06-400x257'
+				}).post-sm
+			.col-xs-10.col-md-6.col-lg-4( data-animate!={ class: 'fadeInUpBig', delay: '0.3s' } )
+				+post-classic-3({
+					title:    post3.titleShort2,
+					label:    'HTML',
+					img:      'image-05-400x257'
+				}).post-sm
+			.col-xs-10.col-md-6.col-lg-4( data-animate!={ class: 'fadeInUpBig' } )
+				+post-classic-3({
+					title:    post1.titleShort,
+					label:    'HTML',
+					img:      'image-11-400x257'
+				}).post-sm
+			.col-xs-10.col-md-6.col-lg-4( data-animate!={ class: 'fadeInUpBig', delay: '0.15s' } )
+				+post-classic-3({
+					title:    post2.titleShort2,
+					label:    'HTML',
+					img:      'image-47-400x257'
+				}).post-sm
+			.col-xs-10.col-md-6.col-lg-4( data-animate!={ class: 'fadeInUpBig', delay: '0.3s' } )
+				+post-classic-3({
+					title:    post3.titleShort2,
+					label:    'HTML',
+					img:      'image-48-400x257'
+				}).post-sm
+			.col-12.text-center( data-animate!={ class: 'fadeIn', delay: '0.15s' } )
+				a.btn.btn-round.btn-lg.btn-dark.btn-anis( href='blog-grid-no-sidebar.html' ) All posts

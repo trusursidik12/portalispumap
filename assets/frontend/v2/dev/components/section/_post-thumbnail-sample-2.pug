@@ -1,0 +1,50 @@
+include ../post/_post
+
+// Post thumbnail
+section.section.section-md.bg-transparent.novi-background( data-preset!={ title:'Post Thumbnail', category:'blog', reload:false, id:'post-thumbnail-2' } )
+	.container
+		.row.row-40.justify-content-center
+			.col-xs-10.col-md-6.col-xxl-7
+				+post-thumbnail({
+					label: 'HTML',
+					autor: 'Adam Smith',
+					date: 'September 16, 2019',
+					coments: '3',
+					title: post1.titleLarge,
+					postText: post1.textShort2,
+					img: 'image-09-730x470',
+					tags: [ 'Web design', 'Articles' ]
+				}).post-sm
+			.col-xs-10.col-md-6.col-xxl-5
+				+post-thumbnail({
+					label: 'HTML',
+					autor: 'Adam Smith',
+					date: 'September 16, 2019',
+					coments: '3',
+					title: post2.title,
+					postText: post2.textLarge2,
+					img: 'persons/person-06-510x470',
+					tags: [ 'Web design', 'Articles' ]
+				}).post-sm
+			.col-xs-10.col-md-6.col-xxl-5
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title: post4.title,
+					postText: post4.textShort,
+					img:      'image-06-510x470',
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-sm
+			.col-xs-10.col-md-6.col-xxl-7
+				+post-thumbnail({
+					label: 'HTML',
+					autor: 'Adam Smith',
+					date: 'September 16, 2019',
+					coments: '3',
+					title: post3.title,
+					postText: post3.text,
+					img: 'image-08-730x470',
+					tags: [ 'Web design', 'Articles' ]
+				}).post-sm

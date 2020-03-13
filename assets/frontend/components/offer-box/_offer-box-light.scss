@@ -1,0 +1,78 @@
+// Variables
+$offer-box-light-shadow: $box-shadow-sm;
+$offer-box-light-radius: $border-radius;
+$offer-box-light-divider: 1px solid $border-color;
+
+
+// Shadow
+.offer-box-light {
+	padding: 20px 15px;
+	box-shadow: $offer-box-light-shadow;
+	border-radius: $offer-box-light-radius;
+
+	.offer-box-divider {
+		border-bottom: $offer-box-light-divider;
+	}
+
+	.offer-box-list {
+		font-size: $offer-box-text-fsz;
+		font-weight: 400;
+		color: $offer-box-title-color;
+
+		> li {
+			> * {
+				vertical-align: middle;
+			}
+		}
+
+		> li + li {
+			margin-top: 6px;
+		}
+	}
+
+	.offer-box-list-icon {
+		line-height: inherit;
+		padding-right: .3em;
+	}
+
+	* + .offer-box-divider { margin-top: 12px; }
+	* + .offer-box-text { margin-top: 12px; }
+	* + .offer-box-list { margin-top: 13px; }
+}
+
+
+// Context dark
+.context-dark {
+	.offer-box-light {
+		background-color: rgba( $white, .05 );
+
+		.offer-box-list {
+			color: inherit;
+		}
+	}
+}
+
+// Media
+@include media-breakpoint-up( md ) {
+	.offer-box-light {
+		transition: $transition-base;
+
+		&:hover {
+			transform: translateY( -10px );
+		}
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.offer-box-light {
+		padding: 34px 40px;
+
+		.offer-box-list-icon {
+			padding-right: .7em;
+		}
+
+		* + .offer-box-divider { margin-top: 19px; }
+		* + .offer-box-text { margin-top: 32px; }
+		* + .offer-box-list { margin-top: 23px; }
+	}
+}

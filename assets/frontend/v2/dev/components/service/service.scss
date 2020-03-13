@@ -1,0 +1,50 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.service {
+	padding: 8.5% 10%;
+	font-size: $font-size-sm;
+	border-radius: $border-radius;
+	box-shadow: $box-shadow-sm;
+	transition: .3s ease;
+}
+
+.service-list-item {
+	&::before {
+		content: '\2022';
+		margin-right: .5em;
+	}
+}
+
+
+// Spacing
+* + .service {
+	margin-top: px-to-rem( 40px );
+}
+
+* + .service-list {
+	margin-top: px-to-rem( 20px );
+}
+
+.service-title + .service-divider {
+	margin-top: px-to-rem( 20px );
+}
+
+.service-divider + .service-list {
+	margin-top: px-to-rem( 30px );
+}
+
+
+// Contexts
+.desktop {
+	.service:hover {
+		box-shadow: $box-shadow-lg;
+		transform: translateY(-10px);
+	}
+}

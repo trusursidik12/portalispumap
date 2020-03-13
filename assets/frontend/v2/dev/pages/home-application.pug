@@ -1,0 +1,17 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar-app
+
+block variables
+	-
+		pageName = 'Application';
+		pageId = 'home-application';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_home-application-intro
+	include ../components/section/_home-application-blurbs
+	include ../components/section/_home-application-steps
+	include ../components/section/_home-application-tabs
+	include ../components/section/_home-application-cta
+	include ../components/footer/_footer-app

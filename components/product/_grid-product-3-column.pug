@@ -1,0 +1,69 @@
+include ../product/_product
+include ../product/_product-toolbar
+include ../pag/_pag
+
++product-toolbar({ gridActive: true })
+.row.row-30.row-sm-40.row-md-50.row-offset-lg
+	.col-6.col-md-4
+		+product({
+			img:   'products/product-01-290x372',
+			title: 'Iridescent iPhone',
+			price: '12'
+		})
+	.col-6.col-md-4
+		+product({
+			img:   'products/product-02-290x372',
+			title: 'Analogue watch',
+			price: '43',
+			productNew: true
+		})
+	.col-6.col-md-4
+		+product({
+			img:   'products/product-03-290x372',
+			title: 'Ombré vinyl backpack',
+			price: '18',
+			priceOld: '27'
+		})
+	.col-6.col-md-4
+		+product({
+			img:   'products/product-04-290x372',
+			title: 'Iridescent tote bag',
+			price: '27'
+		})
+	.col-6.col-md-4
+		+product({
+			img:   'products/product-05-290x372',
+			title: 'Diary with slogan',
+			price: '33'
+		})
+	.col-6.col-md-4
+		+product({
+			img:   'products/product-06-290x372',
+			title: 'Iridescent belt bag',
+			price: '9'
+		})
+	.col-6.col-md-4
+		+product({
+			img:   'products/product-07-290x372',
+			title: 'Pen with pompom',
+			price: '2'
+		})
+	.col-6.col-md-4
+		+product({
+			img:   'products/product-08-290x372',
+			title: 'Phone case with chain',
+			price: '24',
+			priceOld: '27'
+		})
+	.col-6.col-md-4
+		+product({
+			img:   'products/product-09-290x372',
+			title: 'Rose eau de toilette',
+			price: '39'
+		})
+
++pag-simple([
+	{ value: '1', actionClass: 'active' },
+	{ value: '2' },
+	{ next: true }
+]).justify-content-center

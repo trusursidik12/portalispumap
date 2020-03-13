@@ -1,0 +1,226 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/button-group";
+
+
+// Base
+.btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: $btn-border-width solid transparent;
+	font-family: $btn-font-family;
+	font-weight: $btn-font-weight;
+	box-shadow: $btn-box-shadow;
+	background: $white;
+	color: $dark;
+	transition: $transition-base;
+
+	@include button-size(
+		$btn-padding-y,
+		$btn-padding-x,
+		$btn-font-size,
+		$btn-line-height,
+		$btn-border-radius
+	);
+
+	&:hover,
+	&.hover,
+	&:active,
+	&.active {
+		box-shadow: $btn-focus-box-shadow;
+		text-decoration: none;
+		border-color: $gray-700;
+		background: $gray-700;
+		color: $white;
+	}
+
+	&:focus,
+	&.focus {
+		outline: 0;
+	}
+
+	&.disabled,
+	&:disabled {
+		opacity: $btn-disabled-opacity;
+		pointer-events: none;
+	}
+}
+
+
+// Icon
+.btn-icon {
+	font-size: 1em;
+	margin: 0 .47058em;
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+
+// Spacing
+* + .btn {
+	margin-top: px-to-rem( 30px );
+}
+
+.divider + .btn {
+	margin-top: px-to-rem( 50px );
+}
+
+.row + .btn {
+	margin-top: px-to-rem( 40px );
+}
+
+
+// Modifying
+.btn-outline {
+	box-shadow: none;
+	border-color: $white;
+	background: transparent;
+	color: $white;
+
+	&:hover {
+		border-color: $white;
+		background: $white;
+		color: $gray-900;
+	}
+}
+
+.btn-block {
+	display: flex;
+	width: 100%;
+}
+
+.btn-rect {
+	&,
+	&.btn-sm,
+	&.btn-lg {
+		border-radius: 0;
+	}
+}
+
+.btn-round {
+	border-radius: $btn-padding-y * 2 + $btn-font-size * $btn-line-height;
+
+	&.btn-sm {
+		border-radius: $btn-padding-y-sm * 2 + $btn-font-size-sm * $btn-line-height-sm;
+	}
+
+	&.btn-lg {
+		border-radius: $btn-padding-y-lg * 2 + $btn-font-size-lg * $btn-line-height-lg;
+	}
+}
+
+
+// Sizing
+.btn-sm {
+	@include button-size(
+			$btn-padding-y-sm,
+			$btn-padding-x-sm,
+			$btn-font-size-sm,
+			$btn-line-height-sm,
+			$btn-border-radius-sm
+	);
+}
+
+.btn-lg {
+	@include button-size(
+			$btn-padding-y-lg,
+			$btn-padding-x-lg,
+			$btn-font-size-lg,
+			$btn-line-height-lg,
+			$btn-border-radius-lg
+	);
+}
+
+
+// Theming
+@each $color, $value in $theme-colors {
+	.btn-#{$color} {
+		color: color-yiq( $value );
+		border-color: $value;
+		background-color: $value;
+
+		&:hover,
+		&.hover,
+		&:active,
+		&.active {
+			$accent-value: mix( if( get-yiq( $value ) >= 30, $dark, $light ), $value, 20% );
+			color: color-yiq( $accent-value );
+			border-color: $accent-value;
+			background-color: $accent-value
+		}
+
+		&.btn-outline {
+			color: $value;
+			border-color: $value;
+			background-color: transparent;
+
+			&:hover,
+			&.hover,
+			&:active,
+			&.active {
+				color: color-yiq( $value );
+				background-color: $value;
+			}
+		}
+	}
+}
+
+
+// Contexts
+.btn-group {
+	.btn {
+		margin: 0;
+
+		&:hover {
+			z-index: 0;
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(md) {
+	.row + .btn {
+		margin-top: px-to-rem( 50px );
+	} 
+}
+
+@include media-breakpoint-up(lg) {
+	p + .btn {
+		margin-top: px-to-rem( 50px );
+	}
+
+	img + .btn {
+		margin-top: px-to-rem( 60px );
+	}
+
+	.form-group + .btn {
+		margin-top: px-to-rem( 40px );
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	.row + .btn {
+		margin-top: px-to-rem( 70px );
+	}
+} 
+
+
+// Effects
+@import "./btn-anis";
+@import "./btn-aqil";
+@import "./btn-rayen";
+@import "./btn-nuka";
+@import "./btn-naira";
+@import "./btn-polat";

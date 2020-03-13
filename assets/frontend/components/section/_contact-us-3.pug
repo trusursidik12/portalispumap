@@ -1,0 +1,40 @@
+// Contact us
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Contact Us', category:'contacts', reload:false, id:'contact-us-3' } )
+	.container
+		h1.text-center= pageName
+		.row.row-40
+			.col-lg-3
+				p
+					span.icon.icon-xs.int-phone.novi-icon.mr-3
+					| Phones:
+				.offset-xxs
+					ul.list.list-xs
+						li.list-item
+							.h5
+								a( href='tel:#' ) +1 234 567 8901
+								| ;
+						li.list-item
+							.h5: a( href='tel:#' ) +1 234 567 8902
+			.col-lg-3
+				p
+					span.icon.icon-xs.int-marker.novi-icon.mr-3
+					| Address:
+				.offset-xxs
+					.h5: a( href='#' ) 178 West 27th Street, Suite 527, New York NY 10012, United States
+			.col-lg-3
+				p
+					span.icon.icon-xs.int-email.novi-icon.mr-3
+					| E-mail:
+				.offset-xxs
+					ul.list.list-lg
+						li.list-item: a.link.link-secondary( href='mailto:#' ) mail@example.com
+						li.list-item: a.link.link-secondary( href='mailto:#' ) info@example.com
+			.col-lg-3
+				p
+					span.icon.icon-xs.int-clock.novi-icon.mr-3
+					| Open Hours
+				.offset-xxs
+					ul.list.list-xs.h5
+						li.list-item Mon-Fri: 8am - 6pm
+						li.list-item Sat-Sun: 8am - 2pm
+						li.list-item Holidays: closed

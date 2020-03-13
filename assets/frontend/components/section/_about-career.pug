@@ -1,0 +1,48 @@
+include ../offer-box/_offer-box
+
+// Career
+section.section.section-lg.bg-transparent.text-center.novi-background( data-preset!={ title:'Career', category:'offer box', reload:false, id:'career' } )
+	.container
+		h2 Your career starts here
+		.row.row-30.row-md-40.text-left
+			.col-xs-6.col-lg-3
+				+offer-box-light({
+					title: 'Senior web <br>designer',
+					text: 'We are looking for senior designers who are problem-solvers creating interfaces that elegantly merge form and function.',
+					list: [
+						{ listIcon: 'int-marker', listItem: 'New York' },
+						{ listIcon: 'int-clock', listItem: 'Full Time' },
+						{ listIcon: 'int-calendar', listItem: 'March 12, 2019' }
+					]
+				})
+			.col-xs-6.col-lg-3
+				+offer-box-light({
+					title: 'Senior UI/UX <br>graphic designer',
+					text: 'Intense is seeking a Senior UI/UX Graphic Designer to join our growing team. This position will have a core focus on developing.',
+					list: [
+						{ listIcon: 'int-marker', listItem: 'New York' },
+						{ listIcon: 'int-clock', listItem: 'Full Time' },
+						{ listIcon: 'int-calendar', listItem: 'March 12, 2019' }
+					]
+				})
+			.col-xs-6.col-lg-3
+				+offer-box-light({
+					title: 'Full stack <br>developer',
+					text: 'We need a Full Stack Developer who will be  responsible for developing, implementing and maintaining IT software.',
+					list: [
+						{ listIcon: 'int-marker', listItem: 'New York' },
+						{ listIcon: 'int-clock', listItem: 'Full Time' },
+						{ listIcon: 'int-calendar', listItem: 'March 12, 2019' }
+					]
+				})
+			.col-xs-6.col-lg-3
+				+offer-box-light({
+					title: 'Front end <br>developer',
+					text: 'We are looking for a versatile developer experienced with Front End Web Development, but also familiar with Back-End.',
+					list: [
+						{ listIcon: 'int-marker', listItem: 'New York' },
+						{ listIcon: 'int-clock', listItem: 'Full Time' },
+						{ listIcon: 'int-calendar', listItem: 'March 12, 2019' }
+					]
+				})
+		a.btn.btn-lg.btn-secondary( href='our-team.html' ) Join our team

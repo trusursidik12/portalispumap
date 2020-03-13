@@ -1,0 +1,14 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	-
+		pageName = 'Portfolio Tamaz';
+		pageId = 'portfolio-tamaz';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb-no-title
+	include ../components/section/_portfolio-tamaz
+	include ../components/footer/_footer-default

@@ -1,0 +1,15 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Careers';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb-no-title
+	include ../components/section/_career-intro
+	include ../components/section/_career-benefits
+	include ../components/section/_cta-type-2
+	include ../components/section/_careers
+	include ../components/footer/_footer-default

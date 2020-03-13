@@ -1,0 +1,57 @@
+.navbar-cart
+	h5.navbar-cart-heading Shopping cart
+	.navbar-cart-item
+		.navbar-cart-item-left
+			a.thumbnail-small( href='product-page.html' )
+				+img( 'products/product-03-80x103.jpg' )
+		.navbar-cart-item-body
+			a.navbar-cart-item-heading( href='product-page.html' ) Ombré vinyl backpack
+			.navbar-cart-item-price $29
+			.navbar-cart-item-parameter Size: S
+			.navbar-cart-item-parameter Color: Black
+			.navbar-cart-item-parameter Dimension: 80X120mm
+			.navbar-cart-item-parameter
+				| Qty:
+				input.form-control.navbar-cart-item-qty( type='number', value='1', name='qty', data-spinner!= { classes: { 'ui-spinner': 'navbar-cart-spinner' } } )
+		.navbar-cart-item-right
+			button.navbar-cart-remove.int-trash.novi-icon
+
+	.navbar-cart-item
+		.navbar-cart-item-left
+			a.thumbnail-small( href='product-page.html' )
+				+img( 'products/product-08-80x103.jpg' )
+		.navbar-cart-item-body
+			a.navbar-cart-item-heading( href='product-page.html' ) Phone case with chain
+			.navbar-cart-item-price $34
+			.navbar-cart-item-parameter Size: S
+			.navbar-cart-item-parameter Color: Red
+			.navbar-cart-item-parameter Dimension: 80X120mm
+			.navbar-cart-item-parameter
+				| Qty:
+				input.form-control.navbar-cart-item-qty( type='number', value='1', name='qty', data-spinner!= { classes: { 'ui-spinner': 'navbar-cart-spinner' } } )
+		.navbar-cart-item-right
+			button.navbar-cart-remove.int-trash.novi-icon
+
+	.navbar-cart-line
+		.navbar-cart-line-name Subtotal:
+		.navbar-cart-line-value $63.00
+
+	.navbar-cart-line
+		.navbar-cart-line-name Shipping:
+		.navbar-cart-line-value Free
+
+	.navbar-cart-line
+		.navbar-cart-line-name Taxes:
+		.navbar-cart-line-value $0.00
+
+	.navbar-cart-line
+		.navbar-cart-line-name Total:
+		.navbar-cart-total $63
+
+	.navbar-cart-buttons
+		.navbar-cart-group
+			a.btn.btn-dark.btn-sm( href='list-shop-right-sidebar.html' )
+				| Continue shopping
+			a.btn.btn-primary.btn-sm( href='cart.html' )
+				span.btn-icon.int-check.novi-icon
+				span Checkout

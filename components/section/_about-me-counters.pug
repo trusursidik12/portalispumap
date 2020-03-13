@@ -1,0 +1,29 @@
+include ../counter/_counter
+
+// Counters
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Facts', category:'infographics', reload:true, id:'facts' } )
+	.container
+		.row.row-30.justify-content-center.novi-disabled
+			.col-md-3
+				h2 Facts
+					| #[br.d-none.d-md-block]
+					| about me
+			.col-md-9.col-lg-7
+				.row.row-30.justify-content-xs-between
+					.col-6.col-xs-4
+						+counter({
+							value: 2008,
+							title: 'Career start'
+						})
+					.col-6.col-xs-4
+						+counter({
+							value: 100,
+							postfix: '%',
+							title: 'Positive reviews'
+						})
+					.col-6.col-xs-3
+						+counter({
+							value: 1,
+							postfix: 'K',
+							title: 'Clients'
+						})

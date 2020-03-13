@@ -1,0 +1,14 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	-
+		pageName = 'Blog modern large';
+		pageId = 'blog-modern-large';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb-no-title
+	include ../components/section/_blog-modern-large
+	include ../components/footer/_footer-default

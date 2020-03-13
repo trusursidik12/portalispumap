@@ -1,0 +1,41 @@
+include ../blurb/_blurb
+
+// Flotcharts
+section.section.section-lg.bg-200.novi-background( data-preset!={ title:'Flotcharts', category:'chart', reload:true, id:'flotcharts' } )
+	.container
+		h2.text-center( data-animate!={ class: 'fadeIn' } ) Flotcharts
+		.tab.tab-shadow-horizontal
+			ul.nav.nav-advanced-horizontal.tab-embed( role='tablist' )
+				li.nav-item: a.nav-link.active( data-toggle='tab', href='#navFlotchart1', role='tab', aria-selected='true' ) Bar Chart
+				li.nav-item: a.nav-link( data-toggle='tab', href='#navFlotchart2', role='tab', aria-selected='false' ) Spine Chart
+				li.nav-item: a.nav-link( data-toggle='tab', href='#navFlotchart3', role='tab', aria-selected='false' ) Matrix Chart
+				li.nav-item: a.nav-link( data-toggle='tab', href='#navFlotchart4', role='tab', aria-selected='false' ) Area Chart
+				li.nav-item: a.nav-link( data-toggle='tab', href='#navFlotchart5', role='tab', aria-selected='false' ) Line Chart Area
+				li.nav-item: a.nav-link( data-toggle='tab', href='#navFlotchart6', role='tab', aria-selected='false' ) Step Chart
+				li.nav-item: a.nav-link( data-toggle='tab', href='#navFlotchart7', role='tab', aria-selected='false' ) Pie & Donut Charts
+			.tab-content
+				#navFlotchart1.tab-pane.fade.show.active( role='tabpanel' )
+					h3 Bar Chart
+					include ../flotchart/_bar-chart
+				#navFlotchart2.tab-pane.fade( role='tabpanel' )
+					h3 Spine Chart
+					include ../flotchart/_spline-chart
+				#navFlotchart3.tab-pane.fade( role='tabpanel' )
+					h3 Matrix Chart
+					include ../flotchart/_matrix-chart
+				#navFlotchart4.tab-pane.fade( role='tabpanel' )
+					h3 Area Chart
+					include ../flotchart/_area-chart
+				#navFlotchart5.tab-pane.fade( role='tabpanel' )
+					h3 Line Chart Area
+					include ../flotchart/_line-chart
+				#navFlotchart6.tab-pane.fade( role='tabpanel' )
+					h3 Step Chart
+					include ../flotchart/_step-chart
+				#navFlotchart7.tab-pane.fade( role='tabpanel' )
+					h3 Pie & Donut Charts
+					.row.row-15
+						.col-sm-6
+							include ../flotchart/_pie-chart
+						.col-sm-6
+							include ../flotchart/_donut-chart

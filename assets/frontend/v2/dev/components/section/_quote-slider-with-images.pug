@@ -1,0 +1,30 @@
+include ../quote/_quote
+
+// Quote slider with images
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Quote Slider With Images', category:'quote, carousel', reload:true, id:'quote-slider-with-images' } )
+	.container
+		h2.text-center( data-animate!={ class: 'fadeInUp' } ) Recent testimonials
+			br
+			| submitted by our clients
+		.row.row-30.align-items-center
+			.col-sm-5.d-none.d-sm-block( data-animate!={ class: 'fadeInLeft' } )
+				+img( 'image-02-510x419.png' )
+			.col-sm-7
+				.pl-xl-5
+					// Owl Carousel
+					.owl-carousel( data-owl= { dots: true } )
+						+quote({
+							text:     'Intense is an innovative and professional company that has provided us with valuable software development services. We are very happy with our decision to cooperate with them.',
+							name:     quote1.name,
+							position: quote1.position
+						})
+						+quote({
+							text:     'Intense proved to be a professional service provider from the outset. We appreciate their proactive approach and ability to suggest improvements to a prospective solution.',
+							name:     quote2.name,
+							position: quote2.position
+						})
+						+quote({
+							text:     'Our company has great respect for the technical and management capabilities of Intense, whose people are highly competent, easy to work with, and result-oriented.',
+							name:     quote3.name,
+							position: quote3.position
+						})

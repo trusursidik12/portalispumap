@@ -1,0 +1,14 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Advanced UI Kit';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_intro-ui-kit
+	include ../components/section/_ui-kit-1
+	include ../components/section/_ui-kit-2
+	include ../components/section/_ui-kit-3
+	include ../components/footer/_footer-default

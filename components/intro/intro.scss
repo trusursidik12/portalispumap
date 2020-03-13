@@ -1,0 +1,53 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.intro {
+	padding: 50px 0;
+}
+
+
+// Spacing
+.breadcrumb + .intro-title,
+.breadcrumb + .intro-content { margin-top: 25px; }
+* + .intro-embed { margin-top: 20px; }
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.intro { padding: 50px 0 60px; }
+
+	.breadcrumb + .intro-title,
+.breadcrumb + .intro-content { margin-top: 25px; }
+	* + .intro-embed { margin-top: 30px; }
+}
+
+@include media-breakpoint-up( lg ) {
+	.intro { padding: 52px 0 90px; }
+	.intro-title { max-width: 650px; }
+
+	.breadcrumb + .intro-title,
+.breadcrumb + .intro-content { margin-top: 50px; }
+	* + .intro-embed { margin-top: 50px; }
+}
+
+@include media-breakpoint-up( xl ) {
+	.intro { padding: 52px 0 160px; }
+}
+
+@include media-breakpoint-up( xxl ) {
+	.intro-post {
+		padding: 52px 0 227px;
+	}
+
+	* + .intro-title { margin-top: 38px; }
+	.breadcrumb + .intro-title { margin-top: 137px; }
+	.breadcrumb + .intro-content { margin-top: 147px; }
+	* + .intro-embed { margin-top: 97px; }
+	* + .intro-meta { margin-top: 36px; }
+}

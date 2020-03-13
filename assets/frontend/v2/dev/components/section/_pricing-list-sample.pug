@@ -1,0 +1,130 @@
+include ../multiswitch/_multiswitch
+include ../pricing/_pricing
+
+// Pricing list sample
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Pricing List Sample', category:'price', reload:true, id:'pricing-list-sample' } )
+	.container
+		h2.text-center Plans type #5
+		.tab
+			ul.nav.nav-line( role='tablist' )
+				li.nav-item: a.nav-link.h6.active( data-toggle='tab', href='#navPrice1', role='tab', aria-selected='true' ) Breakfast
+				li.nav-item: a.nav-link.h6( data-toggle='tab', href='#navPrice2', role='tab', aria-selected='false' ) Lunch
+				li.nav-item: a.nav-link.h6( data-toggle='tab', href='#navPrice3', role='tab', aria-selected='false' ) Dinner
+			.tab-content
+				#navPrice1.tab-pane.fade.show.active( role='tabpanel' )
+					.row.row-30.novi-disabled
+						.col-md-6.pricing-list-area
+							+pricing-list({
+								value:       '4.89',
+								title:       'English breakfast',
+								description: 'Smoked streaky bacon, Cumberland sausage, black pudding, eggs, mushrooms & grilled tomato, toast with butter & preserves.'
+							})
+
+							+pricing-list({
+								value:       '11.89',
+								title:       'Vegetarian breakfast',
+								description: 'Eggs, spinach, sautéed potatoes, mushrooms & grilled tomato,toast with butter & preserves,tea or coffee, fresh orange or grapefruit juice.'
+							})
+
+							+pricing-list({
+								value:       '12.89',
+								title:       'Children’s breakfast',
+								description: 'Choice of cereals, eggy bread, fish finger stack, mini-English breakfast.'
+							})
+						.col-md-6.pricing-list-area
+							+pricing-list({
+								value:       '3.89',
+								title:       'Traditional breakfast',
+								description: 'Fried free range eggs, Cumberland sausage, smoked streaky bacon, roasted plum tomatoes, mushrooms & toast.'
+							})
+
+							+pricing-list({
+								value:       '7.89',
+								title:       'Garden breakfast',
+								description: 'Poached free range eggs, halloumi, roasted plum tomatoes, charred red peppers, smashed avocado, hollandaise, and pea shoots.'
+							})
+
+							+pricing-list({
+								value:       '17.89',
+								title:       'Brunch',
+								description: 'Two fried free range eggs, smoked streaky bacon, Cumberland sausage, roasted plum tomatoes, mushrooms, and potato rösti.'
+							})
+
+				#navPrice2.tab-pane.fade( role='tabpanel' )
+					.row.row-30.novi-disabled
+						.col-md-6.pricing-list-area
+							+pricing-list({
+								value:       '7.89',
+								title:       'Crispy Honey Mustard Chicken Salad',
+								description: 'Our Original Crispy Chicken Tenders on a bed of fresh mixed greens. Topped with applewood smoked bacon & Monterey Jack.'
+							})
+
+							+pricing-list({
+								value:       '13.89',
+								title:       'Apple BBQ Chicken Sandwich',
+								description: 'Flame-broiled boneless chicken breast, apple BBQ sauce and Vermont Cheddar cheese with applewood smoked bacon.'
+							})
+
+							+pricing-list({
+								value:       '15.89',
+								title:       'Soup & House Salad',
+								description: 'A fresh House Salad paired with a crock of creamy chowder or steaming soup. Enjoy it with Heart of Caesar Wedge.'
+							})
+
+						.col-md-6.pricing-list-area
+							+pricing-list({
+								value:       '5.89',
+								title:       'Twin Catch',
+								description: 'Baked North Atlantic cod paired with tender shrimp and crusted with seasoned cracker crumbs and butter. Served with one side.'
+							})
+
+							+pricing-list({
+								value:       '16.89',
+								title:       'Honey BBQ Chicken Wrap',
+								description: 'Crispy chicken tenders drenched in honey BBQ sauce. Wrapped up with lettuce, tomatoes, Monterey Jack and cheddar cheeses.'
+							})
+
+							+pricing-list({
+								value:       '19.89',
+								title:       'Broiled Sirloin Tips',
+								description: 'Hand-cut and marinated with our secret recipe. A lunch-sized portion of our signature tips served with two sides.'
+							})
+
+				#navPrice3.tab-pane.fade( role='tabpanel' )
+					.row.row-30.novi-disabled
+						.col-md-6.pricing-list-area
+							+pricing-list({
+								value:       '17.89',
+								title:       'Baked Brie',
+								description: 'Honey and almond topped French cheese served with grapes, apples, strawberries and olive oil brushed croutons.'
+							})
+
+							+pricing-list({
+								value:       '21.89',
+								title:       'Mediterranean Platter',
+								description: 'Roasted garlic hummus, feta cheese, assorted olives and artichoke tapenade, topped with pickled red onions and pepperoncini.'
+							})
+
+							+pricing-list({
+								value:       '3.89',
+								title:       'Escargots',
+								description: 'Tender snails baked in our house garlic butter topped with crispy puff pastry.'
+							})
+						.col-md-6.pricing-list-area
+							+pricing-list({
+								value:       '14.89',
+								title:       'Colorado Lamb T-Bone',
+								description: 'Grilled, then lightly glazed with a balsamic, Dijon mustard, brown sugar reduction, then topped with house garlic butter.'
+							})
+
+							+pricing-list({
+								value:       '18.89',
+								title:       'Trout Amandine',
+								description: 'Pan-seared, sustainably-raised, whole boneless filet Rocky Mountain trout with brown butter and toasted almond sauce.'
+							})
+
+							+pricing-list({
+								value:       '27.89',
+								title:       'Roast Half Duck',
+								description: 'Slow-roasted Maple Leaf Farms duck served crisp and tender with choice of honey almond sauce or a fresh orange.'
+							})

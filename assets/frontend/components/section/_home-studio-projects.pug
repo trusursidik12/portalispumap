@@ -1,0 +1,40 @@
+include ../thumbnail-louis/_thumbnail-louis
+
+// Projects
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Projects', category:'thumbnail', reload:false, id:'projects' } )
+	.container
+		.row.row-30( data-animate!={ class: 'fadeInRight' } )
+			.col-md-3.col-xl-2
+				h5 My projects
+			.col-md-9.col-xl-6
+				h2 I have designed dozens of appealing interfaces for websites and web apps. Take a look at my projects below.
+			.col-md-9.offset-md-3.col-xl-4.offset-xl-0.text-xl-right
+				.group-30.d-xl-inline-flex.flex-xl-column
+					a.btn.btn-lg.btn-info( href='#' )
+						span.btn-icon.int-behance.novi-icon
+						span Behance
+					a.btn.btn-lg.btn-danger( href='#' )
+						span.btn-icon.int-dribble.novi-icon
+						span Dribbble
+		.row.row-offset-xl.row-30.row-md-40
+			.col-xs-10.col-md-6( data-animate!={ class: 'fadeInUp' } )
+				+thumbnail-louis({
+					img:   'partners/partner-1-inverse-180x49.png',
+					title: 'Website interface design'
+				})
+			.col-xs-10.col-md-6( data-animate!={ class: 'fadeInUp' } )
+				+thumbnail-louis({
+					img:   'partners/partner-4-inverse-107x31.png',
+					title: 'UX design'
+				})
+			.col-xs-10.col-md-6( data-animate!={ class: 'fadeInUp' } )
+				+thumbnail-louis({
+					img:   'partners/partner-3-inverse-180x45.png',
+					title: 'Motion design'
+				})
+			.col-xs-10.col-md-6( data-animate!={ class: 'fadeInUp' } )
+				+thumbnail-louis({
+					img:   'partners/partner-2-inverse-133x38.png',
+					title: 'Web application UI design'
+				})
+

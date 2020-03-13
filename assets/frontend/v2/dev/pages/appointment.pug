@@ -1,0 +1,11 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Appointment';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_appointment-form-2
+	include ../components/footer/_footer-default

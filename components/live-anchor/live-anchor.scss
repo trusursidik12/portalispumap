@@ -1,0 +1,55 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.live-anchor {
+	font-size: $h4-font-size;
+	font-weight: $headings-font-weight;
+	opacity: .3;
+	color: inherit;
+	transition: .2s;
+
+	&.active {
+		opacity: 1;
+		font-size: $h3-font-size;
+	}
+
+	&:hover {
+		opacity: 1;
+		color: inherit;
+	}
+}
+
+
+// Context
+.context-dark {
+	.live-anchor {
+		color: $white;
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(xl) {
+	.live-anchor {
+		font-size: $h3-font-size;
+
+		&.active {
+			font-size: $h2-font-size;
+		}
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	.live-anchor {
+		font-size: $h2-font-size;
+
+		&.active {
+			font-size: $h1-font-size;
+		}
+	}
+}

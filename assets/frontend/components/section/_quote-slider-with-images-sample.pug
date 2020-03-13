@@ -1,0 +1,28 @@
+include ../quote/_quote
+
+// Quote slider with images
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Quote Slider With Images', category:'quote, carousel', reload:true, id:'quote-slider-with-images-2' } )
+	.container
+		h2.text-center Testimonials slider type #7
+		.row.row-30.align-items-center
+			.col-sm-5.d-none.d-sm-block
+				+img( 'image-02-510x419.png' )
+			.col-sm-7
+				.pl-xl-5
+					// Owl Carousel
+					.owl-carousel( data-owl= { dots: true } )
+						+quote({
+							text:     quote1.text,
+							name:     quote1.name,
+							position: quote1.position
+						})
+						+quote({
+							text:     quote2.text,
+							name:     quote2.name,
+							position: quote2.position
+						})
+						+quote({
+							text:     quote3.text,
+							name:     quote3.name,
+							position: quote3.position
+						})

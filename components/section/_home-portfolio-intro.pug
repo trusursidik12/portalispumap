@@ -1,0 +1,17 @@
+include ../vide/_vide
+
+// Intro
++vide( 'video/bg-video-4' ).section.section-lg.d-flex.align-items-center.min-vh-100.context-dark.novi-vide( data-preset!={ title:'Intro', category:'intro, media', reload:false, id:'intro-14' } )
+	.container
+		.row.row-30.align-items-end.justify-content-between
+			.col-sm-6.col-md-5.col-xl-4.col-xxl-6( data-animate!={ class: 'fadeInRight' } )
+				h1 Professional photography services for you
+				p We are a team of award-winning photographers ready to help you.
+			.col-sm-auto.text-sm-right( data-animate!={ class: 'fadeInLeft' } )
+				p.small 178 West 27th Street, Suite 527,
+					br
+					| New York NY 10012, United States
+				.offset-xs
+					.d-inline-flex.align-items-center
+						span.icon.icon-xs.int-phone.novi-icon.mr-2
+						.h6: a( href='tel:#' ) +1 234 567 8901

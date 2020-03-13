@@ -1,0 +1,21 @@
+include ../blurb/_blurb
+
+// Check Plugin Highlights
+section.section.section-lg.bg-transparent.pb-0.novi-background( data-preset!={ title:'Fullcalendar Overview', category:'blurb', reload:false, id:'fullcalendar-overview' } )
+	.container
+		h2.text-center( data-animate!={ class: 'fadeIn' } ) Check Plugin Highlights
+		.row.row-40.row-xl-70.justify-content-center
+			.col-md-6.col-lg-5( data-animate!={ class: 'fadeInRight' } )
+				+blurb-modern({
+					embed: '<span class="blurb-icon mdi mdi-settings novi-icon"></span>',
+					title: 'FULL CUSTOMIZATION',
+					text:  'The script ensures full customization to keep the calendar in line with the overall page design. Feel free to change its styles, set fonts, and arrange elements the way you like.'
+				})
+			.col-md-6.col-lg-5( data-animate!={ class: 'fadeInLeft' } )
+				+blurb-modern({
+					embed: '<span class="blurb-icon mdi mdi-calendar-today novi-icon"></span>',
+					title: 'BUILT-IN COUNTER',
+					text:  'Use a built-in counter to check out how many events are planned for a certain date. This feature will help you keep track of your everyday activities.'
+				})
+			.col-md-10.text-center( data-animate!={ class: 'fadeInUp' } )
+				+img( 'image-38-770x436' )

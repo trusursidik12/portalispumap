@@ -1,0 +1,48 @@
+// Variables
+$obd-shadow: $box-shadow-sm;
+
+// Base
+.offer-box-divided {
+	padding: 20px 15px;
+	box-shadow: $obd-shadow;
+
+	* + .offer-box-divider,
+	.offer-box-divider + * {
+		margin-top: 1.9rem;
+	}
+
+	* + .offer-box-btn { margin-top: 16px }
+}
+
+
+// Context desktop
+.desktop {
+	.offer-box-divided {
+		box-shadow: none;
+		transition: $transition-base;
+
+		&:hover {
+			box-shadow: $obd-shadow;
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( sm ) {
+	.offer-box-divided {
+		padding: 30px 20px;
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.offer-box-divided {
+		padding: 44px 50px 50px;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.offer-box-divided {
+		* + .offer-box-title { margin-top: 25px }
+	}
+}

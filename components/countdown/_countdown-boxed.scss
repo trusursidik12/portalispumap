@@ -1,0 +1,89 @@
+// Variables
+$c-boxed-radius: $border-radius;
+$c-boxed-shadow: $box-shadow-sm;
+
+$c-boxed-value-fsz: 54px;
+$c-boxed-value-bg: $secondary;
+$c-boxed-value-color: color-yiq( $c-boxed-value-bg );
+
+$c-boxed-title-color: $gray-900;
+$c-boxed-title-fsz: $font-size-sm;
+
+
+.countdown-boxed {
+	display: flex;
+	justify-content: center;
+	margin: 0 -15px;
+	line-height: 1.2;
+	text-align: center;
+
+	.countdown-block {
+		padding: 0 10px;
+	}
+
+	.countdown-wrap {
+		border-radius: $c-boxed-radius;
+		box-shadow: $c-boxed-shadow;
+	}
+
+	.countdown-counter {
+		min-width: 80px;
+		padding: 15px 10px;
+		font-size: $c-boxed-value-fsz * .6;
+		line-height: 1;
+		color: $c-boxed-value-color;
+		background-color: $c-boxed-value-bg;
+		border-top-right-radius: inherit;
+		border-top-left-radius: inherit;
+	}
+
+	.countdown-title {
+		padding: 5px;
+		font-size: $c-boxed-title-fsz;
+		font-weight: 400;
+		color: $c-boxed-title-color;
+		text-transform: uppercase;
+		border-bottom-right-radius: inherit;
+		border-bottom-left-radius: inherit;
+	}
+}
+
+// Spacing
+* + .countdown-boxed {
+	margin-top: 25px;
+}
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.countdown-boxed {
+		.countdown-counter {
+			min-width: 100px;
+			font-size: $c-boxed-value-fsz * .6;
+		}
+
+		.countdown-title {
+			padding: 10px 5px;
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	* + .countdown-boxed {
+		margin-top: 35px;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.countdown-boxed {
+		.countdown-counter {
+			min-width: 120px;
+			padding: 18px 10px;
+			font-size: $c-boxed-value-fsz;
+		}
+	}
+
+	* + .countdown-boxed {
+		margin-top: 58px;
+	}
+}

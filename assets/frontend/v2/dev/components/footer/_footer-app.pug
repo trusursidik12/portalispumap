@@ -1,0 +1,56 @@
+include ../logo/_logo
+include ../rights/_rights
+
+// Footer app
+footer.section.footer.footer-lg.bg-transparent.novi-background( data-preset!={ title:'Footer App', category:'footer', reload:true, id:'footer-app' } )
+	.container
+		.row.row-40.row-md-50.justify-content-md-between.justify-content-xl-end
+			.col-lg-4.col-xl-3
+				+logo
+				p.small Intense is a mobile app that unites the functionality of a messenger, e-mail app, and several social network clients.
+				a.btn.btn-lg.btn-round.btn-dark( href='#' )
+					span.btn-icon.int-apple.novi-icon
+					span Download for iOS
+			.col-auto.col-xs-4.col-lg-auto.col-xl-3
+				h6 Features
+				ul.list.list-xl.small.font-weight-normal
+					li.list-item: a.list-link( href='#' ) Messaging
+					li.list-item: a.list-link( href='#' ) Spam filtering
+					li.list-item: a.list-link( href='#' ) Tweeting
+					li.list-item: a.list-link( href='#' ) Picture editing
+					li.list-item: a.list-link( href='#' ) Account security
+			.col-auto.col-xs-4.col-lg-auto.col-xl-3
+				h6 Navigation
+				ul.list.list-xl.small.font-weight-normal
+					li.list-item: a.list-link( href='#' ) About us
+					li.list-item: a.list-link( href='#' ) Our team
+					li.list-item: a.list-link( href='#' ) Our history
+					li.list-item: a.list-link( href='#' ) Portfolio
+					li.list-item: a.list-link( href='#' ) Careers
+			.col-auto.col-xs-4.col-lg-auto.col-xl-3
+				h6 Quick links
+				ul.list.list-xl.small.font-weight-normal
+					li.list-item: a.list-link( href='#' ) Reviews
+					li.list-item: a.list-link( href='#' ) Troubleshooting
+					li.list-item: a.list-link( href='#' ) App installation
+					li.list-item: a.list-link( href='#' ) Configuration
+					li.list-item: a.list-link( href='#' ) App changelog
+			.col-sm-7.col-lg-6.col-xl-5
+				h6 Discover the latest news & updates
+				form.rd-mailform( data-form-output='form-output-footer-app', data-form-type='subscribe', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.form-group-icon.novi-disabled
+						input.form-control( type='email', name='email', placeholder='Enter your email address', data-constraints='@Email @Required' )
+						button.form-group-icon-btn.int-arrow-right.novi-icon
+				#form-output-footer-app.form-output.snackbar.snackbar-dark
+			.col-sm-5.col-xl-3.offset-lg-1.align-self-end.pb-sm-3
+				.group-30.d-flex.text-900
+					a.icon.icon-xs.icon-social.int-youtube.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-facebook.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-instagram.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-twitter.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-linkedin.novi-icon( href='#' )
+
+		hr.divider.divider-sm.footer-divider
+
+		.footer-panel
+			+rights

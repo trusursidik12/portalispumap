@@ -1,0 +1,13 @@
+include ../post/_post
+
+// Intro post
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Intro Post', category:'blog', reload:false, id:'intro-post' } )
+	.container
+		.row.row-40.justify-content-center
+			.col-xs-10.col-md-12
+				+post-side-link-arrow({
+					label:    'HTML',
+					title:    'Best of 2020 UX Design Case Studies',
+					img:      'image-08-840x540',
+					btnText:  'Learn more'
+				}).post-sm.align-items-center( data-animate!={ class: 'fadeIn' } )

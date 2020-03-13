@@ -1,0 +1,7 @@
+include ../countdown/_countdown
+
+// Timers type #3
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Countdown Rounded Sample', category:'countdown', reload:true, id:'countdown-rounded-sample' } )
+	.container
+		h2.text-center Timers type #3
+		+countdown-rounded({ to: '2019-12-31' })

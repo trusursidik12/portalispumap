@@ -1,0 +1,15 @@
+include ../content-row/_content-row
+
+// Tickets
+section.section.section-xl.bg-transparent.novi-background( data-preset!={ title:'Tickets', category:'content box', reload:false, id:'tickets' } )
+	.container.content-row-area
+		h1( data-animate!={ class: 'fadeIn' } ) Tickets
+		+content-row-2({
+			title: 'Combo: DSL Conf + Workshop by Sid: Accessibility in Design Systems'
+		}).content-row-sm( data-animate!={ class: 'fadeInRightBig' } )
+		+content-row-2({
+			title: 'Workshop by Jina: A Real-World Design Systems Workshop'
+		}).content-row-sm( data-animate!={ class: 'fadeInRightBig', delay: '0.15s' } )
+		+content-row-2({
+			title: 'Combo: DSL Conf + Workshop by Jina: A Real-World Design Systems Workshop'
+		}).content-row-sm( data-animate!={ class: 'fadeInRightBig', delay: '0.3s' } )

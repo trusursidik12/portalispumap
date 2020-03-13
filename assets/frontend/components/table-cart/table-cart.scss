@@ -1,0 +1,97 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.table-cart {
+	tbody td {
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	td:not( :first-child ) {
+		border-left-color: transparent;
+	}
+
+	td {
+		border-top: $table-border-width solid $table-border-color;
+		border-bottom: $table-border-width solid $table-border-color;
+	}
+}
+
+.table-cart-figure {
+	display: block;
+	max-width: 180px;
+}
+
+.table-cart-list {
+	font-weight: 300;
+	color: $body-color;
+}
+
+.table-cart-total {
+	text-align: right;
+	margin-left: auto;
+	max-width: 200px;
+	font-size: $font-size-sm;
+	line-height: $line-height-sm;
+
+	tfoot {
+		tr,
+		td {
+			padding-top: 16px;
+		}
+	}
+
+	th,
+	td {
+		padding-top: 0;
+		padding-bottom: 0;
+		border-color: transparent;
+
+		&:not( :first-child ),
+		&:not( :first-child ) {
+			border-left-color: transparent;
+		}
+	}
+
+	th {
+		padding-left: 0;
+		font-weight: 400;
+	}
+
+	td {
+		padding-right: 0;
+		font-weight: 300;
+		color: $body-color;
+	}
+}
+
+
+// Spacing
+* + .list.table-cart-list {
+	margin-top: 12px;
+}
+
+* + .table-cart-total {
+	margin-top: px-to-rem( 34px );
+}
+
+
+// Media
+@include media-breakpoint-up(md) {
+	.table-cart {
+		td {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+	}
+}

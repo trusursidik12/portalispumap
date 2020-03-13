@@ -1,0 +1,72 @@
+// Anis Effect
+.btn-anis {
+	transform: translateZ(0);
+	overflow: hidden;
+	transition: .25s;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		z-index: -1;
+		padding: 10px;
+		border-radius: 50%;
+		opacity: 1;
+		transition: 0s;
+		will-change: transform;
+	}
+
+	&::before {
+		left: -30%;
+		transform: translate(-50%, -50%);
+	}
+
+	&::after {
+		right: -30%;
+		transform: translate(50%, -50%);
+	}
+
+	&:hover {
+		transition: all .25s, border-color .3s .5s, background-color .3s .5s;
+
+		&::before,
+		&::after {
+			padding: 50%;
+			opacity: 0;
+			transition: left .4s, right .4s, padding .3s .5s, opacity .05s .75s;
+		}
+
+		&::before {
+			left: 50%;
+		}
+
+		&::after {
+			right: 50%;
+		}
+	}
+
+	&.btn-outline {
+		&:hover {
+			transition: all .25s, background-color .1s .7s, color .3s .5s;
+		}
+	}
+}
+
+
+// Theming
+@each $color, $value in $theme-colors {
+	.btn-#{$color}.btn-anis {
+		&::before,
+		&::after {
+			background-color: mix( if( get-yiq( $value ) >= 30, $dark, $light ), $value, 20% );
+		}
+
+		&.btn-outline {
+			&::before,
+			&::after {
+				background-color: $value;
+			}
+		}
+	}
+}

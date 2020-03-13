@@ -1,0 +1,53 @@
+//- Pagination simple
+	@param {array} data - pagination data array
+	@param {object} item - single item object
+	@param {string} item.value - item value
+	@param {string} [item.prev] - set prev button to pagination
+	@param {string} [item.next] - set next button to pagination
+	@param {string} [item.actionClass] - add action class to item
+mixin pag-simple( data )
+	ul.pag.pag-simple&attributes( attributes )
+		each item in data
+			li.pag-simple-item( class= item.actionClass )
+				if (item.prev)
+					a.pag-simple-link.pag-simple-link-prev( href='#' )
+						span.int-arrow-left.novi-icon
+						span Prev
+				else if (item.next)
+					a.pag-simple-link.pag-simple-link-next( href='#' )
+						span Next
+						span.int-arrow-right.novi-icon
+				else
+					a.pag-simple-link( class= (item.class ? item.class : ''), href='#' )= item.value
+
+//- Pagination extended
+	@param {array} data - pagination data array
+	@param {object} data.prevTitle - previous title text
+	@param {string} data.prevBtn - previous button text
+	@param {string} data.nextTitle - next title text
+	@param {string} data.nextBtn - next button text
+mixin pag-extended( data )
+	.pag.pag-extended&attributes( attributes )
+		a.pag-extended-item( href='#' )
+			h5.pag-extended-title= data.prevTitle
+			.pag-extended-link.pag-extended-link-prev
+				span.pag-extended-arrow.int-arrow-left.novi-icon
+				span= data.prevBtn
+		a.pag-extended-item( href='#' )
+			h5.pag-extended-title= data.nextTitle
+			.pag-extended-link.pag-extended-link-next
+				span= data.nextBtn
+				span.pag-extended-arrow.int-arrow-right.novi-icon
+
+//- Pagination short
+	@param {array} data - pagination data array
+	@param {string} data.prevBtn - previous button text
+	@param {string} data.nextBtn - next button text
+mixin pag-short( data )
+	.pag.pag-short&attributes( attributes )
+		a.pag-short-link.pag-short-link-prev( href='#' )
+			span.pag-short-arrow.int-arrow-left.novi-icon
+			span= data.prevBtn
+		a.pag-short-link.pag-short-link-next( href='#' )
+			span= data.nextBtn
+			span.pag-short-arrow.int-arrow-right.novi-icon

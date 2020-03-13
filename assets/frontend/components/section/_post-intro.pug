@@ -1,0 +1,194 @@
+include ../post/_post
+include ../pag/_pag
+include ../person/_person
+include ../quote-simple/_quote-simple
+include ../comment/_comment
+
+// Post single intro
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Post Single Intro', category:'blog', reload:true, id:'post-single-intro' } )
+	.container
+		.row.row-40.novi-disabled
+			.col-md-4.col-xxl-3
+				+person({
+					img:      'persons/person-04-120x120',
+					title:    'Vlad Magdalin',
+					subtitle: 'Chief executive officer',
+					text:     'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+					links: [
+						{ iconClass: 'int-youtube' },
+						{ iconClass: 'int-facebook' },
+						{ iconClass: 'int-instagram' }
+					]
+				}).person-rounded.person-sm.blog-article-person.text-left
+			.col-md-8
+				.blog-article.clearfix
+					h3.post-single-subtitle 1.  Trends to watch out for next year
+					p
+						| This year may bring us a lot of surprises as standards in web design change and we experience lots of new trends. You can
+						!= ' <b>take these trends in and decide</b> '
+						| if they can help you. As per
+						!= ' <b>the newest website design trends</b> '
+						| , a heavy loaded optimized site that loads quickly is a thing of the past, we need sites that not only process quickly but can adapt as well.
+					p.small Modern websites also need to have functionality, features, and versions which can solve the purpose for the user with an appealing user interface that will radiate customer conversions and engagement.
+					figure.figure
+						+img( 'image-08-840x540' ).figure-img
+						figcaption.figure-caption 1. Progressive websites and applications
+					p
+						span Another popular trend among web application development is Single Page Application (SPA) which can be used to maintain the durability of the website while optimizing the load time. SPA’s boosts performance by reducing website fetch time by rewriting the existing page instead of reloading. The working framework for SPA is JavaScript and it uses AJAX
+						span.figure.figure-float.figure-float-left
+							+img( 'image-09-380x245').figure-img
+							span.figure-caption 2. Top web design trends
+						span and HTML5 to create fluid and responsive Web apps. Companies using SPA’s are Google Maps, Facebook, Twitter, etc. The
+						!= ' <b>most predictable and obvious web trend for the next year</b> '
+						span is chatbot integration. Chatbot is an AI-driven program, which has increased the revenue surge of websites that have adopted the chatbots integration for their existing business websites. Chatbots have helped the businesses in increasing
+						!= ' <mark>customer engagement</mark> '
+						span that has forged business intelligence.
+						span Another appealing trend is Motion UI. It brings transition by translating reality into rich user experiences. A great example of storytelling can be implemented through Motion UI when the user can converse in reality with actions taken on the website through motion graphics.
+
+					h3.post-single-subtitle 2.  Design-oriented trends
+					p
+						| Besides the trends that will undoubtedly shape the industry next year, we have to mention design-orineted trends that may have a strong influence on global web design projects. Some trends, such as gradients, are
+						= ' '
+						b: u making a comeback
+						= ' '
+						| although this time as dynamic gradients. That means if flat design decides to take a nap, it could evaporate in 2020.
+					h5 2. 1. Responsive design trends
+					p There’s never been a more important time to focus on the leading responsive design trends, approached entirely from the perspective of the end-user. Here are some of such trends:
+					.row.row-15
+						.col-sm-6
+							ul.list.list-marked-arrow
+								li.list-item Bold colors & simplicity;
+								li.list-item
+									| Dynamic illustrations;
+									ul.list.list-marked-arrow
+										li.list-item Integrated GIFs;
+										li.list-item Animations;
+								li.list-item Asymmetric layouts.
+						.col-sm-6
+							ul.list.list-marked
+								li.list-item Loud typography;
+								li.list-item
+									| CSS grids;
+									ul.list.list-marked
+										li.list-item Scalable vector graphics;
+										li.list-item Hand drawings;
+								li.list-item Voice-capable interfaces.
+					h5 2. 2. Minimalism in web design
+					p This trend is very often combined with white space. However, minimalism is a broader concept. It involves simplifying the interface in several ways:
+					ul.list.list-ordered
+						li.list-item Hidden navigation bar;
+						li.list-item
+							| Minimum of colors;
+							ul.list.list-ordered
+								li.list-item Lack of additional details;
+								li.list-item Minimum of buttons;
+						li.list-item Shadows and font variety.
+
+					h3.post-single-subtitle 3. Split content & 3D design
+					p
+						| One of the most outstanding web design trends for 2020 is the usage of 3D elements. The importance of such graphics has already been recognized in the gaming and movie industry, and web design is not lagging behind!
+						= ' '
+						b: u The use of 3D design
+						= ' '
+						| is more engaging and will enhance interest in your brand.
+					+quote-simple({
+						text:     'Websites with 3D graphics look more attractive and feels like a fairy tale. This also lets you showcase your brand’s story.',
+						name:     'John Wilson, CEO of Intense'
+					}).quote-simple-shadow.text-center
+					p Other notable web design trend is connected with splitting content blocks. With the help of such technique, you can showcase more than one important message at a time.
+					+quote-simple({
+						text:     'Many modern websites use content splitting and thanks to it, you can attract the visitors’ attention to multiple blocks at once.',
+						name:     'Edward Rivera'
+					})
+					p.small Feel free to leave your comments below to discuss these and other popular web design trends.
+					.tag-container
+						a.tag.tag-light( href='#' ) Web design
+						a.tag.tag-light( href='#' ) Trends
+						a.tag.tag-light( href='#' ) Articles
+						a.tag.tag-light( href='#' ) Design ideas
+
+					.post-share.post-share-2
+						.post-share-title Share
+						a.post-share-icon.int-facebook.novi-icon( href='#' )
+						a.post-share-icon.int-twitter.novi-icon( href='#' )
+
+					hr.divider.divider-sm.post-single-divider
+
+					+person-side({
+						img:         'persons/person-04-176x176',
+						title:       'Mark Rogers',
+						description: 'Lead designer & blog editor',
+						text:        'Mark is one of the best designers employed at Intense who has a unique artistic vision and always has a lot to share with our clients.',
+						links: [
+							{ iconClass: 'int-youtube' },
+							{ iconClass: 'int-facebook' },
+							{ iconClass: 'int-instagram' },
+							{ iconClass: 'int-twitter' },
+							{ iconClass: 'int-linkedin' }
+						]
+					}).person-side-lg.align-items-start
+
+					+pag-extended({
+						prevTitle: post2.titleShort,
+						prevBtn:   'Prev post',
+						nextTitle: post3.titleShort3,
+						nextBtn:   'Next post'
+					}).justify-content-center
+
+					hr.divider.divider-sm.post-single-divider
+
+					h6.blog-article-subtitle Related posts
+					.row.row-40
+						.col-sm-6
+							+post-classic-2({
+								title:    post4.title,
+								label:    'HTML',
+								autor:    'Mark Rogers',
+								date:     'September 16, 2019',
+								img:      'image-09-400x257',
+								postText: 'If you want to increase ROI from your website, you can go about it in two ways: increase traffic...',
+								coments:  '25'
+							}).post-sm
+						.col-sm-6
+							+post-classic-2({
+								title:    post5.title,
+								label:    'HTML',
+								autor:    'Mark Rogers',
+								date:     'September 16, 2019',
+								img:      'image-05-400x257',
+								postText: 'Dark design is and always will be a trend. The level of darkness will always vary, but basically, it’s really...',
+								coments:  '25'
+							}).post-sm
+
+					hr.divider.divider-sm.post-single-divider
+
+					h6.blog-article-subtitle 3 comment(s)
+					+comment({
+						name: 'Adam Smith',
+						time: {
+							date: '2019-09-16',
+							text: 'September 16, 2019'
+						},
+						text: 'Thank you for such an informative post! It will surely be of great use to me in my future work.'
+					}).comment-cloud
+						+comment({
+							img:  'persons/person-04-60x60',
+							name: 'Mark Rogers',
+							time: {
+								date: '2019-09-16',
+								text: 'September 16, 2019'
+							},
+							text: 'You’re welcome! I’m going to post more on this topic soon.'
+						}).comment-cloud
+					+comment({
+						name: 'John Peters',
+						time: {
+							date: '2019-09-16',
+							text: 'September 16, 2019'
+						},
+						text: 'Your every post contains a lot of great tips and lifehacks! Thank you for sharing all this useful information with your readers.'
+					}).comment-cloud
+
+					hr.divider.divider-sm.post-single-divider
+
+					include ../post/_post-form-comment

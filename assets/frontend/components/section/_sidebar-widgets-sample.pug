@@ -1,0 +1,17 @@
+include ../post/_post
+
+// Sidebar widgets
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Sidebar Widgets', category:'blog', reload:false, id:'sidebar-widgets' } )
+	.container
+		.row.row-30
+			.col-sm-6.col-md-4.col-lg-3
+				include ../widget/_widget-categories
+
+			.col-sm-6.col-md-4.col-lg-3
+				include ../widget/_widget-recent-posts
+
+			.col-sm-6.col-md-4.col-lg-3
+				include ../widget/_widget-recent-comments
+
+			.col-sm-6.col-md-4.col-lg-3
+				include ../widget/_widget-archive

@@ -1,0 +1,267 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins/breakpoints";
+@import "../bootstrap/scss/mixins/grid-framework";
+@import "../bootstrap/scss/mixins/grid";
+@import "../bootstrap/scss/grid";
+@import "grid-spacing";
+
+// Base
+.row-5 {
+	@include grid-spacing( 5px );
+}
+
+.row-10 {
+	@include grid-spacing( 10px );
+}
+
+.row-15 {
+	@include grid-spacing( 15px );
+}
+
+.row-20 {
+	@include grid-spacing( 20px );
+}
+
+.row-22 {
+	@include grid-spacing( 22px );
+}
+
+.row-30 {
+	@include grid-spacing( 30px );
+}
+
+.row-40 {
+	@include grid-spacing( 40px );
+}
+
+.row-50 {
+	@include grid-spacing( 50px );
+}
+
+
+// Spacing
+* + .row {
+	margin-top: px-to-rem( 40px );
+}
+
+* + .row-text {
+	margin-top: px-to-rem( 25px );
+}
+
+.divider + .row {
+	margin-top: px-to-rem( 60px );
+}
+
+
+// Modifying
+.gutters-20 {
+	margin-right: -10px;
+	margin-left: -10px;
+
+	> [ class*='col-' ] {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(sm) {
+	.row-sm-20 {
+		@include grid-spacing( 20px );
+	}
+
+	.row-sm-40 {
+		@include grid-spacing( 40px );
+	}
+}
+
+@include media-breakpoint-up( md ) {
+	.row-md-40 {
+		@include grid-spacing( 40px );
+	}
+
+	.row-md-50 {
+		@include grid-spacing( 50px );
+	}
+
+	.row-md-60 {
+		@include grid-spacing( 60px );
+	}
+
+	.row-md-70 {
+		@include grid-spacing( 70px );
+	}
+
+	* + .row-offset-lg {
+		margin-top: px-to-rem( 50px );
+	}
+
+	* + .row-offset-xl {
+		margin-top: px-to-rem( 65px );
+	}
+
+	p + .row {
+		margin-top: px-to-rem( 50px );
+	}
+
+	h1 + .row {
+		margin-top: px-to-rem( 60px );
+	}
+
+	h2 + .row {
+		margin-top: px-to-rem( 50px );
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.row-lg-25 {
+		@include grid-spacing( 25px );
+	}
+
+	.row-lg-40 {
+		@include grid-spacing( 40px );
+	}
+
+	.row-lg-50 {
+		@include grid-spacing( 50px );
+	}
+
+	.row-lg-60 {
+		@include grid-spacing( 60px );
+	}
+
+	.row-lg-70 {
+		@include grid-spacing( 70px );
+	}
+
+	.row-lg-80 {
+		@include grid-spacing( 80px );
+	}
+
+	.row-lg-100 {
+		@include grid-spacing( 100px );
+	}
+
+	.divider + .row {
+		margin-top: px-to-rem( 75px );
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.row-xl-50 {
+		@include grid-spacing( 50px );
+	}
+
+	.row-xl-60 {
+		@include grid-spacing( 60px );
+	}
+
+	.row-xl-70 {
+		@include grid-spacing( 70px );
+	}
+
+	.row-xl-80 {
+		@include grid-spacing( 80px );
+	}
+
+	.row-xl-100 {
+		@include grid-spacing( 100px );
+	}
+
+	* + .row-text {
+		margin-top: px-to-rem( 40px );
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.row-xxl-40 {
+		@include grid-spacing( 40px );
+	}
+
+	.row-xxl-70 {
+		@include grid-spacing( 70px );
+	}
+
+	.row-xxl-90 {
+		@include grid-spacing( 90px );
+	}
+
+	.row-xxl-100 {
+		@include grid-spacing( 100px );
+	}
+
+	.row-xxl-110 {
+		@include grid-spacing( 100px );
+	}
+
+	.row-xxl-130 {
+		@include grid-spacing( 130px );
+	}
+
+	.row-xxl-150 {
+		@include grid-spacing( 150px );
+	}
+
+	* + .row-offset-sm {
+		margin-top: px-to-rem( 50px );
+	}
+
+	* + .row-offset-md {
+		margin-top: px-to-rem( 60px );
+	}
+
+	* + .row-offset-lg {
+		margin-top: px-to-rem( 70px );
+	}
+
+	* + .row-offset-xl {
+		margin-top: px-to-rem( 85px );
+	}
+
+	p + .row {
+		margin-top: px-to-rem( 70px );
+	}
+
+	h1 + .row {
+		margin-top: px-to-rem( 80px );
+	}
+
+	h2 + .row {
+		margin-top: px-to-rem( 70px );
+	}
+}
+
+
+// Grid sample
+.grid-sample {
+	text-align: center;
+
+	[ class*='col-' ] {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		padding: 26px 0;
+		border: 2px solid $white;
+		font-size: 12px;
+		background: $gray-200;
+	}
+
+	.col-1:nth-child( -n + 12 ) {
+		background: adjust-color( $danger, $saturation: 3%, $lightness: 42% ); // #FDE9EF
+	}
+}
+
+
+// Grid divided
+.grid-divided {
+	// Media
+	@include media-breakpoint-up( sm ) {
+		> [ class*='col-' ] + [ class*='col-' ] {
+			border-left: 1px solid $border-color;
+		}
+	}
+}

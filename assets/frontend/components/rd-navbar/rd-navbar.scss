@@ -1,0 +1,106 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import '../base/mixins';
+
+
+// Variables
+$navbar-color: $gray-900;
+$navbar-hover: $primary;
+$navbar-background: $white;
+$navbar-zindex: $zindex-fixed;
+$navbar-shadow: 0 0 28px rgba( $gray-600, 0.1 );
+
+
+// Base
+.rd-navbar {
+	position: relative;
+	z-index: $navbar-zindex;
+	color: $gray-900;
+
+	li {
+		list-style: none;
+	}
+}
+
+
+.navbar-button {
+	position: relative;
+	display: block;
+	border: none;
+	font-size: 18px;
+	width: 18px;
+	height: 18px;
+	line-height: 1;
+	opacity: 1;
+	visibility: visible;
+	background: none;
+	color: inherit;
+	transition: .25s ease-in-out;
+
+	&::before,
+	&::after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transition: .25s, color 0s;
+	}
+
+	&::before {
+		transform: translate( -50%, -50% ) rotate(0) scale(1);
+		opacity: 1;
+	}
+
+	&::after {
+		content: '\e90c';
+		transform: translate( -50%, -50% ) rotate(90deg)  scale(0);
+		font-family: 'Intense Icons';
+		opacity: 0;
+	}
+
+	&:hover {
+		color: $navbar-hover;
+	}
+
+	&.navbar-info-active,
+	&.navbar-search-active,
+	&.navbar-cart-active,
+	&.active {
+		&::before {
+			transform: translate( -50%, -50% ) rotate(-90deg)  scale(0);
+			opacity: 0;
+		}
+
+		&::after {
+			transform: translate( -50%, -50% ) rotate(0deg)  scale(1);
+			opacity: 1;
+		}
+	}
+}
+
+
+// Logo
+.navbar-logo {
+	//padding: 10px;
+}
+
+.navbar-logo-link {
+	display: block;
+	margin: -10px 0 0 -10px;
+}
+
+.navbar-logo-default,
+.navbar-logo-inverse {
+	margin: 0;
+}
+
+.navbar-logo-inverse {
+	display: none;
+}
+
+
+// Layouts
+@import 'rd-navbar-fixed';
+@import 'rd-navbar-fullwidth';

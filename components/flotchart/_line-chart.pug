@@ -1,0 +1,21 @@
+// Line chart
+-
+	var dataLineValues = [];
+	for ( let i = 0; i < 14; i += 0.5 ) {
+		dataLineValues.push( [ i, Math.sqrt( i ) ] );
+	};
+
+	var dataLine = [
+		{
+			label: "Area",
+			data: dataLineValues,
+			lines: {
+				show: true
+			},
+			points: {
+				show: true
+			}
+		}
+	];
+
+.flotchart-container( data-flotchart-data= dataLine )

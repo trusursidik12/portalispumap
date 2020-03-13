@@ -1,0 +1,138 @@
+// Variables
+$post-creative-bg: $white;
+
+// Base
+.post-creative {
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+
+	.post-inner {
+		padding: 20px 15px;
+		background-color: $post-creative-bg;
+		box-shadow: $post-shadow;
+	}
+}
+
+
+// Spacing
+* + .post-creative { margin-top: 40px; }
+
+
+// Context dark
+.context-dark {
+	.post-creative {
+		.post-inner {
+			background-color: lighten( color-yiq( $post-creative-bg ), 5% );
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.post-creative {
+		display: flex;
+		align-items: center;
+		max-width: 100%;
+
+		.post-creative-img {
+			flex-shrink: 0;
+			max-width: 65%;
+		}
+
+		.post-inner {
+			padding: 20px 15px;
+			margin-left: -25%;
+			flex-grow: 1;
+		}
+	}
+
+	.post-creative-reverse {
+		flex-direction: row-reverse;
+
+		.post-inner {
+			margin-right: -20%;
+			margin-left: 0;
+		}
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.post-creative {
+		.post-creative-img {
+			max-width: 50%;
+		}
+
+		.post-inner {
+			margin-left: -5%;
+		}
+	}
+
+	.post-creative-reverse {
+		align-items: flex-end;
+
+		.post-inner {
+			transform: translateY( 30px );
+			margin-right: -20%;
+			margin-left: 0;
+		}
+	}
+
+	.post-creative-bottom {
+		align-items: flex-end;
+
+		.post-inner {
+			transform: translateY( 30px );
+		}
+	}
+
+	* + .post-creative { margin-top: 60px; }
+}
+
+@include media-breakpoint-up( xl ) {
+	.post-creative-reverse,
+	.post-creative-bottom {
+		&:last-child {
+			padding-bottom: 80px;
+		}
+	}
+
+	.post-creative-reverse {
+		.post-inner {
+			margin-right: -5%;
+		}
+	}
+
+	* + .post-creative { margin-top: 130px; }
+}
+
+@include media-breakpoint-up( xxl ) {
+	.post-creative {
+		.post-inner {
+			padding: 50px 44px;
+		}
+
+		.post-creative-img {
+			max-width: 57%;
+		}
+
+		* + .post-title { margin-top: 15px; }
+		* + .post-meta { margin-top: 31px; }
+		* + .post-text { margin-top: 13px; }
+	}
+
+	.post-creative-reverse {
+		.post-inner {
+			transform: translateY( 80px );
+		}
+	}
+
+	.post-creative-bottom {
+		.post-inner {
+			transform: translateY( 80px );
+		}
+	}
+
+	* + .post-creative { margin-top: 190px; }
+}

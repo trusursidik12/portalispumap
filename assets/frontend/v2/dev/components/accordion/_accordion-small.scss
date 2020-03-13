@@ -1,0 +1,35 @@
+// Variables
+$accordion-small-header-fsz: $h6-font-size;
+$accordion-small-body-fsz: $font-size-sm;
+
+
+// Base
+.accordion-small {
+	.accordion-header {
+		padding: 19px 10px 15px 40px;
+		font-size: $accordion-small-header-fsz;
+
+		&:before {
+			top: 18px;
+		}
+	}
+
+	.accordion-body {
+		padding: 0 15px 24px 40px;
+		font-size: $accordion-small-body-fsz;
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(lg) {
+	.accordion-small {
+		.accordion-header {
+			padding-left: 54px;
+		}
+
+		.accordion-body {
+			padding-left: 54px;
+		}
+	}
+}

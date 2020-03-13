@@ -1,0 +1,29 @@
+// Uranus skin
+.uranus {
+	&.tparrows {
+		width: 50px;
+		height: 50px;
+		background: transparent;
+
+		&:before {
+			font-family: 'Intense Icons';
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			font-size: 40px;
+			transition: all 0.3s;
+		}
+
+		&.tp-leftarrow:before {
+			content: '\e908';
+		}
+
+		&.tp-rightarrow:before {
+			content: '\e909';
+		}
+
+		&:hover:before {
+			opacity: 0.75;
+		}
+	}
+}

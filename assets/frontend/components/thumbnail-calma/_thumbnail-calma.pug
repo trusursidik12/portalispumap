@@ -1,0 +1,13 @@
+//- Thumbnail Calma
+	@param {object} obj - data object
+	@param {string} obj.img - image name or path
+	@param {string} obj.title - name of thumbnail
+	@param {string} obj.text - description of thumbnail
+mixin thumbnail-calma( obj )
+	// Thumbnail Calma
+	.thumbnail-calma&attributes( attributes )
+		a.thumbnail-calma-figure.lightgallery-item( href='images/' + obj.imgOriginal + '.jpg' )
+			+img( obj.img ).thumbnail-calma-image
+		.thumbnail-calma-title.h5
+			a.thumbnail-calma-title-link( href= obj.link ? obj.link : '#' )= obj.title
+		.thumbnail-calma-text.small= obj.text

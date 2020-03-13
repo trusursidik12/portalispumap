@@ -1,0 +1,43 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.thumbnail-calma {
+
+}
+
+.thumbnail-calma-figure {
+	display: flex;
+	overflow: hidden;
+}
+
+.thumbnail-calma-image {
+	width: 100%;
+	transition: .3s;
+	transform: scale(1.1);
+}
+
+
+// Spacing
+* + .thumbnail-calma-title {
+	margin-top: px-to-rem( 40px );
+}
+
+* + .thumbnail-calma-text {
+	margin-top: px-to-rem( 20px );
+}
+
+
+// Contexts
+.desktop {
+	.thumbnail-calma:hover {
+		.thumbnail-calma-image {
+			transform: none;
+		}
+	}
+}

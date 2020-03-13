@@ -1,0 +1,29 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Footers';
+
+block page
+	+rd-navbar
+
+	section.section-sm.bg-900.context-dark: .container: h2 Footer Minimal
+	include ../components/footer/_footer-minimal
+	section.section-sm.bg-900.context-dark: .container: h2 Footer Store
+	include ../components/footer/_footer-store
+	section.section-sm: .container: h2 Footer Blog
+	include ../components/footer/_footer-blog
+	section.section-sm.bg-900.context-dark: .container: h2 Footer Event
+	include ../components/footer/_footer-event
+	section.section-sm.bg-900.context-dark: .container: h2 Footer App
+	include ../components/footer/_footer-app
+	section.section-sm.bg-200: .container: h2 Footer Portfolio
+	include ../components/footer/_footer-portfolio
+	section.section-sm: .container: h2 Footer Business
+	include ../components/footer/_footer-business
+	section.section-sm: .container: h2 Footer Consulting
+	include ../components/footer/_footer-consulting
+	section.section-sm: .container: h2 Footer Default
+	include ../components/footer/_footer-default
+	section.section-sm: .container: h2 Footer Default Extended
+	include ../components/footer/_footer-extended

@@ -1,0 +1,60 @@
+include ../thumbnail-calma/_thumbnail-calma
+
+// Our portfolio
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Portfolio Carousel', category:'carousel, gallery, thumbnail', reload:true, id:'portfolio-carousel' } )
+	.container
+		h6( data-animate!={ class: 'fadeInUp' } ) Our portfolio
+		h1( data-animate!={ class: 'fadeInUp' } ) Take a look at the most recent
+			| #[br.d-none.d-sm-block]
+			| photos made by our photographers
+		.offset-xl.group-30.d-flex.flex-wrap.justify-content-between.align-items-end( data-animate!={ class: 'fadeInUp' } )
+			p At Intense, every photographer takes pride in their work. In our
+				| #[br.d-none.d-sm-block]
+				| portfolio, you can find featured photos made by our photographers.
+			#owl-nav.owl-remote-nav
+
+		.owl-carousel.owl-style-3( data-owl= {
+			loop: false,
+			center: true,
+			nav: true,
+			autoplay: false,
+			autoplaySpeed: 1000,
+			smartSpeed: 1000,
+			navContainer: '#owl-nav'
+		}, data-lightgallery, data-autoplay='false', data-loop='false', data-mouse-drag='true', data-items='1', data-sm-items='2', data-md-items='3' )
+			+thumbnail-calma({
+				img: 'image-59-400x600',
+				imgOriginal: 'image-59-533x800',
+				title: 'Landscapes',
+				text: 'Our team knows how to capture a stunning landscape and our photos can show it to you.'
+			})
+			+thumbnail-calma({
+				img: 'image-60-400x600',
+				imgOriginal: 'image-60-533x800',
+				title: 'Love Stories',
+				text: 'Get your love and emotions captured in a romantic photo shoot that you will remember.'
+			})
+			+thumbnail-calma({
+				img: 'image-61-400x600',
+				imgOriginal: 'image-61-533x800',
+				title: 'Commercials',
+				text: 'Our photographers can show the bright sides and advantages of your product to make it stand out.'
+			})
+			+thumbnail-calma({
+				img: 'image-62-400x600',
+				imgOriginal: 'image-62-449x800',
+				title: 'Events',
+				text: 'We can easily capture any kind of event, no matter if it’s something official or informal.'
+			})
+			+thumbnail-calma({
+				img: 'image-63-400x600',
+				imgOriginal: 'image-63-1200x800',
+				title: 'Wildlife',
+				text: 'Looking for quality wildlife photography? Our team of professional photographers knows how to help you.'
+			})
+			+thumbnail-calma({
+				img: 'image-64-400x600',
+				imgOriginal: 'image-64-533x800',
+				title: 'Fashion',
+				text: 'Our fashion photographers know how to portray the fashionable clothing the right way.'
+			})

@@ -1,0 +1,48 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.layout {
+	text-align: center;
+	max-width: 220px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.layout-figure {
+	display: block;
+	transition: .3s ease;
+}
+
+
+// Spacing
+* + .layout-title {
+	margin-top: px-to-rem( 22px );
+}
+
+
+// Modifying
+.layout-disabled {
+	pointer-events: none;
+
+	.layout-figure {
+		opacity: .7;
+	}
+
+	.layout-title-link {
+		opacity: .5;
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(xs) {
+	.layout {
+		max-width: 336px;
+	}
+}

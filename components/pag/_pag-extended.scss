@@ -1,0 +1,77 @@
+// Variables
+$pag-extended-fsz: $font-size-sm;
+$pag-extended-border-color: $border-color;
+$pag-extended-border-radius: $border-radius;
+$pag-extended-link-color: $secondary;
+$pag-extended-color: $gray-900;
+$pag-extended-shadow: $box-shadow-sm;
+
+
+// Base
+.pag-extended {
+	flex-wrap: wrap;
+	@include group( 15px );
+}
+
+.pag-extended-item {
+	width: 400px;
+	max-width: 100%;
+	padding: 20px 15px;
+	border: 1px solid $pag-extended-border-color;
+	border-radius: $pag-extended-border-radius;
+	transition: $transition-base;
+
+	&:hover {
+		border-color: transparent;
+		box-shadow: $pag-extended-shadow;
+	}
+
+	&:first-child { text-align: left; }
+	&:last-child { text-align: right; }
+}
+
+.pag-extended-title {
+	padding-bottom: .95em;
+	margin-bottom: .95em;
+	border-bottom: 1px solid $pag-extended-border-color;
+}
+
+.pag-extended-link {
+	font-size: $pag-extended-fsz;
+	font-weight: 500;
+	color: $pag-extended-link-color;
+}
+
+.pag-extended-arrow {
+	color: $pag-extended-color;
+}
+
+.pag-extended-link-prev,
+.pag-extended-link-next {
+	> * { vertical-align: middle; }
+	> * + * { margin-left: 10px; }
+}
+
+
+// Media
+@include media-breakpoint-up( sm ) {
+	.pag-extended {
+		flex-wrap: nowrap;
+	}
+}
+
+@include media-breakpoint-up( md ) {
+	.pag-extended-item {
+		padding: 25px 20px;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.pag-extended {
+		@include group( 40px );
+	}
+
+	.pag-extended-item {
+		padding: 38px 39px;
+	}
+}

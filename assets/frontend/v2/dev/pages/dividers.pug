@@ -1,0 +1,12 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Dividers';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_dividers-sample
+	include ../components/footer/_footer-default

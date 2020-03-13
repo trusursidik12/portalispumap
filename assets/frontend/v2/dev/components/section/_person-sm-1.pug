@@ -1,0 +1,35 @@
+include ../person/_person
+
+// Person small
+section.section.section-lg.bg-transparent.text-center.novi-background( data-preset!={ title:'Person Small', category:'person', reload:false, id:'person-small' } )
+	.container
+		h2( data-animate!={ class: 'fadeInUp' } ) Meet our team
+		.row.row-30.justify-content-center
+			.col-xs-6.col-md-3( data-animate!={ class: 'fadeInUp' } )
+				+person({
+					img:      'persons/person-04-176x176',
+					title:    'Mark Rogers',
+					subtitle: 'Lead Designer',
+					mailText: 'lgriffin@demolink.org'
+				}).person-rounded.person-sm
+			.col-xs-6.col-md-3( data-animate!={ class: 'fadeInUp' } )
+				+person({
+					img:      'persons/person-05-176x176',
+					title:    'Edward Rivera',
+					subtitle: 'CEO, founder',
+					mailText: 'erivera@demolink.org'
+				}).person-rounded.person-sm
+			.col-xs-6.col-md-3( data-animate!={ class: 'fadeInUp' } )
+				+person({
+					img:      'persons/person-07-176x176',
+					title:    'Lisa Baker',
+					subtitle: 'C++ & C# developer',
+					mailText: 'lbaker@demolink.org'
+				}).person-rounded.person-sm
+			.col-xs-6.col-md-3( data-animate!={ class: 'fadeInUp' } )
+				+person({
+					img:      'persons/person-09-176x176',
+					title:    'Jose Jackson',
+					subtitle: 'JavaScript developer',
+					mailText: 'jjackson@demolink.org'
+				}).person-rounded.person-sm

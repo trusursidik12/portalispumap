@@ -1,0 +1,32 @@
+include ../counter/_counter
+
+// Team demographics
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Team Demographics', category:'content box', reload:true, id:'team-demographics' } )
+	.container
+		.row.row-30.justify-content-lg-between.novi-disabled
+			.col-md-4
+				h4 Team demographics
+				p At Intense, we employ top experts in the web design and development. Here are some interesting facts about our team.
+			.col-md-8.col-lg-7
+				div
+					.row
+						.col-6.col-xs-5.col-md-6.col-xl-5
+							+counter({
+								value: 57,
+								postfix: '%',
+								title: 'Men'
+							})
+						.col-6.col-xs-5.col-md-6.col-xl-5
+							+counter({
+								value: 43,
+								postfix: '%',
+								title: 'Women'
+							})
+				hr.divider.divider-sm
+				p.small All of our staff members are certified and seasoned professionals.
+					| #[br.d-none.d-xs-block]
+					| We are always open to talented and ambitious people looking forward to join our team.
+				.offset-sm.group-30.d-flex.align-items-center.flex-wrap.flex-xs-nowrap
+					h3 Want to help build the future of the web design industry?
+					.flex-shrink-0
+						a.btn.btn-lg.btn-secondary( href='contact-us.html' ) Join Our Team

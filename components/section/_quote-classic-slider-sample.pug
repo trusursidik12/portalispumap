@@ -1,0 +1,47 @@
+include ../quote/_quote
+
+// Quote classic slider
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Quote Classic Slider', category:'quote, carousel', reload:true, id:'quote-classic-slider' } )
+	.container
+		h2.text-center Testimonials slider type #5
+		// Owl Carousel
+		//{DEL DIST BUILDER}
+		// TODO заменить изображения для скрытых слайдов (другие имена)
+		//{DEL}
+		.owl-carousel( data-owl= { dots: true, dotsClass: 'owl-dots text-center' }, data-items='1', data-sm-items='2', data-md-items='3' )
+			+quote-classic({
+				text:     quote1.text,
+				img:      'persons/person-01-100x100',
+				name:     quote1.name,
+				position: quote1.position
+			}).text-center
+			+quote-classic({
+				text:     quote2.text,
+				img:      'persons/person-02-100x100',
+				name:     quote2.name,
+				position: quote2.position
+			}).text-center
+			+quote-classic({
+				text:     quote3.text,
+				img:      'persons/person-03-100x100',
+				name:     quote3.name,
+				position: quote3.position
+			}).text-center
+			+quote-classic({
+				text:     quote4.text,
+				img:      'persons/person-01-100x100',
+				name:     quote4.name,
+				position: quote4.position
+			}).text-center
+			+quote-classic({
+				text:     quote5.text,
+				img:      'persons/person-02-100x100',
+				name:     quote5.name,
+				position: quote5.position
+			}).text-center
+			+quote-classic({
+				text:     quote6.text,
+				img:      'persons/person-03-100x100',
+				name:     quote6.name,
+				position: quote6.position
+			}).text-center

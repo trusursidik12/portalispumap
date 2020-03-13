@@ -1,0 +1,149 @@
+include ../layout/_layout
+
+// Layouts
+section.section.section-lg.bg-gradient-animated.novi-background( data-preset!={ title:'Layouts', category:'tab, gallery, thumbnail', reload:true, id:'layouts' } )
+	.container-fluid
+		h1.text-center( data-animate!={ class: 'fadeInUp' } ) Check out other themes
+			| #[br.d-none.d-xs-block]
+			| based on Intense
+		.tab
+			ul.nav.nav-classic.justify-content-center( role='tablist' data-animate!={ class: 'fadeInUp' } )
+				li.nav-item
+					a.nav-link.h4.active( data-toggle='tab', href='#navClassic1-1', role='tab', aria-selected='true' ) Home Pages
+				li.nav-item
+					a.nav-link.h4( data-toggle='tab', href='#navClassic1-2', role='tab', aria-selected='false' ) Skins
+			.tab-content
+				#navClassic1-1.tab-pane.fade.show.active( role='tabpanel' )
+					.row.row-30.row-md-40.row-lg-50.justify-content-center
+						.col-xs-6.col-md-4.col-xl-auto( data-animate!={ class: 'fadeInUp' } )
+							+layout({
+								img:   'layouts/layout-1-336x450',
+								title: 'Home — Default',
+								link:  'index.html'
+							})
+						.col-xs-6.col-md-4.col-xl-auto( data-animate!={ class: 'fadeInUp' } )
+							+layout({
+								img:   'layouts/layout-3-336x450',
+								title: 'Home — Consulting',
+								link:  'home-consulting.html'
+							})
+						.col-xs-6.col-md-4.col-xl-auto( data-animate!={ class: 'fadeInUp' } )
+							+layout({
+								img:   'layouts/layout-2-336x450',
+								title: 'Home — Business',
+								link:  'home-business.html'
+							})
+						.col-xs-6.col-md-4.col-xl-auto( data-animate!={ class: 'fadeInUp' } )
+							+layout({
+								img:   'layouts/layout-5-336x450',
+								title: 'Home — Studio',
+								link: 'home-studio.html'
+							})
+						.col-xs-6.col-md-4.col-xl-auto( data-animate!={ class: 'fadeInUp' } )
+							+layout({
+								img:   'layouts/layout-6-336x450',
+								title: 'Home — App',
+								link:  'home-application.html'
+							})
+						.col-xs-6.col-md-4.col-xl-auto( data-animate!={ class: 'fadeInUp' } )
+							+layout({
+								img:   'layouts/layout-7-336x450',
+								title: 'Home — Event',
+								link:  'home-event.html'
+							})
+						.col-xs-6.col-md-4.col-xl-auto( data-animate!={ class: 'fadeInUp' } )
+							+layout({
+								img:   'layouts/layout-8-336x450',
+								title: 'Home — Blog',
+								link:  'home-blog.html'
+							})
+						.col-xs-6.col-md-4.col-xl-auto( data-animate!={ class: 'fadeInUp' } )
+							+layout({
+								img:   'layouts/layout-9-336x450',
+								title: 'Home — Store',
+								link: 'home-store.html'
+							})
+						.col-xs-6.col-md-4.col-xl-auto( data-animate!={ class: 'fadeInUp' } )
+							+layout({
+								img:   'layouts/layout-10-336x450',
+								title: 'Home — Minimal',
+								link: 'home-minimal.html'
+							})
+						.col-xs-6.col-md-4.col-xl-auto( data-animate!={ class: 'fadeInUp' } )
+							+layout({
+								img:   'layouts/layout-4-336x450',
+								title: 'Home — Portfolio',
+								link: 'home-portfolio.html'
+							})
+
+				#navClassic1-2.tab-pane.fade( role='tabpanel' )
+					.row.row-40.row-md-50.justify-content-center.flex-row-reverse
+						.col-xs-6.col-md-4.col-xl-auto
+							+layout({
+								img:   'layouts/layout-1-336x450',
+								title: 'Home — Default',
+								link:  'index.html'
+							})
+						.col-xs-6.col-md-4.col-xl-auto
+							+layout({
+								img:   'layouts/layout-2-336x450',
+								title: 'Home — Business',
+								link:  '#',
+								commingSoon: true
+							}).layout-disabled
+						.col-xs-6.col-md-4.col-xl-auto
+							+layout({
+								img:   'layouts/layout-3-336x450',
+								title: 'Home — Consulting',
+								link:  '#',
+								commingSoon: true
+							}).layout-disabled
+						.col-xs-6.col-md-4.col-xl-auto
+							+layout({
+								img:   'layouts/layout-4-336x450',
+								title: 'Home — Portfolio',
+								link:  '#',
+								commingSoon: true
+							}).layout-disabled
+						.col-xs-6.col-md-4.col-xl-auto
+							+layout({
+								img:   'layouts/layout-5-336x450',
+								title: 'Home — Studio',
+								link:  '#',
+								commingSoon: true
+							}).layout-disabled
+						.col-xs-6.col-md-4.col-xl-auto
+							+layout({
+								img:   'layouts/layout-6-336x450',
+								title: 'Home  — App',
+								link:  '#',
+								commingSoon: true
+							}).layout-disabled
+						.col-xs-6.col-md-4.col-xl-auto
+							+layout({
+								img:   'layouts/layout-7-336x450',
+								title: 'Home — Event',
+								link:  '#',
+								commingSoon: true
+							}).layout-disabled
+						.col-xs-6.col-md-4.col-xl-auto
+							+layout({
+								img:   'layouts/layout-8-336x450',
+								title: 'Home — Blog',
+								link:  '#',
+								commingSoon: true
+							}).layout-disabled
+						.col-xs-6.col-md-4.col-xl-auto
+							+layout({
+								img:   'layouts/layout-9-336x450',
+								title: 'Home — Store',
+								link:  '#',
+								commingSoon: true
+							}).layout-disabled
+						.col-xs-6.col-md-4.col-xl-auto
+							+layout({
+								img:   'layouts/layout-10-336x450',
+								title: 'Home — Minimal',
+								link:  '#',
+								commingSoon: true
+							}).layout-disabled

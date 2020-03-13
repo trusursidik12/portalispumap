@@ -1,0 +1,137 @@
+// Variables
+$nav-bg: $gray-900;
+$nav-link-color: $white;
+$nav-border-width: 2px;
+$nav-border-radius: $border-radius;
+$nav-border-link-radius: $border-radius-sm;
+$nav-link-hover-bg: rgba( $nav-link-color, .2 );
+$nav-link-active-bg: $nav-link-color;
+$nav-link-active-color: color-yiq( $nav-link-active-bg );
+
+.nav-advanced,
+.nav-advanced-horizontal {
+	align-items: flex-end;
+	padding: 15px 15px 0;
+	background-color: $nav-bg;
+	border-top-left-radius: $nav-border-radius;
+	border-top-right-radius: $nav-border-radius;
+
+	.nav-item {
+		margin-right: 9px;
+	}
+
+	.nav-link {
+		position: relative;
+		z-index: 1;
+		padding: 10px 20px;
+		font-size: $small-font-size;
+		font-weight: 700;
+		color: $nav-link-color;
+		border-top-right-radius: $nav-border-link-radius;
+		border-top-left-radius: $nav-border-link-radius;
+		transition: $transition-base;
+
+		&:hover {
+			background-color: $nav-link-hover-bg;
+		}
+
+		&.active {
+			z-index: 2;
+			color: $nav-link-active-color;
+			background-color: $nav-link-active-bg;
+		}
+	}
+}
+
+
+// Context dark
+.context-dark {
+	.nav-advanced,
+	.nav-advanced-horizontal {
+		background-color: color-yiq( $nav-bg );
+
+		.nav-link {
+			color: color-yiq( $nav-link-color );
+
+			&:hover {
+				background-color: rgba( color-yiq( $nav-link-hover-bg ), .2 );
+			}
+
+			&.active {
+				color: color-yiq( $nav-link-active-color );
+				background-color: color-yiq( $nav-link-active-bg );
+			}
+		}
+	}
+}
+
+// Media
+@include media-breakpoint-up( md ) {
+	.nav-advanced {
+		padding: 11px 20px 0;
+
+		.nav-link {
+			padding: 12px 20px;
+		}
+	}
+
+	.nav-advanced-horizontal {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		overflow: inherit;
+		padding: 10px 0 10px 10px;
+		border-top-right-radius: 0;
+		border-bottom-left-radius: $nav-border-radius;
+
+		.nav-item {
+			margin-right: 0;
+
+			+ .nav-item {
+				margin-top: 11px;
+			}
+		}
+
+		.nav-link {
+			margin-bottom: 0;
+			text-align: right;
+			white-space: normal;
+			border-top-left-radius: $nav-border-link-radius;
+			border-bottom-left-radius: $nav-border-link-radius;
+			border-top-right-radius: 0;
+
+			&.active {
+				text-align: left;
+				border-right-color: $nav-link-active-bg;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.nav-advanced {
+		min-height: 71px;
+
+		.nav-link {
+			&.active {
+				padding: 17px 20px;
+			}
+		}
+	}
+
+	.nav-advanced-horizontal {
+		.nav-link {
+			&.active {
+				padding: 12px 20px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.nav-advanced-horizontal{
+		.nav-link {
+			padding: 12px 41px;
+		}
+	}
+}

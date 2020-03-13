@@ -1,0 +1,90 @@
+//- Offer box detail
+	@param {object} data - offer box data object
+	@param {string} data.img - offer box image
+	@param {string} data.title - offer box title
+	@param {string} data.label - offer box label
+	@param {string} data.text - offer box description
+mixin offer-box-detail( data )
+	// Offer box detail
+	.offer-box.offer-box-detail&attributes( attributes )
+		.offer-box-media
+			+img( data.img )
+		.offer-box-content
+			.offer-box-label.offer-box-limiter= data.label
+			if ( block )
+				block
+
+//- Offer box light
+	@param {object} data - offer-box data object
+	@param {string} data.title - offer-box title
+	@param {string} data.text - offer-box description
+	@param {array} data.list - offer-box list array of items
+	@param {object} data.list[ ...item ] - offer-box list item objects
+	@param {string} data.list[ item.listIcon ] - offer-box list item icon class
+	@param {string} data.list[ item.listItem ] - offer-box list item text
+mixin offer-box-light( data )
+	// Offer box light
+	.offer-box.offer-box-light&attributes( attributes )
+		h5.offer-box-title!= data.title
+		.offer-box-divider
+		.offer-box-text= data.text
+		ul.offer-box-list
+			each item in data.list
+				li
+					span.offer-box-list-icon.novi-icon( class= item.listIcon )
+					span.offer-box-list-text= item.listItem
+
+//- Offer box thumbnail
+	@param {object} data - offer box data object
+	@param {string} data.title - offer box title
+	@param {string} data.text - offer box description
+	@param {string} data.link - offer box link
+mixin offer-box-thumbnail( data )
+	// Offer box thumbnail
+	.offer-box.offer-box-thumbnail.novi-background( style=`background-image: url( images/${data.imgBackground}.jpg)` )&attributes( attributes )
+		.offer-box-inner
+			h5.offer-box-title: a( href= data.link ? data.link : '#' )= data.title
+			.offer-box-hover
+				.offer-box-text= data.text
+				a.btn.btn-primary.offer-box-btn( href= data.link ? data.link : '#' )= data.btnText ? data.btnText : 'Read more'
+
+//- Offer box link
+	@param {object} data - offer-box data object
+	@param {string} data.title - offer-box title
+	@param {string} data.text - offer-box description
+	@param {string} data.iconClass - offer-box icon class
+mixin offer-box-link( data )
+	// Offer box link
+	a.offer-box.offer-box-link( href= data.link ? data.link : '#' )&attributes( attributes )
+		h5.offer-box-title= data.title
+		.offer-box-text= data.text
+		.offer-box-icon.novi-icon( class= data.iconClass ? data.iconClass : 'int-arrow-right' )
+
+//- Offer box classic
+	@param {object} data - offer-box data object
+	@param {string} data.title - offer-box title
+	@param {string} data.text - offer-box description
+	@param {string} data.link - offer-box link
+	@param {string} data.btnText - offer-box button text
+mixin offer-box-classic( data )
+	// Offer box classic
+	.offer-box.offer-box-classic&attributes( attributes )
+		+img( data.img )
+		h5.offer-box-title: a( href= data.link ? data.link : '#' )= data.title
+		.offer-box-text= data.text
+		a.btn.btn-primary.offer-box-button( href= data.link ? data.link : '#' )= data.btnText ? data.btnText : 'Read more'
+
+//- Offer box divided
+	@param {object} data - offer-box data object
+	@param {string} data.title - offer-box title
+	@param {string} data.text - offer-box description
+	@param {string} data.link - offer-box link
+	@param {string} data.btnText - offer-box button text
+mixin offer-box-divided( data )
+	// Offer box divided
+	.offer-box.offer-box-divided&attributes( attributes )
+		h6.offer-box-subtitle= data.subtitle
+		h3.offer-box-title= data.title
+		hr.divider.offer-box-divider
+		.offer-box-text= data.text
+		a.btn.btn-lg.btn-dark.rounded-0.offer-box-btn( href= data.link ? data.link : '#' )= data.btnText ? data.btnText : 'I Want to Speak'

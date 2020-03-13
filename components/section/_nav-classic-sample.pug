@@ -1,0 +1,26 @@
+include ../counter/_counter
+
+// Nav classic sample
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Nav Classic Sample', category:'tab, sample', reload:true, id:'nav-classic-sample' } )
+	.container
+		h2.text-center Tab type #1
+		.row.justify-content-center.novi-disabled
+			.col-lg-10.col-xxl-8
+				.tab
+					ul.nav.nav-classic( role='tablist' )
+						li.nav-item: a.nav-link.h4.active( data-toggle='tab', href='#navClassic1-1', role='tab', aria-selected='true' ) Toolkit core
+						li.nav-item: a.nav-link.h4( data-toggle='tab', href='#navClassic1-2', role='tab', aria-selected='false' ) Ui kit
+						li.nav-item: a.nav-link.h4( data-toggle='tab', href='#navClassic1-3', role='tab', aria-selected='false' ) Plugins
+						li.nav-item: a.nav-link.h4( data-toggle='tab', href='#navClassic1-4', role='tab', aria-selected='false' ) Documentation
+					.tab-content
+						#navClassic1-1.tab-pane.fade.show.active( role='tabpanel' )
+							include ../tab/_tab-content-1
+
+						#navClassic1-2.tab-pane.fade( role='tabpanel' )
+							include ../tab/_tab-content-2
+
+						#navClassic1-3.tab-pane.fade( role='tabpanel' )
+							include ../tab/_tab-content-3
+
+						#navClassic1-4.tab-pane.fade( role='tabpanel' )
+							include ../tab/_tab-content-4

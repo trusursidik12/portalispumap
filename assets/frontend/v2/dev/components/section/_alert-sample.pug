@@ -1,0 +1,35 @@
+include ../alert/_alert
+
+// Alerts
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Alert Sample', category:'sample', reload:false, id:'alert-sample' } )
+	.container
+		h2.text-center Classic alerts
+		.row.novi-disabled
+			.col
+				+alert({
+					themeColor: 'primary',
+					title: 'Classic success alert!',
+					titleIcon: 'int-check',
+					text: 'Intense is based on the one of the most popular and flexible CSS Frameworks - Bootstrap.'
+				})
+
+				+alert({
+					themeColor: 'info',
+					title:      'Classic info alert!',
+					titleIcon:  'int-info',
+					text:       'Intense is based on the one of the most popular and flexible CSS Frameworks - Bootstrap.'
+				})
+
+				+alert({
+					themeColor: 'warning',
+					title: 'Classic warning alert!',
+					titleIcon: 'int-warning',
+					text: 'Intense is based on the one of the most popular and flexible CSS Frameworks - Bootstrap.'
+				})
+
+				+alert({
+					themeColor: 'danger',
+					title:      'Classic danger alert!',
+					titleIcon:  'int-danger',
+					text:       'Intense is based on the one of the most popular and flexible CSS Frameworks - Bootstrap.'
+				})

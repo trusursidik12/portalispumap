@@ -1,0 +1,81 @@
+include ../progress-linear/_progress-liear
+
+// Progress linear
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Progress Linear', category:'infographics, sample', reload:true, id:'progress-linear' } )
+	.container
+		h2.text-center Linear bars
+		.row.row-50.row-lg-80.row-xl-100
+			.col-12
+				.row.justify-content-center.novi-disabled
+					.col-md-8.col-lg-7.col-xl-6.progress-linear-area
+						+progress-linear({
+							title: 'HTML/CSS',
+							value: '75'
+						}).progress-linear-lg.progress-linear-shamrock-blue
+
+						+progress-linear({
+							title: 'JavaScript',
+							value: '99'
+						}).progress-linear-lg.progress-linear-blue-violet
+
+						+progress-linear({
+							title: 'UI/UX Design',
+							value: '45'
+						}).progress-linear-lg.progress-linear-electric-violet
+
+			.col-12
+				.row.justify-content-center.novi-disabled
+					.col-md-8.col-lg-7.col-xl-6.progress-linear-area
+						+progress-linear({
+							title: 'HTML/CSS',
+							value: '75'
+						}).progress-linear-reverse.progress-linear-shamrock-blue
+
+						+progress-linear({
+							title: 'JavaScript',
+							value: '99'
+						}).progress-linear-reverse.progress-linear-blue-violet
+
+						+progress-linear({
+							title: 'UI/UX Design',
+							value: '45'
+						}).progress-linear-reverse.progress-linear-electric-violet
+
+			.col-12
+				.row.justify-content-center.novi-disabled
+					.col-md-8.col-lg-7.col-xl-6.progress-linear-area
+						+progress-linear({
+							title: 'HTML/CSS',
+							value: '75',
+							text: 'HTML & CSS are used worldwide for website development.'
+						}).progress-linear-lg.progress-linear-shamrock-blue
+
+						+progress-linear({
+							title: 'JavaScript',
+							value: '99',
+							text: 'JavaScript is a dynamic computer programming language.'
+						}).progress-linear-lg.progress-linear-blue-violet
+
+						+progress-linear({
+							title: 'UI/UX Design',
+							value: '45',
+							text: 'UI & UX design simplify interaction with interfaces.'
+						}).progress-linear-lg.progress-linear-electric-violet
+
+			.col-12
+				.row.justify-content-center.novi-disabled
+					.col-md-8.col-lg-7.col-xl-6.progress-linear-area
+						+progress-linear-creative({
+							value: '75',
+							text: 'HTML/CSS'
+						}).progress-linear-shamrock-blue
+
+						+progress-linear-creative({
+							value: '99',
+							text: 'JavaScript'
+						}).progress-linear-blue-violet
+
+						+progress-linear-creative({
+							value: '45',
+							text: 'UI/UX Design'
+						}).progress-linear-electric-violet

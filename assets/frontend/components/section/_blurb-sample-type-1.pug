@@ -1,0 +1,25 @@
+include ../blurb/_blurb
+
+// Blurb type #1
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blurb Sample', category:'blurb', reload:false, id:'blurb-sample-1' } )
+	.container
+		h2.text-center Blurb type #1
+		.row.row-30
+			.col-sm-6.col-lg-4
+				+blurb({
+					embed: '<span class="blurb-icon ith-layers novi-icon"></span>',
+					title: '60+ reusable elements',
+					text:  'Intense has a set of more than 60 UI elements designed to make your website attractive and feature-rich.'
+				}).blurb-boxed
+			.col-sm-6.col-lg-4
+				+blurb({
+					embed: '<span class="blurb-icon ith-layers novi-icon"></span>',
+					title: '60+ reusable elements',
+					text:  'Intense has a set of more than 60 UI elements designed to make your website attractive and feature-rich.'
+				}).blurb-boxed.blurb-secondary.text-center
+			.col-sm-6.col-lg-4
+				+blurb({
+					embed: '<span class="blurb-icon ith-layers novi-icon"></span>',
+					title: '60+ reusable elements',
+					text:  'Intense has a set of more than 60 UI elements designed to make your website attractive and feature-rich.'
+				}).blurb-boxed.blurb-primary.text-right

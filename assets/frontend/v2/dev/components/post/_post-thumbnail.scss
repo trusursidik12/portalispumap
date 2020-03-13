@@ -1,0 +1,146 @@
+// Variables
+$post-thumbnail-bg: rgba( $gray-900, .85 );
+$post-thumbnail-color: color-yiq( $post-thumbnail-bg );
+
+$post-thumbnail-label-color: lighten( $post-secondary, 13% );
+
+
+// Base
+.post-thumbnail {
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+	background-position: center center;
+	background-size: cover;
+
+	.post-inner {
+		padding: 30px 20px;
+		color: $post-thumbnail-color;
+		background-color: $post-thumbnail-bg;
+	}
+
+	.post-title {
+		color: inherit;
+
+		a {
+			color: inherit;
+
+			&:hover,
+			&:focus {
+				color: $post-primary;
+			}
+		}
+	}
+
+	.post-meta-icon {
+		color: inherit;
+	}
+
+	.post-meta-link {
+		color: inherit;
+
+		&:hover,
+		&:focus {
+			color: $post-primary;
+		}
+	}
+
+	.post-meta-link-primary {
+		color: $post-primary;
+
+		&:hover,
+		&:focus {
+			color: inherit;
+		}
+	}
+
+	.post-tag {
+		color: $post-thumbnail-label-color;
+		border: none;
+
+		&:hover,
+		&:focus {
+			color: inherit;
+		}
+	}
+
+	* + .post-thumbnail-hover-content > *:first-child { margin-top: 9px; }
+}
+
+
+// Spacing
+* + .post-thumbnail { margin-top: px-to-rem( 30px ) }
+.post-thumbnail + .post-thumbnail { margin-top: px-to-rem( 30px ) }
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.post-thumbnail {
+		.post-inner {
+			padding: 40px 20px;
+		}
+
+		* + .post-title { margin-top: 13px; }
+		* + .post-thumbnail-hover-content > *:first-child { margin-top: 15px; }
+		* + .post-meta { margin-top: 16px; }
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.post-thumbnail {
+		height: 470px;
+
+		.post-inner {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			padding: 30px 20px;
+		}
+	}
+
+	.desktop {
+		.post-thumbnail-hover-content {
+			max-height: 0;
+			overflow: hidden;
+			transition: .6s;
+		}
+
+		.post-thumbnail:hover {
+			.post-thumbnail-hover-content {
+				max-height: 200px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.post-thumbnail {
+		height: 540px;
+
+		.post-inner {
+			padding: 38px 40px;
+		}
+
+		* + .post-thumbnail-hover-content > *:first-child { margin-top: 18px; }
+	}
+
+	.post-thumbnail.post-sm {
+		height: 470px;
+
+		.post-title {
+			font-size: $h5-font-size;
+			line-height: $h5-line-height;
+		}
+
+		.post-inner {
+			padding: 33px 30px 28px;
+		}
+
+		* + .post-title { margin-top: 19px; }
+	}
+
+	* + .post-thumbnail { margin-top: px-to-rem( 67px ) }
+	.post-thumbnail + .post-thumbnail { margin-top: px-to-rem( 70px ) }
+}

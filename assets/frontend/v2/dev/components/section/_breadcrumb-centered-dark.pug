@@ -1,0 +1,7 @@
+include ../breadcrumb/_breadcrumb
+
+// Breadcrumb dark centered
+section.section.section-sm.context-dark.bg-image.text-center.novi-background( style='background-image: url(images/breadcrumb-01.jpg)', data-preset!={ title:'Breadcrumb', category:'breadcrumb', reload:false, id:'breadcrumb-3' } )
+	.container
+		+breadcrumb( breadcrumbs ).d-inline-flex.justify-content-center
+		h4= pageName

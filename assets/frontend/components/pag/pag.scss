@@ -1,0 +1,36 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.pag {
+	display: flex;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+
+// Spacing
+* + .pag { margin-top: px-to-rem( 40px ); }
+
+
+// Media
+@include media-breakpoint-up( md) {
+	* + .pag { margin-top: px-to-rem( 50px ); }
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .pag { margin-top: px-to-rem( 70px ); }
+	.post + .pag,
+	.post-container + .pag { margin-top: px-to-rem( 110px ); }
+}
+
+
+// Layouts
+@import "pag-simple";
+@import "pag-extended";
+@import "pag-short";

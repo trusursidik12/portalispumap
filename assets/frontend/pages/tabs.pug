@@ -1,0 +1,20 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Tabs';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_nav-classic-sample
+	include ../components/section/_nav-scale-sample
+	include ../components/section/_nav-scale-horizontal-sample
+	include ../components/section/_nav-line-sample
+	include ../components/section/_nav-line-horizontal-sample
+	include ../components/section/_nav-advanced-sample
+	include ../components/section/_nav-advanced-horizontal-sample
+	include ../components/section/_nav-inset-sample
+	include ../components/section/_nav-inset-horizontal-sample
+	include ../components/footer/_footer-default

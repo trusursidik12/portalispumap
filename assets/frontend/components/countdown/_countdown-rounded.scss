@@ -1,0 +1,76 @@
+// Variables
+$c-rounded-bg: $white;
+$c-rounded-shadow: $box-shadow-sm;
+$c-rounded-title-fsz: $font-size-sm;
+
+
+// Base
+.countdown-rounded {
+	display: flex;
+	justify-content: center;
+	margin: 0 -15px;
+	line-height: 1.2;
+	text-align: center;
+
+	.countdown-block {
+		padding: 0 7px;
+	}
+
+	.countdown-wrap {
+		width: 80px;
+		height: 80px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: $c-rounded-bg;
+		border-radius: 50%;
+		box-shadow: $c-rounded-shadow;
+	}
+
+	.countdown-title {
+		font-size: $c-rounded-title-fsz;
+		text-transform: capitalize;
+	}
+}
+
+
+// Spacing
+* + .countdown-rounded {
+	margin-top: 25px;
+}
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.countdown-rounded {
+		.countdown-wrap {
+			width: 100px;
+			height: 100px;
+		}
+
+		.countdown-block {
+			padding: 0 15px;
+		}
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.countdown-rounded {
+		.countdown-wrap {
+			width: 130px;
+			height: 130px;
+		}
+	}
+
+	* + .countdown-rounded {
+		margin-top: 35px;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.countdown-rounded {
+		* + .countdown-title { margin-top: -4px; }
+	}
+
+	* + .countdown-rounded { margin-top: 58px; }
+}

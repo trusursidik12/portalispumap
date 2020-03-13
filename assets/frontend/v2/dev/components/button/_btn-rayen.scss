@@ -1,0 +1,75 @@
+// Rayen Effect
+.btn-rayen {
+	position: relative;
+
+	&:not(.sample) {
+		overflow: hidden;
+	}
+
+	&::before,
+	&::after {
+		content: attr(data-text);
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		transition: transform 0.3s cubic-bezier(0.75, 0, 0.125, 1);
+		pointer-events: none;
+	}
+
+	&::before {
+		transform: translateY(0);
+		background-color: inherit;
+	}
+
+	&::after {
+		transform: translateX(-100%);
+	}
+
+	&:hover {
+		&::before {
+			transform: translateY(100%);
+		}
+
+		&::after {
+			transform: translateY(0);
+		}
+	}
+
+	@each $color, $value in $theme-colors {
+		&.btn-#{$color} {
+			background-color: $value;
+			color: transparent;
+
+			&::before {
+				background-color: $value;
+				color: color-yiq($value);
+			}
+
+			&::after {
+				background-color: mix( if( get-yiq( $value ) >= 30, $dark, $light ), $value, 20% );
+				color: color-yiq($value);
+			}
+
+			&.btn-outline {
+				background-color: transparent;
+				color: transparent;
+
+				&::before {
+					background-color: transparent;
+					color: $value;
+				}
+
+				&::after {
+					background-color: $value;
+					color: color-yiq( $value );
+				}
+			}
+		}
+	}
+}

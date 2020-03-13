@@ -1,0 +1,7 @@
+include ../breadcrumb/_breadcrumb
+
+// Breadcrumb centered
+section.section.section-sm.bg-transparent.text-center.novi-background( data-preset!={ title:'Breadcrumb', category:'breadcrumb', reload:false, id:'breadcrumb-2' } )
+	.container
+		+breadcrumb( breadcrumbs ).d-inline-flex.justify-content-center
+		h4= pageName

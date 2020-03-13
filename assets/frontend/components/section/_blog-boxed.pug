@@ -1,0 +1,50 @@
+include ../post/_post
+include ../pag/_pag
+
+// Boxed layout without sidebar
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blog Boxed', category:'blog', reload:false, id:'blog-boxed' } )
+	.container
+		.row.row-40.justify-content-center.novi-disabled
+			.col-md-8.post-area
+				h1.text-center Boxed layout
+				+post-boxed({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '3',
+					title:    post1.title,
+					img:      'image-05-760x489',
+					postText: post1.textShort,
+					tags:     [ 'Web design', 'Articles' ]
+				})
+
+				+post-boxed({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '3',
+					title:    post2.title,
+					img:      'image-08-760x489',
+					postText: post2.textShort2,
+					tags:     [ 'Web design', 'Articles' ]
+				})
+
+				+post-boxed({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '3',
+					title:    post3.title,
+					img:      'image-11-760x489',
+					postText: post1.textShort2,
+					tags:     [ 'Web design', 'Articles' ]
+				})
+
+				+pag-simple([
+					{ value: '1', actionClass: 'active' },
+					{ value: '2' },
+					{ value: '3' },
+					{ value: '..', class: 'inactive' },
+					{ value: '24' },
+					{ next: true }
+				]).justify-content-center

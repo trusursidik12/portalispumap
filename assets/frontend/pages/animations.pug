@@ -1,0 +1,17 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Animations';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_animation-fadeIn-sample
+	include ../components/section/_animation-flipIn-sample
+	include ../components/section/_animation-bounceIn-sample
+	include ../components/section/_animation-lightSpeedIn-sample
+	include ../components/section/_animation-rotateInUpLeft-sample
+	include ../components/section/_animation-slideInLeft-sample
+	include ../components/footer/_footer-default

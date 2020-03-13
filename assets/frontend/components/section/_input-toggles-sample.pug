@@ -1,0 +1,79 @@
+include ../multiswitch/_multiswitch
+
+// Checkbox and Radio
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Input Toggles Sample', category:'input sample', reload:true, id:'input-toggles-sample' } )
+	.container
+		h3 Check/radio buttons and toggles
+		.row.row-30.justify-content-center
+			.col-sm-6.col-lg-4
+				ul.list.list-lg
+					li.list-item
+						+checkbox( {
+							id: 'check1'
+						} ) Unchecked — normal
+					li.list-item
+						+checkbox( {
+							id: 'check2',
+							checked: true
+						} ) Checked — normal
+					li.list-item
+						+checkbox( {
+							id: 'check3',
+							disabled: true
+						} ) Unchecked — disabled
+					li.list-item
+						+checkbox( {
+							id: 'check4',
+							checked: true,
+							disabled: true
+						} ) Checked — disabled
+
+			.col-sm-6.col-lg-4
+				ul.list.list-lg
+					li.list-item
+						+radio( {
+							id:   'radio1',
+							name: 'customRadio'
+						} ) Unchecked — normal
+					li.list-item
+						+radio( {
+							id:   'radio2',
+							name: 'customRadio',
+							checked: true
+						} ) Checked — normal
+					li.list-item
+						+radio( {
+							id:   'radio3',
+							name: 'customRadio2',
+							disabled: true
+						} ) Unchecked — disabled
+					li.list-item
+						+radio( {
+							id:   'radio4',
+							name: 'customRadio2',
+							checked: true,
+							disabled: true
+						} ) Checked — disabled
+
+			.col-sm-6.col-lg-4
+				ul.list.list-xl
+					li.list-item
+						.d-flex.align-items-center.group-x-30
+							+switch-toggle-thin({ targets: '.switch-container-3' })
+							+switch-toggle({ targets: '.switch-container-1' })
+							span.small Off — normal
+					li.list-item
+						.d-flex.align-items-center.group-x-30
+							+switch-toggle-thin({ targets: '.switch-container-3', state: true })
+							+switch-toggle({ targets: '.switch-container-1', state: true })
+							span.small Off — normal
+					li.list-item
+						.d-flex.align-items-center.group-x-30
+							+switch-toggle-thin({ targets: '.switch-container-3' }).switch-toggle-thin-disabled
+							+switch-toggle({ targets: '.switch-container-1' }).switch-toggle-disabled
+							span.small.text-black-50 Off — normal
+					li.list-item
+						.d-flex.align-items-center.group-x-30
+							+switch-toggle-thin({ targets: '.switch-container-3', state: true }).switch-toggle-thin-disabled
+							+switch-toggle({ targets: '.switch-container-1', state: true }).switch-toggle-disabled
+							span.small.text-black-50 Off — normal

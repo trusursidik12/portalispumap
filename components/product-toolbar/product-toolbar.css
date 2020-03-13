@@ -1,0 +1,2 @@
+.product-toolbar {	display: flex;	flex-wrap: wrap;	align-items: center;	font-size: 1.0625rem;	margin-bottom: -20px;	margin-left: -30px;}.product-toolbar:empty {	margin-bottom: 0;	margin-left: 0;}.product-toolbar > * {	margin-top: 0;	margin-bottom: 20px;	margin-left: 30px;}.product-toolbar-icon {	display: inline-block;	color: #e8e8e9;}.product-toolbar-icon:hover {	color: #31c77f;}.product-toolbar-icon.active {	color: #171724;}
+/*# sourceMappingURL=product-toolbar.css.map */

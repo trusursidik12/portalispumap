@@ -1,0 +1,2 @@
+.divider-layout + .divider-layout {	margin-top: 2.1875rem;	padding-top: 2.1875rem;	border-top: 1px solid #e8e8e9;}* + .divider-layout {	margin-top: 1.5625rem;}@media (min-width: 1600px) {	.divider-layout + .divider-layout {		margin-top: 5.0625rem;		padding-top: 4.25rem;	}	* + .divider-layout {		margin-top: 4.25rem;	}}
+/*# sourceMappingURL=divider-layout.css.map */

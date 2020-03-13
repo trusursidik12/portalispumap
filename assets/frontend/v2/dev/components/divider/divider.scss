@@ -1,0 +1,62 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Spacing
+* + .divider,
+.divider + * {
+	margin-top: px-to-rem( 40px );
+}
+
+.row + .divider {
+	margin-top: px-to-rem( 60px );
+}
+
+.btn + .divider {
+	margin-top: px-to-rem( 50px );
+}
+
+
+// Modifying
+.divider-dark {
+	border-color: $gray-900;
+}
+
+.divider-sm {
+	border-top-width: 1px;
+}
+
+.divider-lg {
+	border-top-width: 3px;
+}
+
+.divider-xl {
+	border-top-width: 4px;
+}
+
+
+// Contexts
+.context-dark {
+	.divider {
+		border-color: $white;
+	}
+}
+
+.bg-800,
+.bg-900 {
+	.divider {
+		border-color: $gray-700;
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(lg) {
+	.row + .divider {
+		margin-top: px-to-rem( 75px );
+	}
+}

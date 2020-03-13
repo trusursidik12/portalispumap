@@ -1,0 +1,18 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Thumbnails';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_thumbnail-connor-sample
+	include ../components/section/_thumbnail-upward-sample
+	include ../components/section/_thumbnail-josip-sample
+	include ../components/section/_thumbnail-janes-sample
+	include ../components/section/_thumbnail-frode-sample
+	include ../components/section/_thumbnail-tamaz-sample
+	include ../components/section/_thumbnail-scaleup-sample
+	include ../components/footer/_footer-default

@@ -1,0 +1,79 @@
+include ../post/_post
+include ../pag/_pag
+
+// Modern rounded layout
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blog Modern', category:'blog', reload:false, id:'blog-modern-4' } )
+	.container
+		.row.row-40.justify-content-center
+			.col-xs-10.col-md-10.col-lg-8.post-area
+				h1.text-center Modern rounded layout
+				+post-side({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post7.titleShort,
+					img:      'persons/person-06-260x260',
+					postText: post7.textShort
+				}).post-sm.post-side-rounded.post-side-sm.divider-layout
+
+				+post-side({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    '15 examples of one-page website design',
+					img:      'image-05-260x260',
+					postText: 'Nowadays, designing a landing page is way more difficult. The only challenge you face is getting all the necessary information on a...'
+				}).post-sm.post-side-rounded.post-side-sm.divider-layout
+
+				+post-side({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    'Designing accessible color systems',
+					img:      'image-11-260x260',
+					postText: 'Our team of developers and designers constantly explores ways of refining the color palette to make it more accessible and legible...'
+				}).post-sm.post-side-rounded.post-side-sm.divider-layout
+
+				+post-side({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    'Best examples of online portfolio',
+					img:      'image-08-260x260',
+					postText: 'Out of all of the creative people in the world, designers have a very clear vision of what their online portfolio should look like. Their...'
+				}).post-sm.post-side-rounded.post-side-sm.divider-layout
+
+				+post-side({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    '5 design tips to increase your conversions',
+					img:      'image-06-260x260',
+					postText: 'If you want to increase ROI from your website, you can go about it in two ways: increase traffic or increase conversions. It is much...'
+				}).post-sm.post-side-rounded.post-side-sm.divider-layout
+
+				+post-side({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    'Different sides of the dark UI',
+					img:      'image-10-260x260',
+					postText: 'Dark design is and always will be a trend. The level of darkness will always vary, but basically, it’s really hard to screw up a simple...'
+				}).post-sm.post-side-rounded.post-side-sm.divider-layout
+
+				+pag-simple([
+					{ value: '1', actionClass: 'active' },
+					{ value: '2' },
+					{ value: '3' },
+					{ value: '4' },
+					{ value: '5' },
+					{ value: '..', class: 'inactive' },
+					{ value: '24' },
+					{ next: true }
+				]).divider-layout.justify-content-center

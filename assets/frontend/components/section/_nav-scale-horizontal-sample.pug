@@ -1,0 +1,24 @@
+include ../counter/_counter
+
+// Nav scale horizontal sample
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Nav Scale Horizontal Sample', category:'tab, sample', reload:true, id:'nav-scale-horizontal-sample' } )
+	.container
+		h2.text-center Tab type #3
+		.tab.tab-scale-horizontal
+			ul.nav.nav-scale-horizontal.tab-embed( role='tablist' )
+				li.nav-item: a.nav-link.h4.active( data-toggle='tab', href='#navScale2-1', role='tab', aria-selected='true' ) Toolkit core
+				li.nav-item: a.nav-link.h4( data-toggle='tab', href='#navScale2-2', role='tab', aria-selected='false' ) UI kit
+				li.nav-item: a.nav-link.h4( data-toggle='tab', href='#navScale2-3', role='tab', aria-selected='false' ) Plugins
+				li.nav-item: a.nav-link.h4( data-toggle='tab', href='#navScale2-4', role='tab', aria-selected='false' ) Documentation
+			.tab-content
+				#navScale2-1.tab-pane.fade.show.active( role='tabpanel' )
+					include ../tab/_tab-content-1
+
+				#navScale2-2.tab-pane.fade( role='tabpanel' )
+					include ../tab/_tab-content-2
+
+				#navScale2-3.tab-pane.fade( role='tabpanel' )
+					include ../tab/_tab-content-5
+
+				#navScale2-4.tab-pane.fade( role='tabpanel' )
+					include ../tab/_tab-content-4

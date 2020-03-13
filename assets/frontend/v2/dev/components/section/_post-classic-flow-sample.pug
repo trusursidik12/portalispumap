@@ -1,0 +1,28 @@
+include ../post/_post
+
+// Post classic flow sample
+section.section.section-md.bg-transparent.novi-background( data-preset!={ title:'Post Classic Flow Sample', category:'blog', reload:false, id:'post-classic-flow-sample' } )
+	.container
+		.row.justify-content-center
+			.col-xs-10.col-md-12
+				.post-container
+					.post-container-item
+						+post-classic-1({
+							label:    'HTML',
+							autor:    'Mark Rogers',
+							date:     'September 16, 2019',
+							title:    post2.titleShort,
+							img:      'image-05-570x366',
+							postText: post2.text,
+							coments:  '25'
+						})
+					.post-container-item
+						+post-classic-1({
+							label:    'HTML',
+							autor:    'Mark Rogers',
+							date:     'September 16, 2019',
+							title:    post2.title,
+							img:      'image-09-570x366',
+							postText: post2.text,
+							coments:  '25'
+						})

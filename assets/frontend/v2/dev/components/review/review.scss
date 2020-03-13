@@ -1,0 +1,41 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.review-text q {
+	&:before {
+		content: '“';
+	}
+
+	&:after {
+		content: '”';
+	}
+}
+
+.review-info {
+	font-size: $font-size-sm;
+	@include groupX(10px);
+
+	> * {
+		display: inline-block;
+	}
+}
+
+
+// Spacing
+* + .review-info {
+	margin-top: px-to-rem( 38px );
+}
+
+
+// Contexts
+.context-dark {
+	.review-time {
+		color: $gray-400;
+	}
+}

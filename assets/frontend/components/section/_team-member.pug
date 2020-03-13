@@ -1,0 +1,79 @@
+include ../progress-linear/_progress-liear
+
+// Team member
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Team Member', category:'person', reload:true, id:'team-member' } )
+	.container
+		.row.row-40.novi-background
+			.col-xs-10.col-md-5
+				+img( 'persons/person-04-510x510' ).rounded-lg
+				a.btn.btn-block.btn-lg.btn-primary( href='contact-me.html' ) Get in Touch
+				.offset-md
+					.d-inline-flex.align-items-center
+						span.icon.icon-xs.int-phone.novi-icon.mr-2
+						.h5: a( href='tel:#' ) +1 234 567 8901
+				ul.list.list-xs.small
+					li.list-item Monday-Friday: 8am - 6pm
+					li.list-item Saturday-Sunday: 8am - 2pm
+					li.list-item Holidays: closed
+				.offset-xs
+					a.font-weight-normal( href='mailto:#' ) mrogers@demolink.org
+				.offset-sm
+					.group-30.d-inline-flex.text-900
+						a.icon.icon-sm.icon-social.int-youtube.novi-icon( href='#' )
+						a.icon.icon-sm.icon-social.int-facebook.novi-icon( href='#' )
+						a.icon.icon-sm.icon-social.int-instagram.novi-icon( href='#' )
+						a.icon.icon-sm.icon-social.int-twitter.novi-icon( href='#' )
+						a.icon.icon-sm.icon-social.int-linkedin.novi-icon( href='#' )
+			.col-md-7: .pl-xl-4
+				.row.row-30.row-md-40.row-xl-60
+					.col-12
+						h2 Hello,
+							br
+							| I’m Mark Rogers.
+							br
+							| I’m the lead designer at Intense where I create stunning websites.
+					.col-12
+						h5 I design products
+						p I’m a web designer/developer focused on crafting great web experiences. Designing has been my passion since the days I started working with computers but I found myself into web design since 2007. I enjoy creating beautifully designed, intuitive and functional websites.
+					.col-12
+						h5 Working with Intense
+						p For over past 8 years, I have worked for one of the best web studios - Intense.  Here I create award-winning works for its wonderful clients. Moreover, I can make this happen for your business as well.
+					.col-12.progress-linear-area
+						+progress-linear({
+							title: 'Responsive Design',
+							value: '75',
+							hideValue: true
+						}).progress-linear-lg.progress-linear-shamrock-blue
+						+progress-linear({
+							title: 'Logo Design',
+							value: '99',
+							hideValue: true
+						}).progress-linear-lg.progress-linear-blue-violet
+						+progress-linear({
+							title: 'Mobile App UI Design',
+							value: '45',
+							hideValue: true
+						}).progress-linear-lg.progress-linear-electric-violet
+					.col-12
+						h5 Awards:
+						.row.row-20.gutters-20.row-text
+							.col-6.col-sm-4.col-md-6.col-lg-4
+								article.award
+									.award-title.h3 2019
+									.award-text.small MAGNUM 30 under 30, Winner
+							.col-6.col-sm-4.col-md-6.col-lg-4
+								article.award
+									.award-title.h3 2018
+									.award-text.small The Other Hundred, 1st Prize
+							.col-6.col-sm-4.col-md-6.col-lg-4
+								article.award
+									.award-title.h3 2016
+									.award-text.small American Photography 30
+							.col-6.col-sm-4.col-md-6.col-lg-4
+								article.award
+									.award-title.h3 2014
+									.award-text.small AOP Student Awards, Finalist
+							.col-6.col-sm-4.col-md-6.col-lg-4
+								article.award
+									.award-title.h3 2013
+									.award-text.small Leica Oskar Barnack Award

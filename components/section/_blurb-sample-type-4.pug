@@ -1,0 +1,22 @@
+include ../blurb/_blurb
+
+// Blurb type #4
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blurb Sample', category:'blurb', reload:false, id:'blurb-sample-4' } )
+	.container
+		h2.text-center Blurb type #4
+		.row.row-30.justify-content-center
+			.col-sm-4.col-md-3.col-lg-2
+				+blurb-small({
+					embed: '<span class="blurb-icon ith-devices novi-icon"></span>',
+					title: 'Bootstrap 4 framework'
+				})
+			.col-sm-4.col-md-3.col-lg-2
+				+blurb-small({
+					embed: '<span class="blurb-icon ith-devices novi-icon"></span>',
+					title: 'Bootstrap 4 framework'
+				}).text-center
+			.col-sm-4.col-md-3.col-lg-2
+				+blurb-small({
+					embed: '<span class="blurb-icon ith-devices novi-icon"></span>',
+					title: 'Bootstrap 4 framework'
+				}).text-right

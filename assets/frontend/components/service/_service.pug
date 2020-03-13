@@ -1,0 +1,13 @@
+//- Service
+	@param {object} obj - data object
+	@param {string} obj.embed - class for icon
+	@param {string} obj.title - service title
+	@param {string} obj.text - service text
+mixin service( obj )
+	// Service
+	article.service&attributes( attributes )
+		.service-title.h4= obj.title
+		hr.service-divider.divider.divider-sm
+		ul.service-list
+			each item in obj.list
+				li.service-list-item= item.text

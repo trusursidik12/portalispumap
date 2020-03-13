@@ -1,0 +1,19 @@
+// Step chart
+-
+	var dataStepValues = [];
+	for (let i = 0; i < 14; i += 0.5 + Math.random()) {
+		dataStepValues.push( [ i, Math.sqrt( 2 * i + Math.sin( i ) + 5 ) ] );
+	};
+
+	var dataStep = [
+		{
+			label: "Area",
+			data: dataStepValues,
+			lines: {
+				show: true,
+				steps: true
+			}
+		}
+	];
+
+.flotchart-container( data-flotchart-data= dataStep )

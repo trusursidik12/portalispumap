@@ -1,0 +1,14 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	-
+		pageName = 'Blog modern without sidebar';
+		pageId = 'blog-modern-no-sidebar';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb-no-title
+	include ../components/section/_blog-modern
+	include ../components/footer/_footer-default

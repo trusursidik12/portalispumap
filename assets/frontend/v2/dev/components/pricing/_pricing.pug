@@ -1,0 +1,69 @@
+//- Pricing box
+	@param {object} data - pricing-box data object
+	@param {string} [data.label] - pricing-box label
+	@param {string} data.title - pricing-box title
+	@param {string} data.subtitle - pricing-box subtitle text
+	@param {string} data.price - pricing-box price value
+	@param {string} data.valueMeta - pricing-box price meta
+	@param {array} data.list - pricing-box list array
+		@param {object} item - object with list item parameters
+	@param {string} [data.btnClass] - button class
+	@param {string} [data.btnText] - button text
+	@param {string} [data.link] - link path
+	@param {string} [data.linkText] - link text
+mixin pricing-box( data )
+	.pricing.pricing-box&attributes( attributes )
+		.pricing-box-header
+			if ( data.label )
+				.pricing-box-label= data.label
+			.pricing-box-title.h3= data.title
+			.pricing-box-subtitle.lead= data.subtitle
+			.pricing-box-divider
+		.pricing-box-body
+			.pricing-box-value
+				| $
+				= data.price
+				span.pricing-box-postfix /mo
+			.pricing-box-value-meta= data.valueMeta ? data.valueMeta : 'Billed monthly'
+			ul.pricing-box-list
+				each item in data.list
+					li
+						span.pricing-box-list-icon.int-check-circle-filled.novi-icon
+						= item
+			button.btn.btn-block.btn-lg.pricing-box-btn( class= ( data.btnClass ? data.btnClass : 'btn-primary' ) )= data.btnText ? data.btnText : 'Start a Free 7-day Trial'
+			.pricing-box-links
+				span or
+				a.pricing-box-link( href= ( data.link ? data.link : '#' ) )= data.linkText ? linkText : 'See More Features'
+
+//- Pricing column
+	@param {object} data - pricing-box data object
+		@param {string} [data.label] - pricing-box label
+		@param {string} data.title - pricing-box title
+		@param {string} data.subtitle - pricing-box subtitle text
+		@param {string} data.price - pricing-box price value
+		@param {string} data.valueMeta - pricing-box price meta
+		@param {array} data.list - pricing-box list array
+			@param {object} item - object with list item parameters
+		@param {string} [data.btnClass] - button class
+		@param {string} [data.btnText] - button text
+		@param {string} [data.link] - link path
+		@param {string} [data.linkText] - link text
+mixin pricing-column( data )
+	.pricing.pricing-column&attributes( attributes )
+		if ( data.label )
+			.pricing-column-label= data.label
+		.pricing-column-title.h4= data.title
+		.pricing-column-subtitle= data.subtitle
+		.pricing-column-divider
+		.pricing-column-value
+			| $
+			= data.price
+			span.pricing-column-postfix /mo
+		.pricing-column-value-meta= data.valueMeta ? data.valueMeta : 'Billed monthly'
+		ul.list.list-divided.pricing-column-list
+			each item in data.list
+				li= item
+		button.btn.btn-block.btn-primary.pricing-column-btn= data.btnText ? data.btnText : 'Sign up'
+		.pricing-column-links
+			span or
+			a.pricing-column-link( href= ( data.link ? data.link : '#' ) )= data.linkText ? linkText : 'See More Features'

@@ -1,0 +1,66 @@
+<section class='section section-lg overlay-light overlay-light-05 bg-image novi-background' id='rdMailform' style='background-image: url( images/image-37-1920x960.jpg )'>
+  <div class='container'>
+    <div class='row justify-content-center novi-disabled'>
+      <div class='col-md-11 col-lg-9 col-xl-8'>
+        <h2 class='text-center'>See It In Action</h2>
+        <form class='rd-mailform' data-form-output='form-output-global' data-form-type='contact' method='post' action='components/rd-mailform/rd-mailform.php'>
+          <div class='row row-20 gutters-20 novi-disabled'>
+            <div class='col-sm-6'>
+              <div class='form-group'><label for='input-name'>Name:</label>
+                <div class='position-relative'><input class='form-control' id='input-name' type='text' name='name' placeholder='First name' data-constraints='@Required' /></div>
+              </div>
+            </div>
+            <div class='col-sm-6'>
+              <div class='form-group'><label for='input-surname'>Surname:</label>
+                <div class='position-relative'><input class='form-control' id='input-surname' type='text' name='surname' placeholder='Last name' data-constraints='@Required' /></div>
+              </div>
+            </div>
+            <div class='col-sm-6'>
+              <div class='form-group'><label for='input-email'>E-mail:</label>
+                <div class='position-relative'><input class='form-control' id='input-email' type='email' name='email' placeholder='Your e-mail address' data-constraints='@Email @Required' /></div>
+              </div>
+            </div>
+            <div class='col-sm-6'>
+              <div class='form-group'><label for='input-tel'>Phone:</label>
+                <div class='position-relative'><input class='form-control' id='input-tel' type='tel' name='tel' placeholder='X-XXX-XXX-XXXX' data-constraints='@PhoneNumber @Required' /></div>
+              </div>
+            </div>
+            <div class='col-sm-6'>
+              <div class='form-group'><label for='input-sex'>Sex:</label>
+                <div class='select-wrap position-relative'><select class='select2' id='input-sex' name='sex' data-select2-options='{"placeholder":"Gender:"}' data-constraints='@Required'>
+                    <option label='placeholder'></option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Non-binary</option>
+                  </select></div>
+              </div>
+            </div>
+            <div class='col-sm-6'>
+              <div class='form-group'><label for='input-date'>Date:</label>
+                <div class='form-group-icon novi-disabled'><input class='form-control' id='input-date' type='text' name='date' placeholder='Select date' data-datetimepicker='{"format":"L"}' data-constraints='@Required' />
+                  <div class='form-icon int-calendar novi-icon'></div>
+                </div>
+              </div>
+            </div>
+            <div class='col-sm-6'>
+              <div class='form-group'><label for='input-time-start'>Required time interval start:</label>
+                <div class='form-group-icon novi-disabled'><input class='form-control' id='input-time-start' type='text' name='time-start' placeholder='Select time' data-datetimepicker='{"format":"LT"}' data-constraints='@Required' />
+                  <div class='form-icon int-clock novi-icon'></div>
+                </div>
+              </div>
+            </div>
+            <div class='col-sm-6'>
+              <div class='form-group'><label for='input-time-end'>Required time interval end:</label>
+                <div class='form-group-icon novi-disabled'><input class='form-control' id='input-time-end' type='text' name='time-end' placeholder='Select time' data-datetimepicker='{"format":"LT"}' data-constraints='@Required' />
+                  <div class='form-icon int-clock novi-icon'></div>
+                </div>
+              </div>
+            </div>
+            <div class='col-sm-12 mt-4'><button class='btn btn-lg btn-primary accent-box-btn' type='submit'>Submit</button></div>
+          </div>
+        </form>
+        <div class='form-output snackbar snackbar-secondary' id='form-output-global'></div>
+      </div>
+    </div>
+  </div>
+</section>

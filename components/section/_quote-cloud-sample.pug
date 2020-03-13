@@ -1,0 +1,28 @@
+include ../quote/_quote
+
+// Quote cloud sample
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Quote Cloud Sample', category:'quote', reload:false, id:'quote-cloud-sample' } )
+	.container
+		h2.text-center Testimonials type #2
+		.row.row-40.row-md-50
+			.col-sm-6.col-lg-4
+				+quote-cloud({
+					text:     quote1.text,
+					img:      'persons/person-01-64x64',
+					name:     quote1.name,
+					position: quote1.position
+				})
+			.col-sm-6.col-lg-4
+				+quote-cloud({
+					text:     quote2.text,
+					img:      'persons/person-02-64x64',
+					name:     quote2.name,
+					position: quote2.position
+				}).quote-light
+			.col-sm-6.col-lg-4
+				+quote-cloud({
+					text:     quote3.text,
+					img:      'persons/person-03-64x64',
+					name:     quote3.name,
+					position: quote3.position
+				}).quote-primary

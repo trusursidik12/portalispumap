@@ -1,0 +1,85 @@
+// Variables
+$pag-short-font-size: $font-size-sm;
+$pag-short-border-color: $border-color;
+$pag-short-border-radius: $border-radius;
+$pag-short-link-color: $secondary;
+$pag-short-color: $gray-900;
+$pag-short-shadow: $box-shadow-sm;
+
+
+// Base
+.pag-short-link {
+	font-size: $pag-short-font-size;
+	font-weight: 500;
+	color: $pag-short-color;
+	transition: $transition-base;
+
+	&:hover {
+		color: $pag-short-link-color;
+	}
+}
+
+.pag-short-link-prev,
+.pag-short-link-next {
+	> * { vertical-align: middle; }
+	> * + * { margin-left: 10px; }
+}
+
+
+// Spacing
+.pag-short-link + .pag-short-link { margin-left: 25px; }
+
+
+// Modifiers
+.pag-short-bordered {
+	.pag-short-link + .pag-short-link { margin-left: 17px; }
+
+	.pag-short-link {
+		padding: 10px 13px;
+		color: $pag-short-link-color;
+		border: 1px solid $pag-short-border-color;
+		border-radius: $pag-short-border-radius;
+
+		&:hover {
+			box-shadow: $pag-short-shadow;
+			border-color: transparent;
+		}
+	}
+
+	.pag-short-arrow {
+		color: $pag-short-color;
+	}
+}
+
+
+// Context dark
+.context-dark {
+	.pag-short-link {
+		color: inherit;
+
+		&:hover {
+			color: $pag-short-link-color;
+		}
+	}
+
+	.pag-short-bordered {
+		.pag-short-link {
+			color: $pag-short-link-color;
+		}
+
+		.pag-short-arrow {
+			color: inherit;
+		}
+	}
+}
+
+// Media
+@include media-breakpoint-up( xxl ) {
+	.pag-short-bordered {
+		.pag-short-link {
+			padding: 16px 33px;
+		}
+	}
+
+	.pag-short-link + .pag-short-link { margin-left: 60px; }
+}

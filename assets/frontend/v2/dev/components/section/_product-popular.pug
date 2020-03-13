@@ -1,0 +1,33 @@
+include ../product/_product
+
+// Popular product
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Popular Product', category:'shop', reload:false, id:'popular-product' } )
+	.container
+		h3 Similar products
+		.row.row-30.row-sm-40.row-md-50
+			.col-6.col-md-4.col-lg-3
+				+product({
+					img: 'products/product-10-290x372',
+					title: 'Black baseball cap',
+					price: '12'
+				})
+			.col-6.col-md-4.col-lg-3
+				+product({
+					img:   'products/product-01-290x372',
+					title: 'Iridescent iPhone case',
+					price: '19'
+				})
+			.col-6.col-md-4.col-lg-3
+				+product({
+					img:   'products/product-02-290x372',
+					title: 'Black analogue watch',
+					price: '43',
+					productNew: true
+				})
+			.col-6.col-md-4.col-lg-3
+				+product({
+					img:   'products/product-03-290x372',
+					title: 'Ombré vinyl backpack',
+					price: '29',
+					priceOld: '37'
+				})

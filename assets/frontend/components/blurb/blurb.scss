@@ -1,0 +1,173 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.blurb {
+	font-size: $font-size-sm;
+
+	.blurb-header > * {
+		margin-top: 0;
+	}
+}
+
+.blurb-embed {
+	line-height: 1;
+	color: $primary;
+
+	.blurb-number {
+		color: inherit;
+	}
+}
+
+.blurb-icon {
+	font-size: px-to-rem( 64px );
+}
+
+.blurb-header {
+	display: flex;
+	align-items: center;
+	@include group(20px);
+}
+
+
+// Spacing
+* + .blurb {
+	margin-top: px-to-rem( 40px );
+}
+
+* + .blurb-title {
+	margin-top: px-to-rem( 30px );
+}
+
+* + .blurb-text {
+	margin-top: px-to-rem( 20px );
+}
+
+* + .blurb-embed {
+	margin-top: px-to-rem( 30px );
+}
+
+.blurb-header + .blurb-divider {
+	margin-top: px-to-rem( 20px );
+}
+
+.blurb-divider + .blurb-text {
+	margin-top: px-to-rem( 30px );
+}
+
+
+// Blurb boxed
+.blurb-boxed {
+	padding: 10%;
+	border-radius: $border-radius;
+	background-color: $white;
+	box-shadow: $box-shadow-sm;
+}
+
+
+// Blurb minimal
+.blurb-minimal {
+	padding: 15%;
+	border-radius: $border-radius;
+	background-color: $white;
+	box-shadow: $box-shadow-sm;
+}
+
+
+// Blurb small
+.blurb-small {
+	* + .blurb-title {
+		margin-top: px-to-rem( 20px );
+	}
+}
+
+
+// Blurb inline
+.blurb-inline {
+	* + .blurb-text {
+		margin-top: 5px;
+	}
+}
+
+
+// Blurb modern
+.blurb-modern {
+	padding: 10%;
+	border-radius: $border-radius;
+	border: 1px solid $border-color;
+	background-color: $white;
+	transition: .3s ease;
+}
+
+
+// Blurb classic
+.blurb-classic {
+	font-size: inherit;
+}
+
+
+// Contexts
+.context-dark {
+	.blurb-embed {
+		color: inherit;
+	}
+
+	.blurb-boxed,
+	.blurb-minimal {
+		background-color: $gray-900;
+	}
+
+	.blurb-modern {
+		background-color: $gray-900;
+		border-color: $gray-700;
+	}
+}
+
+.desktop {
+	.blurb-modern:hover {
+		border-color: transparent;
+		box-shadow: $box-shadow-sm;
+		transform: translateY(-10px);
+	}
+}
+
+
+// Theming
+@each $color, $value in $theme-colors {
+	.blurb.blurb-#{$color} {
+		color: color-yiq($value);
+		background-color: $value;
+		border-color: transparent;
+
+		.blurb-title,
+		.blurb-embed {
+			color: inherit;
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(xs) {
+	.blurb-minimal {
+		padding-right: 18%;
+		padding-left: 18%;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	* + .blurb {
+		margin-top: px-to-rem( 55px );
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	.blurb-minimal {
+		min-width: 224px;
+	}
+}

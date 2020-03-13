@@ -1,0 +1,64 @@
+// Variables
+$offer-box-link-color: $body-color;
+$offer-box-link-border-color: $border-color;
+$offer-box-link-shadow: $box-shadow-sm;
+$offer-box-link-icon-color: $gray-900;
+
+
+// Base
+.offer-box-link {
+	display: block;
+	padding: 20px 15px;
+	color: $offer-box-link-color;
+	border: 1px solid $offer-box-link-border-color;
+	border-radius: $border-radius;
+	transition: $transition-base;
+
+	&:hover {
+		color: $offer-box-link-color;
+		box-shadow: $offer-box-link-shadow;
+		border-color: transparent;
+		transform: translateY( -10px );
+	}
+
+	.offer-box-icon {
+		font-size: $offer-box-text-fsz;
+		color: $offer-box-link-icon-color;
+	}
+
+	* + .offer-box-text { margin-top: 10px; }
+	* + .offer-box-icon { margin-top: 13px; }
+}
+
+
+// Context dark
+.context-dark {
+	.offer-box-link {
+		color: inherit;
+
+		.offer-box-icon {
+			color: inherit;
+		}
+
+		&:hover {
+			background-color: rgba( $white, .05 );
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.offer-box-link {
+		padding: 35px 25px;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.offer-box-link {
+		padding: 52px 40px 63px;
+
+		* + .offer-box-text { margin-top: 20px; }
+		* + .offer-box-icon { margin-top: 28px; }
+	}
+}

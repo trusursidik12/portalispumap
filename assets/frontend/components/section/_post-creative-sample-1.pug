@@ -1,0 +1,25 @@
+include ../post/_post
+
+// Post creative sample
+section.section.section-md.bg-transparent.novi-background( data-preset!={ title:'Post Creative Sample', category:'blog', reload:false, id:'post-creative-sample' } )
+	.container
+		.row.row-40.justify-content-center
+			.col-xs-10.col-md-12.post-area
+				+post-creative({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post1.title,
+					img:      'image-09-730x470',
+					postText: post1.text
+				}).post-sm
+				+post-creative({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post2.title,
+					img:      'image-05-730x469',
+					postText: post2.textLarge
+				}).post-sm.post-creative-reverse

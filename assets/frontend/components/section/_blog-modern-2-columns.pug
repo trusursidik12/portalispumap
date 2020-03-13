@@ -1,0 +1,86 @@
+include ../post/_post
+include ../pag/_pag
+
+// Modern layout 2 columns
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blog Modern', category:'blog', reload:false, id:'blog-modern-2' } )
+	.container
+		h1.text-center Modern layout
+		.row.row-40.row-md-60.justify-content-center
+			.col-sm-6.col-md-10.col-lg-8.col-xl-6
+				.blog.blog-divider.blog-divider-md
+					+post-side-xs({
+						label:    'HTML',
+						title:    post1.title,
+						img:      'image-09-290x187',
+						postText: 'This year may bring us a lot of surprises as standards in web...',
+						coments:  '25'
+					}).post-sm.blog-divider-item
+
+					+post-side-xs({
+						label:    'HTML',
+						title:    post2.titleShort,
+						img:      'persons/person-06-290x187',
+						postText: 'Nowadays, designing a landing page is way more difficult. The challenge is...',
+						coments:  '25'
+					}).post-sm.blog-divider-item
+
+					+post-side-xs({
+						label:    'HTML',
+						title:    post3.titleShort3,
+						img:      'image-05-290x187',
+						postText: 'I’ve always cared about great visual design, but a few years ago...',
+						coments:  '25'
+					}).post-sm.blog-divider-item
+
+					+post-side-xs({
+						label:    'HTML',
+						title:    post4.title,
+						img:      'image-18-290x187',
+						postText: 'If you want to increase ROI from your website, you can go about it in two...',
+						coments:  '25'
+					}).post-sm.blog-divider-item
+
+			.col-sm-6.col-md-10.col-lg-8.col-xl-6
+				.blog.blog-divider.blog-divider-md
+					+post-side-xs({
+						label:    'HTML',
+						title:    post5.title,
+						img:      'image-11-290x187',
+						postText: 'Dark design is and always will be a trend. The level of darkness will...',
+						coments:  '25'
+					}).post-sm.blog-divider-item
+
+					+post-side-xs({
+						label:    'HTML',
+						title:    post6.titleShort,
+						img:      'image-10-290x187',
+						postText: 'Our team of developers and designers constantly explores ways of refining...',
+						coments:  '25'
+					}).post-sm.blog-divider-item
+
+					+post-side-xs({
+						label:    'HTML',
+						title:    post8.title,
+						img:      'image-06-290x187',
+						postText: 'In this post, our founder John Wilson shared with us his opinion on...',
+						coments:  '25'
+					}).post-sm.blog-divider-item
+
+					+post-side-xs({
+						label:    'HTML',
+						title:    'New impressive & exciting tools for web designers',
+						img:      'image-08-290x187',
+						postText: 'It’s the right time to start thinking about new tools and solutions that...',
+						coments:  '25'
+					}).post-sm.blog-divider-item
+
+		+pag-simple([
+			{ value: '1', actionClass: 'active' },
+			{ value: '2' },
+			{ value: '3' },
+			{ value: '4' },
+			{ value: '5' },
+			{ value: '..', class: 'inactive' },
+			{ value: '24' },
+			{ next: true }
+		]).justify-content-center

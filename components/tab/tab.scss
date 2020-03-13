@@ -1,0 +1,64 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.tab-content {
+	padding-top: 35px;
+}
+
+
+// Spacing
+* + .tab { margin-top: 25px; }
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.tab-horizontal {
+		display: flex;
+
+		.tab-embed {
+			max-width: 40%;
+		}
+
+		.tab-content {
+			padding-top: 0;
+			padding-bottom: 30px;
+		}
+	}
+
+	* + .tab { margin-top: 35px; }
+}
+
+@include media-breakpoint-up( lg ) {
+	* + .tab { margin-top: 55px; }
+}
+
+@include media-breakpoint-up( xl ) {
+	.tab-content {
+		padding-top: 45px;
+	}
+
+	.tab-horizontal {
+		.tab-embed {
+			min-width: 20%;
+		}
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.tab-content {
+		padding-top: 52px;
+	}
+
+	* + .tab { margin-top: 67px; }
+}
+
+
+// Layouts
+@import "tab-scale";
+@import "tab-shadow";

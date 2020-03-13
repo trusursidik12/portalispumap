@@ -1,0 +1,29 @@
+// Base
+.post-simple {
+	display: inline-block;
+	max-width: 400px;
+
+	* + .post-title { margin-top: 10px; }
+	* + .post-meta { margin-top: 10px; }
+	* + .post-text { margin-top: 8px; }
+	* + .post-btn { margin-top: 15px; }
+	.post-img-link + .post-title { margin-top: 15px; }
+}
+
+
+// Spacing
+.post-simple + .post-simple { margin-top: 20px; }
+
+
+// Media
+@include media-breakpoint-up( xxl ) {
+	.post-simple {
+		* + .post-title { margin-top: 11px; }
+		* + .post-meta { margin-top: 11px; }
+		* + .post-text { margin-top: 10px; }
+		* + .post-btn { margin-top: 22px; }
+		.post-img-link + .post-title { margin-top: 29px; }
+	}
+
+	.post-simple + .post-simple { margin-top: 32px; }
+}

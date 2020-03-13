@@ -1,0 +1,21 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.iframe {
+
+}
+
+
+// Modifying
+.iframe-soundcloud {
+	.iframe-item {
+		width: 100%;
+		border: none;
+	}
+}

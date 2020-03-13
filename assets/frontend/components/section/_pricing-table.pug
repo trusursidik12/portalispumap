@@ -1,0 +1,135 @@
+include ../multiswitch/_multiswitch
+include ../pricing/_pricing
+
+// Pricing table
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Pricing Table', category:'price', reload:true, id:'pricing-table' } )
+	.container
+		h2.text-center Compare Plans, Side by Side
+		p.text-center Easy to switch at any time
+		.pricing-table-container
+			table.pricing-table.accordion.accordion-small
+				thead
+					tr.pricing-table-header
+						th.pricing-table-title.h4 The basics
+						th
+							.h3.pricing-table-column-title Pro
+							button.btn.btn-lg.btn-primary.pricing-table-btn Start Trial
+						th
+							.h3.pricing-table-column-title Premium
+							button.btn.btn-lg.btn-primary.pricing-table-btn Start Trial
+						th
+							.h3.pricing-table-column-title Business
+							button.btn.btn-lg.btn-primary.pricing-table-btn Start Trial
+
+				tbody
+					tr.pricing-table-subheader
+						td.pricing-table-meta Monthly price
+						td
+							.pricing-table-value.h2 $15#[span.pricing-table-postfix /mo]
+						td
+							.pricing-table-value.h2 $55#[span.pricing-table-postfix /mo]
+						td
+							.pricing-table-value.h2 $55#[span.pricing-table-postfix /mo]
+
+					tr.pricing-table-row-fill
+						td
+							.accordion-item.accordion-table-1
+								a.accordion-header.accordion-group-table-1( href='#', data-multi-switch!={ targets: '.accordion-table-1', isolate: '.accordion-group-table-1', state: true } ) Social accounts
+								.accordion-body.accordion-table-1( data-multi-switch-target-slide ) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+						td 8
+						td 8
+						td 8
+
+					tr
+						td
+							.accordion-item.accordion-table-2
+								a.accordion-header.accordion-group-table-1( href='#', data-multi-switch!={ targets: '.accordion-table-2', isolate: '.accordion-group-table-1' } ) Scheduled posts per social account
+								.accordion-body.accordion-table-2( data-multi-switch-target-slide ) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+						td 8
+						td 8
+						td 8
+
+					tr.pricing-table-row-fill
+						td
+							.accordion-item.accordion-table-3
+								a.accordion-header.accordion-group-table-1( href='#', data-multi-switch!={ targets: '.accordion-table-3', isolate: '.accordion-group-table-1' } ) Users
+								.accordion-body.accordion-table-3( data-multi-switch-target-slide ) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+						td 8
+						td 8
+						td 8
+
+					tr.pricing-table-header
+						th.pricing-table-title.h4 Social Networks
+						th
+						th
+						th
+
+					tr.pricing-table-row-empty
+						td
+						td
+						td
+						td
+
+					tr.pricing-table-row-fill
+						td
+							.accordion-item.accordion-table-4
+								a.accordion-header.accordion-group-table-2( href='#', data-multi-switch!={ targets: '.accordion-table-4', isolate: '.accordion-group-table-2' } ) Instagram
+								.accordion-body.accordion-table-4( data-multi-switch-target-slide ) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+						td: span.int-check-circle-filled.novi-icon.text-dark.h5
+						td: span.int-check-circle-filled.novi-icon.text-dark.h5
+						td: span.int-check-circle-filled.novi-icon.text-dark.h5
+
+					tr
+						td
+							.accordion-item.accordion-table-5
+								a.accordion-header.accordion-group-table-2( href='#', data-multi-switch!={ targets: '.accordion-table-5', isolate: '.accordion-group-table-2' } ) Facebook
+								.accordion-body.accordion-table-5( data-multi-switch-target-slide ) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+						td: span.int-check-circle-filled.novi-icon.text-dark.h5
+						td: span.int-check-circle-filled.novi-icon.text-dark.h5
+						td: span.int-check-circle-filled.novi-icon.text-dark.h5
+
+					tr.pricing-table-row-fill
+						td
+							.accordion-item.accordion-table-6
+								a.accordion-header.accordion-group-table-2( href='#', data-multi-switch!={ targets: '.accordion-table-6', isolate: '.accordion-group-table-2' } ) Twitter
+								.accordion-body.accordion-table-6( data-multi-switch-target-slide ) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+						td: span.int-check-circle-filled.novi-icon.text-dark.h5
+						td: span.int-check-circle-filled.novi-icon.text-dark.h5
+						td: span.int-check-circle-filled.novi-icon.text-dark.h5
+
+					tr
+						td
+							.accordion-item.accordion-table-7
+								a.accordion-header.accordion-group-table-2( href='#', data-multi-switch!={ targets: '.accordion-table-7', isolate: '.accordion-group-table-2' } ) LinkedIn
+								.accordion-body.accordion-table-7( data-multi-switch-target-slide ) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+						td: span.int-check-circle-filled.novi-icon.text-dark.h5
+						td: span.int-check-circle-filled.novi-icon.text-dark.h5
+						td: span.int-check-circle-filled.novi-icon.text-dark.h5
+
+					tr.pricing-table-row-fill
+						td
+							.accordion-item.accordion-table-8
+								a.accordion-header.accordion-group-table-2( href='#', data-multi-switch!={ targets: '.accordion-table-8', isolate: '.accordion-group-table-2' } ) Pinterest
+								.accordion-body.accordion-table-8( data-multi-switch-target-slide ) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+						td: span.int-check-circle-filled.novi-icon.text-dark.h5
+						td: span.int-check-circle-filled.novi-icon.text-dark.h5
+						td: span.int-check-circle-filled.novi-icon.text-dark.h5
+
+					tr.pricing-table-row-empty
+						td
+						td
+						td
+						td
+
+				tfoot
+					tr
+						td
+						td
+							.h3.pricing-table-column-title Pro
+							button.btn.btn-lg.btn-primary.pricing-table-btn Start Trial
+						td
+							.h3.pricing-table-column-title Premium
+							button.btn.btn-lg.btn-primary.pricing-table-btn Start Trial
+						td
+							.h3.pricing-table-column-title Business
+							button.btn.btn-lg.btn-primary.pricing-table-btn Start Trial

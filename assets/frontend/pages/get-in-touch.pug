@@ -1,0 +1,11 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Get in touch';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_get-in-touch-4
+	include ../components/footer/_footer-default

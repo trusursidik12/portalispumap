@@ -1,0 +1,145 @@
+// Variables
+$iso-scale-filter-fsz: $h4-font-size;
+$iso-scale-filter-color: $gray-400;
+$iso-scale-filter-active-color: $gray-900;
+$iso-scale-filter-hover-color: $iso-scale-filter-active-color;
+
+
+// Base
+.isotope-scale,
+.isotope-scale-vertical {
+	.isotope-filter {
+		position: relative;
+		margin-right: 25px;
+		font-weight: 400;
+		color: $iso-scale-filter-color;
+
+		&:first-child {
+			transform-origin: 0 50%;
+		}
+
+		&:hover {
+			color: $iso-scale-filter-hover-color;
+		}
+
+		&.active {
+			color: $iso-scale-filter-active-color;
+			transform: scale( 1.15 );
+		}
+	}
+
+	* + .isotope { margin-top: 25px; }
+}
+
+
+// Context dark
+.context-dark {
+	.isotope-scale,
+	.isotope-scale-vertical {
+		.isotope-filter {
+			color: rgba( color-yiq( $iso-scale-filter-active-color), .4 );
+
+			&:hover,
+			&.active {
+				color: inherit;
+			}
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.isotope-scale-vertical {
+		display: flex;
+
+		.isotope-filters {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			min-width: 30%;
+			max-width: 40%;
+			padding-right: 45px;
+			overflow: inherit;
+		}
+
+		.isotope {
+			flex-grow: 1;
+		}
+
+		.isotope-filter {
+			margin-right: 0;
+			white-space: normal;
+			transition: $transition-base;
+			transform-origin: 0 50%;
+
+			+ .isotope-filter {
+				margin-top: 15px;
+			}
+		}
+
+		* + .isotope { margin-top: 0; }
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.isotope-scale,
+	.isotope-scale-vertical {
+		.isotope-filter {
+			font-size: $iso-scale-filter-fsz * .8;
+
+			&.active {
+				transform: scale( 1.6 );
+			}
+		}
+	}
+
+	.isotope-scale-vertical {
+		.isotope-filters {
+			padding-right: 165px;
+		}
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.isotope-scale,
+	.isotope-scale-vertical {
+		.isotope-filter {
+			font-size: $iso-scale-filter-fsz * .9;
+		}
+	}
+
+	.isotope-scale-vertical {
+		.isotope-filters {
+			min-width: 33%;
+			padding-right: 205px;
+		}
+
+		.isotope-filter + .isotope-filter {
+			margin-top: 21px;
+		}
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.isotope-scale,
+	.isotope-scale-vertical {
+		.isotope-filter {
+			font-size: $iso-scale-filter-fsz;
+		}
+	}
+
+	.isotope-scale-vertical {
+		.isotope-filters {
+			min-width: 35%;
+			padding-right: 235px;
+		}
+
+		&.isotope-scale-vertical-wide {
+			.isotope-filters {
+				min-width: 26%;
+			}
+		}
+	}
+
+}

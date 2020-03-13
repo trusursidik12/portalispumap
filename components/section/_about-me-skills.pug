@@ -1,0 +1,27 @@
+include ../offer-box/_offer-box
+
+// Skills
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Skills', category:'offer box', reload:false, id:'skills-1' } )
+	.container
+		.row.novi-disabled
+			.col-lg-8.col-xl-6.offset-lg-1
+				h2 I’m a creator
+				h4 I got my start as a web and software designer, but soon became obsessed with the world of audience building and book publishing.
+		.row.row-offset-lg.justify-content-center.novi-disabled
+			.col-lg-10
+				.row.row-30.row-md-40
+					.col-sm-6
+						+offer-box-link({
+							title: 'The app design handbook',
+							text: 'This handbook is a perfect giude to the world of web design for both beginners and seasoned experts.'
+						})
+					.col-sm-6
+						+offer-box-link({
+							title: 'Designing web applications',
+							text: 'In my second book I’ve decided to dive deeper into the world of web apps and describe how they are built.'
+						})
+					.col-sm-6
+						+offer-box-link({
+							title: 'Figma for web design',
+							text: 'My recent book is aimed at professional web designers who are just discovering Figma as a web design tool.'
+						})

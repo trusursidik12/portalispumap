@@ -1,0 +1,26 @@
+// Variables
+$person-sm-fsz: $font-size-sm;
+
+
+// Base
+.person-sm {
+	.person-subtitle,
+	.person-text,
+	.person-mail {
+		font-size: $person-sm-fsz;
+	}
+
+	* + .person-title { margin-top: 15px; }
+	* + .person-subtitle { margin-top: 2px; }
+	* + .person-mail { margin-top: 6px; }
+}
+
+
+// Media
+@include media-breakpoint-up( xxl ) {
+	.person-sm {
+		* + .person-title { margin-top: 31px; }
+		* + .person-subtitle { margin-top: 2px; }
+		* + .person-mail { margin-top: 14px; }
+	}
+}

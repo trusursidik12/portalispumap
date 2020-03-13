@@ -1,0 +1,114 @@
+include ../post/_post
+include ../pag/_pag
+
+// Thumbnail creative layout
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blog Thumbnail', category:'blog', reload:false, id:'blog-thumbnail-3' } )
+	.container
+		h1.text-center Thumbnail layout
+		.row.row-40.justify-content-center
+			.col-md-6.col-xxl-7
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post1.title,
+					postText: 'This year may bring us a lot of surprises as standards in web design change and we experience lots of new trends. You can take these trends in and decide...',
+					img:      'image-09-730x470',
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-sm
+
+			.col-md-6.col-xxl-5
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post2.title,
+					postText: 'Nowadays, designing a landing page is way more difficult. The only challenge you face is getting all the necessary information on a single page. To help you with...',
+					img:      'persons/person-06-510x470',
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-sm
+
+			.col-md-6.col-xxl-5
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post3.titleShort,
+					postText: 'Out of all of the creative people in the world, designers have a very clear vision of what their online portfolio should look like. Their line of work demands a site that...',
+					img:      'image-06-510x470',
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-sm
+
+			.col-md-6.col-xxl-7
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    '5 design tips that will highly increase your conversionsand improve your sales',
+					postText: 'If you want to increase ROI from your website, you can go about it in two ways: increase traffic or increase conversions. It is much easier to increase conversions...',
+					img:      'image-08-730x470',
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-sm
+
+			.col-md-6.col-xxl-7
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post5.titleLarge,
+					postText: 'Dark design is and always will be a trend. The level of darkness will always vary, but basically, it’s really hard to screw up a simple, dark design. This is especially...',
+					img:      'image-11-730x470',
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-sm
+
+			.col-md-6.col-xxl-5
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    'Designing accessible color systems for your next web development project',
+					postText: 'Our team of developers and designers constantly explores ways of refining the color palette to make it more accessible and legible for users across all products...',
+					img:      'image-05-510x470',
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-sm
+
+			.col-md-6.col-xxl-5
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    'New impressive & exciting tools for web designers to use this year',
+					postText: 'It’s the right time to start thinking about new tools and solutions that you will use for the rest of the year. We have a few new recommendations that might meet your...',
+					img:      'image-10-510x470',
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-sm
+
+			.col-md-6.col-xxl-7
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    'Interview with John Wilson: the CEO, founder, and art director of Intense web design studio',
+					postText: 'In this post, our founder John Wilson shared with us his opinion on modern web design trends and what new products Intense will introduce next year. We started our...',
+					img:      'image-18-730x470',
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-sm
+
+	+pag-simple([
+		{ value: '1', actionClass: 'active' },
+		{ value: '2' },
+		{ value: '3' },
+		{ value: '4' },
+		{ value: '5' },
+		{ value: '..', class: 'inactive' },
+		{ value: '24' },
+		{ next: true }
+	]).justify-content-center

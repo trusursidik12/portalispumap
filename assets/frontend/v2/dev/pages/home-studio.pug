@@ -1,0 +1,26 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar-studio
+
+block variables
+	-
+		pageName = 'Studio';
+		pageId = 'home-studio';
+		pageClass = 'bg-900 context-dark';
+		logo.default = 'logo-default-secondary-114x27.svg';
+		logo.inverse = 'logo-inverse-secondary-114x27.svg';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_home-studio-about-me
+	include ../components/section/_divider-section
+	include ../components/section/_home-studio-projects
+	include ../components/section/_divider-section
+	include ../components/section/_home-studio-skills
+	include ../components/section/_divider-section
+	include ../components/section/_home-studio-clients
+	include ../components/section/_divider-section
+	include ../components/section/_home-studio-experience
+	include ../components/section/_divider-section
+	include ../components/section/_home-studio-get-in-touch
+	include ../components/footer/_footer-studio

@@ -1,0 +1,80 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+
+// Base
+.link {
+	position: relative;
+	display: inline-block;
+	border: none;
+	font-weight: 500;
+	background: none;
+	transition: .25s;
+	color: inherit;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 0;
+		transform: translateX(-50%);
+		opacity: 0;
+		border-bottom: 2px solid;
+		transition: width .25s;
+	}
+
+	&:hover {
+		color: inherit;
+
+		&::before {
+			width: 100%;
+			opacity: 1;
+		}
+	}
+}
+
+.link-icon {
+	vertical-align: middle;
+	padding-left: .6em;
+}
+
+
+// Theming
+@each $name, $color in $theme-colors {
+	.link.link-#{$name} {
+		color: $color;
+
+		&:hover {
+			color: $color;
+		}
+	}
+
+	.context-dark {
+		// Special contrast colors for dark context
+		$yiq: get-yiq( $color );
+		$contrast-color: $color;
+
+		@if ( $yiq < 90 ) {
+			$contrast-color: if(
+					$yiq < 30,
+					adjust-color($color, $lightness: 40%),
+					adjust-color($color, $saturation: 36%, $lightness: 16%)
+			);
+		}
+
+		.link.link-#{$name} {
+			color: $contrast-color;
+
+			&:hover {
+				color: $white;
+			}
+
+			&::before {
+				border-bottom-color: $contrast-color;
+			}
+		}
+	}
+}

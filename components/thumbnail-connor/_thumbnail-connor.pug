@@ -1,0 +1,15 @@
+//- Thumbnail connor
+	@param {object} data - thumbnail data object
+	@param {array} data.img - thumbnail image params (path, width, height)
+	@param {string} data.title - thumbnail title
+	@param {string} data.description - thumbnail description text
+	@param {string} data.link - thumbnail link path
+	@param {string} data.btnText - thumbnail button text
+mixin thumbnail-connor( data )
+	// Thumbnail connor
+	figure.thumbnail.thumbnail-connor&attributes( attributes )
+		+img( data.img )
+		figcaption.thumbnail-connor-caption
+			h3.thumbnail-connor-title= data.title
+			.thumbnail-connor-description= data.description
+			a.btn.btn-primary.thumbnail-connor-btn( href= data.link ? data.link : '#' )= data.btnText ? data.btnText : 'Take a look'

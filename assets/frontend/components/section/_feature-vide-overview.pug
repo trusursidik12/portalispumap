@@ -1,0 +1,25 @@
+include ../blurb/_blurb
+
+// Plugin Highlights
+section.section.section-lg.bg-transparent.pb-0.novi-background( data-preset!={ title:'Vide Overview', category:'blurb', reload:false, id:'vide-overview' } )
+	.container
+		h2.text-center( data-animate!={ class: 'fadeIn' } ) Plugin Highlights
+		.row.row-40.row-xl-70.justify-content-center
+			.col-md-6.col-lg-5( data-animate!={ class: 'fadeInRight' } )
+				+blurb-modern({
+					embed: '<span class="blurb-icon mdi mdi-settings novi-icon"></span>',
+					title: 'Full HD support',
+					text:  'Create a really beautiful background video scenes in higher quality. Get the all benefits of Full HD video scenes with Vide.'
+				})
+			.col-md-6.col-lg-5( data-animate!={ class: 'fadeInLeft' } )
+				+blurb-modern({
+					embed: '<span class="blurb-icon mdi mdi-calendar-today novi-icon"></span>',
+					title: 'Performance optimization',
+					text:  'Vide will dynamically adapt to your screen resolution and internet connection to provide you and your customers the best experience.'
+				})
+			.col-md-10.text-center
+				.row.no-gutters.justify-content-center.novi-disabled
+					.col-6( data-animate!={ class: 'fadeInUpBig' } )
+						+img( 'image-39-608x500.png' )
+					.col-3( style='margin-left: -17%; margin-top: 4%', data-animate!={ class: 'fadeInUpBig', delay: '0.3s' } )
+						+img( 'image-40-249x469.png' )

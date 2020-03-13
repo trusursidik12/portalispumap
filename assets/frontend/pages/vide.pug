@@ -1,0 +1,15 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Vide';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_intro-vide
+	include ../components/section/_feature-vide-overview
+	include ../components/section/_feature-vide-requirements
+	include ../components/section/_feature-fullcalendar-browser
+	include ../components/section/_feature-fullcalendar-license
+	include ../components/footer/_footer-default

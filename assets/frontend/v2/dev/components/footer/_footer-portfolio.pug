@@ -1,0 +1,28 @@
+include ../rights/_rights
+
+// Footer portfolio
+footer.section.footer.footer-xxl.overlay-dark.context-dark.bg-image.novi-background( style='background-image: url("images/image-32-1920x1000.jpg")', data-preset!={ title:'Footer Portfolio', category:'footer', reload:false, id:'footer-portfolio' } )
+	.container
+		.row.row-40.justify-content-md-between
+			.col-sm-7.col-md-6.col-xl-5.col-xxl-6
+				h1 Trust industry professionals with photography
+				p We are always ready to work on your next photo shoot.
+			.col-sm-5.col-lg-4.col-xl-3.text-sm-right
+				.group-30.d-inline-flex.text-white
+					a.icon.icon-xs.icon-social.int-youtube.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-facebook.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-instagram.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-twitter.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-linkedin.novi-icon( href='#' )
+				.offset-lg
+					p.small 178 West 27th Street, Suite 527, New York NY 10012, United States
+				.offset-xs
+					.d-inline-flex.align-items-center
+						span.icon.icon-xs.int-phone.novi-icon.mr-2
+						.h6: a( href='tel:#' ) +1 234 567 8901
+				.offset-sm
+					a.link.small( href='contact-us.html' ) Get in Touch with Us
+						span.int-arrow-right.novi-icon.ml-2
+
+		.footer-panel
+			+rights

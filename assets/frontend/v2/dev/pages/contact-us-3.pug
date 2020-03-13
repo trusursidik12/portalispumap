@@ -1,0 +1,14 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Contact us 3';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb-no-title
+	include ../components/section/_contact-us-3
+	include ../components/section/_get-in-touch-3
+	include ../components/section/_google-map
+	include ../components/footer/_footer-default

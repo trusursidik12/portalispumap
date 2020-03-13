@@ -1,0 +1,30 @@
+// Bar chart
+-
+	var dataBar = [
+		{
+			label: "Bar 1",
+			data: [ [ 0, 10 ], [ 4, 8 ], [ 8, 4 ], [ 12, 22 ], [ 16, 25 ], [ 20, 14 ], [ 24, 10 ], [ 28, 16 ], [ 32, 10 ], [ 36, 8 ], [ 40, 10 ] ],
+			bars: {
+				show: true,
+				barWidth: [ 1, true ]
+			}
+		},
+		{
+			label: "Bar 2",
+			data: [ [ 1, 7 ], [ 5, 12 ], [ 9, 19 ], [ 13, 9 ], [ 17, 11 ], [ 21, 33 ], [ 25, 4 ], [ 29, 25 ], [ 33, 7 ], [ 37, 12 ], [ 41, 14 ] ],
+			bars: {
+				show: true,
+				barWidth: [ 1, true ]
+			}
+		},
+		{
+			label: "Bar 3",
+			data: [ [ 2, 12 ], [ 6, 19 ], [ 10, 10 ], [ 14, 4 ], [ 18, 18 ], [ 22, 25 ], [ 26, 18 ], [ 30, 11 ], [ 34, 12 ], [ 38, 19 ], [ 42, 18 ] ],
+			bars: {
+				show: true,
+				barWidth: [ 1, true ]
+			}
+		}
+	];
+
+.flotchart-container( data-flotchart-data= dataBar )

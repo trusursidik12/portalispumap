@@ -1,0 +1,41 @@
+include ../person/_person
+
+// Person thumbnail
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Person Thumbnail', category:'person', reload:false, id:'person-thumbnail' } )
+	.container.text-center
+		h2 Member boxes type #4
+		.row.row-40
+			.col-sm-6
+				+person-thumbnail({
+					img: 'persons/person-04-620x620',
+					title: 'Mark Rogers',
+					position: 'Lead Designer'
+				})
+
+			.col-sm-6
+				+person-thumbnail({
+					img: 'persons/person-05-620x620',
+					title: 'Edward Rivera',
+					position: 'Senior Developer'
+				})
+
+			.col-sm-6.col-lg-4
+				+person-thumbnail({
+					img: 'persons/person-01-400x400',
+					title: 'Daniel Reed',
+					position: 'UX Designer'
+				})
+
+			.col-sm-6.col-lg-4
+				+person-thumbnail({
+					img: 'persons/person-08-400x400',
+					title: 'Jean Hall',
+					position: 'Back End Developer'
+				})
+
+			.col-sm-6.col-lg-4
+				+person-thumbnail({
+					img: 'persons/person-06-400x400',
+					title: 'John Wilson',
+					position: 'CEO, Founder, Creative Director'
+				})

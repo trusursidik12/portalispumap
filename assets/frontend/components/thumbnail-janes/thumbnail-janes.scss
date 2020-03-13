@@ -1,0 +1,118 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Variables
+$thumbnail-bg: $secondary;
+$thumbnail-color: $white;
+$thumbnail-caption-fsz: $font-size-sm;
+
+
+// Base
+.thumbnail-janes {
+	position: relative;
+	display: inline-block;
+	max-width: 400px;
+	text-align: left;
+	perspective: 1700px;
+	perspective-origin: 0 50%;
+	transform-style: preserve-3d;
+}
+
+.thumbnail-janes-img {
+	overflow: hidden;
+
+	img {
+		transition: transform 0.4s;
+	}
+}
+
+.thumbnail-janes-caption {
+	position: absolute;
+	top: 0;
+	right: 10%;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	max-width: 230px;
+	padding: 15px;
+	color: $thumbnail-color;
+	background-color: rgba( $thumbnail-bg, .9 );
+	pointer-events: none;
+
+	> * {
+		pointer-events: auto;
+	}
+}
+
+.thumbnail-janes-title {
+	color: inherit;
+}
+
+.thumbnail-janes-description {
+	font-size: $thumbnail-caption-fsz;
+}
+
+.thumbnail-janes-btn {
+	align-self: flex-end;
+}
+
+
+// Spacing
+* + .thumbnail-janes-description { margin-top: 5px; }
+* + .thumbnail-janes-btn { margin-top: 10px; }
+
+
+// Media
+@include media-breakpoint-up(sm) {
+	.thumbnail-janes {
+		max-width: 100%;
+	}
+}
+@include media-breakpoint-up( lg ) {
+	.thumbnail-janes-caption {
+		right: 50%;
+		max-width: 100%;
+		padding: 25px 20px;
+	}
+
+	* + .thumbnail-janes-description { margin-top: 11px; }
+
+	.desktop {
+		.thumbnail-janes-caption {
+			background-color: $thumbnail-bg;
+			opacity: 0;
+			transform: rotateY( -90deg );
+			transform-origin: 0 0;
+			transition: transform .4s, opacity .1s .3s;
+			backface-visibility: hidden;
+		}
+
+		.thumbnail-janes:hover {
+			.thumbnail-janes-img {
+				img {
+					transform: translateX( 25% );
+				}
+			}
+
+			.thumbnail-janes-caption {
+				opacity: 1;
+				transform: rotateY( 0 );
+				transition: transform 0.4s, opacity 0.1s;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.thumbnail-janes-caption {
+		padding: 32px 40px 40px;
+	}
+}

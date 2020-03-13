@@ -1,0 +1,124 @@
+include ../rating/_rating
+include ../quote/_quote-content-sample
+
+//- Quote author
+	@param {object} obj - data object
+	@param {string} obj.img - image name or path
+	@param {string} obj.name - name of author
+	@param {string} obj.position - position of author
+mixin quote-author( obj )
+	// Quote author
+	.quote-author&attributes( attributes )
+		if( obj.img )
+			.media.media-md.align-items-center
+				.media-left
+					+img( obj.img ).quote-author-image
+				.media-body
+					.quote-author-name= obj.name
+					.quote-author-position= obj.position
+		else
+			.quote-author-name= obj.name
+			.quote-author-position= obj.position
+
+
+//- Quote
+	@param {object} obj - data object
+	@param {string} obj.text - quote text
+	@param {string} obj.img - image name or path
+	@param {string} obj.name - name of author
+	@param {string} obj.position - position of author
+	@param {boolean} obj.rating - remove rating from quote
+mixin quote( obj )
+	// Quote
+	article.quote&attributes( attributes )
+		if ( obj.rating != false )
+			+rating.quote-rating
+		.quote-text.h5: q= obj.text
+		+quote-author({
+			img:      obj.img,
+			name:     obj.name,
+			position: obj.position
+		})
+
+
+//- Quote cloud
+	@param {object} obj - data object
+	@param {string} obj.text - quote text
+	@param {string} obj.img - image name or path
+	@param {string} obj.name - name of author
+	@param {string} obj.position - position of author
+mixin quote-cloud( obj )
+	// Quote cloud
+	article.quote.quote-cloud&attributes( attributes )
+		.quote-body
+			+rating.quote-rating
+			.quote-text.h5: q= obj.text
+		+quote-author({
+			img:      obj.img,
+			name:    obj.name,
+			position: obj.position
+		})
+
+
+//- Quote boxed
+	@param {object} obj - data object
+	@param {string} obj.text - quote text
+	@param {string} obj.img - image name or path
+	@param {string} obj.name - name of author
+	@param {string} obj.position - position of author
+mixin quote-boxed( obj )
+	// Quote boxed
+	article.quote.quote-boxed&attributes( attributes )
+		.quote-body
+			+img( obj.img ).quote-author-image
+			+rating.quote-rating
+			.quote-text.h5: q= obj.text
+			.quote-author
+				.quote-author-name= obj.name
+				.quote-author-position= obj.position
+
+
+//- Quote minimal
+	@param {object} obj - data object
+	@param {string} obj.text - quote text
+	@param {string} obj.name - name of author
+	@param {string} obj.position - position of author
+mixin quote-minimal( obj )
+	// Quote minimal
+	article.quote.quote-minimal&attributes( attributes )
+		.quote-text.h5: q= obj.text
+		.quote-author
+			.quote-author-name.h6= obj.name
+			.quote-author-position= obj.position
+
+
+//- Quote classic
+	@param {object} obj - data object
+	@param {string} obj.text - quote text
+	@param {string} obj.name - name of author
+	@param {string} obj.position - position of author
+mixin quote-classic( obj )
+	// Quote classic
+	article.quote&attributes( attributes )
+		+img( obj.img ).quote-author-image
+		+rating.quote-rating
+		.quote-text.h5: q= obj.text
+		.quote-author
+			.quote-author-name= obj.name
+			.quote-author-position= obj.position
+
+
+//- Quote centered
+	@param {object} obj - data object
+	@param {string} obj.text - quote text
+	@param {string} obj.name - name of author
+	@param {string} obj.position - position of author
+mixin quote-centered( obj )
+	// Quote centered
+	article.quote.quote-centered&attributes( attributes )
+		+img( obj.img ).quote-author-image
+		+rating.quote-rating
+		.quote-text.h4: q= obj.text
+		.quote-author
+			.quote-author-name.h6= obj.name
+			.quote-author-position= obj.position

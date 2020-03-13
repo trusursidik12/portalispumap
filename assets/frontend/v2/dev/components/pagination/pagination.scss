@@ -1,0 +1,126 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+// Bootstrap variables
+$pagination-padding-y: 13px;
+$pagination-padding-x: 3px;
+$pagination-font-size: $font-size-sm;
+$pagination-color: $gray-900;
+$pagination-bg: $gray-100;
+$pagination-border-color: $border-color;
+$pagination-border-radius: $border-radius;
+
+$pagination-hover-color: $pagination-color;
+$pagination-hover-bg: $white;
+
+$pagination-focus-box-shadow: 0 0 0 $pagination-border-width $pagination-border-color;
+$pagination-focus-outline: none;
+
+$pagination-disabled-color: $gray-400;
+
+$pagination-padding-y-sm: 5px;
+$pagination-padding-x-sm: $pagination-padding-x;
+$pagination-font-size-sm: $font-size-sm;
+$pagination-line-height-sm: $pagination-line-height;
+$pagination-border-radius-sm: $pagination-border-radius;
+
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+@import "../bootstrap/scss/pagination";
+
+
+// Base
+.pagination {
+	border-radius: 0;
+	@include group( 10px );
+}
+
+.page-link {
+	width: px-to-rem( $pagination-padding-y ) * 2 + ( $pagination-line-height * $pagination-font-size ) + px-to-rem( $pagination-border-width ) * 2;
+	height: px-to-rem( $pagination-padding-y ) * 2 + ( $pagination-line-height * $pagination-font-size ) + px-to-rem( $pagination-border-width ) * 2;
+	margin-left: 0;
+	text-align: center;
+	font-size: $pagination-font-size;
+	font-weight: 400;
+	border-radius: $pagination-border-radius;
+	transition: $transition-base;
+
+	&:hover {
+		box-shadow: $pagination-focus-box-shadow;
+	}
+
+	&.inactive {
+		pointer-events: none;
+	}
+}
+
+.page-item {
+	&:first-child {
+		.page-link {
+			@include border-left-radius( 0 );
+		}
+	}
+
+	&:last-child {
+		.page-link {
+			@include border-right-radius( 0 );
+		}
+	}
+
+	.page-link.page-link-prev,
+	.page-link.page-link-next {
+		border: none;
+		background: none;
+
+		&:hover,
+		&:focus {
+			color: $pagination-active-bg;
+			background: none;
+			box-shadow: none;
+		}
+	}
+}
+
+
+// Spacing
+* + .pagination { margin-top: 30px; }
+
+
+// Modifying
+.pagination-sm {
+	@include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $pagination-font-size-sm, $pagination-line-height-sm, $pagination-border-radius-sm);
+
+	.page-link {
+		width: px-to-rem( $pagination-padding-y-sm ) * 2 + ( $pagination-line-height-sm * $pagination-font-size-sm ) + px-to-rem( $pagination-border-width ) * 2;
+		height: px-to-rem( $pagination-padding-y-sm ) * 2 + ( $pagination-line-height-sm * $pagination-font-size-sm ) + px-to-rem( $pagination-border-width ) * 2;
+	}
+}
+
+.pagination-rounded {
+	.page-link {
+		border-radius: $rounded-pill;
+	}
+}
+
+
+// Context dark
+.context-dark {
+	.page-item {
+		.page-link.page-link-prev,
+		.page-link.page-link-next {
+			color: inherit;
+
+			&:hover,
+			&:focus {
+				color: $pagination-active-bg;
+			}
+		}
+	}
+}
+
+// Media
+@include media-breakpoint-up(xxl) {
+	* + .pagination { margin-top: 80px; }
+}

@@ -1,0 +1,55 @@
+include ../person/_person
+
+// Speakers
+section.section.section-xl.bg-transparent.novi-background( data-preset!={ title:'Speakers', category:'person', reload:false, id:'speakers' } )
+	.container
+		.row.row-40.row-lg-50.row-xl-70.row-xxl-90
+			.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+person({
+					img:      'persons/person-04-400x400',
+					title:    'Mark Rogers',
+					subtitle: 'Lead Designer',
+					links:    [
+						{ iconClass: 'int-twitter' }
+					]
+				}).person-gray.person-md
+
+			.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp', delay: '0.15s' } )
+				+person({
+					img:      'persons/person-05-400x400',
+					title:    'Edward Rivera',
+					subtitle: 'Senior Developer',
+					links:    [
+						{ iconClass: 'int-twitter' }
+					]
+				}).person-gray.person-md
+
+			.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp', delay: '0.3s' } )
+				+person({
+					img:      'persons/person-06-400x400',
+					title:    'John Wilson',
+					subtitle: 'CEO, Founder, Creative Director',
+					links:    [
+						{ iconClass: 'int-twitter' }
+					]
+				}).person-gray.person-md
+
+			.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+person({
+					img:      'persons/person-01-400x400',
+					title:    'Daniel Reed',
+					subtitle: 'UX Designer',
+					links:    [
+						{ iconClass: 'int-twitter' }
+					]
+				}).person-gray.person-md
+
+			.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp', delay: '0.15s' } )
+				+person({
+					img:      'persons/person-08-400x400',
+					title:    'Jean Hall',
+					subtitle: 'Back End Developer',
+					links:    [
+						{ iconClass: 'int-twitter' }
+					]
+				}).person-gray.person-md

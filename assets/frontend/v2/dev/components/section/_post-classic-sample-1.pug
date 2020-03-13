@@ -1,0 +1,17 @@
+include ../post/_post
+
+// Post classic sample
+section.section.section-md.bg-transparent.novi-background( data-preset!={ title:'Post Classic Sample', category:'blog', reload:false, id:'post-classic-sample' } )
+	.container
+		.row.row-40.justify-content-center
+			.col-xs-10.col-md-9.col-lg-8
+				+post-classic({
+					title: post1.title,
+					label: 'HTML',
+					autor: 'Adam Smith',
+					date: 'September 16, 2019',
+					img: 'image-09-840x540',
+					postText: post1.text,
+					coments: '3 Comment(s)',
+					tags: [ 'Web design', 'Articles' ]
+				})

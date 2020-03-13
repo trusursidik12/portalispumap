@@ -1,0 +1,51 @@
+// RD Mailform
+section#rdMailform.section.section-lg.overlay-light.overlay-light-05.bg-image.novi-background( style='background-image: url( images/image-37-1920x960.jpg )', data-preset!={ title:'Mailform', category:'form', reload:true, id:'mailform' } )
+	.container
+		.row.justify-content-center.novi-disabled
+			.col-md-11.col-lg-9.col-xl-8
+				h2.text-center See It In Action
+				form.rd-mailform( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.row.row-20.gutters-20.novi-disabled
+						.col-sm-6: .form-group
+							label( for='input-name' ) Name:
+							.position-relative
+								input.form-control( id='input-name', type='text', name='name', placeholder='First name', data-constraints='@Required' )
+						.col-sm-6: .form-group
+							label( for='input-surname' ) Surname:
+							.position-relative
+								input.form-control( id='input-surname', type='text', name='surname', placeholder='Last name', data-constraints='@Required' )
+						.col-sm-6: .form-group
+							label( for='input-email' ) E-mail:
+							.position-relative
+								input.form-control( id='input-email', type='email', name='email', placeholder='Your e-mail address', data-constraints='@Email @Required' )
+						.col-sm-6: .form-group
+							label( for='input-tel' ) Phone:
+							.position-relative
+								input.form-control( id='input-tel', type='tel', name='tel', placeholder='X-XXX-XXX-XXXX', data-constraints='@PhoneNumber @Required' )
+						.col-sm-6: .form-group
+							label( for='input-sex' ) Sex:
+							.select-wrap.position-relative
+								select.select2( id='input-sex', name='sex', data-select2-options!={ placeholder: 'Gender:' }, data-constraints='@Required' )
+									option( label='placeholder' )
+									option Male
+									option Female
+									option Non-binary
+						.col-sm-6: .form-group
+							label( for='input-date' ) Date:
+							.form-group-icon.novi-disabled
+								input.form-control( id='input-date', type='text', name='date', placeholder='Select date', data-datetimepicker!={ format: 'L' }, data-constraints='@Required' )
+								.form-icon.int-calendar.novi-icon
+						.col-sm-6: .form-group
+							label( for='input-time-start' ) Required time interval start:
+							.form-group-icon.novi-disabled
+								input.form-control( id='input-time-start', type='text', name='time-start', placeholder='Select time', data-datetimepicker!={ format: 'LT' }, data-constraints='@Required' )
+								.form-icon.int-clock.novi-icon
+						.col-sm-6: .form-group
+							label( for='input-time-end' ) Required time interval end:
+							.form-group-icon.novi-disabled
+								input.form-control( id='input-time-end', type='text', name='time-end', placeholder='Select time', data-datetimepicker!={ format: 'LT' }, data-constraints='@Required' )
+								.form-icon.int-clock.novi-icon
+						.col-sm-12.mt-4
+							button.btn.btn-lg.btn-primary.accent-box-btn( type='submit' ) Submit
+
+				#form-output-global.form-output.snackbar.snackbar-secondary

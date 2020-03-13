@@ -1,0 +1,44 @@
+include ../blurb/_blurb
+
+// What we offer
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Offer', category:'blurb', reload:false, id:'offer-1' } )
+	.container
+		h2( data-animate!={ class: 'fadeInUp' } ).text-center What we offer
+		p( data-animate!={ class: 'fadeInUp' } ).text-center Here are our most popular services that we provide to our customers.
+		.row.row-30.row-md-40.justify-content-center.justify-content-xl-between
+			.col-sm-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+blurb({
+					embed: '<span class="blurb-icon ith-layers novi-icon"></span>',
+					title: 'eCommerce assessments',
+					text:  'We can assess your eCommerce and create a discovery document that can serve as the basis for your strategy.'
+				}).blurb-boxed
+			.col-sm-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+blurb({
+					embed: '<span class="blurb-icon ith-calendar novi-icon"></span>',
+					title: 'Conversion rate optimization',
+					text:  'Let us take a look at your website and identify opportunities to increase your conversion rate & average order value.'
+				}).blurb-boxed
+			.col-sm-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+blurb({
+					embed: '<span class="blurb-icon ith-layout-header novi-icon"></span>',
+					title: 'Digital marketing strategy',
+					text:  'We provide guidance, monitoring, and recommendations to ensure your marketing campaign is beneficial.'
+				}).blurb-boxed
+			.col-sm-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+blurb({
+					embed: '<span class="blurb-icon ith-settings novi-icon"></span>',
+					title: 'Customized CRM consulting',
+					text:  'We will work with you to develop the best consulting plan to suit your needs, no matter what digital presence you have.'
+				}).blurb-boxed
+			.col-sm-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+blurb({
+					embed: '<span class="blurb-icon ith-console novi-icon"></span>',
+					title: 'B2B solutions',
+					text:  'We can help you execute the digital transformation of your marketing channel priorities concerning your B2B strategies.'
+				}).blurb-boxed
+			.col-sm-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+blurb({
+					embed: '<span class="blurb-icon ith-mail novi-icon"></span>',
+					title: 'Strategy development',
+					text:  'Our eCommerce experts will partner with you, creating a business strategy that allows you to reach your goals.'
+				}).blurb-boxed

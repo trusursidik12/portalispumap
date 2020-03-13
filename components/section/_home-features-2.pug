@@ -1,0 +1,107 @@
+include ../blurb/_blurb
+
+// Features
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Features', category:'blurb, tab', reload:true, id:'testimonials-3' } )
+	.container
+		.row.row-30.novi-disabled
+			.col-lg-6( data-animate!={ class: 'fadeInLeft' } )
+				.sticky.sticky-top
+					h1 Even more
+						| #[br.d-none.d-lg-block]
+						| features available
+					p Take a look at an extensive list of features
+						| #[br.d-none.d-lg-block]
+						| that our template has to offer.
+			.col-lg-6
+				.tab
+					ul.nav.nav-classic( role='tablist', data-animate!={ class: 'fadeInRight' } )
+						li.nav-item
+							a.nav-link.h4.active( data-toggle='tab', href='#navClassic2-1', role='tab', aria-selected='true' ) Design
+						li.nav-item
+							a.nav-link.h4( data-toggle='tab', href='#navClassic2-2', role='tab', aria-selected='false' ) Development
+					.tab-content
+						#navClassic2-1.tab-pane.fade.show.active( role='tabpanel' )
+							.row.row-30
+								.col-6.col-xs-4.col-md-3.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-devices novi-icon"></span>',
+										title: 'Based on Bootstrap 4'
+									})
+								.col-6.col-xs-4.col-md-3.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-slider novi-icon"></span>',
+										title: 'Sliders and carousels'
+									})
+								.col-6.col-xs-4.col-md-3.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-parallax novi-icon"></span>',
+										title: 'Parallax'
+									})
+								.col-6.col-xs-4.col-md-3.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-layout-header novi-icon"></span>',
+										title: 'Lots of header layouts'
+									})
+								.col-6.col-xs-4.col-md-3.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-layout-footer novi-icon"></span>',
+										title: 'A variety of footer layouts'
+									})
+								.col-6.col-xs-4.col-md-3.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-smile novi-icon"></span>',
+										title: 'Icon fonts'
+									})
+								.col-6.col-xs-4.col-md-3.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-video novi-icon"></span>',
+										title: 'Video background'
+									})
+								.col-6.col-xs-4.col-md-3.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-layout novi-icon"></span>',
+										title: '26 child themes'
+									})
+
+						#navClassic2-2.tab-pane.fade( role='tabpanel' )
+							.row.row-30.flex-row-reverse
+								.col-6.col-xs-4.col-md-3.col-lg-4
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-devices novi-icon"></span>',
+										title: 'Based on Bootstrap 4'
+									})
+								.col-6.col-xs-4.col-md-3.col-lg-4
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-slider novi-icon"></span>',
+										title: 'Sliders and carousels'
+									})
+								.col-6.col-xs-4.col-md-3.col-lg-4
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-parallax novi-icon"></span>',
+										title: 'Parallax'
+									})
+								.col-6.col-xs-4.col-md-3.col-lg-4
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-layout-header novi-icon"></span>',
+										title: 'Lots of header layouts'
+									})
+								.col-6.col-xs-4.col-md-3.col-lg-4
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-layout-footer novi-icon"></span>',
+										title: 'A variety of footer layouts'
+									})
+								.col-6.col-xs-4.col-md-3.col-lg-4
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-smile novi-icon"></span>',
+										title: 'Icon fonts'
+									})
+								.col-6.col-xs-4.col-md-3.col-lg-4
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-video novi-icon"></span>',
+										title: 'Video background'
+									})
+								.col-6.col-xs-4.col-md-3.col-lg-4
+									+blurb-small({
+										embed: '<span class="blurb-icon ith-layout novi-icon"></span>',
+										title: '26 child themes'
+									})

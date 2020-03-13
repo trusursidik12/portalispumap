@@ -1,0 +1,145 @@
+// Aqil Effect
+.btn-aqil-vertical,
+.btn-aqil-horizontal {
+	overflow: hidden;
+	transform: translateZ(0);
+	transition:
+		all .25s,
+		border-color .8s cubic-bezier(0.3, 0.7, 0.7, 0.3);
+
+	&::before,
+	&::after {
+		position: absolute;
+		z-index: -1;
+		content: '';
+		transition-property: top, bottom, left, right;
+		transition-duration: .8s;
+		transition-timing-function: cubic-bezier(0.3, 0.7, 0.7, 0.3);
+	}
+
+	&.btn-outline {
+		transition:
+			all .25s,
+			color .25s .55s;
+
+		&:hover {
+			transition: .25s;
+		}
+	}
+}
+
+.btn-aqil-vertical {
+	&::before,
+	&::after {
+		left: 0;
+		right: 0;
+		height: 200%;
+	}
+
+	&::before {
+		top: -200%;
+	}
+
+	&::after {
+		bottom: -200%;
+	}
+
+	&:hover {
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+	}
+}
+
+.btn-aqil-horizontal {
+	&::before,
+	&::after {
+		top: 0;
+		bottom: 0;
+		width: 200%;
+	}
+
+	&::before {
+		left: -200%;
+	}
+
+	&::after {
+		right: -200%;
+	}
+
+	&:hover {
+		&::before {
+			left: 0;
+		}
+
+		&::after {
+			right: 0;
+		}
+	}
+}
+
+
+// Theming
+@each $color, $value in $theme-colors {
+	$half-value: mix( if( get-yiq( $value ) >= 30, $dark, $light ), $value, 10% );
+	$final-value: mix( if( get-yiq( $value ) >= 30, $dark, $light ), $value, 20% );
+
+	.btn-#{$color} {
+		&.btn-aqil-vertical,
+		&.btn-aqil-horizontal {
+			&:hover {
+				background-color: $value;
+			}
+
+			&.btn-outline {
+				&:hover {
+					background-color: transparent;
+				}
+			}
+		}
+
+		&.btn-aqil-vertical {
+			&::before {
+				background: linear-gradient(to top, rgba( $half-value, .5 ) 50%, rgba( $final-value, .5 ) 50%);
+			}
+
+			&::after {
+				background: linear-gradient(to bottom, rgba( $half-value, .5 ) 50%, rgba( $final-value, .5 ) 50%);
+			}
+
+			&.btn-outline {
+				&::before {
+					background: linear-gradient(to top, rgba( $value, .25 ) 50%, rgba( $value, .5 ) 50%, $value 100%);
+				}
+
+				&::after {
+					background: linear-gradient(to bottom, rgba( $value, .25 ) 50%, rgba( $value, .5 ) 50%, $value 100%);
+				}
+			}
+		}
+
+		&.btn-aqil-horizontal {
+			&::before {
+				background: linear-gradient(to left, rgba( $half-value, .5 ) 50%, rgba( $final-value, .5 ) 50%);
+			}
+
+			&::after {
+				background: linear-gradient(to right, rgba( $half-value, .5 ) 50%, rgba( $final-value, .5 ) 50%);
+			}
+
+			&.btn-outline {
+				&::before {
+					background: linear-gradient(to left, rgba( $value, .25 ) 50%, rgba( $value, .5 ) 50%, $value 100%);
+				}
+
+				&::after {
+					background: linear-gradient(to right, rgba( $value, .25 ) 50%, rgba( $value, .5 ) 50%, $value 100%);
+				}
+			}
+		}
+	}
+}

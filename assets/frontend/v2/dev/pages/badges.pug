@@ -1,0 +1,14 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Badges';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_badge-styles-sample
+	include ../components/section/_badge-shapes-sample
+	include ../components/section/_badge-sizes-sample
+	include ../components/footer/_footer-default

@@ -1,0 +1,16 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	-
+		pageName = 'Portfolio wide vertical';
+		pageId = 'portfolio-wide-vertical';
+		pageClass = 'page-bg bg-900 context-dark';
+		pageImage = 'image-19-1920x762'
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb-no-title
+	include ../components/section/_portfolio-wide-vertical
+	include ../components/footer/_footer-default

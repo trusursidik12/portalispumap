@@ -1,0 +1,37 @@
+include _navigation
+
+mixin rd-navbar
+	//RD Navbar
+	header.section.rd-navbar-wrap( data-preset!={ title:'Navbar App', category:'header', reload:true, id:'navbar-app' } )
+		nav.rd-navbar.navbar-app&attributes( attributes )
+			.navbar-container
+				.navbar-cell
+					.navbar-panel
+						button.navbar-switch.int-hamburger.novi-icon( data-multi-switch!= {
+							targets: '.rd-navbar',
+							scope:   '.rd-navbar',
+							isolate: '[data-multi-switch]'
+						})
+
+						.navbar-logo
+							a.navbar-logo-link( href= homePage.link )
+								+img( logo.default ).navbar-logo-default( alt= logo.name )
+								+img( logo.inverse ).navbar-logo-inverse( alt= logo.name )
+
+				.navbar-cell.navbar-sidebar
+					+navigation( menu )
+
+				.navbar-cell.navbar-spacer
+
+				.navbar-cell
+					.navbar-subpanel
+						.navbar-subpanel-item
+							button.navbar-button.navbar-info-button.mdi-dots-vertical.novi-icon( data-multi-switch!= {
+								targets: '.rd-navbar',
+								scope:   '.rd-navbar',
+								class:   'navbar-info-active',
+								isolate: '[data-multi-switch]'
+							})
+
+							.navbar-info
+								button.btn.btn-secondary.navbar-action-button Download for iOS

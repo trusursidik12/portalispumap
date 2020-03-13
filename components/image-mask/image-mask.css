@@ -1,0 +1,2 @@
+.media {	display: flex;	align-items: flex-start;}.media-body {	flex: 1;}.image-mask {	height: auto;}@media (min-width: 768px) {	.image-mask-1 {		position: absolute;		top: 44%;		right: 0;		width: 45.7%;		transform: translateY(-50%);	}}
+/*# sourceMappingURL=image-mask.css.map */

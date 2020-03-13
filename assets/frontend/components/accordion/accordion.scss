@@ -1,0 +1,88 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Variables
+$accordion-spacer-y: 11px;
+$accordion-spacer-x: 15px;
+
+$accordion-header-fsz: $h5-font-size;
+$accordion-header-lh: $h5-line-height;
+$accordion-header-color: $gray-900;
+
+$accordion-border-color: $border-color;
+$accordion-border-radius: $border-radius;
+$sizeX: 0.75em;
+
+
+// Accordion
+.accordion-header {
+	position: relative;
+	display: block;
+	padding: $accordion-spacer-y $accordion-spacer-x $accordion-spacer-y $sizeX * 2.8;
+	font-size: 1.1em;
+	font-weight: 400;
+	color: $accordion-header-color;
+	transition: $transition-base;
+
+	&:before {
+		position: absolute;
+		left: $sizeX;
+		font-family: 'Intense Icons';
+		line-height: inherit;
+		content: '\e909';
+		will-change: transform;
+		transform: scale( .7 );
+		transition: transform .25s;
+	}
+}
+
+.accordion-body {
+	padding: $accordion-spacer-y $accordion-spacer-x;
+}
+
+.accordion-item.active {
+	.accordion-header {
+		&:before {
+			transform: scale( .7 ) rotate( 90deg );
+		}
+	}
+}
+
+
+// Spacing
+* + .accordion { margin-top: 30px; }
+
+
+// Context dark
+.context-dark {
+	.accordion-header {
+		color: color-yiq( $accordion-header-color );
+
+		&:hover {
+			color: rgba( color-yiq( $accordion-header-color ), .7 );
+		}
+	}
+}
+
+// Media
+@include media-breakpoint-up( xl ) {
+	.accordion-header {
+		font-size: $accordion-header-fsz;
+		line-height: $accordion-header-lh;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .accordion { margin-top: 70px; }
+}
+
+
+// Layouts
+@import "accordion-bootstrap";
+@import "accordion-boxed";
+@import "accordion-classic";
+@import "accordion-small";

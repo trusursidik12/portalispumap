@@ -1,0 +1,30 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+
+// Base
+.icon-box {
+	display: flex;
+	align-items: center;
+	padding: px-to-rem( 15px, 20px );
+	border-radius: $border-radius;
+	text-align: left;
+	transition: .25s;
+
+	&:hover {
+		background: $primary;
+		color: $white;
+		box-shadow: $box-shadow;
+	}
+}
+
+.icon-box-icon {
+	font-size: px-to-rem( 22px );
+	line-height: 1;
+}
+
+* + .icon-box-text {
+	margin-left: px-to-rem( 15px );
+}

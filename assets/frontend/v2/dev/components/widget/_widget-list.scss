@@ -1,0 +1,46 @@
+// Base
+.widget-list {
+	$char-size: .24em;
+	$char-offset: .6em;
+
+	font-size: $font-size-sm;
+	padding-left: $char-offset + $char-size;
+
+	> li {
+		position: relative;
+		max-width: 280px;
+		display: flex;
+		justify-content: space-between;
+		font-weight: 400;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: .64em;
+			left: -$char-offset - $char-size;
+			border: $char-size/2 solid;
+			border-radius: 50%;
+		}
+
+		> * + * {
+			margin-left: 10px;
+		}
+	}
+
+	> li + li { margin-top: 11px; }
+}
+
+
+// Spacing
+* + .widget-list { margin-top: 14px; }
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.widget-list > li { max-width: 100%; }
+	* + .widget-list { margin-top: 22px; }
+}
+
+@include media-breakpoint-up(xxl) {
+	* + .widget-list { margin-top: 31px; }
+}

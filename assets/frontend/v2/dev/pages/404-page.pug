@@ -1,0 +1,11 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = '404 Page';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_404-section
+	include ../components/footer/_footer-default

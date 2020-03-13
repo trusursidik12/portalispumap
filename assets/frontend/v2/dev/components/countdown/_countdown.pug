@@ -1,0 +1,57 @@
+//- Countdown
+	@param {object} data - countdown data object
+	@param {string} data.to - end date
+	@param {string} data.from - start date
+mixin countdown-simple( data )
+	// Countdown
+	.countdown-simple( data-countdown!={ from: data.from, to: data.to } )&attributes( attributes )
+		each item in [ 'days', 'hours', 'minutes', 'seconds' ]
+			- var attrCounter = {}; attrCounter[ 'data-counter-'+ item ] = '';
+			.countdown-block( class= 'countdown-block-' + item )
+				.countdown-wrap
+					.countdown-counter.h1&attributes( attrCounter ) 00
+					.countdown-title= item
+
+//- Countdown boxed
+	@param {object} data - countdown data object
+	@param {string} data.to - end date
+	@param {string} data.from - start date
+mixin countdown-boxed( data )
+	// Countdown boxed
+	.countdown-boxed( data-countdown!={ from: data.from, to: data.to } )
+		each item in [ 'days', 'hours', 'minutes', 'seconds' ]
+			- var attrCounter = {}; attrCounter[ 'data-counter-'+ item ] = '';
+			.countdown-block( class= 'countdown-block-' + item )
+				.countdown-wrap
+					.countdown-counter&attributes( attrCounter ) 00
+					.countdown-title= item
+
+//- Countdown rounded
+	@param {object} data
+	@param {string} data.to
+	@param {string} [data.from]
+	@param {string} [data.count]
+mixin countdown-rounded( data )
+	// Countdown rounded
+	.countdown-rounded( data-countdown!={ from: data.from, to: data.to } )
+		each item in [ 'days', 'hours', 'minutes', 'seconds' ]
+			- var attrCounter = {}; attrCounter[ 'data-counter-'+ item ] = '';
+			.countdown-block( class= 'countdown-block-' + item )
+				.countdown-wrap
+					.countdown-counter.h2&attributes( attrCounter ) 00
+					.countdown-title= item
+
+//- Countdown inline
+	@param {object} data - countdown data object
+	@param {string} data.to - end date
+	@param {string} data.from - start date
+mixin countdown-inline( data )
+	// Countdown inline
+	.countdown-inline( data-countdown!={ from: data.from, to: data.to } )
+		.countdown-meta.h5= data.meta
+		each item in [ 'days', 'hours', 'minutes', 'seconds' ]
+			- var attrCounter = {}; attrCounter[ 'data-counter-'+ item ] = '';
+			.countdown-block( class= 'countdown-block-' + item )
+				.countdown-wrap
+					span.countdown-counter.h1&attributes( attrCounter ) 00
+					span.countdown-title.h5= item

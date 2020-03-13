@@ -1,0 +1,63 @@
+include ../person/_person
+
+// Our team
+section.section.section-lg.bg-transparent.text-center.novi-background( data-preset!={ title:'Our Team', category:'person', reload:false, id:'our-team' } )
+	.container
+		h2 Our team
+		.row.row-40.row-md-50.justify-content-center
+			.col-xs-6.col-md-4.col-lg-3
+				+person({
+					img: 'persons/person-04-176x176',
+					title: 'Mark Rogers',
+					subtitle: 'Lead Designer',
+					mailText: 'mrogers@demolink.org'
+				}).person-rounded.person-sm
+			.col-xs-6.col-md-4.col-lg-3
+				+person({
+					img: 'persons/person-05-176x176',
+					title: 'Edward Rivera',
+					subtitle: 'Senior Front End Developer',
+					mailText: 'erivera@demolink.org'
+				}).person-rounded.person-sm
+			.col-xs-6.col-md-4.col-lg-3
+				+person({
+					img: 'persons/person-07-176x176',
+					title: 'Lisa Baker',
+					subtitle: 'Head of Marketing',
+					mailText: 'lbaker@demolink.org'
+				}).person-rounded.person-sm
+			.col-xs-6.col-md-4.col-lg-3
+				+person({
+					img: 'persons/person-09-176x176',
+					title: 'Jose Jackson',
+					subtitle: 'Senior Copywriter',
+					mailText: 'jjackson@demolink.org'
+				}).person-rounded.person-sm
+			.col-xs-6.col-md-4.col-lg-3
+				+person({
+					img: 'persons/person-08-176x176',
+					title: 'Jean Hall',
+					subtitle: 'Back End Developer',
+					mailText: 'jhall@demolink.org'
+				}).person-rounded.person-sm
+			.col-xs-6.col-md-4.col-lg-3
+				+person({
+					img: 'persons/person-06-176x176',
+					title: 'John Wilson',
+					subtitle: 'CEO, Founder, Creative Director',
+					mailText: 'jwilson@demolink.org'
+				}).person-rounded.person-sm
+			.col-xs-6.col-md-4.col-lg-3
+				+person({
+					img: 'persons/person-01-176x176',
+					title: 'Daniel Reed',
+					subtitle: 'UX Designer',
+					mailText: 'dreed@demolink.org'
+				}).person-rounded.person-sm
+			.col-xs-6.col-md-4.col-lg-3
+				+person({
+					img: 'persons/person-10-176x176',
+					title: 'Alex Davis',
+					subtitle: 'SEO & SMM specialist',
+					mailText: 'adavis@demolink.org'
+				}).person-rounded.person-sm

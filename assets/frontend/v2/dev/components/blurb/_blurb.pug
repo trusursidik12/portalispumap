@@ -1,0 +1,80 @@
+//- Blurb
+	@param {object} obj - data object
+	@param {string} obj.embed - class for icon
+	@param {string} obj.title - blurb title
+	@param {string} obj.text - blurb text
+mixin blurb( obj )
+	// Blurb
+	article.blurb&attributes( attributes )
+		.blurb-embed!= obj.embed
+		.blurb-title.h5= obj.title
+		if( obj.text )
+			.blurb-text= obj.text
+
+
+//- Blurb minimal
+	@param {object} obj - data object
+	@param {string} obj.title - blurb title
+	@param {string} obj.embed - class for icon
+mixin blurb-minimal( obj )
+	// Blurb minimal
+	article.blurb.blurb-minimal&attributes( attributes )
+		.blurb-title.h6= obj.title
+		.blurb-embed!= obj.embed
+
+
+//- Blurb small
+	@param {object} obj - data object
+	@param {string} obj.embed - class for icon
+	@param {string} obj.title - blurb title
+mixin blurb-small( obj )
+	// Blurb small
+	article.blurb.blurb-small&attributes( attributes )
+		.blurb-embed!= obj.embed
+		.blurb-title.h6= obj.title
+
+
+//- Blurb modern
+	@param {object} obj - data object
+	@param {string} obj.embed - class for icon
+	@param {string} obj.title - blurb title
+	@param {string} obj.text - blurb text
+mixin blurb-modern( obj )
+	// Blurb modern
+	article.blurb&attributes( attributes )
+		.blurb-header
+			.blurb-embed!= obj.embed
+			.blurb-title.h5!= obj.title
+		hr.blurb-divider.divider.divider-sm
+		.blurb-text= obj.text
+
+
+//- Blurb inline
+	@param {object} obj - data object
+	@param {string} obj.embed - class for icon
+	@param {string} obj.title - blurb title
+	@param {string} obj.text - blurb text
+	@param {string} obj.alignY - vertical align
+mixin blurb-inline( obj )
+	// Blurb inline
+	article.blurb.blurb-inline&attributes( attributes )
+		.media.media-md( class= obj.alignY )
+			.media-left
+				.blurb-embed!= obj.embed
+			.media-body
+				.blurb-title.h5= obj.title
+				.blurb-text= obj.text
+
+
+//- Blurb modern
+	@param {object} obj - data object
+	@param {string} obj.embed - class for icon
+	@param {string} obj.title - blurb title
+	@param {string} obj.text - blurb text
+mixin blurb-classic( obj )
+	// Blurb modern
+	article.blurb&attributes( attributes )
+		.blurb-header
+			.blurb-embed!= obj.embed
+			.blurb-title.h5!= obj.title
+		.blurb-text= obj.text

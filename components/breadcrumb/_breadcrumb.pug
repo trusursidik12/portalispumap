@@ -1,0 +1,18 @@
+//- Breadcrumb
+	@param {Array} path - navigation path
+	@example +breadcrumb([ { title:'About Us', link:'about-us.html' }, { title:'Team member' } ])
+mixin breadcrumb ( path )
+	// Breadcrumb
+	ul.breadcrumb&attributes( attributes )
+		if ( path.length && path[ path.length - 1 ].title.toLowerCase() !== homePage.title.toLowerCase() )
+			li.breadcrumb-item: a.breadcrumb-link( href= homePage.link )= homePage.title
+			- for ( var i = 0; i < path.length; i++ )
+				- item = path[i]
+				if ( i === path.length - 1 )
+					li.breadcrumb-item: span.breadcrumb-text.breadcrumb-active= item.title
+				else if ( item.link )
+					li.breadcrumb-item: a.breadcrumb-link( href= item.link )= item.title
+				else
+					li.breadcrumb-item: span.breadcrumb-text= item.title
+		else
+			li.breadcrumb-item: span.breadcrumb-text.breadcrumb-active= homePage.title

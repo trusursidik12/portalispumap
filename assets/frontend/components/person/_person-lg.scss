@@ -1,0 +1,24 @@
+// Variables
+$person-lg-title-fsz: $h2-font-size;
+
+
+// Media
+@include media-breakpoint-up( xl ) {
+	.person-lg {
+		.person-title { font-size: 36px; }
+		.person-icon { font-size: 26px; }
+
+		* + .person-subtitle { margin-top: 5px; }
+		* + .person-social { margin-top: 15px; }
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.person-lg {
+		.person-title { font-size: $person-lg-title-fsz; }
+
+		* + .person-title { margin-top: 42px; }
+		* + .person-subtitle { margin-top: 8px; }
+		* + .person-social { margin-top: 22px; }
+	}
+}

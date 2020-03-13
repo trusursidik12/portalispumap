@@ -1,0 +1,43 @@
+//- Counter simple
+	@param {object} data - counter data object
+	@param {number} data.value - counter value
+	@param {string} [data.prefix] - counter value prefix character
+	@param {string} [data.postfix] - counter value postfix character
+	@param {string} [data.title] - counter title
+	@param {string} [data.iconClass] - counter icon class
+mixin counter( data )
+	// Counter
+	.counter&attributes( attributes )
+		.counter-body
+			.counter-value.h1( class= data.valueColor )
+				if ( data.prefix )
+					span.counter-prefix= data.prefix
+				span( data-counter='' )= data.value
+				if ( data.postfix )
+					span.counter-postfix= data.postfix
+				if block
+					block
+			if ( data.title )
+				.counter-title!= data.title
+
+//- Counter inline
+	@param {object} data - counter data object
+	@param {number} data.value - counter value
+	@param {string} [data.prefix] - counter value prefix character
+	@param {string} [data.postfix] - counter value postfix character
+	@param {string} [data.title] - counter title
+	@param {string} [data.iconClass] - counter icon class
+mixin counter-inline( data )
+	// Counter inline
+	.counter&attributes( attributes )
+		.d-sm-flex.group-20
+			.counter-icon.h1( class= data.iconClass )
+			.counter-body
+				.counter-value.h1
+					if ( data.prefix )
+						span.counter-prefix= data.prefix
+					span( data-counter='' )= data.value
+					if ( data.postfix )
+						span.counter-postfix= data.postfix
+				if ( data.title )
+					.counter-title= data.title

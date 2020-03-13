@@ -1,0 +1,23 @@
+//- Checkbox color
+	@param {string} data.id - id label
+	@param {string} data.name - name input
+mixin checkbox-color( data )
+	-
+		data = data || {};
+		data.id = data.id || Math.random().toString( 36 ).substring( 2 );
+	.checkbox-color&attributes( attributes )
+		input.checkbox-color-input( type='checkbox', id= data.id, name= data.name, checked= data.checked )
+		label.checkbox-color-label( for= data.id )
+			span.checkbox-color-content.int-check.novi-icon
+
+//- Radio color
+	@param {string} data.id - id label
+	@param {string} data.name - name input
+mixin radio-color( data )
+	-
+		data = data || {};
+		data.id = data.id || Math.random().toString( 36 ).substring( 2 );
+	.checkbox-color&attributes( attributes )
+		input.checkbox-color-input( type='radio', id= data.id, name= data.name, checked= data.checked )
+		label.checkbox-color-label( for= data.id )
+			span.checkbox-color-content.int-check.novi-icon

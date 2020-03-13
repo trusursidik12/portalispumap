@@ -1,0 +1,2 @@
+.thumbnail-calma-figure {	display: flex;	overflow: hidden;}.thumbnail-calma-image {	width: 100%;	transition: .3s;	transform: scale(1.1);}* + .thumbnail-calma-title {	margin-top: 2.5rem;}* + .thumbnail-calma-text {	margin-top: 1.25rem;}.desktop .thumbnail-calma:hover .thumbnail-calma-image {	transform: none;}
+/*# sourceMappingURL=thumbnail-calma.css.map */

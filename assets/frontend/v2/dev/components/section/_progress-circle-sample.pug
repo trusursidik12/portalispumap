@@ -1,0 +1,30 @@
+include ../progress-circle/_progress-circle
+
+// Progress circle
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Progress Circle', category:'infographics, sample', reload:true, id:'progress-circle' } )
+	.container.text-center
+		h3 Pie charts
+		.row.row-30.row-offset-lg
+			.col-sm-6.col-md-4
+				+progress-circle({
+					value:    75,
+					gradient: [ '#43dd93', '#28a8ff' ],
+					title:    'HTML/CSS',
+					text:     'HTML & CSS are used worldwide for website development.'
+				})
+
+			.col-sm-6.col-md-4
+				+progress-circle({
+					value:    89,
+					gradient: [ '#28a8ff', '#7d2eff' ],
+					title:    'JavaScript',
+					text:     'JavaScript is a dynamic computer programming language.'
+				})
+
+			.col-sm-6.col-md-4
+				+progress-circle({
+					value:    85,
+					gradient: [ '#7d2eff', '#c728ff' ],
+					title:    'UI/UX Design',
+					text:     'UI & UX design simplify interaction with interfaces.'
+				})

@@ -1,0 +1,29 @@
+include ../counter/_counter
+
+// Counters Type #3
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Counter Icon Sample', category:'counter', reload:true, id:'counter-icon-sample-1' } )
+	.container
+		h3 Counters Type #3
+		.row.row-30.row-offset-lg
+			.col-6.col-md-4
+				+counter-inline({
+					iconClass: 'ith-layers',
+					value: 72,
+					postfix: '+',
+					title: 'Team members'
+				})
+
+			.col-6.col-md-4
+				+counter-inline({
+					iconClass: 'ith-layers',
+					value: 2013,
+					title: 'Year of foundation'
+				})
+
+			.col-6.col-md-4
+				+counter-inline({
+					iconClass: 'ith-layers',
+					value: 15,
+					postfix: 'K',
+					title: 'Users'
+				})

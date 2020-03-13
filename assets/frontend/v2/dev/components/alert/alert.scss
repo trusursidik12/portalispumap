@@ -1,0 +1,63 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+// Variables
+$alert-border-width: 0;
+
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/alert";
+
+
+// Base
+.alert {
+	margin-bottom: 0;
+	padding: 20px 15px;
+	font-size: $font-size-sm;
+	color: $body-color;
+	border-left: 10px solid;
+}
+
+.alert-inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	@include group( 10px, 10px );
+}
+
+.alert-icon {
+	margin-right: .7em;
+	font-size: .7em;
+}
+
+.alert-inner-controls {
+	@include group( 27px, 15px );
+}
+
+
+// Theming
+@each $color, $value in $theme-colors {
+	.alert-#{$color} {
+		border-left-color: $value;
+
+		.alert-title {
+			color: $value;
+		}
+	}
+}
+
+
+// Spacing
+* + .alert-text { margin-top: 6px }
+.alert + .alert { margin-top: 30px; }
+
+
+// Media
+@include media-breakpoint-up(lg) {
+	.alert {
+		padding: 12px 29px 22px 20px;
+	}
+}

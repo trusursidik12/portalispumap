@@ -1,0 +1,122 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Variables
+$progress-bg: $primary;
+$progress-title-fsz: $h6-font-size;
+$progress-title-color: $headings-color;
+$progress-title-fw: $headings-font-weight;
+$progress-text-fsz: $font-size-sm;
+
+
+// Base
+.progress-linear {
+	position: relative;
+	text-align: left;
+}
+
+.progress-linear-inner {
+	display: flex;
+	flex-direction: column;
+	@include groupY( 6px );
+}
+
+.progress-linear-title,
+.progress-linear-counter-wrap {
+	font-size: $progress-title-fsz;
+	font-weight: $progress-title-fw;
+	color: $progress-title-color;
+}
+
+.progress-linear-counter-wrap {
+	&.hidden {
+		display: none;
+	}
+}
+
+.progress-linear-body {
+	height: 12px;
+}
+
+.progress-linear-bar {
+	width: 0;
+	height: inherit;
+	background: $progress-bg;
+	transition: 1s all ease-in-out;
+}
+
+.progress-linear-text {
+	max-width: 290px;
+	font-size: $font-size-sm;
+}
+
+
+// Spacing
+.progress-linear + .progress-linear { margin-top: 20px; }
+
+
+// Modifying
+.progress-linear-reverse {
+	.progress-linear-inner {
+		flex-direction: column-reverse;
+	}
+}
+
+.progress-linear-creative {
+	.progress-linear-body {
+		display: flex;
+		align-items: center;
+	}
+
+	.progress-linear-counter-wrap {
+		margin-left: 10px;
+	}
+}
+
+
+// Theming
+@each $name, $value in $gradients {
+	.progress-linear-#{$name} {
+		.progress-linear-bar {
+			background: $value;
+		}
+	}
+}
+
+
+// Contexts
+.context-dark {
+	.progress-linear-title,
+		.progress-linear-counter-wrap {
+		color: $white;
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.progress-linear + .progress-linear {
+		margin-top: px-to-rem( 36px );
+	}
+
+	.progress-linear-lg {
+		.progress-linear-body {
+			height: 16px;
+		}
+
+		.progress-linear-title,
+		.progress-linear-counter-wrap {
+			font-size: $h5-font-size;
+			line-height: $h5-line-height;
+		}
+	}
+
+	.progress-linear-lg + .progress-linear-lg {
+		margin-top: 31px;
+	}
+}

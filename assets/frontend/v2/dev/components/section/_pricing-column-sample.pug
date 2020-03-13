@@ -1,0 +1,93 @@
+include ../multiswitch/_multiswitch
+include ../pricing/_pricing
+
+// Pricing column sample
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Pricing Column Sample', category:'price', reload:true, id:'pricing-column-sample' } )
+	.container
+		h2.text-center Plans type #3
+		.plans.plans-column
+			.plans-switcher.text-center.text-lg-left
+				.switch-item
+					span.switch-item-label Monthly billing
+					+switch-toggle-thin({ targets: '.switch-container-3' }).plans-toggle
+				ul.list.list-divided.plans-list-meta
+					li Social accounts
+					li Scheduled posts
+					li User
+
+			.plans-switch-container
+				.plans-switch-inner.switch-container.switch-container-3
+					.switch-inner
+						.row.row-30.no-gutters.novi-disabled
+							.col-sm-6.col-lg-3
+								+pricing-column({
+									title: 'Free',
+									subtitle: 'Great choice',
+									price: '0',
+									list: [ '1 website', '10 pages', '1 website layout' ]
+								})
+
+							.col-sm-6.col-lg-3
+								+pricing-column({
+									label: 'Most popular',
+									title: 'Basic',
+									subtitle: 'Ideal for getting started',
+									price: '15',
+									list: [ '2 websites', '20 pages', '3 website layouts' ]
+								}).pricing-column-accent
+
+							.col-sm-6.col-lg-3
+								+pricing-column({
+									title: 'Standard',
+									subtitle: 'Perfect for all websites',
+									price: '55',
+									list: [ '3 websites', '35 pages', '6 website layouts' ]
+								})
+
+							.col-sm-6.col-lg-3
+								+pricing-column({
+									title: 'Premium',
+									subtitle: 'For complex websites',
+									price: '85',
+									list: [ '4 websites', '50 pages', '9 website layouts' ]
+								})
+
+					.switch-inner
+						.row.row-30.no-gutters.novi-disabled
+							.col-sm-6.col-lg-3
+								+pricing-column({
+									title: 'Free',
+									subtitle: 'Great choice',
+									price: '0',
+									list: [ '1 website', '10 pages', '1 website layout' ]
+								})
+
+							.col-sm-6.col-lg-3
+								+pricing-column({
+									label: 'Most popular',
+									title: 'Basic',
+									subtitle: 'Ideal for getting started',
+									price: '10',
+									list: [ '2 websites', '20 pages', '3 website layouts' ]
+								}).pricing-column-accent
+
+							.col-sm-6.col-lg-3
+								+pricing-column({
+									title: 'Standard',
+									subtitle: 'Perfect for all websites',
+									price: '50',
+									list: [ '3 websites', '35 pages', '6 website layouts' ]
+								})
+
+							.col-sm-6.col-lg-3
+								+pricing-column({
+									title: 'Premium',
+									subtitle: 'For complex websites',
+									price: '80',
+									list: [ '4 websites', '50 pages', '9 website layouts' ]
+								})
+
+				.plans-description
+					span At the end of your trial, you may downgrade to our basic Free plan:
+					br
+					span.font-weight-normal 1 website, 10 pages, 1 website layout.

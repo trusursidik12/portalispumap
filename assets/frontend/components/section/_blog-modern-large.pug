@@ -1,0 +1,85 @@
+include ../post/_post
+include ../pag/_pag
+
+// Modern large layout
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blog Modern', category:'blog', reload:false, id:'blog-modern-3' } )
+	.container
+		h1.text-center Modern layout
+		.row.row-40.justify-content-center
+			.col-md-12.post-area
+				+post-side-large({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post1.title,
+					img:      'image-09-620x398',
+					postText: 'This year may bring us a lot of surprises as standards in web design change and we experience lots of new trends. You can take these trends in and decide if they...',
+					btnText: 'Read more'
+				})
+
+				+post-side-large({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post2.titleShort,
+					img:      'persons/person-06-620x398',
+					postText: 'Nowadays, designing a landing page is way more difficult. The only challenge you face is getting all the necessary information on a single page. To help you with...',
+					btnText:      'p /Read more'
+				}).post-side-reverse
+
+				+post-side-large({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post3.title,
+					img:      'image-05-620x398',
+					postText: 'I’ve always cared about great visual design, but a few years ago I learned that I loved to teach as well. That led to starting this blog, building iPhone apps...',
+					btnText: 'Read more'
+				})
+
+				+post-side-large({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post6.titleShort,
+					img:      'image-11-620x398',
+					postText: 'Out of all of the creative people in the world, designers have a very clear vision of what their online portfolio should look like. Their line of work demands a site that lives up to...',
+					btnText: 'Read more'
+				}).post-side-reverse
+
+				+post-side-large({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post4.title,
+					img:      'image-06-620x398',
+					postText: 'If you want to increase ROI from your website, you can go about it in two ways: increase traffic or increase conversions. It is much easier to increase conversions, however. Depending...',
+					btnText: 'Read more'
+				})
+
+				+post-side-large({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post5.title,
+					img:      'image-08-620x398',
+					postText: 'Dark design is and always will be a trend. The level of darkness will always vary, but basically, it’s really hard to screw up a simple, dark design. This is especially true for dark...',
+					btnText: 'Read more'
+				}).post-side-reverse
+
+				+pag-simple([
+					{ value: '1', actionClass: 'active' },
+					{ value: '2' },
+					{ value: '3' },
+					{ value: '4' },
+					{ value: '5' },
+					{ value: '..', class: 'inactive' },
+					{ value: '24' },
+					{ next: true }
+				]).justify-content-center

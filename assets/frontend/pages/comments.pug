@@ -1,0 +1,13 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Comments';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_comments-cloud-sample
+	include ../components/section/_comments-bordered-sample
+	include ../components/footer/_footer-default

@@ -1,0 +1,91 @@
+//- Main Navigation
+mixin sitelist( item )
+	case item.type
+		when 'root'
+			ul.sitelist.row.row-30.row-lg-50.row-xl-80.row-xxl-100( class= item.class )&attributes( item.attributes )&attributes( attributes )
+				each child in item.child
+					+sitelist( child )
+			- break;
+
+		when 'dropdown'
+			ul.sitelist-dropdown( class= item.class )&attributes( item.attributes )
+				each child in item.child
+					+sitelist( child )
+			- break;
+
+		when 'megamenu'
+			.sitelist-megamenu( class= item.class )&attributes( item.attributes )
+				.sitelist-megamenu-row
+					each child in item.child
+						+sitelist( child )
+			- break;
+
+		when 'column'
+			ul.sitelist-megamenu-column.sitelist-item-arrow( class= item.class )&attributes( item.attributes )
+				each child in item.child
+					+sitelist( child )
+			- break;
+
+		when 'block'
+			if (item.title)
+				li.sitelist-megamenu-heading= item.title
+			each child in item.child
+				+sitelist( child )
+			- break;
+
+		when 'root-item'
+			li.sitelist-root-item.col-6.col-sm-4.col-md-3( class= { active: item.active }, class= item.class )&attributes( item.attributes )
+				a.sitelist-root-link( href= item.link )
+					!= item.title
+				if (item.child)
+					+sitelist( item.child )
+			- break;
+
+		when 'dropdown-item'
+			li.sitelist-dropdown-item.sitelist-item-dot( class= { active: item.active }, class= item.class )&attributes( item.attributes )
+				a.sitelist-dropdown-link( href= item.link )
+					!= item.title
+				if (item.child)
+					+sitelist( item.child )
+			- break;
+
+		when 'megamenu-item'
+			li.sitelist-megamenu-item.sitelist-item-dot( class= { active: item.active }, class= item.class )&attributes( item.attributes )
+				a.sitelist-megamenu-link( href= item.link )
+					!= item.title
+				if (item.child)
+					+sitelist( item.child )
+			- break;
+
+		when 'banner'
+			=''
+
+//- Megamenu Navigation
+mixin sitelist-megamenu( item )
+	case item.type
+		when 'megamenu'
+			ul.sitelist-megamenu.sitelist-megamenu-wide( class= item.class )&attributes( item.attributes )
+				each child in item.child
+					+sitelist-megamenu( child )
+			- break;
+
+		when 'column'
+			each child in item.child
+				+sitelist-megamenu( child )
+			- break;
+
+		when 'block'
+			each child in item.child
+				+sitelist-megamenu( child )
+			- break;
+
+		when 'megamenu-item'
+			li.sitelist-megamenu-item( class= { active: item.active }, class= item.class )&attributes( item.attributes )
+				a.sitelist-megamenu-link( href= item.link )
+					!= item.title
+				if (item.child)
+					+sitelist-megamenu( item.child )
+			- break;
+
+		when 'banner'
+			=''

@@ -1,0 +1,13 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Media elements';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_media-youtube
+	include ../components/section/_media-soundclaud
+	include ../components/footer/_footer-default

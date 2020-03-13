@@ -1,0 +1,14 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	-
+		pageName = 'Post intro';
+		pageId = 'post-intro';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_intro-post
+	include ../components/section/_post-intro
+	include ../components/footer/_footer-default

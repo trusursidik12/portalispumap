@@ -1,0 +1,137 @@
+include ../logo/_logo
+include ../rights/_rights
+include ../sitelist/_sitelist
+
+// Footer default extended
+footer.section.footer.bg-800.text-400.context-dark.novi-background( data-preset!={ title:'Footer Extended', category:'footer', reload:false, id:'footer-extended' } )
+	.container
+		.row.justify-content-center.novi-disabled
+			.col-sm-11.col-md-9.col-lg-7.col-xl-6.text-center
+				h2 Discover the latest trends in
+					| #[br.d-none.d-xs-block]
+					| web design and development
+				p Trying to stay on top of it all? Get the best tools, resources and inspiration sent to your inbox weekly.
+				form.rd-mailform.form-inline.justify-content-center.group-20.novi-disabled( data-form-output='footer-extended-form-output', data-form-type='subscribe', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.form-inline-group
+						input.form-control( type='email', name='email', placeholder='Enter your email address', data-constraints='@Email @Required' )
+					button.btn.btn-lg.btn-primary( type='submit' ) Subscribe
+
+				#footer-extended-form-output.form-output.snackbar.snackbar-secondary
+
+		.row.row-40
+			.col-xl-6
+				h6 Pages
+				ul.list.footer-list.small.font-weight-normal
+					li.list-item: a.list-link( href='404-page.html' ) 404 page
+					li.list-item: a.list-link( href='503-page.html' ) 503 page
+					li.list-item: a.list-link( href='about-us.html' ) About us
+					li.list-item: a.list-link( href='about-us-2.html' ) About us 2
+					li.list-item: a.list-link( href='about-me.html' ) About me
+					li.list-item: a.list-link( href='about-me-2.html' ) About me 2
+					li.list-item: a.list-link( href='services.html' ) Services
+					li.list-item: a.list-link( href='our-team.html' ) Our team
+					li.list-item: a.list-link( href='our-team-2.html' ) Our team 2
+					li.list-item: a.list-link( href='team-member.html' ) Team member
+					li.list-item: a.list-link( href='team-member-2.html' ) Team member 2
+					li.list-item: a.list-link( href='careers.html' ) Careers
+
+					li.list-item: a.list-link( href='faq.html' ) FAQ
+					li.list-item: a.list-link( href='faq-2.html' ) FAQ 2
+					li.list-item: a.list-link( href='faq-3.html' ) FAQ 3
+					li.list-item: a.list-link( href='faq-4.html' ) FAQ 4
+					li.list-item: a.list-link( href='contact-me.html' ) Contact me
+					li.list-item: a.list-link( href='contact-us.html' ) Contact us
+					li.list-item: a.list-link( href='contact-us-2.html' ) Contact us 2
+					li.list-item: a.list-link( href='contact-us-3.html' ) Contact us 3
+					li.list-item: a.list-link( href='get-in-touch.html' ) Get in touch
+					li.list-item: a.list-link( href='subscribe.html' ) Subscribe
+					li.list-item: a.list-link( href='sitemap.html' ) Sitemap
+					li.list-item: a.list-link( href='coming-soon.html' ) Coming soon
+
+					li.list-item: a.list-link( href='search-results.html' ) Search results
+					li.list-item: a.list-link( href='login.html' ) Login
+					li.list-item: a.list-link( href='register.html' ) Register
+					li.list-item: a.list-link( href='pricing.html' ) Pricing
+					li.list-item: a.list-link( href='appointment.html' ) Appointment
+					li.list-item: a.list-link( href='appointment-calendar.html' ) Appointment 2
+					li.list-item: a.list-link( href='maintenance.html' ) Maintenance
+					li.list-item: a.list-link( href='clients.html' ) Clients
+					li.list-item: a.list-link( href='under-construction.html' ) Under construction
+					li.list-item: a.list-link( href='privacy-policy.html' ) Privacy policy
+
+			.col-xl-6
+				h6 Components
+				ul.list.footer-list.small.font-weight-normal
+					li.list-item: a.list-link( href='accordions.html' ) Accordions
+					li.list-item: a.list-link( href='alerts.html' ) Alerts
+					li.list-item: a.list-link( href='animations.html' ) Animations
+					li.list-item: a.list-link( href='breadcrumbs.html' ) Breadcrumbs
+					li.list-item: a.list-link( href='buttons.html' ) Buttons
+					li.list-item: a.list-link( href='calls-to-action.html' ) Calls to action
+					li.list-item: a.list-link( href='comments.html' ) Comments
+					li.list-item: a.list-link( href='offer-boxes.html' ) Offer boxes
+					li.list-item: a.list-link( href='counters.html' ) Counters
+					li.list-item: a.list-link( href='dividers.html' ) Dividers
+					li.list-item: a.list-link( href='widgets.html' ) Widgets
+					li.list-item: a.list-link( href='form-elements.html' ) Form elements
+
+					li.list-item: a.list-link( href='grid-system.html' ) Grid system
+					li.list-item: a.list-link( href='blurbs.html' ) Blurbs
+					li.list-item: a.list-link( href='icons.html' ) Icons
+					li.list-item: a.list-link( href='infographics.html' ) Infographics
+					li.list-item: a.list-link( href='badges.html' ) Badges
+					li.list-item: a.list-link( href='lists.html' ) Lists
+					li.list-item: a.list-link( href='maps.html' ) Maps
+					li.list-item: a.list-link( href='media-elements.html' ) Media elements
+					li.list-item: a.list-link( href='persons.html' ) Persons
+					li.list-item: a.list-link( href='pagination.html' ) Pagination
+					li.list-item: a.list-link( href='posts.html' ) Posts
+					li.list-item: a.list-link( href='pricing-and-plans.html' ) Pricing and plans
+
+					li.list-item: a.list-link( href='tables.html' ) Tables
+					li.list-item: a.list-link( href='tabs.html' ) Tabs
+					li.list-item: a.list-link( href='testimonials.html' ) Testimonials
+					li.list-item: a.list-link( href='text-rotator.html' ) Text rotator
+					li.list-item: a.list-link( href='thumbnails.html' ) Thumbnails
+					li.list-item: a.list-link( href='countdowns.html' ) Countdowns
+					li.list-item: a.list-link( href='typography.html' ) Typography
+
+		hr.divider.footer-divider
+
+		.row.row-30.justify-content-xxl-between.novi-disabled
+			.col-lg-5
+				+logo
+				p.small Get the most for your website with Intense Multipurpose Website Template, valued by over 3,000 customers worldwide. With a great number of pages, components, elements, and blocks, this responsive Bootstrap 4 template is definitely worth your attention.
+			.col-md-11.col-lg-7.col-xxl-6
+				p.small 178 West 27th Street, Suite 527, New York NY 10012, United States
+				.row.row-20.novi-disabled
+					.col-auto.col-sm-4
+						.media.media-xxs.text-white
+							.media-left
+								span.icon.icon-xs.int-phone.novi-icon
+							.media-body
+								ul.list.list-contact
+									li.list-contact-item: a.list-contact-link( href='tel:#' ) +1 234 567 8901
+									li.list-contact-item: a.list-contact-link( href='tel:#' ) +1 234 567 8902
+					.col-auto.col-sm-4
+						ul.list.list-xs.small
+							li.list-item Mon-Fri: 8am - 6pm
+							li.list-item Sat-Sun: 8am - 4pm
+							li.list-item Holidays: closed
+					.col-auto.col-sm-4
+						ul.list.list-lg.small.text-white
+							li.list-item: a.link.link-contrast.link-secondary( href='mailto:#' ) mail@example.com
+							li.list-item: a.link.link-contrast.link-secondary( href='mailto:#' ) info@example.com
+
+		hr.divider.footer-divider
+
+		.row.row-15.align-items-center.justify-content-between.footer-panel.novi-disabled
+			.col-auto
+				+rights
+			.col-auto
+				.group-30.d-flex.align-items-center.text-white
+					a.icon.icon-xs.icon-social.int-youtube.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-facebook.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-instagram.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-twitter.novi-icon( href='#' )
+					a.icon.icon-xs.icon-social.int-linkedin.novi-icon( href='#' )

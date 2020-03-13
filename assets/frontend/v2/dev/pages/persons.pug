@@ -1,0 +1,16 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Persons';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_person-lg-sample
+	include ../components/section/_person-sm-sample
+	include ../components/section/_person-sample
+	include ../components/section/_person-thumbnail-sample
+	include ../components/section/_person-xl-sample
+	include ../components/footer/_footer-default

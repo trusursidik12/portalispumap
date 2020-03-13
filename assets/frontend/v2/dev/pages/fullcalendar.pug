@@ -1,0 +1,16 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Fullcalendar';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_intro-calendar
+	include ../components/section/_feature-fullcalendar-overview
+	include ../components/section/_feature-fullcalendar-requirements
+	include ../components/section/_feature-fullcalendar-browser
+	include ../components/section/_feature-fullcalendar-license
+	include ../components/section/_fullcalendar
+	include ../components/footer/_footer-default

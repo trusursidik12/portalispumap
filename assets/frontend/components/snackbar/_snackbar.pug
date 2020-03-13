@@ -1,0 +1,15 @@
+//- Snackbars
+	@param {object} data - object data
+	@param {string} data.themeColor - snackbar color variant
+	@param {string} data.title - snackbar title
+	@param {number} data.titleIcon - snackbar title icon class
+	@param {string} [data.btnText] - snackbar button text
+mixin snackbar( data )
+	// Snackbars
+	.snackbar( class= `snackbar-${data.themeColor}` )&attributes( attributes )
+		.snackbar-inner
+			.snackbar-title
+				span.icon.snackbar-icon.novi-icon( class= data.titleIcon )
+				= data.title
+			if ( data.btnText )
+				button.link( class= `link-${data.themeColor}` )= data.btnText

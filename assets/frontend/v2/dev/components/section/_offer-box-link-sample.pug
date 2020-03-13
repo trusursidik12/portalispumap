@@ -1,0 +1,22 @@
+include ../offer-box/_offer-box
+
+// Offer box link
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Offer Box Link Sample', category:'offer box', reload:false, id:'offer-box-link-sample' } )
+	.container
+		h2.px-3.text-center Offer boxes type #4
+		.row.row-30.justify-content-center
+			.col-sm-6.col-xl-5
+				+offer-box-link({
+					title: 'Creating outstanding websites',
+					text:  'Intense provides you with everything necessary for creation of a powerful and responsive website.'
+				})
+			.col-sm-6.col-xl-5
+				+offer-box-link({
+					title: 'Powerful customization tools',
+					text:  'With Intense, it is very easy to customize your existing website any way you want thanks to the rich UI kit.'
+				})
+			.col-sm-6.col-xl-5
+				+offer-box-link({
+					title: 'Appealing online presence',
+					text:  'Intense also allows you to develop a totally unique web presence with a variety of pre-designed pages.'
+				})

@@ -1,0 +1,38 @@
+include ../person/_person
+
+// Person small
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Person Small', category:'person', reload:false, id:'person-small-2' } )
+	.container.text-center
+		h2 Member boxes type #2
+		.row.row-30.justify-content-center
+			.col-sm-6.col-md-3
+				+person({
+					img: 'persons/person-04-176x176',
+					title: 'Mark Rogers',
+					subtitle: 'Lead Designer',
+					mailText: 'lgriffin@demolink.org'
+				}).person-rounded.person-sm
+
+			.col-sm-6.col-md-3
+				+person({
+					img: 'persons/person-05-176x176',
+					title: 'Edward Rivera',
+					subtitle: 'Senior Front End Developer',
+					mailText: 'erivera@demolink.org'
+				}).person-rounded.person-sm
+
+			.col-sm-6.col-md-3
+				+person({
+					img: 'persons/person-07-176x176',
+					title: 'Lisa Baker',
+					subtitle: 'Head of Marketing',
+					mailText: 'lbaker@demolink.org'
+				}).person-rounded.person-sm
+
+			.col-sm-6.col-md-3
+				+person({
+					img: 'persons/person-09-176x176',
+					title: 'Jose Jackson',
+					subtitle: 'Senior Copywriter',
+					mailText: 'jjackson@demolink.org'
+				}).person-rounded.person-sm

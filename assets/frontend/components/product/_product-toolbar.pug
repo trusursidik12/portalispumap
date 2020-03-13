@@ -1,0 +1,13 @@
+//- Product toolbar
+mixin product-toolbar( obj )
+	// Product toolbar
+	.product-toolbar.justify-content-center.justify-content-sm-between
+		.product-toolbar-item
+			.group-20
+				a.product-toolbar-icon.icon-xs.int-grid.novi-icon( href='grid-shop-left-sidebar.html', class= obj.gridActive ? 'active' : '' )
+				a.product-toolbar-icon.icon-xs.int-list.novi-icon( href='list-shop-left-sidebar.html', class= obj.listActive ? 'active' : '' )
+		.product-toolbar-item 1-9 of 15
+		.product-toolbar-item
+			.group-20
+				span Show:
+				input.form-control.form-control-sm.form-control-inline( type='text', data-masked='99', value='09', size='5' )

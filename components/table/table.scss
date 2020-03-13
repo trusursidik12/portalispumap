@@ -1,0 +1,163 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/tables";
+
+
+// Base
+.table {
+	font-weight: 400;
+	margin-bottom: 0;
+
+	thead {
+
+		th {
+			color: $body-color;
+			font-size: $font-size-sm;
+			font-weight: 300;
+			border-bottom: $table-border-width solid $table-border-color;
+
+			&:first-child {
+				color: $gray-900
+			}
+		}
+	}
+	
+	th,
+	td {
+		vertical-align: middle;
+	}
+
+	th:not( :first-child ),
+	td:not( :first-child ) {
+		border-left: $table-border-width solid $table-border-color;
+	}
+}
+
+
+// Spacing
+* + .table-title {
+	margin-top: 30px;
+}
+
+.table-title + .table {
+	margin-top: 10px;
+}
+
+
+// Modifying
+.table-striped {
+	tbody {
+		td {
+			border-top-color: transparent;
+		}
+	}
+}
+
+
+// Table classic
+.table-classic {
+	thead th {
+		border-top: 2px solid $gray-900;
+		border-bottom-color: $gray-900;
+	}
+}
+
+
+// Table modern
+.table-modern {
+	box-shadow: $box-shadow-sm;
+	border-radius: 6px;
+
+	thead th {
+		border-top-color: transparent;
+		border-bottom: 2px solid $gray-900;
+	}
+}
+
+
+// Table creative
+.table-creative {
+	border-radius: 6px;
+	box-shadow: $box-shadow-sm;
+
+	thead th {
+		border-top-color: transparent;
+
+		&:first-child {
+			border-top-left-radius: 6px;
+		}
+
+		&:last-child {
+			border-top-right-radius: 6px;
+		}
+
+		&:nth-child(-n+2) {
+			color: $white;
+			background: $secondary;
+			border-bottom-color: $gray-700;
+			border-left-color: $gray-700;
+		}
+
+		&:nth-child(n+3) {
+			background: $gray-200;
+		}
+	}
+
+	tbody tr:last-child td {
+		&:first-child {
+			border-bottom-left-radius: 6px;
+		}
+	}
+
+	td:nth-child(-n+2) {
+		color: $white;
+		background: $secondary;
+		border-top-color: $gray-700;
+		border-left-color: $gray-700;
+	}
+}
+
+
+// Context
+.context-dark {
+	.table {
+		color: $gray-400;
+
+		th {
+			color: inherit;
+		}
+
+		th, td {
+			border-color: $gray-700;
+		}
+	}
+
+	.table-striped {
+		tbody tr:nth-of-type(odd) {
+			background: #2C2C37;
+		}
+	}
+
+	.table-creative {
+		thead th:nth-child(n+3) {
+			background: #2C2C37;
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(lg) {
+	* + .table-title {
+		margin-top: 50px;
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	* + .table-title {
+		margin-top: 65px;
+	}
+}

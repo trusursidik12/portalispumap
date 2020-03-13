@@ -1,0 +1,87 @@
+// Variables
+$pag-simple-fsz: $small-font-size;
+$pag-simple-color: $gray-900;
+$pag-simple-active-bg: $pagination-active-bg;
+$pag-simple-disabled-color: $pagination-disabled-color;
+
+// Base
+.pag-simple-link {
+	display: inline-block;
+	font-size: $pag-simple-fsz;
+	font-weight: 400;
+	color: $pag-simple-color;
+	vertical-align: middle;
+	transform-origin: 50% 70%;
+
+	&:hover,
+	&:focus {
+		color: $pag-simple-active-bg;
+	}
+
+	&.inactive {
+		pointer-events: none;
+	}
+}
+
+.pag-simple-link-prev,
+.pag-simple-link-next {
+	> * { vertical-align: middle; }
+	> * + * { margin-left: 10px; }
+}
+
+.pag-simple-item {
+	&.active {
+		.pag-simple-link {
+			color: $pag-simple-active-bg;
+			transform: scale( 1.4 );
+		}
+	}
+
+	&.disabled {
+		.pag-simple-link {
+			color: $pag-simple-disabled-color;
+			pointer-events: none;
+		}
+	}
+}
+
+
+// Spacing
+.pag-simple-item + .pag-simple-item { margin-left: 15px; }
+
+
+// Context dark
+.context-dark {
+	.pag-simple-link {
+		color: color-yiq( $pag-simple-color );
+
+		&:hover,
+		&:focus {
+			color: $pag-simple-active-bg;
+		}
+	}
+
+	.pag-simple-item {
+		&.active {
+			.pag-simple-link {
+				color: $pag-simple-active-bg;
+			}
+		}
+
+		&.disabled {
+			.pag-simple-link {
+				color: $pag-simple-disabled-color;
+			}
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.pag-simple-item + .pag-simple-item { margin-left: 25px; }
+}
+
+@include media-breakpoint-up( xxl ) {
+	.pag-simple-item + .pag-simple-item { margin-left: 35px; }
+}

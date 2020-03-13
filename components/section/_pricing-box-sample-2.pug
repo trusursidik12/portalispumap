@@ -1,0 +1,81 @@
+include ../multiswitch/_multiswitch
+include ../pricing/_pricing
+
+// Pricing box sample
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Pricing Box Sample', category:'price', reload:true, id:'pricing-box-sample-2' } )
+	.container
+		h2.text-center Plans type #2
+		.plans
+			.plans-switcher
+				.plans-switcher-text Monthly billing
+				div
+					+switch-toggle({ targets: '.switch-container-2' }).plans-toggle
+				div
+					.plans-switcher-text Annual billing
+					.plans-switcher-subtext Save up to 20%
+
+			.plans-switch-container.switch-container.switch-container-2
+				.switch-inner
+					.row.row-30.no-gutters.align-items-center.novi-disabled
+						.col-lg-4
+							+pricing-box({
+								title: 'Pro',
+								subtitle: 'Ideal for getting started',
+								price: '15',
+								btnClass: 'btn-secondary',
+								list: [ '2 websites', '20 pages', '3 website layouts' ]
+							}).pricing-box-filled
+
+						.col-lg-4
+							+pricing-box({
+								label: 'Most popular',
+								title: 'Premium',
+								subtitle: 'Ideal for getting started',
+								price: '55',
+								btnClass: 'btn-secondary',
+								list: [ '3 websites', '35 pages', '6 website layouts' ]
+							}).pricing-box-accent-primary
+
+						.col-lg-4
+							+pricing-box({
+								title: 'Business',
+								subtitle: 'Ideal for getting started',
+								price: '85',
+								btnClass: 'btn-secondary',
+								list: [ '4 websites', '50 pages', '9 website layouts' ]
+							}).pricing-box-filled
+
+				.switch-inner
+					.row.row-30.no-gutters.align-items-center.novi-disabled
+						.col-lg-4
+							+pricing-box({
+								title: 'Pro',
+								subtitle: 'Ideal for getting started',
+								price: '10',
+								btnClass: 'btn-secondary',
+								list: [ '2 websites', '20 pages', '3 website layouts' ]
+							}).pricing-box-filled
+
+						.col-lg-4
+							+pricing-box({
+								label: 'Most popular',
+								title: 'Premium',
+								subtitle: 'Ideal for getting started',
+								price: '50',
+								btnClass: 'btn-secondary',
+								list: [ '3 websites', '35 pages', '6 website layouts' ]
+							}).pricing-box-accent-primary
+
+						.col-lg-4
+							+pricing-box({
+								title: 'Business',
+								subtitle: 'Ideal for getting started',
+								price: '80',
+								btnClass: 'btn-secondary',
+								list: [ '4 websites', '50 pages', '9 website layouts' ]
+							}).pricing-box-filled
+
+			.plans-description
+				span At the end of your trial, you may downgrade to our basic Free plan:
+				br
+				span.font-weight-normal 1 website, 10 pages, 1 website layout.

@@ -1,0 +1,24 @@
+include ../counter/_counter
+
+// Nav advanced sample
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Nav Advanced Sample', category:'tab, sample', reload:true, id:'nav-advanced-sample' } )
+	.container
+		h2.text-center Tab type #6
+		.tab.tab-shadow
+			ul.nav.nav-advanced( role='tablist' )
+				li.nav-item: a.nav-link.active( data-toggle='tab', href='#navAdvanced1-1', role='tab', aria-selected='true' ) Toolkit core
+				li.nav-item: a.nav-link( data-toggle='tab', href='#navAdvanced1-2', role='tab', aria-selected='false' ) Ui kit
+				li.nav-item: a.nav-link( data-toggle='tab', href='#navAdvanced1-3', role='tab', aria-selected='false' ) Plugins
+				li.nav-item: a.nav-link( data-toggle='tab', href='#navAdvanced1-4', role='tab', aria-selected='false' ) Documentation
+			.tab-content
+				#navAdvanced1-1.tab-pane.fade.show.active( role='tabpanel' )
+					include ../tab/_tab-content-1
+
+				#navAdvanced1-2.tab-pane.fade( role='tabpanel' )
+					include ../tab/_tab-content-2
+
+				#navAdvanced1-3.tab-pane.fade( role='tabpanel' )
+					include ../tab/_tab-content-3
+
+				#navAdvanced1-4.tab-pane.fade( role='tabpanel' )
+					include ../tab/_tab-content-4

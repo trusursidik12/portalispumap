@@ -1,0 +1,13 @@
+include ../thumbnail-scaleup/_thumbnail-scaleup
+
+// Thumbnail Scaleup
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Thumbnail Scaleup', category:'thumbnail', reload:false, id:'thumbnail-scaleup' } )
+	.container
+		h2.text-center Scaleup thumbnail
+		.row.row-30.justify-content-center
+			.col-sm-8.col-md-6
+				+thumbnail-scaleup({
+					img: 'image-07-620x420',
+					title: 'Web Design',
+					description: 'Delivering quality web design services to our clients.'
+				})

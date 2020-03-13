@@ -1,0 +1,53 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Variables
+$check-padding: px-to-rem( 8px, 15px );
+$check-fsz: $font-size-sm;
+$check-border: 1px solid $gray-300;
+$check-border-radius: $border-radius;
+$check-shadow: $box-shadow-sm;
+$check-active-bg: $secondary;
+$check-disabled-color: rgba( $body-color, .3 );
+$check-disabled-bg: $gray-200;
+
+
+// Base
+.checkbox-tag {
+	input {
+		display: none;
+	}
+}
+
+.checkbox-tag-label {
+	min-width: px-to-rem( 105px );
+	padding: $check-padding;
+	font-size: $check-fsz;
+	font-weight: $font-weight-normal;
+	text-align: center;
+	border: $check-border;
+	border-radius: $check-border-radius;
+	transition: $transition-base;
+}
+
+.checkbox-tag:hover .checkbox-tag-label {
+	box-shadow: $check-shadow;
+	border-color: transparent;
+}
+
+.checkbox-tag-input:checked ~ .checkbox-tag-label {
+	color: color-yiq( $check-active-bg );
+	background-color: $check-active-bg;
+	border-color: $check-active-bg;
+}
+
+.checkbox-tag-input:disabled ~ .checkbox-tag-label {
+	color: $check-disabled-color;
+	background-color: $check-disabled-bg;
+	border-color: $check-disabled-bg;
+	pointer-events: none;
+}

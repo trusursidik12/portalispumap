@@ -1,0 +1,23 @@
+include ../offer-box/_offer-box
+
+// Offer box detail
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Offer Box Detail Sample', category:'offer box', reload:false, id:'offer-box-detail-sample' } )
+	.container
+		h2.text-center Offer boxes type #1
+		.row.row-30.novi-disabled
+			.col-12
+				+offer-box-detail({
+					img:   'image-05-730x730',
+					label: 'Create',
+					title: 'Websites',
+					description: 'Powerful options & tools, unlimited designs, responsive framework and amazing support are the reasons for our customers to fall in love.'
+				})
+					.tab.tab-scale.offer-box-tab
+						ul.nav.nav-scale( role='tablist' )
+							li.nav-item: a.nav-link.h2.active( data-toggle='tab', href='#navDetail1-1', role='tab', aria-selected='true' ) Websites
+							li.nav-item: a.nav-link.h2( data-toggle='tab', href='#navDetail1-2', role='tab', aria-selected='false' ) Sliders
+							li.nav-item: a.nav-link.h2( data-toggle='tab', href='#navDetail1-3', role='tab', aria-selected='false' ) Content Blocks
+						.tab-content.offer-box-limiter
+							#navDetail1-1.tab-pane.fade.show.active( role='tabpanel' ) Intense gives you a variety of powerful options, useful tools, and unlimited designs to easily create a website of your dreams that your clients will love.
+							#navDetail1-2.tab-pane.fade( role='tabpanel' ) Use the built-in slider plugins to create appealing blocks with smooth sliders that are completely responsive and customizable.
+							#navDetail1-3.tab-pane.fade( role='tabpanel' ) Change the layout of Intense with the included content blocks ranging from counters to tabs and accordions and other impressive elements.

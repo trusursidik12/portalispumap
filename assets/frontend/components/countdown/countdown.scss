@@ -1,0 +1,44 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Base styles
+.countdown {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin: 0 -15px;
+	line-height: 1.2;
+}
+
+.countdown-block {
+	padding: 0 15px;
+}
+
+.countdown-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.countdown-block-seconds {
+	display: none;
+}
+
+
+// Media
+@include media-breakpoint-up(sm) {
+	.countdown-block-seconds {
+		display: block;
+	}
+}
+
+
+// Layouts
+@import "countdown-boxed";
+@import "countdown-inline";
+@import "countdown-rounded";
+@import "countdown-simple";

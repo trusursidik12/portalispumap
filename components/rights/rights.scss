@@ -1,0 +1,31 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+
+// Base
+.rights {
+	font-size: 15px;
+}
+
+.rights-link {
+	font-weight: 400;
+	color: $gray-900;
+
+	&:hover {
+		color: $primary;
+	}
+}
+
+
+// Contexts
+.context-dark {
+	.rights-link {
+		color: $white;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Maps';
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_google-map-with-title
+	include ../components/footer/_footer-default
+

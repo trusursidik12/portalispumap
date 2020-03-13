@@ -1,0 +1,125 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Variables
+$plans-secondary: $secondary;
+$plans-column-inset: 40px;
+
+// Base
+.plans-switcher {
+	text-align: center;
+	@include group( 20px, 10px );
+}
+
+.plans-toggle {
+	margin-top: .1em;
+}
+
+.plans-switcher-text {
+	font-weight: 400;
+	color: $plans-secondary;
+}
+
+.plans-switcher-subtext {
+	margin-top: -.3em;
+	font-size: $small-font-size;
+}
+
+.plans-description {
+	text-align: center;
+}
+
+
+// Spacing
+* + .plans { margin-top: 40px; }
+* + .plans-switch-container { margin-top: 40px; }
+* + .plans-description { margin-top: 35px; }
+
+
+// Plans column
+.plans-column {
+	font-size: $font-size-sm;
+
+	.plans-switcher {
+		padding: 9px 9px 9px 0;
+	}
+
+	.plans-container {
+		font-size: $small-font-size;
+	}
+
+	.plans-list-meta {
+		display: none;
+		font-weight: 400;
+		color: $gray-900;
+	}
+
+	* + .plans-switch-container { margin-top: 20px; }
+	* + .plans-description { margin-top: 22px; }
+}
+
+
+// Media
+@include media-breakpoint-up( sm ) {
+	.plans-switcher {
+		display: flex;
+		justify-content: center;
+		text-align: left;
+	}
+
+	.plans-column {
+		.plans-switcher {
+			display: block;
+		}
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.plans-column {
+		display: flex;
+		padding-top: $plans-column-inset;
+
+		.plans-switch-container {
+			width: 83%;
+		}
+
+		.plans-switcher {
+			width: 22%;
+			padding-right: 19px;
+		}
+
+		.plans-list-meta {
+			display: block;
+		}
+
+		* + .plans-switch-container { margin-top: 0; }
+		* + .plans-list-meta { margin-top: 165px; }
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.plans-column {
+		* + .plans-list-meta { margin-top: 176px; }
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .plans { margin-top: 68px; }
+	* + .plans-switch-container { margin-top: 76px; }
+	* + .plans-description { margin-top: 53px; }
+
+	.plans-column {
+		.plans-switcher {
+			width: 18%;
+			padding-right: 29px;
+		}
+
+		* + .plans-description { margin-top: 47px; }
+		* + .plans-list-meta { margin-top: 219px; }
+	}
+}

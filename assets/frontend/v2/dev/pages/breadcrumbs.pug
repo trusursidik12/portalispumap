@@ -1,0 +1,14 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Breadcrumbs';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_breadcrumb-dark
+	include ../components/section/_breadcrumb-centered
+	include ../components/section/_breadcrumb-centered-dark
+	include ../components/footer/_footer-default

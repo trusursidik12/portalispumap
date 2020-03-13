@@ -1,0 +1,11 @@
+//- Pricing list
+	@param {object} data - pricing list data object
+	@param {string} data.title - title
+	@param {string} data.description - description text
+	@param {string} data.value - price value
+mixin pricing-list( data )
+	.pricing-list&attributes( attributes )
+		.pricing-list-value.h6= `$${data.value}`
+		.pricing-list-content
+			h6.pricing-list-title= data.title
+			.pricing-list-description= data.description

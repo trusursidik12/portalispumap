@@ -1,0 +1,64 @@
+include ../post/_post
+include ../pag/_pag
+
+// Dated layout
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blog Numbered', category:'blog', reload:false, id:'blog-numbered' } )
+	.container
+		.row.row-40.justify-content-center
+			.col-md-8.post-area
+				h1.text-center Dated layout
+				+post-number({
+					date:     [ '25', 'Sep' ],
+					label:    'HTML',
+					title:    'Top 10 essential design trends that revolutionize web design',
+					postText: 'This year may bring us a lot of surprises as standards in web design change and we experience lots of new trends. You can take these trends in and decide if they...',
+					autor:    'Mark Rogers',
+					coments:  '25'
+				}).post-sm.divider-layout
+
+				+post-number({
+					date:     [ '25', 'Sep' ],
+					label:    'HTML',
+					title:    '15 impressive examples of one-page website design',
+					postText: 'Nowadays, designing a landing page is way more difficult. The only challenge you face is getting all the necessary information on a single page. To help you with...',
+					autor:    'Mark Rogers',
+					coments:  '25'
+				}).post-sm.divider-layout
+
+				+post-number({
+					date:     [ '25', 'Sep' ],
+					label:    'HTML',
+					title:    'Best examples of online portfolio',
+					postText: 'Out of all of the creative people in the world, designers have a very clear vision of what their online portfolio should look like. Their line of work demands a site that lives up...',
+					autor:    'Mark Rogers',
+					coments:  '25'
+				}).post-sm.divider-layout
+
+				+post-number({
+					date:     [ '25', 'Sep' ],
+					label:    'HTML',
+					title:    '5 design tips that will increase your conversions',
+					postText: 'If you want to increase ROI from your website, you can go about it in two ways: increase traffic or increase conversions. It is much easier to increase conversions...',
+					autor:    'Mark Rogers',
+					coments:  '25'
+				}).post-sm.divider-layout
+
+				+post-number({
+					date:     [ '25', 'Sep' ],
+					label:    'HTML',
+					title:    'Different sides of the dark UI',
+					postText: 'Dark design is and always will be a trend. The level of darkness will always vary, but basically, it’s really hard to screw up a simple, dark design. This is especially...',
+					autor:    'Mark Rogers',
+					coments:  '25'
+				}).post-sm.divider-layout
+
+				+pag-simple([
+					{ value: '1', actionClass: 'active' },
+					{ value: '2' },
+					{ value: '3' },
+					{ value: '4' },
+					{ value: '5' },
+					{ value: '..', class: 'inactive' },
+					{ value: '24' },
+					{ next: true }
+				]).divider-layout.justify-content-center

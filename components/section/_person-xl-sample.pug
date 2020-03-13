@@ -1,0 +1,21 @@
+include ../person/_person
+
+// Person extra large
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Person Extra Large', category:'person', reload:false, id:'person-extra-large' } )
+	.container.text-center
+		h2 Member boxes type #4
+		.row.row-40.justify-content-center
+			.col-sm-10.col-md-9.col-lg-7.col-xxl-8
+				+person({
+					img: 'persons/person-06-400x400',
+					title: 'Hello, I’m John Wilson.<br> I’m the CEO, founder & creative director of Intense.',
+					tel: '+1 234 567 8901',
+					mailText: 'jwilson@demolink.org',
+					links: [
+						{ iconClass: 'int-youtube' },
+						{ iconClass: 'int-facebook' },
+						{ iconClass: 'int-instagram' },
+						{ iconClass: 'int-twitter' },
+						{ iconClass: 'int-linkedin' }
+					]
+				}).person-rounded.person-xl

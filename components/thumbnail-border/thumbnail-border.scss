@@ -1,0 +1,18 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+
+// Base
+.thumbnail-border {
+	display: inline-block;
+	border: 2px solid transparent;
+	transition: $transition-base;
+
+	&:hover,
+	&:focus {
+		border-color: rgba( $secondary, .5 );
+		box-shadow: $box-shadow-sm;
+	}
+}

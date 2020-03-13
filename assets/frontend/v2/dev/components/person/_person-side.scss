@@ -1,0 +1,60 @@
+// Variables
+$person-side-subtitle-fsz: $font-size-sm;
+
+
+// Base
+.person-side {
+	display: flex;
+	align-items: center;
+	max-width: 100%;
+	text-align: left;
+	@include group( 15px, 10px );
+
+	.person-side-body {
+		flex: 1;
+	}
+
+	.person-img {
+		width: 80px;
+		border-radius: 50%;
+	}
+
+	.person-subtitle {
+		font-size: $person-side-subtitle-fsz;
+	}
+
+	* + .person-subtitle { margin-top: 2px; }
+}
+
+
+// Spacing
+* + .person-side { margin-top: px-to-rem( 27px ) }
+
+// Media
+@include media-breakpoint-up( xl ) {
+	.person-side {
+		@include groupX( 30px );
+
+		.person-img {
+			width: auto;
+		}
+	}
+
+	.person-side-sm {
+		@include groupX( 17px );
+	}
+
+	.person-side-lg {
+		@include groupX( 43px );
+
+		.person-icon {
+			font-size: 20px;
+		}
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.person-side-sm {
+		.person-title { font-size: 26px; }
+	}
+}

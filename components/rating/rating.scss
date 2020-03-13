@@ -1,0 +1,72 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.rating {
+	font-size: 22px;
+	line-height: 1;
+	color: $primary;
+}
+
+.rating-body {
+	position: relative;
+	display: inline-block;
+}
+
+.rating-empty {
+	color: $gray-300;
+}
+
+.rating-fill {
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+}
+
+
+// Spacing
+* + .rating {
+	margin-top: 15px;
+}
+
+
+// Modifying
+.rating-orange {
+	color: #FFC149;
+}
+
+
+// Rating head
+* + .rating-head {
+	margin-top: px-to-rem( 30px );
+}
+
+* + .rating-head-subtitle {
+	margin-top: 0;
+}
+
+.rating-head-subtitle + .rating {
+	margin-top: px-to-rem( 20px );
+}
+
+.rating-head + .divider {
+	margin-top: px-to-rem( 50px );
+}
+
+
+// Media
+@include media-breakpoint-up(lg) {
+	* + .rating-head {
+		margin-top: px-to-rem(65px);
+	}
+
+	.rating-head + .divider {
+		margin-top: px-to-rem( 60px );
+	}
+}

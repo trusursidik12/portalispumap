@@ -1,0 +1,96 @@
+include ../post/_post
+include ../pag/_pag
+
+// Thumbnail layout without sidebar
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blog Thumbnail', category:'blog', reload:false, id:'blog-thumbnail' } )
+	.container
+		.row.row-40.justify-content-center
+			.col-md-8.post-area
+				h1.text-center Thumbnail layout
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post1.title,
+					img:      'image-09-840x540',
+					postText: post1.textShort3,
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-thumbnail-large
+
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post2.title,
+					img:      'image-05-840x540',
+					postText: post2.textShort2,
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-thumbnail-large
+
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post3.title,
+					img:      'image-08-840x540',
+					postText: post3.textShort2,
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-thumbnail-large
+
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post4.title,
+					img:      'image-06-840x540',
+					postText: post4.textShort2,
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-thumbnail-large
+
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post5.title,
+					img:      'image-10-840x540',
+					postText: post5.textShort,
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-thumbnail-large
+
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post7.title,
+					img:      'image-11-840x540',
+					postText: post7.text,
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-thumbnail-large
+
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post8.title,
+					img:      'persons/person-06-840x540',
+					postText: post8.text,
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-thumbnail-large
+
+				+pag-simple([
+					{ value: '1', actionClass: 'active' },
+					{ value: '2' },
+					{ value: '3' },
+					{ value: '4' },
+					{ value: '5' },
+					{ value: '..', class: 'inactive' },
+					{ value: '24' },
+					{ next: true }
+				]).justify-content-center

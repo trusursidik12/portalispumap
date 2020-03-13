@@ -1,0 +1,2 @@
+.thumbnail-gumba {	position: relative;	overflow: hidden;	display: flex;	align-items: center;	justify-content: center;}.thumbnail-gumba-image {	width: 100%;	transition: .3s;	transform: scale(1.1);}.thumbnail-gumba-title {	position: absolute;	color: #fff;	transition: .3s;	will-change: transform;}.desktop .thumbnail-gumba:hover .thumbnail-gumba-image {	transform: none;}.desktop .thumbnail-gumba:hover .thumbnail-gumba-title {	transform: scale(1.1);}
+/*# sourceMappingURL=thumbnail-gumba.css.map */

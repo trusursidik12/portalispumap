@@ -1,0 +1,46 @@
+include ../input/_input
+
+// Register
+section.section.section-one-screen.section-sm.overlay-dark-07.novi-background( data-preset!={ title:'Register', category:'one screen page, form', reload:true, id:'register' } )
+	.container
+		.row.justify-content-center.novi-disabled
+			.col-md-8.col-lg-6.col-xxl-5
+				article.accent-box
+					h4.accent-box-title.text-center Create your account
+					p.accent-box-text.text-center.mt-2 All fields are required
+					form.accent-box-form.rd-mailform
+						.form-group
+							.input-group
+								.input-group-prepend
+									span.input-group-text.int-user.novi-icon
+								input.form-control( type='text', name='name', placeholder='Your name', data-constraints='@Required' )
+						.form-group
+							.input-group
+								.input-group-prepend
+									span.input-group-text.int-user.novi-icon
+								input.form-control( type='email', name='email', placeholder='E-mail', data-constraints='@Email @Required' )
+						.form-group
+							.input-group
+								.input-group-prepend
+									span.input-group-text.int-user.novi-icon
+								input.form-control.input-password.password-register-1( type='text', name='password', placeholder='Password', data-constraints='@Required' )
+								.input-group-append
+									span.input-group-text.input-group-text-nodivider.input-password-icon( data-multi-switch!= {
+										targets: '.password-register-1'
+									})
+						.form-group
+							.input-group
+								.input-group-prepend
+									span.input-group-text.int-user.novi-icon
+								input.form-control.input-password.password-register-2( type='text', name='password', placeholder='Confirm password', data-constraints='@Required' )
+								.input-group-append
+									span.input-group-text.input-group-text-nodivider.input-password-icon( data-multi-switch!= {
+										targets: '.password-register-2'
+									})
+						+checkbox( {
+							id: 'check1'
+						} ).accent-box-text
+							| I agree with the
+							u.font-weight-medium
+							a.link-inherit.small( href='#' ) Terms of use.
+						button.btn.btn-block.btn-lg.btn-secondary.accent-box-btn( type='submit' ) Sign in

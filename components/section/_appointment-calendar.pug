@@ -1,0 +1,115 @@
+include ../alert/_alert
+include ../breadcrumb/_breadcrumb
+
+// Appointment calendar
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Appointment Calendar', category:'calendar', reload:true, id:'appointment-calendar' } )
+	.container
+		.row.row-30.row-xl-70.justify-content-center.novi-disabled
+			.col-md-8.col-xl-6.text-center
+				h1 Appointment
+				p.lead.font-weight-normal You can contact us any way that is convenient for you. We are available 24/7 via fax or email.
+			.col-12
+				.fullcalendar( data-fullcalendar-event!=[
+					{
+						title:     '10:00 am',
+						start:     '2019-08-06',
+						className: 'fc-event-success'
+					},
+					{
+						title:     '11:00 am',
+						start:     '2019-08-14',
+						end:       '2019-08-16',
+						className: 'fc-event-warning'
+					},
+					{
+						title:     '01:00 pm',
+						start:     '2019-08-26',
+						end:       '2019-08-28',
+						className: 'fc-event-primary'
+					},
+					{
+						title:     '10:00 am',
+						start:     '2019-09-05',
+						className: 'fc-event-success'
+					},
+					{
+						title:     '11:00 am',
+						start:     '2019-09-11',
+						end:       '2019-09-12',
+						className: 'fc-event-warning'
+					},
+					{
+						title:     '01:00 pm',
+						start:     '2019-09-26',
+						end:       '2019-09-28',
+						className: 'fc-event-primary'
+					},
+					{
+						title:     '10:00 am',
+						start:     '2019-10-06',
+						className: 'fc-event-success'
+					},
+					{
+						title:     '11:00 am',
+						start:     '2019-10-14',
+						end:       '2019-10-16',
+						className: 'fc-event-warning'
+					},
+					{
+						title:     '01:00 pm',
+						start:     '2019-10-26',
+						end:       '2019-10-28',
+						className: 'fc-event-primary'
+					},
+					{
+						title:     '10:00 am',
+						start:     '2019-11-09',
+						className: 'fc-event-success'
+					},
+					{
+						title:     '11:00 am',
+						start:     '2019-11-17',
+						end:       '2019-11-18',
+						className: 'fc-event-warning'
+					},
+					{
+						title:     '01:00 pm',
+						start:     '2019-11-26',
+						end:       '2019-11-28',
+						className: 'fc-event-primary'
+					},
+					{
+						title:     '10:00 am',
+						start:     '2019-12-06',
+						className: 'fc-event-success'
+					},
+					{
+						title:     '11:00 am',
+						start:     '2019-12-14',
+						end:       '2019-12-16',
+						className: 'fc-event-warning'
+					},
+					{
+						title:     '01:00 pm',
+						start:     '2019-12-26',
+						end:       '2019-12-27',
+						className: 'fc-event-primary'
+					},
+					{
+						title:     '10:00 am',
+						start:     '2020-01-09',
+						className: 'fc-event-success'
+					},
+					{
+						title:     '11:00 am',
+						start:     '2020-01-17',
+						end:       '2020-01-18',
+						className: 'fc-event-warning'
+					},
+					{
+						title:     '01:00 pm',
+						start:     '2020-01-26',
+						end:       '2020-01-28',
+						className: 'fc-event-primary'
+					}
+				] )

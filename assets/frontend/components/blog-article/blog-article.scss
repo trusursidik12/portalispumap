@@ -1,0 +1,80 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.blog-article {
+	* + h2 { margin-top: px-to-rem( 20px ) }
+	* + h3 { margin-top: px-to-rem( 35px ) }
+	* + h5 { margin-top: px-to-rem( 25px ) }
+	* + h6 { margin-top: px-to-rem( 30px ) }
+	* + p { margin-top: px-to-rem( 14px ) }
+	* + figure { margin-top: px-to-rem( 25px ) }
+	* + .person-side { margin-top: px-to-rem( 20px ) }
+	* + .person-side-lg { margin-top: px-to-rem( 34px ) }
+	* + .list { margin-top: px-to-rem( 14px ) }
+	* + .tag-container { margin-top: px-to-rem( 35px ) }
+	* + .pag { margin-top: px-to-rem( 40px ) }
+	* + .comment { margin-top: px-to-rem( 25px ) }
+	* + .divider { margin-top: px-to-rem( 50px ) }
+	p + .row { margin-top: px-to-rem( 14px ) }
+	.quote-simple + p { margin-top: px-to-rem( 30px ) }
+}
+
+.blog-article-subtitle {
+	color: $primary;
+}
+
+.blog-article-person {
+	.person-title { font-size: $h5-font-size; }
+	.person-subtitle { color: $primary }
+	.person-icon {  font-size: $font-size-base }
+}
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.blog-article {
+		* + h2 { margin-top: px-to-rem( 30px ) }
+		* + h3 { margin-top: px-to-rem( 45px ) }
+		* + h5 { margin-top: px-to-rem( 35px ) }
+		* + h6 { margin-top: px-to-rem( 40px ) }
+		* + p { margin-top: px-to-rem( 24px ) }
+		* + figure { margin-top: px-to-rem( 35px ) }
+		* + .person-side { margin-top: px-to-rem( 30px ) }
+		* + .person-side-lg { margin-top: px-to-rem( 44px ) }
+		* + .list { margin-top: px-to-rem( 24px ) }
+		* + .tag-container { margin-top: px-to-rem( 45px ) }
+		* + .pag { margin-top: px-to-rem( 50px ) }
+		* + .comment { margin-top: px-to-rem( 35px ) }
+		* + .divider { margin-top: px-to-rem( 60px ) }
+		p + .row { margin-top: px-to-rem( 24px ) }
+		.quote-simple + p { margin-top: px-to-rem( 40px ) }
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.blog-article {
+		* + h2 { margin-top: px-to-rem( 26px ) }
+		* + h3 { margin-top: px-to-rem( 75px ) }
+		* + h5 { margin-top: px-to-rem( 37px ) }
+		* + h6 { margin-top: px-to-rem( 50px ) }
+		* + p { margin-top: px-to-rem( 40px ) }
+		* + figure { margin-top: px-to-rem( 50px ) }
+		* + .person-side { margin-top: px-to-rem( 23px ) }
+		* + .person-side-lg { margin-top: px-to-rem( 69px ) }
+		* + .list { margin-top: px-to-rem( 40px ) }
+		* + .tag-container { margin-top: px-to-rem( 74px ) }
+		* + .pag { margin-top: px-to-rem( 108px ) }
+		* + .comment { margin-top: px-to-rem( 44px ) }
+		* + .divider { margin-top: px-to-rem( 129px ) }
+		h2 + h3 { margin-top: px-to-rem( 100px ) }
+		p + .row { margin-top: px-to-rem( 40px ) }
+		.tag-container + .divider { margin-top: px-to-rem( 88px ) }
+		.row + h5 { margin-top: px-to-rem( 50px ) }
+		.quote-simple + p { margin-top: px-to-rem( 52px ) }
+	}
+}

@@ -1,0 +1,11 @@
+//- Quote simple
+	@param {dataect} data - data dataect
+	@param {string} data.text - quote text
+	@param {string} data.name - name of author
+	@param {string} data.position - position of author
+mixin quote-simple( data )
+	// Quote simple
+	article.quote-simple&attributes( attributes )
+		.quote-simple-icon.novi-icon( class= data.iconClass ? data.iconClass : 'int-marker' )
+		.quote-simple-text.h5: q= data.text
+		.quote-simple-author.h6: cite= '—' + data.name

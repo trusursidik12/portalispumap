@@ -1,0 +1,39 @@
+//- Progress Bar linear
+	@param {object} data - object data
+	@param {string} data.title - progress title
+	@param {number} data.value - progress value
+	@param {string} [data.unit] - progress value unit
+	@param {string} [data.text] - progress description
+mixin progress-linear( data )
+	// Linear progress bar
+	.progress-linear&attributes( attributes )
+		.progress-linear-inner
+			.progress-linear-title
+				= data.title
+				span.progress-linear-counter-wrap( class= data.hideValue ? 'hidden' : '' )
+					= ' — '
+					span.progress-linear-counter= data.value
+					= data.unit ? data.unit : '%'
+			.progress-linear-body
+				.progress-linear-bar
+			if ( data.text )
+				.progress-linear-text= data.text
+
+//- Progress Bar linear creative
+	@param {object} data - object data
+	@param {string} [data.title] - progress title
+	@param {number} data.value - progress value
+	@param {string} [data.text] - progress description
+mixin progress-linear-creative( data )
+	// Linear progress bar
+	.progress-linear.progress-linear-creative&attributes( attributes )
+		.progress-linear-inner
+			if ( data.title )
+				.progress-linear-title= data.title
+			.progress-linear-body
+				.progress-linear-bar
+				div.progress-linear-counter-wrap
+					span.progress-linear-counter= data.value
+					= data.unit ? data.unit : '%'
+			if ( data.text )
+				.progress-linear-text= data.text

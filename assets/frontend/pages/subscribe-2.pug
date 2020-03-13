@@ -1,0 +1,15 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	-
+		pageName = 'Subscribe',
+		pageId = 'subscribe-2';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_mailchimp
+	include ../components/section/_campaign-monitor
+	include ../components/footer/_footer-default

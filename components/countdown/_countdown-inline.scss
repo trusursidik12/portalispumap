@@ -1,0 +1,78 @@
+// Variables
+$c-inline-value-color: $gray-900;
+$c-inline-title-color: $body-color;
+
+
+// Base
+.countdown-inline {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: baseline;
+	text-align: center;
+	margin: 0 -15px;
+	line-height: 1.2;
+
+	.countdown-block {
+		padding: 0 10px;
+	}
+
+	.countdown-wrap {
+		display: block;
+	}
+
+	.countdown-counter {
+		padding-right: 5px;
+		font-weight: $font-weight-normal;
+		color: $c-inline-value-color;
+	}
+
+	.countdown-title {
+		text-transform: capitalize;
+		font-weight: $font-weight-base;
+		color: $c-inline-title-color;
+	}
+
+	.countdown-meta {
+		width: 100%;
+		padding-bottom: 5px;
+	}
+
+	* + .countdown-title { margin-top: 3px; }
+}
+
+
+// Spacing
+* + .countdown-inline { margin-top: 20px; }
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.countdown-inline {
+		flex-wrap: nowrap;
+
+		.countdown-meta {
+			width: auto;
+			padding-right: 20px;
+			padding-bottom: 0;
+		}
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	* + .countdown-inline {
+		margin-top: 35px;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.countdown-inline {
+		.countdown-meta {
+			padding-right: 26px;
+		}
+	}
+
+	* + .countdown-inline {
+		margin-top: 52px;
+	}
+}

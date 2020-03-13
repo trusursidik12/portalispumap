@@ -1,0 +1,28 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+
+
+// Base
+.product-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-size: $font-size-sm;
+	@include group( 30px, 20px );
+}
+
+.product-toolbar-icon {
+	display: inline-block;
+	color: $gray-300;
+
+	&:hover {
+		color: $primary;
+	}
+
+	&.active {
+		color: $gray-900;
+	}
+}

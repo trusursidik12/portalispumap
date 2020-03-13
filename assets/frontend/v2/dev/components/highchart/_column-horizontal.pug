@@ -1,0 +1,70 @@
+-
+	var barChart = {
+		colors: [ '#31c77f', '#6b39bd', '#28A8FF' ],
+		credits: false,
+		legend: {
+			itemStyle: {
+				color: '#777',
+				fontWeight: 'normal'
+			},
+			itemHoverStyle: {
+				color: '#919495'
+			}
+		},
+		chart: {
+			type: 'bar'
+		},
+		title: {
+			text: null
+		},
+		xAxis: {
+			showEmpty: false,
+			tickLength: 80,
+			offset: 1,
+			lineColor: '#dde3e8',
+			categories: ['TV', 'Radio'],
+			title: {
+				text: null
+			},
+			labels: {
+				align: 'right',
+				style: {
+					color: '#bebebe'
+				}
+			}
+		},
+		yAxis: {
+			min: 0,
+			gridLineWidth: 0,
+			showEmpty: false,
+			title: {
+				text: null
+			},
+			labels: {
+				enabled: false
+			}
+		},
+		tooltip: {
+			valueSuffix: ' millions'
+		},
+		plotOptions: {
+			bar: {
+				borderColor: 'transparent'
+			}
+		},
+		series: [
+			{
+				name: 'Viewers',
+				data: [100, 100]
+			},
+			{
+				name: 'Women',
+				data: [36, 55]
+			},
+			{
+				name: 'Men',
+				data: [65, 45]
+			}
+		]
+	}
+.highcharts-container( data-highcharts-options= barChart )

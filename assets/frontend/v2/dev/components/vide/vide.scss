@@ -1,0 +1,24 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.vide {
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+
+	> * {
+		position: relative;
+		z-index: 1;
+		width: 100%;
+	}
+
+	video {
+		will-change: transform;
+		pointer-events: none;
+	}
+}

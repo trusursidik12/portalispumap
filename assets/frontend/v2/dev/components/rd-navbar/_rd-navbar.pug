@@ -1,0 +1,46 @@
+include _navigation
+
+mixin rd-navbar
+	//RD Navbar
+	header.section.rd-navbar-wrap( data-preset!={ title:'Navbar Default', category:'header', reload:true, id:'navbar-default' } )
+		nav.rd-navbar&attributes( attributes )
+			.navbar-container
+				.navbar-cell
+					.navbar-panel
+						button.navbar-switch.int-hamburger.novi-icon( data-multi-switch!= {
+							targets: '.rd-navbar',
+							scope:   '.rd-navbar',
+							isolate: '[data-multi-switch]'
+						})
+
+						.navbar-logo
+							a.navbar-logo-link( href= homePage.link )
+								+img( logo.default ).navbar-logo-default( alt= logo.name )
+								+img( logo.inverse ).navbar-logo-inverse( alt= logo.name )
+
+				.navbar-cell.navbar-spacer
+
+				.navbar-cell.navbar-sidebar
+					+navigation( menu )
+
+				.navbar-cell
+					.navbar-subpanel
+						.navbar-subpanel-item
+							include _search
+
+							button.navbar-button.search-switch.int-search.novi-icon( data-multi-switch!= {
+								targets: '.rd-navbar',
+								scope:   '.rd-navbar',
+								class:   'navbar-search-active',
+								isolate: '[data-multi-switch]:not(.search-switch)'
+							})
+
+						.navbar-subpanel-item
+							button.navbar-button.int-cart.novi-icon( data-multi-switch!= {
+								targets: '.rd-navbar',
+								scope:   '.rd-navbar',
+								class:   'navbar-cart-active',
+								isolate: '[data-multi-switch]'
+							})
+
+							include _cart

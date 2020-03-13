@@ -1,0 +1,15 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Our team';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_team-intro
+	include ../components/section/_who-we-are
+	include ../components/section/_our-team-2
+	include ../components/section/_gallery-description
+	include ../components/section/_project-gallery-4
+	include ../components/footer/_footer-default

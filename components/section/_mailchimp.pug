@@ -1,0 +1,14 @@
+// Mailchimp
+section.section.section-lg.text-center.context-dark.bg-image.novi-background( style='background-image: url("images/image-03-1920x583.jpg")', data-preset!={ title:'Mailchimp', category:'form', reload:true, id:'mailchimp' } )
+	.container
+		.row.justify-content-center.novi-disabled
+			.col-md-9.col-lg-7.col-xl-6
+				h2 Mailchimp
+				p Sign up to our newsletter and be the first to know about the latest news, special offers, events, and discounts.
+
+				form.mailchimp-mailform.form-inline.justify-content-center.group-20.novi-disabled( data-form-output='mailchimp-output', action='https://templatemonster.us15.list-manage.com/subscribe/post?u=ba5bb362073a413f48e4a7b90&id=8dc95d9dec', method='post' )
+					.form-inline-group
+						input.form-control( type='email', name='email', placeholder='Enter your email address', data-constraints='@Email @Required' )
+					button.btn.btn-lg.btn-primary( type='submit' ) Subscribe
+
+#mailchimp-output.form-output.snackbar.snackbar-secondary

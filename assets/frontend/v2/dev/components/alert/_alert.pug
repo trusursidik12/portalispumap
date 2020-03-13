@@ -1,0 +1,19 @@
+//- Alert
+	@param {object} data - object data
+	@param {string} data.themeColor - alert color variant
+	@param {string} data.title - alert title
+	@param {number} data.titleIcon - alert title icon class
+	@param {string} data.text - alert description text
+mixin alert( data )
+	// Alert
+	.alert( class= `alert-${data.themeColor}` )&attributes( attributes )
+		.alert-inner
+			.alert-inner-item
+				h5.alert-title
+					span.icon.alert-icon.novi-icon( class= data.titleIcon )
+					= data.title
+				.alert-text= data.text
+			.alert-inner-item
+				.alert-inner-controls
+					button.btn( class= `btn-${data.themeColor}` ) Submit
+					button.link( class= `link-${data.themeColor}` ) Dismiss

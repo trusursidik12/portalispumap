@@ -1,0 +1,14 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+include ../components/pagination/_pagination
+include ../components/pag/_pag
+
+block variables
+	- pageName = 'Pagination';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_pagination-sample
+	include ../components/footer/_footer-default

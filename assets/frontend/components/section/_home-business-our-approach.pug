@@ -1,0 +1,33 @@
+include ../blurb/_blurb
+
+// Our design and development approach
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Our Approach', category:'blurb', reload:false, id:'our-approach' } )
+	.container
+		h2.text-center( data-animate!={ class: 'fadeInUp' } ) Our design and
+			br
+			| development approach
+		.row.row-30.row-md-40.justify-content-center
+			.col-sm-6.col-lg-5( data-animate!={ class: 'fadeInUp' } )
+				+blurb-modern({
+					embed: '<span class="blurb-number h1">01</span>',
+					title: 'Project analysis and research',
+					text:  'The customer provides us with detailed project-related information, gathered from supporting documents, process specs, systems, on-site analysis, market research, competitor analysis and end-user interviews.'
+				}).blurb-boxed
+			.col-sm-6.col-lg-5( data-animate!={ class: 'fadeInUp' } )
+				+blurb-modern({
+					embed: '<span class="blurb-number h1">02</span>',
+					title: 'Alignment with your business goals',
+					text:  'As a part of the project, you will have a business analyst assigned on the project to assure all the development process is well-aligned with your goals.'
+				}).blurb-boxed.blurb-secondary
+			.col-sm-6.col-lg-5( data-animate!={ class: 'fadeInUp' } )
+				+blurb-modern({
+					embed: '<span class="blurb-number h1">03</span>',
+					title: 'The best cost to <br>quality ratio',
+					text:  'Quality does come at a price, but we manage to keep the best cost to quality ratio. It guarantees affordable prices on our services to clients worldwide.'
+				}).blurb-boxed
+			.col-sm-6.col-lg-5( data-animate!={ class: 'fadeInUp' } )
+				+blurb-modern({
+					embed: '<span class="blurb-number h1">04</span>',
+					title: 'Quality software <br>integration',
+					text:  'After your app is developed, we’ll perform extensive integration process. An acceptance report will be created along with the software.'
+				}).blurb-boxed

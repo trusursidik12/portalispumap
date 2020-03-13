@@ -1,0 +1,37 @@
+include ../comment/_product-review
+
+h3 Customer reviews
+.d-flex.align-items-center.mt-4
+	+rating.rating-orange
+	.small.ml-4 Based on 3 reviews
+a.btn.btn-secondary( href='#' ) Write a review
+hr.divider.divider-sm
++product-review({
+	title: 'Great product!',
+	name: 'Kevin Anderson',
+	time: {
+		date: '2019-09-16',
+		text: 'September 16, 2019'
+	},
+	text: 'Thank you for quick shipping and amazing quality of this product! My nephew is more than happy with what you provided.'
+})
+hr.divider.divider-sm
++product-review({
+	title: 'Amazing quality & beautiful color',
+	name: 'Adam Smith',
+	time: {
+		date: '2019-09-16',
+		text: 'September 16, 2019'
+	},
+	text: 'This product is not only beautiful & bright, it is very reliable and of high quality. Thanks to your shop I now have what I was looking for.'
+})
+hr.divider.divider-sm
++product-review({
+	title: 'Best customer service',
+	name: 'Sarah Peters',
+	time: {
+		date: '2019-09-16',
+		text: 'September 16, 2019'
+	},
+	text: 'My mom recommended this store and I’m not disappointed at all. Thank you for quick delivery and easy payment, I’ll surely use your website again.'
+})

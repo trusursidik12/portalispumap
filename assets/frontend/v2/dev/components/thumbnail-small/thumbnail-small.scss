@@ -1,0 +1,19 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.thumbnail-small {
+	display: inline-block;
+	transform: scale( 1 );
+	transition: $transition-base;
+
+	&:hover,
+	&:focus {
+		transform: scale( 1.08 );
+	}
+}

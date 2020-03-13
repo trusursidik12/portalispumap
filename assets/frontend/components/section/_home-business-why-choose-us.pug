@@ -1,0 +1,56 @@
+include ../blurb/_blurb
+
+// Why choose us
+section.section.section-lg.bg-transparent.text-center.novi-background( data-preset!={ title:'Why Us', category:'carousel, blurb', reload:false, id:'why-us-2' } )
+	.container
+		h2( data-animate!={ class: 'fadeInUp' } ) Why thousands of clients
+			br
+			| choose Intense
+		.owl-carousel.owl-style-3( data-owl= {
+			center: true,
+			dots: true,
+			autoplayTimeout: 4500,
+			autoplaySpeed: 4500,
+			slideTransition: 'linear',
+			dotsClass: 'owl-dots text-center'
+		}, data-items='1', data-xs-items='2', data-lg-items='3' )
+			+blurb({
+				embed: '<span class="blurb-icon ith-layers novi-icon"></span>',
+				title: 'Quick results',
+				text:  'We work quickly and effectively to provide the best results and efficient solutions for our customers worldwide.'
+			}).blurb-boxed
+			+blurb({
+				embed: '<span class="blurb-icon ith-layers novi-icon"></span>',
+				title: 'Powerful apps',
+				text:  'Our team offers a wide variety of powerful and sustainable apps for a great range of business purposes.'
+			}).blurb-boxed.blurb-primary
+			+blurb({
+				embed: '<span class="blurb-icon ith-layers novi-icon"></span>',
+				title: 'Unique design',
+				text:  'Our designers manage to create really catchy and unique designs for our products to stand out.'
+			}).blurb-boxed.blurb-secondary
+			+blurb({
+				embed: '<span class="blurb-icon ith-layers novi-icon"></span>',
+				title: 'Money saving',
+				text:  'Our products cost less than their analogs by other companies. However, our apps are more feature-rich & efficient.'
+			}).blurb-boxed.blurb-success
+			+blurb({
+				embed: '<span class="blurb-icon ith-layers novi-icon"></span>',
+				title: 'Efficient support',
+				text:  'Intense team offers extensive and high-quality online support to its customers all over the world at any time.'
+			}).blurb-boxed.blurb-info
+			+blurb({
+				embed: '<span class="blurb-icon ith-layers novi-icon"></span>',
+				title: 'Innovative technologies',
+				text:  'Our developers use the latest innovative technologies to deliver the best software solutions to our customers.'
+			}).blurb-boxed.blurb-warning
+			+blurb({
+				embed: '<span class="blurb-icon ith-layers novi-icon"></span>',
+				title: 'Great usability',
+				text:  'Improved usability and UX are distinctive features of our products, for which our customers love Intense.'
+			}).blurb-boxed.blurb-danger
+			+blurb({
+				embed: '<span class="blurb-icon ith-layers novi-icon"></span>',
+				title: 'Full responsiveness',
+				text:  'Our apps have fully responsive interface and design that allow our users to run our products on any modern device.'
+			}).blurb-boxed.blurb-dark

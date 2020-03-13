@@ -1,0 +1,24 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/code";
+
+
+// Base
+.text-box {
+	* + h5 { margin-top: px-to-rem( 16px ) }
+	* + .link { margin-top: px-to-rem( 28px ) }
+	h3 + .link { margin-top: px-to-rem( 18px ) }
+}
+
+
+// Media
+@include media-breakpoint-up( xxl ) {
+	.text-box {
+		* + h5 { margin-top: px-to-rem( 36px ) }
+		* + .link { margin-top: px-to-rem( 48px ) }
+		h3 + .link { margin-top: px-to-rem( 45px ) }
+	}
+}

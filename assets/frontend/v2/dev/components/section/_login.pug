@@ -1,0 +1,29 @@
+// Login form
+section.section.section-one-screen.section-sm.overlay-dark-07.novi-background( data-preset!={ title:'Login', category:'one screen page, form', reload:true, id:'login' } )
+	.container
+		.row.justify-content-center.novi-disabled
+			.col-md-8.col-lg-6.col-xxl-5
+				article.accent-box
+					h4.accent-box-title.text-center Login to your account
+					p.accent-box-text.text-center Enter your credentials below.
+					form.accent-box-form.rd-mailform
+						.form-group
+							.input-group
+								.input-group-prepend
+									span.input-group-text.int-user.novi-icon
+								input.form-control( type='text', name='login', placeholder='Your login', data-constraints='@Required' )
+						.form-group
+							.input-group
+								.input-group-prepend
+									span.input-group-text.int-user.novi-icon
+								input.form-control.input-password.password-login( type='text', name='password', placeholder='Password', data-constraints='@Required' )
+								.input-group-append
+									span.input-group-text.input-group-text-nodivider.input-password-icon( data-multi-switch!= {
+										targets: '.password-login'
+									})
+						button.btn.btn-block.btn-lg.btn-primary.accent-box-btn( type='submit' ) Sign in
+						.accent-box-text.small.group-15
+							div
+								u.font-weight-medium
+									a.link-inherit( href='#' ) Forgot your password?
+							div Haven’t an account? #[u.font-weight-medium #[a.link-inherit( href='register.html' ) Sign up here.]]

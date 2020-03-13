@@ -1,0 +1,16 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+// Variables
+$code-font-size: 1em;
+
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/code";
+
+code {
+	font-family: $font-family-mono;
+	color: $secondary;
+	font-weight: 500;
+}

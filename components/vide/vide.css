@@ -1,0 +1,2 @@
+.vide {	width: 100%;	background-size: cover;	background-position: center;}.vide > * {	position: relative;	z-index: 1;	width: 100%;}.vide video {	will-change: transform;	pointer-events: none;}
+/*# sourceMappingURL=vide.css.map */

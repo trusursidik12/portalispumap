@@ -1,0 +1,14 @@
+include ../quote/_quote
+
+// Quote centered
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Quote Centered', category:'quote', reload:false, id:'quote-centered' } )
+	.container
+		h2.text-center Testimonial type #6
+		.row.row-30.justify-content-center
+			.col-md-10.col-lg-9.col-xl-8
+				+quote-centered({
+					text:     quote1.text,
+					img:      'persons/person-01-100x100',
+					name:     quote1.name,
+					position: quote1.position
+				})

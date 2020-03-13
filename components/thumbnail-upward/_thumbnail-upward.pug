@@ -1,0 +1,16 @@
+//- Thumbnail upward
+	@param {object} data - thumbnail data object
+	@param {array} data.img - thumbnail image params (path, width, height)
+	@param {string} data.title - thumbnail title
+	@param {string} data.description - thumbnail description text
+	@param {string} data.link - thumbnail link
+	@param {string} data.btnText - thumbnail button text
+mixin thumbnail-upward( data )
+	// Thumbnail upward
+	figure.thumbnail-upward&attributes( attributes )
+		+img( data.img ).thumbnail-upward-img
+		figcaption.thumbnail-upward-caption
+			.thumbnail-upward-content
+				h5.thumbnail-upward-title= data.title
+				.thumbnail-upward-description= data.description
+			a.btn.btn-primary.thumbnail-upward-btn( href= data.link ? data.link : '#' )= data.btnText ? data.btnText : 'Take a look'

@@ -1,0 +1,59 @@
+include ../post/_post
+include ../pag/_pag
+
+// Creative layout
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blog Creative', category:'blog', reload:false, id:'blog-creative' } )
+	.container
+		h1.text-center Creative layout
+		.row.row-40.justify-content-center
+			.col-md-12.post-area
+				+post-creative({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post1.title,
+					img:      'image-09-730x470',
+					postText: 'This year may bring us a lot of surprises as standards in web design change and we experience lots of new trends. You can take these trends in and decide if they...'
+				}).post-sm
+
+				+post-creative({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post2.titleShort,
+					img:      'image-05-730x469',
+					postText: 'Nowadays, designing a landing page is way more difficult. The only challenge you face is getting all the necessary information on a single page. To help you with...'
+				}).post-sm.post-creative-reverse
+
+				+post-creative({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post3.title,
+					img:      'persons/person-06-730x469',
+					postText: 'I’ve always cared about great visual design, but a few years ago I learned that I loved to teach as well. That led to starting this blog, building iPhone apps...'
+				}).post-sm.post-creative-bottom
+
+				+post-creative({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post6.titleShort,
+					img:      'image-06-730x469',
+					postText: 'Out of all of the creative people in the world, designers have a very clear vision of what their online portfolio should look like. Their line of work demands a site that lives up to...'
+				}).post-sm.post-creative-reverse
+
+			+pag-simple([
+				{ value: '1', actionClass: 'active' },
+				{ value: '2' },
+				{ value: '3' },
+				{ value: '4' },
+				{ value: '5' },
+				{ value: '..', class: 'inactive' },
+				{ value: '24' },
+				{ next: true }
+			]).justify-content-center

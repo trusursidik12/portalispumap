@@ -1,0 +1,53 @@
+// Variables
+$person-xl-title-fsz: $h2-font-size;
+$person-xl-title-lh: $h2-line-height;
+$person-xl-tel-fsz: $font-size-lg;
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.person-xl {
+		* + .person-tel { margin-top: 15px; }
+		* + .person-social { margin-top: 15px; }
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.person-xl {
+		.person-title {
+			font-size: 1.5em;
+			line-height: 1.3;
+		}
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.person-xl {
+		* + .person-title { margin-top: 35px; }
+		* + .person-tel { margin-top: 30px; }
+		* + .person-mail { margin-top: 12px; }
+		* + .person-social { margin-top: 32px; }
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.person-xl {
+		.person-title {
+			font-size: $person-xl-title-fsz;
+			line-height: $person-xl-title-lh;
+		}
+
+		.person-tel-link {
+			font-size: $person-xl-tel-fsz;
+		}
+
+		.person-social {
+			@include groupX( 30px );
+		}
+
+		* + .person-title { margin-top: 51px; }
+		* + .person-tel { margin-top: 40px; }
+		* + .person-mail { margin-top: 16px; }
+		* + .person-social { margin-top: 42px; }
+	}
+}

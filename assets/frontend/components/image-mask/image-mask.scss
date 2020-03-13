@@ -1,0 +1,28 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/media";
+
+
+// Base
+.image-mask {
+	height: auto;
+}
+
+
+// Modifying
+
+
+// Media
+@include media-breakpoint-up(md) {
+	.image-mask-1 {
+		position: absolute;
+		top: 44%;
+		right: 0;
+		width: 45.7%;
+		transform: translateY(-50%);
+	}
+}

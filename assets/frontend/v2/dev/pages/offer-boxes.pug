@@ -1,0 +1,16 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Offer boxes';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_offer-box-detail-sample
+	include ../components/section/_offer-box-light-sample
+	include ../components/section/_offer-box-thumbnail-sample
+	include ../components/section/_offer-box-link-sample
+	include ../components/section/_offer-box-classic-sample
+	include ../components/footer/_footer-default

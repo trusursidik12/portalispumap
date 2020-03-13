@@ -1,0 +1,39 @@
+//Variables
+$post-sm-meta-fsz: $font-size-base * .71;
+$post-sm-icon-fsz: $font-size-base * 0.9;
+$post-sm-text-fsz: $font-size-sm;
+
+
+// Modifying
+.post-sm {
+	.post-text { font-size: $post-sm-text-fsz; }
+	.post-meta { font-size: $post-sm-meta-fsz; }
+	.post-meta-icon { font-size: $post-sm-icon-fsz; }
+	.post-time { font-size: $post-sm-meta-fsz; }
+
+	.post-meta-link {
+		font-weight: 400;
+	}
+
+	* + .post-meta { margin-top: 15px; }
+	* + .post-title { margin-top: 10px; }
+	* + .post-text { margin-top: 5px; }
+}
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.post-sm {
+		* + .post-meta { margin-top: 25px; }
+		* + .post-title { margin-top: 15px; }
+		* + .post-text { margin-top: 10px; }
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.post-sm {
+		* + .post-meta { margin-top: 31px; }
+		* + .post-title { margin-top: 24px; }
+		.post-img-link + .post-meta { margin-top: 42px; }
+	}
+}

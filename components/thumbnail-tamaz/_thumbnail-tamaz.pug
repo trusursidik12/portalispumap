@@ -1,0 +1,17 @@
+//- Thumbnail grow
+	@param {object} data - thumbnail data object
+	@param {array} data.img - thumbnail image params (path, width, height)
+	@param {string} data.title - thumbnail title
+	@param {string} data.description - thumbnail description text
+	@param {string} data.link - thumbnail link
+	@param {string} data.btnText - thumbnail button text
+mixin thumbnail-tamaz( data )
+	// Thumbnail grow
+	figure.thumbnail-tamaz&attributes( attributes )
+		.thumbnail-tamaz-img
+			+img( data.img )
+		figcaption.thumbnail-tamaz-caption
+			.thumbnail-tamaz-content
+				h5.thumbnail-tamaz-title= data.title
+				.thumbnail-tamaz-description= data.description
+			a.btn.btn-primary.thumbnail-tamaz-btn( href= data.link ? data.link : '#' )= data.btnText ? data.btnText : 'Take a look'

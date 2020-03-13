@@ -1,0 +1,7 @@
+include ../breadcrumb/_breadcrumb
+
+// Breadcrumb dark
+section.section.section-sm.context-dark.bg-image.novi-background( style='background-image: url(images/breadcrumb-01.jpg)', data-preset!={ title:'Breadcrumb', category:'breadcrumb', reload:false, id:'breadcrumb-4' } )
+	.container
+		+breadcrumb( breadcrumbs )
+		h4= pageName

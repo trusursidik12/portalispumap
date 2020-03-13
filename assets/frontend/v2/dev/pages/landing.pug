@@ -1,0 +1,33 @@
+extends ../components/base/_skeleton
+include ../components/thumbnail-rotate/_thumbnail-rotate
+
+block variables
+	- pageName = 'Landing';
+
+block page
+	section.section-layer.d-flex.align-items-center.min-vh-100.text-center( style='padding: 4% 0' )
+		.bg-layer.bg-gradient-dark-violet( style='bottom: 27.7%;' )
+		.container
+			.context-dark
+				h2 The most flexible, dynamic, and
+					| #[br.d-none.d-xs-block]
+					| highly rated multipurpose HTML template
+				p Create exactly what you need with the mindblowing Intense toolkit.
+
+			.row.row-offset-xl.row-40.justify-content-center
+				.col-6.col-sm-auto
+					+thumbnail-rotate({
+						banner: 'banners/banner-02-648x972',
+						img:    'banners/banner-04-528x564.png',
+						text:   'Clean & trendy design bringing more features and new possibilities.',
+						title:  'New',
+						link:   'v2/'
+					}).thumbnail-rotate-gradient
+				.col-6.col-sm-auto.offset-sm-1
+					+thumbnail-rotate({
+						banner: 'banners/banner-03-648x972',
+						img:    'banners/banner-05-528x564.png',
+						text:   'Classic time-tested design loved by over 3,000 customers.',
+						title:  'Classic',
+						link:   'classic/'
+					}).thumbnail-rotate-gradient-2

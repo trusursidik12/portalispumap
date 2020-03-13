@@ -1,0 +1,90 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Variables
+$thumbnail-caption-fsz: $font-size-sm;
+
+
+// Base
+.thumbnail-upward {
+	position: relative;
+	display: inline-block;
+	max-width: 420px;
+	transition: $transition-base;
+}
+
+.thumbnail-upward-caption {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-top: 15px;
+	text-align: left;
+	@include group( 10px );
+}
+
+.thumbnail-upward-btn {
+	flex-shrink: 0;
+}
+
+.thumbnail-upward-description {
+	font-size: $thumbnail-caption-fsz;
+}
+
+
+// Media
+@include media-breakpoint-up( sm ) {
+	.thumbnail-upward {
+		max-width: 100%;
+	}
+}
+@include media-breakpoint-up( lg ) {
+	.thumbnail-upward-caption {
+		padding-top: 30px;
+	}
+
+	.desktop {
+		.thumbnail-upward-img {
+			position: relative;
+			z-index: 1;
+			transition: inherit;
+		}
+
+		.thumbnail-upward-caption {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			flex-wrap: nowrap;
+			align-items: flex-end;
+			opacity: 0;
+			transition: inherit;
+		}
+
+		.thumbnail-upward-content {
+			overflow: hidden;
+		}
+
+		.thumbnail-upward-title,
+		.thumbnail-upward-description {
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		.thumbnail-upward:hover {
+			.thumbnail-upward-img {
+				transform: translateY( -86px );
+			}
+
+			.thumbnail-upward-caption {
+				opacity: 1;
+			}
+		}
+	}
+}
+

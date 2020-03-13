@@ -1,0 +1,14 @@
+include ../breadcrumb/_breadcrumb
+include ../person/_person
+
+// Intro project
+section.section.intro.intro-project.bg-image.context-dark.novi-background( style='background-image: url( images/image-14-1920x817.jpg )', data-preset!={ title:'Intro Project', category:'intro', reload:false, id:'intro-project' } )
+	.container
+		+breadcrumb( breadcrumbs )
+		h4.intro-subtitle Our team
+		h1.intro-title Search engine optimization
+		+person-side({
+			img: 'persons/person-04-120x120',
+			title: 'Mark Rogers',
+			description: 'Lead designer'
+		}).intro-embed

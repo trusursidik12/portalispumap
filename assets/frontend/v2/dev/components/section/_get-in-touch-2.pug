@@ -1,0 +1,22 @@
+// Get in touch
+section.section.section-lg.bg-transparent.text-center.novi-background( data-preset!={ title:'Get in touch', category:'form, contacts', reload:true, id:'get-in-touch-5' } )
+	.container
+		h3 Get in Touch
+		.row.justify-content-center.novi-disabled
+			.col-sm-10.col-md-8.col-lg-7.col-xl-6
+				form.rd-mailform( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.form-group
+						label( for='input-name' ) Name:
+						.position-relative
+							input.form-control( id='input-name', type='text', name='name', placeholder='Your name', data-constraints='@Required' )
+					.form-group
+						label( for='input-email' ) E-mail:
+						.position-relative
+							input.form-control( id='input-email', type='email', name='email', placeholder='Your e-mail address', data-constraints='@Email @Required' )
+					.form-group
+						label( for='input-question' ) Question:
+						.position-relative
+							textarea.form-control( id='input-question', name='question', placeholder='Your question', data-constraints='@Required' )
+					button.btn.btn-lg.btn-primary( type='submit' ) Submit
+
+				#form-output-global.form-output.snackbar.snackbar-secondary

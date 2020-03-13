@@ -1,0 +1,16 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	-
+		pageName = 'FAQ 4',
+		pageClass = 'page-bg bg-900 context-dark',
+		pageImage = 'image-30-1920x900';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_faq-3
+	include ../components/section/_general-question-2
+	include ../components/section/_other-question-2
+	include ../components/footer/_footer-default

@@ -1,0 +1,14 @@
+{
+  "name": "Intense",
+  "version": "4.3.0",
+  "description": "Multipage site template",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TemplateMonster",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "tempaw-functions": "2.4.2"
+  }
+}

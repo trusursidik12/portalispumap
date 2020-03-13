@@ -1,0 +1,64 @@
+// Variables
+$post-boxed-bg: $white;
+$post-boxed-border: $border-color;
+
+
+// Base
+.post-boxed {
+	padding: 30px 15px;
+	background-color: $post-boxed-bg;
+	border: 1px solid $post-boxed-border;
+	border-radius: $post-radius;
+	transition: $transition-base;
+
+	&:hover,
+	&:focus {
+		box-shadow: $post-shadow;
+		border-color: transparent;
+	}
+
+	* + .post-title { margin-top: 13px; }
+	* + .post-meta { margin-top: 20px; }
+	* + .post-img-link { margin-top: 20px; }
+	* + .post-text { margin-top: 20px; }
+}
+
+
+// Spacing
+* + .post-boxed { margin-top: px-to-rem( 30px ) }
+.post-boxed + .post-boxed { margin-top: px-to-rem( 30px ) }
+
+
+// Context dark
+.context-dark {
+	.post-boxed {
+		background-color: transparent;
+		border-color: rgba( $white, .15 );
+
+		&:hover,
+		&:focus {
+			background-color: rgba( $white, .15 );
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.post-boxed {
+		padding: 35px 20px;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.post-boxed {
+		padding: 40px;
+
+		* + .post-title { margin-top: 16px; }
+		* + .post-meta { margin-top: 15px; }
+		* + .post-img-link { margin-top: 31px; }
+	}
+
+	* + .post-boxed { margin-top: px-to-rem( 67px ) }
+	.post-boxed + .post-boxed { margin-top: px-to-rem( 70px ) }
+}

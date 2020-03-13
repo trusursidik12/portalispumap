@@ -1,0 +1,67 @@
+// Cart view
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Cart', category:'shop', reload:false, id:'cart' } )
+	.container
+		h2.text-center My cart
+		.row.justify-content-center: .col-lg-11.col-xl-9.col-xxl-8
+			table.table.table-cart.table-responsive-lg
+				tbody
+					tr
+						td( style='min-width: 40px; width: 4.8%' ): button.icon.icon-xs.int-trash.novi-icon( type='button' )
+						td( style='min-width: 160px; width: 26.3%' )
+							a.table-cart-figure( href='product-page.html' ): +img( 'products/product-03-180x231' )
+						td( style='min-width: 250px; width: 32.2%' )
+							h6: a.table-cart-title( href='product-page.html' ) Ombré vinyl backpack
+							ul.table-cart-list.list.small
+								li Size: S
+								li Color: Black
+								li Dimension: 180X1250mm
+						td( style='min-width: 80px; width: 12.6%' ) $19
+						td( style='min-width: 120px; width: 14.3%' )
+							.form-group.mb-4
+								label.d-block.small( for='input-quality' ) Qty:
+								input.form-control.form-control-inline( id='input-quality', type='text', data-masked='99', value='01', size='2' )
+						td.text-right( style='min-width: 60px; width: 9.8%' ) $19
+					tr
+						td: button.icon.icon-xs.int-trash.novi-icon( type='button' )
+						td: a.table-cart-figure( href='product-page.html' ): +img( 'products/product-13-180x231' )
+						td
+							h6: a.table-cart-title( href='product-page.html' ) Phone case with chain
+							ul.table-cart-list.list.small
+								li Size: Standard
+								li Color: Iridescent green
+								li Dimension: 80X120mm
+						td $34
+						td
+							.form-group.mb-4
+								label.d-block.small( for='input-quality-1' ) Qty:
+								input.form-control.form-control-inline( id='input-quality-1', type='text', data-masked='99', value='01', size='2' )
+						td.text-right $34
+			.offset-sm.group-20.d-flex.align-items-center.flex-wrap.justify-content-end
+				.small Have a promo code?
+				div
+					form.form-inline.justify-content-end.group-10
+						.form-inline-group
+							input.form-control( type='text', placeholder='Promo code' )
+						button.btn.btn-lg.btn-dark( type='submit' ) Apply
+			table.table.table-cart-total
+				tbody
+					tr
+						th( style='min-width: 100px; width: 50%' ) Subtotal:
+						td( style='min-width: 100px; width: 50%' ) $0.00
+					tr
+						th Shipping:
+						td Free
+					tr
+						th Taxes:
+						td $0.00
+				tfoot
+					tr
+						th Total:
+						td
+							h3( style='line-height: 1' ) $53
+							| Tax excl.
+			hr.divider.divider-sm
+			.text-right
+				a.btn.btn-lg.btn-primary( href='#' )
+					span.btn-icon.int-check.novi-icon
+					span Proceed to Checkout

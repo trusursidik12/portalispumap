@@ -1,0 +1,15 @@
+//- Thumbnail rotate
+mixin thumbnail-rotate( obj )
+	// Thumbnail rotate
+	article.thumbnail.thumbnail-rotate&attributes( attributes )
+		.thumbnail-rotate-3d
+			.thumbnail-rotate-body
+				a.thumbnail-rotate-banner( href= obj.link ? obj.link : '#', target='_blank' )
+					+img( obj.banner, { retina: true } ).thumbnail-rotate-banner-image
+				.thumbnail-rotate-content
+					.thumbnail-rotate-figure
+						+img( obj.img, { retina: true } )
+					.thumbnail-rotate-text= obj.text
+					.thumbnail-rotate-button
+						a.btn.btn-primary( href= obj.link ? obj.link : '#', target='_blank' ) Discover Now
+		.thumbnail-rotate-title.h5: a( href= obj.link ? obj.link : '#', target='_blank' )= obj.title

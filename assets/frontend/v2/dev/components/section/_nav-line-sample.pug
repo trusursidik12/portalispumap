@@ -1,0 +1,26 @@
+include ../counter/_counter
+
+// Nav line sample
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Nav Line Sample', category:'tab, sample', reload:true, id:'nav-line-sample' } )
+	.container
+		h2.text-center Tab type #4
+		.row.justify-content-center.novi-disabled
+			.col-lg-10.col-xxl-8
+				.tab
+					ul.nav.nav-line( role='tablist' )
+						li.nav-item: a.nav-link.h6.active( data-toggle='tab', href='#navLine1-1', role='tab', aria-selected='true' ) Toolkit core
+						li.nav-item: a.nav-link.h6( data-toggle='tab', href='#navLine1-2', role='tab', aria-selected='false' ) Ui kit
+						li.nav-item: a.nav-link.h6( data-toggle='tab', href='#navLine1-3', role='tab', aria-selected='false' ) Plugins
+						li.nav-item: a.nav-link.h6( data-toggle='tab', href='#navLine1-4', role='tab', aria-selected='false' ) Documentation
+					.tab-content
+						#navLine1-1.tab-pane.fade.show.active( role='tabpanel' )
+							include ../tab/_tab-content-1
+
+						#navLine1-2.tab-pane.fade( role='tabpanel' )
+							include ../tab/_tab-content-2
+
+						#navLine1-3.tab-pane.fade( role='tabpanel' )
+							include ../tab/_tab-content-3
+
+						#navLine1-4.tab-pane.fade( role='tabpanel' )
+							include ../tab/_tab-content-4

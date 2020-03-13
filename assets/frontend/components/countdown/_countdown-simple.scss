@@ -1,0 +1,55 @@
+// Base
+.countdown-simple {
+	display: flex;
+	justify-content: center;
+	margin: 0 -15px;
+	line-height: 1.2;
+	text-align: center;
+
+	.countdown-block {
+		padding: 0 15px;
+	}
+
+	.countdown-wrap {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.countdown-title {
+		font-size: $small-font-size;
+		text-transform: capitalize;
+	}
+
+	* + .countdown-title { margin-top: 3px; }
+}
+
+
+// Spacing
+* + .countdown-simple { margin-top: 20px; }
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.countdown-simple {
+		margin: 0 -38px;
+
+		.countdown-block {
+			padding: 0 38px;
+		}
+	}
+
+	* + .countdown-simple { margin-top: 20px; }
+}
+
+@include media-breakpoint-up( lg ) {
+	* + .countdown-simple {
+		margin-top: 35px;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .countdown-simple {
+		margin-top: 47px;
+	}
+}

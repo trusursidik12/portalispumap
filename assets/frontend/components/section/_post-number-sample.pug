@@ -1,0 +1,15 @@
+include ../post/_post
+
+// Post number
+section.section.section-md.bg-transparent.novi-background( data-preset!={ title:'Post Number', category:'blog', reload:false, id:'post-number' } )
+	.container
+		.row.row-40.justify-content-center
+			.col-xs-12.col-xl-8
+				+post-number({
+					date:     [ '25', 'Sep' ],
+					label:    'HTML',
+					title:    post1.titleShort2,
+					postText: post1.textShort,
+					autor:    'Mark Rogers',
+					coments:  '25'
+				}).post-sm

@@ -1,0 +1,83 @@
+include ../post/_post
+include ../pag/_pag
+
+// Hover layout 3 columns
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blog Hovered', category:'blog', reload:false, id:'blog-hovered-2' } )
+	.container
+		h1.text-center Hover layout
+		.row.row-40.row-md-60
+			.col-md-6.col-lg-4
+				+post-hover({
+					title:    'Top 10 trends that change modern web design',
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-09-400x257',
+					postText: 'This year may bring us a lot of surprises as standards in web design change and we experience lots of new trends. You can take these trends in and decide if they...',
+					coments:  '25'
+				}).post-sm
+
+			.col-md-6.col-lg-4
+				+post-hover({
+					title:    '15 impressive examples of one-page website design',
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-05-400x257',
+					postText: 'Nowadays, designing a landing page is way more difficult. The only challenge you face is getting all the necessary information on a single page. To help...',
+					coments:  '25'
+				}).post-sm
+
+			.col-md-6.col-lg-4
+				+post-hover({
+					title:    'Best examples of online portfolio by 10 designers',
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-08-400x257',
+					postText: 'Out of all of the creative people in the world, designers have a very clear vision of what their online portfolio should look like. Their line of work demands a site that...',
+					coments:  '25'
+				}).post-sm
+
+			.col-md-6.col-lg-4
+				+post-hover({
+					title:    '5 design tips that will increase your conversions',
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-06-400x257',
+					postText: 'If you want to increase ROI from your website, you can go about it in two ways: increase traffic or increase conversions. It is much easier to increase conversions...',
+					coments:  '25'
+				}).post-sm
+
+			.col-md-6.col-lg-4
+				+post-hover({
+					title:    'Different sides of the dark user interface in web design',
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-10-400x257',
+					postText: 'Dark design is and always will be a trend. The level of darkness will always vary, but basically, it’s really hard to screw up a simple, dark design. This is especially...',
+					coments:  '25'
+				}).post-sm
+
+			.col-md-6.col-lg-4
+				+post-hover({
+					title:    'Designing accessible color systems',
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-11-400x257',
+					postText: 'Our team of developers and designers constantly explores ways of refining the color palette to make it more accessible and legible for users across all products...',
+					coments:  '25'
+				}).post-sm
+
+			.col-12
+				+pag-simple([
+					{ value: '1', actionClass: 'active' },
+					{ value: '2' },
+					{ value: '3' },
+					{ value: '..', class: 'inactive' },
+					{ value: '24' },
+					{ next: true }
+				]).justify-content-center

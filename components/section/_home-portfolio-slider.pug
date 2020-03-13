@@ -1,0 +1,54 @@
+// Services
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Services', category:'slider', reload:true, id:'services' } )
+	.container
+		h6( data-animate!={ class: 'fadeInUp' } ) Best photography solutions
+	// Swiper slider
+	.swiper-container.mt-5( style='min-height: 75vh' )
+		// Additional required wrapper
+		.swiper-wrapper
+			// Slides
+			.swiper-slide.section-lg.px-xl-5.align-items-lg-end.context-dark.overlay-dark-02( style='background-image: url( images/image-71-1920x700.jpg )' )
+				.container
+					.row.row-20.justify-content-between.align-items-end
+						.col-sm-8.col-md-6
+							h2 Photos that are a perfect reflection of your lifestyle
+							p.small Lifestyle photography services capture the precious moments of
+								br.d-none.d-lg-block
+								| your life that you value instead of capturing staged photos.
+						.col-auto
+							a.link.small( href= '#' )
+								| Learn more
+								span.link-icon.int-arrow-right.novi-icon
+
+			.swiper-slide.section-lg.px-xl-5.align-items-lg-end.context-dark( style='background-image: url( images/image-72-1920x700.jpg )' )
+				.container
+					.row.row-20.justify-content-between.align-items-end
+						.col-sm-8.col-md-6
+							h2 Corporate photography for all your business needs
+							p.small Corporate photography helps businesses of all kinds to build trust
+								br.d-none.d-lg-block
+								| online and individuals to connect with their audience.
+						.col-auto
+							a.link.small( href= '#' )
+								| Learn more
+								span.link-icon.int-arrow-right.novi-icon
+
+			.swiper-slide.section-lg.px-xl-5.align-items-lg-end.context-dark.overlay-dark( style='background-image: url( images/image-73-1920x700.jpg )' )
+				.container
+					.row.row-20.justify-content-between.align-items-end
+						.col-sm-8.col-md-6
+							h2 Architectural & commercial photography services
+							p.small Through architectural and commercial photography services, we
+								br.d-none.d-lg-block
+								| help express companies’ stories to fuel the brand images.
+						.col-auto
+							a.link.small( href= '#' )
+								| Learn more
+								span.link-icon.int-arrow-right.novi-icon
+
+		// Pagination
+		.swiper-pagination.d-xl-none
+
+		// Navigation buttons
+		.swiper-button-prev.d-none.d-xl-flex
+		.swiper-button-next.d-none.d-xl-flex

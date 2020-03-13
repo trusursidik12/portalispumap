@@ -1,0 +1,28 @@
+include ../quote/_quote
+
+// Quote boxed
+section.section.section-lg.bg-100.novi-background( data-preset!={ title:'Quote Boxed', category:'quote', reload:false, id:'quote-boxed' } )
+	.container.text-center
+		h2.text-primary What people are saying
+		.row.row-30
+			.col-sm-6.col-lg-4( data-animate!={ class: 'fadeInUpBig'} )
+				+quote-boxed({
+					text:     quote1.text,
+					img:      'persons/person-01-90x90',
+					name:     quote1.name,
+					position: quote1.position
+				})
+			.col-sm-6.col-lg-4( data-animate!={ class: 'fadeInUpBig', delay: '0.2s' } )
+				+quote-boxed({
+					text:     quote2.text,
+					img:      'persons/person-02-90x90',
+					name:     quote2.name,
+					position: quote2.position
+				})
+			.col-sm-6.col-lg-4( data-animate!={ class: 'fadeInUpBig', delay: '0.4s' } )
+				+quote-boxed({
+					text:     quote3.text,
+					img:      'persons/person-03-90x90',
+					name:     quote3.name,
+					position: quote3.position
+				})

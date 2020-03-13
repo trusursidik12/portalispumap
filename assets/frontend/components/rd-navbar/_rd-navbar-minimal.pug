@@ -1,0 +1,41 @@
+include _navigation
+
+mixin rd-navbar
+	//RD Navbar
+	header.section.rd-navbar-wrap( data-preset!={ title:'Navbar Minimal', category:'header', reload:true, id:'navbar-minimal' } )
+		nav.rd-navbar.navbar-minimal( data-rd-navbar!= { responsive: { 1200: { stickUpOffset: '70px' } } } )&attributes( attributes )
+			.navbar-section.navbar-non-stuck
+				.navbar-container.justify-content-end
+					.navbar-cell
+						.navbar-subpanel
+							.navbar-subpanel-item
+								button.navbar-button.navbar-info-button.mdi-dots-vertical.novi-icon( data-multi-switch!= {
+									targets: '.rd-navbar',
+									scope:   '.rd-navbar',
+									class:   'navbar-info-active',
+									isolate: '[data-multi-switch]'
+								})
+
+								.navbar-info
+									a.navbar-info-link( href='mailto:#' ) #[span.navbar-info-icon.int-email.novi-icon] mail@demolink.org
+									a.navbar-info-link.icon.icon-social.int-facebook.novi-icon( href='#' )
+									a.navbar-info-link.icon.icon-social.int-instagram.novi-icon( href='#' )
+									a.navbar-info-link.icon.icon-social.int-twitter.novi-icon( href='#' )
+
+			.navbar-section
+				.navbar-container
+					.navbar-cell
+						.navbar-panel
+							button.navbar-switch.int-hamburger.novi-icon( data-multi-switch!= {
+								targets: '.rd-navbar',
+								scope:   '.rd-navbar',
+								isolate: '[data-multi-switch]'
+							})
+
+							.navbar-logo
+								a.navbar-logo-link( href= homePage.link )
+									+img( logo.default ).navbar-logo-default( alt= logo.name )
+									+img( logo.inverse ).navbar-logo-inverse( alt= logo.name )
+
+					.navbar-cell.navbar-sidebar
+						+navigation( menu )

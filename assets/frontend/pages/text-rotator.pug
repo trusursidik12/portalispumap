@@ -1,0 +1,15 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Text Rotator';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_text-rotator-sample-fade
+	include ../components/section/_text-rotator-sample-slide
+	include ../components/section/_text-rotator-sample-bounce
+	include ../components/section/_text-rotator-sample-zoom
+	include ../components/footer/_footer-default

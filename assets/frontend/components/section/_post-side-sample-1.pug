@@ -1,0 +1,16 @@
+include ../post/_post
+
+// Post side
+section.section.section-md.bg-transparent.novi-background( data-preset!={ title:'Post Side', category:'blog', reload:false, id:'post-side-1' } )
+	.container
+		.row.row-40.justify-content-center
+			.col-xs-10.col-md-9.col-lg-8
+				+post-side({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post1.titleShort2,
+					img:      'image-09-400x257',
+					postText: post1.textShort
+				}).post-sm

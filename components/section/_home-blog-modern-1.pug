@@ -1,0 +1,17 @@
+include ../post/_post
+
+// Modern blog section
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Modern Blog Section', category:'blog', reload:false, id:'modern-blog-section' } )
+	.container
+		.row.justify-content-center
+			.col-xs-10.col-xl-12.post-area
+				+post-side-large({
+					label:    'HTML',
+					title:    post1.title,
+					img:      'image-49-620x398'
+				})( data-animate!={ class: 'fadeInRightBig' } )
+				+post-side-large({
+					label:    'HTML',
+					title:    post1.title,
+					img:      'image-50-620x398'
+				}).post-side-reverse( data-animate!={ class: 'fadeInLeftBig' } )

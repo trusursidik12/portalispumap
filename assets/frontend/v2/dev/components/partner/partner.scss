@@ -1,0 +1,14 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.partner-image {
+	width: 100%;
+	border-radius: $border-radius;
+	box-shadow: $box-shadow-sm;
+}

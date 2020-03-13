@@ -1,0 +1,9 @@
+//- Thumbnail Gumba
+	@param {object} obj - data object
+	@param {string} obj.img - image name or path
+	@param {string} obj.title - name of thumbnail
+mixin thumbnail-gumba( obj )
+	// Thumbnail Gumba
+	a.thumbnail-gumba( href= obj.link ? obj.link : '#' )&attributes( attributes )
+		+img( obj.img ).thumbnail-gumba-image
+		.thumbnail-gumba-title.h4= obj.title

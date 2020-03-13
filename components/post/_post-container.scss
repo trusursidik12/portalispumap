@@ -1,0 +1,51 @@
+// Base
+.post-container-item {
+	pointer-events: none;
+
+	.post {
+		max-width: 400px;
+		pointer-events: auto;
+	}
+}
+
+
+// Spacing
+.post-container-item + .post-container-item { margin-top: 40px; }
+h1 + .post-container { margin-top: px-to-rem( 40px ); }
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.post-container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.post-container-item {
+		width: 100%;
+
+		.post {
+			margin-right: 0;
+			margin-left: auto;
+			max-width: 45%;
+		}
+
+		&:nth-child( odd ) {
+			.post {
+				margin-right: auto;
+				margin-left: 0;
+			}
+		}
+	}
+
+	.post-container-item + .post-container-item {
+		margin-top: -22%;
+	}
+
+	h1 + .post-container { margin-top: px-to-rem( 60px ); }
+}
+
+@include media-breakpoint-up( xxl ) {
+	h1 + .post-container { margin-top: px-to-rem( 80px ); }
+}

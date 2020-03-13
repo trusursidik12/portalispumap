@@ -1,0 +1,67 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Variables
+$widget-title-color: $primary;
+
+
+// Base
+.widget {
+	width: 400px;
+	max-width: 100%;
+}
+
+.widget-title {
+	color: $widget-title-color;
+}
+
+.widget-body {
+	position: relative;
+}
+
+
+// Spacing
+* + .widget-body { margin-top: 20px; }
+
+p + .widget-subscribe-form { margin-top: 15px; }
+.widget-subscribe-form * + .widget-subscribe-btn { margin-top: 16px; }
+
+.widget + .widget {
+	margin-top: px-to-rem( 30px );
+	padding-top: px-to-rem( 30px );
+	border-top: 1px solid $border-color;
+}
+
+
+// Context dark
+.context-dark {
+	.widget + .widget {
+		border-top-color: rgba( $border-color, .5 );
+	}
+
+	.widget-title {
+		color: $widget-title-color;
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( xxl ) {
+	* + .widget-body { margin-top: 30px; }
+
+	p + .widget-subscribe-form { margin-top: 23px; }
+
+	.widget + .widget {
+		margin-top: px-to-rem( 60px );
+		padding-top: px-to-rem( 50px );
+	}
+}
+
+
+// Components
+@import 'widget-search';
+@import 'widget-list';

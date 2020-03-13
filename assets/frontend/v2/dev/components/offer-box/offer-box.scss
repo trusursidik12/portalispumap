@@ -1,0 +1,66 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Variables
+$offer-box-title-color: $gray-900;
+$offer-box-title-hover-color: $primary;
+$offer-box-text-fsz: $font-size-sm;
+
+
+// Base
+.offer-box-title {
+	color: $offer-box-title-color;
+
+	a {
+		color: inherit;
+
+		&:hover,
+		&:focus {
+			color: $offer-box-title-hover-color;
+		}
+	}
+}
+
+.offer-box-text {
+	font-size: $offer-box-text-fsz;
+}
+
+
+// Spacing
+* + .offer-box-title { margin-top: 14px; }
+* + .offer-box-text { margin-top: 6px; }
+* + .offer-box-button { margin-top: 13px; }
+
+
+// Context dark
+.context-dark {
+	.offer-box-title {
+		color: inherit;
+	}
+}
+
+// Media
+@include media-breakpoint-up( lg ) {
+	* + .offer-box-title { margin-top: 20px; }
+	* + .offer-box-text { margin-top: 8px; }
+	* + .offer-box-button { margin-top: 22px; }
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .offer-box-title { margin-top: 32px; }
+	* + .offer-box-text { margin-top: 10px; }
+	* + .offer-box-button { margin-top: 29px; }
+}
+
+
+// Layouts
+@import "offer-box-classic";
+@import "offer-box-detail";
+@import "offer-box-light";
+@import "offer-box-link";
+@import "offer-box-thumbnail";
+@import "offer-box-divided";

@@ -1,0 +1,55 @@
+include _navigation
+
+mixin rd-navbar
+	//RD Navbar
+	header.section.rd-navbar-wrap( data-preset!={ title:'Navbar Blog', category:'header', reload:true, id:'navbar-blog' } )
+		nav.rd-navbar.navbar-blog( data-rd-navbar!= { responsive: { 1200: { stickUpOffset: '60px' } } } )&attributes( attributes )
+			.navbar-section.navbar-non-stuck
+				.navbar-container
+					.navbar-cell.flex-grow-1
+						.navbar-info
+							a.navbar-info-link( href='mailto:#' ) #[span.navbar-info-icon.int-email.novi-icon] mail@demolink.org 
+							.group-30.d-flex
+								a.navbar-info-icon.icon-social.int-youtube.novi-icon( href='#' )
+								a.navbar-info-icon.icon-social.int-facebook.novi-icon( href='#' )
+								a.navbar-info-icon.icon-social.int-instagram.novi-icon( href='#' )
+								a.navbar-info-icon.icon-social.int-twitter.novi-icon( href='#' )
+								a.navbar-info-icon.icon-social.int-linkedin.novi-icon( href='#' )
+
+			.navbar-section
+				.navbar-container
+					.navbar-cell
+						.navbar-panel
+							button.navbar-switch.int-hamburger.novi-icon( data-multi-switch!= {
+								targets: '.rd-navbar',
+								scope:   '.rd-navbar',
+								isolate: '[data-multi-switch]'
+							})
+
+							.navbar-logo
+								a.navbar-logo-link( href= homePage.link )
+									+img( logo.default ).navbar-logo-default( alt= logo.name )
+									+img( logo.inverse ).navbar-logo-inverse( alt= logo.name )
+
+					.navbar-cell.navbar-sidebar
+						+navigation( menu )
+
+					.navbar-cell
+						.navbar-subpanel
+							.navbar-subpanel-item
+								button.navbar-button.navbar-info-button.mdi-dots-vertical.novi-icon( data-multi-switch!= {
+									targets: '.rd-navbar',
+									scope:   '.rd-navbar',
+									class:   'navbar-info-active',
+									isolate: '[data-multi-switch]'
+								})
+							
+							.navbar-subpanel-item
+								include _search
+
+								button.navbar-button.search-switch.int-search.novi-icon( data-multi-switch!= {
+									targets: '.rd-navbar',
+									scope:   '.rd-navbar',
+									class:   'navbar-search-active',
+									isolate: '[data-multi-switch]:not(.search-switch)'
+								})

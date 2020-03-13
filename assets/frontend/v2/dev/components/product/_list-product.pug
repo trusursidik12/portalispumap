@@ -1,0 +1,56 @@
+include ../product/_product
+include ../product/_product-toolbar
+include ../pag/_pag
+
++product-toolbar({ listActive: true })
+.row.row-40.row-md-60.row-offset-lg
+	.col-12
+		+product-horizontal({
+			img: 'products/product-10-290x372',
+			title: 'Black baseball cap',
+			price: '12',
+			text: 'I’ve always cared about great visual design, but a few years ago I learned that I loved to teach...',
+			productNew: true
+		})
+	.col-12
+		+product-horizontal({
+			img:   'products/product-01-290x372',
+			title: 'Iridescent iPhone case',
+			price: '19',
+			text: 'I’ve always cared about great visual design, but a few years ago I learned that I loved to teach...',
+			priceOld: '27'
+		})
+	.col-12
+		+product-horizontal({
+			img:   'products/product-02-290x372',
+			title: 'Black analogue watch',
+			price: '43',
+			text: 'I’ve always cared about great visual design, but a few years ago I learned that I loved to teach...',
+		})
+	.col-12
+		+product-horizontal({
+			img:   'products/product-03-290x372',
+			title: 'Ombré vinyl backpack',
+			price: '29',
+			text: 'I’ve always cared about great visual design, but a few years ago I learned that I loved to teach...',
+		})
+	.col-12
+		+product-horizontal({
+			img: 'products/product-11-290x372',
+			title: 'Golden earrings',
+			price: '24',
+			text: 'I’ve always cared about great visual design, but a few years ago I learned that I loved to teach...',
+		})
+	.col-12
+		+product-horizontal({
+			img:   'products/product-04-290x372',
+			title: 'Iridescent tote bag',
+			price: '27',
+			text: 'I’ve always cared about great visual design, but a few years ago I learned that I loved to teach...',
+		})
+
++pag-simple([
+	{ value: '1', actionClass: 'active' },
+	{ value: '2' },
+	{ next: true }
+])

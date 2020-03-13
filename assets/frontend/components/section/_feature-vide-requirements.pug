@@ -1,0 +1,22 @@
+include ../blurb/_blurb
+
+// Calendar requirements
+section.section.section-lg.context-dark.bg-gradient-electric-violet.novi-background( data-preset!={ title:'Fullcalendar Requirements', category:'blurb', reload:false, id:'fullcalendar-requirements' } )
+	.container
+		.row.row-40.row-xl-70.justify-content-center
+			.col-md-6.col-lg-5( data-animate!={ class: 'fadeInLeft' } )
+				+blurb-modern({
+					embed: '<span class="blurb-icon mdi mdi-cellphone-link novi-icon"></span>',
+					title: 'FULLY RESPONSIVE',
+					text:  'Let visitors use the calendar on different devices, be it an HD desktop or mobile phone. Thanks to its fully responsive nature, it can scale down to any viewport automatically.'
+				})
+			.col-md-6.col-lg-5( data-animate!={ class: 'fadeInRight' } )
+				+blurb-modern({
+					embed: '<span class="blurb-icon mdi mdi-code-braces novi-icon"></span>',
+					title: 'jQuery 1.11+',
+					text:  'Before setting up Vide, you’ll need to install jQuery 1.11+. It will provide an optimal performance of the script on your website.'
+				})
+			.col-md-10.text-center( data-animate!={ class: 'fadeIn' } )
+				a.btn.btn-lg.btn-light.btn-outline( href= buyLink, target='_blank' )
+					span.btn-icon.mdi.mdi-cart-outline.novi-icon
+					span Buy Intense Now

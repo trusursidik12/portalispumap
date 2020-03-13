@@ -1,0 +1,12 @@
+include ../countdown/_countdown
+include ../breadcrumb/_breadcrumb
+
+// Maintenance
+section.section.service-section.service-section-breadcrumb.bg-900.context-dark.novi-background( data-preset!={ title:'Maintenance', category:'one screen page, countdown', reload:true, id:'maintenance' } )
+	.container
+		.row.novi-disabled
+			.col-md-8.col-xl-7
+				+breadcrumb( breadcrumbs )
+				h1 Sorry, we’re down for maintenance :(
+				h5 We’ll be back shortly
+				+countdown-simple({ to: '2019-12-31' }).justify-content-start.service-section-countdown

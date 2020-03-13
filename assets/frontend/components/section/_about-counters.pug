@@ -1,0 +1,31 @@
+include ../counter/_counter
+
+// Facts & statistics
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Facts & Statistics', category:'infographics', reload:true, id:'facts-statistics' } )
+	.container
+		h4 Facts & statistics
+		.row.row-30.row-offset-md
+			.col-6.col-md-3
+				+counter({
+					value: 92,
+					postfix: '+',
+					title: 'Team members'
+				})
+			.col-6.col-md-3
+				+counter({
+					value: 1999,
+					title: 'Year founded'
+				})
+			.col-6.col-md-3
+				+counter({
+					value: 15,
+					postfix: 'K',
+					title: 'Clients'
+				})
+			.col-6.col-md-3
+				+counter({
+					prefix: '$',
+					value: 25,
+					postfix: 'M',
+					title: 'Annual income'
+				})

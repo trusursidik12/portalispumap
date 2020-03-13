@@ -1,0 +1,26 @@
+include ../counter/_counter
+
+// Nav line horizontal sample
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Nav Line Horizontal Sample', category:'tab, sample', reload:true, id:'nav-line-horizontal-sample' } )
+	.container
+		h2.text-center Tab type #5
+		.row.justify-content-center.novi-disabled
+			.col-lg-12
+				.tab.tab-horizontal
+					ul.nav.nav-line-horizontal.tab-embed( role='tablist' )
+						li.nav-item: a.nav-link.h6.active( data-toggle='tab', href='#navLine2-1', role='tab', aria-selected='true' ) Toolkit core
+						li.nav-item: a.nav-link.h6( data-toggle='tab', href='#navLine2-2', role='tab', aria-selected='false' ) Ui kit
+						li.nav-item: a.nav-link.h6( data-toggle='tab', href='#navLine2-3', role='tab', aria-selected='false' ) Plugins
+						li.nav-item: a.nav-link.h6( data-toggle='tab', href='#navLine2-4', role='tab', aria-selected='false' ) Documentation
+					.tab-content
+						#navLine2-1.tab-pane.fade.show.active( role='tabpanel' )
+							include ../tab/_tab-content-1
+
+						#navLine2-2.tab-pane.fade( role='tabpanel' )
+							include ../tab/_tab-content-2
+
+						#navLine2-3.tab-pane.fade( role='tabpanel' )
+							include ../tab/_tab-content-5
+
+						#navLine2-4.tab-pane.fade( role='tabpanel' )
+							include ../tab/_tab-content-4

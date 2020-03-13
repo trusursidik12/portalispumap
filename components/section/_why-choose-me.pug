@@ -1,0 +1,22 @@
+include ../blurb/_blurb
+
+// Why Choose Me
+section.section.section-lg.bg-transparent.novi-background(data-preset!={ title:'Why Choose Me', category:'blurb', reload:false, id:'why-choose-me' } )
+	.container
+		.row.row-30.justify-content-lg-between
+			.col-md-5.col-lg-4
+				h2 Why choose me
+				p Here are a few reasons why companies all over the world trust me and my team’s qualifications and choose Intense.
+			.col-md-7.blurb-area
+				+blurb-inline({
+					alignY: 'align-items-center',
+					embed:  '<span class="blurb-icon ith-devices novi-icon"></span>',
+					title:  'Focused on Your Needs',
+					text:   'You never have to worry about getting answers to your questions. My experienced approach is to ensure that you will get what you need at the right time.'
+				})
+				+blurb-inline({
+					alignY: 'align-items-center',
+					embed:  '<span class="blurb-icon ith-devices novi-icon"></span>',
+					title:  'Quality Design at Affordable Prices',
+					text:   'I understand the importance of maintaining a budget and keeping a project on schedule. That’s why I only propose solutions that meet your project’s goal.'
+				})

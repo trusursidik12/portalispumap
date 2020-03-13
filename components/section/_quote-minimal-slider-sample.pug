@@ -1,0 +1,43 @@
+include ../quote/_quote
+
+// Quote minimal slider
+section.section.section-lg.bg-900.context-dark.novi-background( data-preset!={ title:'Quote Minimal Slider', category:'quote, carousel', reload:true, id:'quote-minimal-slider-2' } )
+	.container
+		h2.text-center Testimonials slider type #4
+		.rating-head.text-center
+			h2.rating-head-title 4.89/5
+			h6.rating-head-subtitle Rating on TrustPilot
+			+rating
+		hr.divider.divider-sm
+		// Owl Carousel
+		.owl-carousel( data-owl= { dots: true }, data-items='1', data-sm-items='2', data-md-items='3' )
+			+quote-minimal({
+				text:     quote1.text,
+				name:     quote1.name,
+				position: quote1.position
+			})
+			+quote-minimal({
+				text:     quote2.text,
+				name:     quote2.name,
+				position: quote2.position
+			})
+			+quote-minimal({
+				text:     quote3.text,
+				name:     quote3.name,
+				position: quote3.position
+			})
+			+quote-minimal({
+				text:     quote4.text,
+				name:     quote4.name,
+				position: quote4.position
+			})
+			+quote-minimal({
+				text:     quote5.text,
+				name:     quote5.name,
+				position: quote5.position
+			})
+			+quote-minimal({
+				text:     quote6.text,
+				name:     quote6.name,
+				position: quote6.position
+			})

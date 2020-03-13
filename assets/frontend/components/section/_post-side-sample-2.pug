@@ -1,0 +1,16 @@
+include ../post/_post
+
+// Post side rounded
+section.section.section-md.bg-transparent.novi-background( data-preset!={ title:'Post Side Rounded', category:'blog', reload:false, id:'post-side-rounded' } )
+	.container
+		.row.row-40.justify-content-center
+			.col-xs-10.col-md-9.col-lg-8
+				+post-side({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    post2.titleShort2,
+					img:      'persons/person-06-260x260',
+					postText: post2.textShort
+				}).post-sm.post-side-rounded.post-side-sm

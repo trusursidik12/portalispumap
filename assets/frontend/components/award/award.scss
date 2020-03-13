@@ -1,0 +1,43 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.award {
+	padding: 14%;
+	border: 1px solid $gray-300;
+	border-radius: 6px;
+}
+
+
+// Spacing
+* + .award-text {
+	margin-top: 8px;
+}
+
+
+// Contexts
+.context-dark {
+	.award {
+		border-color: transparent;
+		background-color: rgba($white, .09);
+	}
+}
+
+
+// Theming
+@each $color, $value in $theme-colors {
+	.award.award-#{$color} {
+		color: color-yiq($value);
+		background-color: $value;
+		border-color: transparent;
+
+		.award-title {
+			color: inherit;
+		}
+	}
+}

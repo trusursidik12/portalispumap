@@ -1,0 +1,103 @@
+// Variables
+$iso-filter-fsz: $h4-font-size;
+$iso-filter-color: $gray-400;
+$iso-filter-active-color: $gray-900;
+$iso-filter-hover-color: $iso-filter-active-color;
+$iso-filter-border-color: $secondary;
+$iso-filter-border-radius: $border-radius-sm;
+
+
+// Base
+.isotope-line {
+	.isotope-filter {
+		position: relative;
+		margin-right: 25px;
+		padding: 0 0 .3em;
+		font-weight: 400;
+		color: $iso-filter-color;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:before {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 0;
+			height: 4px;
+			background-color: $iso-filter-border-color;
+			border-radius: $iso-filter-border-radius;
+			content: '';
+			transition: $transition-base;
+		}
+
+		&:hover {
+			color: $iso-filter-hover-color;
+		}
+
+		&.active {
+			color: $iso-filter-active-color;
+
+			&:before {
+				width: 20px;
+			}
+		}
+	}
+
+	* + .isotope { margin-top: 25px; }
+}
+
+
+// Context dark
+.context-dark {
+	.isotope-line {
+		.isotope-filter {
+			color: rgba( color-yiq( $iso-filter-active-color ), .4 );
+
+			&:hover,
+			&.active {
+				color: inherit;
+			}
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.isotope-line {
+		.isotope-filter {
+			font-size: $iso-filter-fsz * .8;
+		}
+
+		* + .isotope { margin-top: 35px; }
+	}
+
+	* + .isotope-line { margin-top: 43px; }
+}
+
+@include media-breakpoint-up( xl ) {
+	.isotope-line {
+		.isotope-filter {
+			margin-right: 37px;
+			font-size: $iso-filter-fsz * .9;
+		}
+
+		* + .isotope { margin-top: 50px; }
+	}
+
+	* + .isotope-line { margin-top: 63px; }
+}
+
+@include media-breakpoint-up( xxl ) {
+	.isotope-line {
+		.isotope-filter {
+			font-size: $iso-filter-fsz;
+		}
+
+		* + .isotope { margin-top: 60px; }
+	}
+
+	* + .isotope-line { margin-top: 73px; }
+}

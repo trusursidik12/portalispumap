@@ -1,0 +1,38 @@
+// Contact us
+section.section.section-md.bg-transparent.novi-background( data-preset!={ title:'Contact Us', category:'contacts', reload:true, id:'contact-us-2' } )
+	.container
+		.row.row-40
+			.col-sm-10.col-md-6
+				h3 How to find us
+				p You can always visit us in our comfortable office. View their addresses and opening hours or call/email us directly using the information below.
+				.offset-md
+					.d-inline-flex.align-items-center
+						span.icon.icon-xs.int-phone.novi-icon.mr-2
+						.h5: a( href='tel:#' ) +1 234 567 8901
+				.offset-xs
+					.h5 178 West 27th Street, Suite 527, New York, NY 10012, United States
+				ul.list.list-xs.small
+					li.list-item Monday-Friday: 8am - 6pm
+					li.list-item Saturday-Sunday: 8am - 2pm
+					li.list-item Holidays: closed
+				ul.list
+					li.list-item: a.link.link-secondary( href='mailto:#' ) mail@demolink.org
+					li.list-item: a.link.link-secondary( href='mailto:#' ) info@demolink.org
+			.col-md-6
+				h3 Get in touch
+				form.rd-mailform( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.form-group
+						label( for='input-name' ) Name:
+						.position-relative
+							input.form-control( id='input-name', type='text', name='name', placeholder='Your name', data-constraints='@Required' )
+					.form-group
+						label( for='input-email' ) E-mail:
+						.position-relative
+							input.form-control( id='input-email', type='email', name='email', placeholder='Your e-mail address', data-constraints='@Email @Required' )
+					.form-group
+						label( for='input-question' ) Question:
+						.position-relative
+							textarea.form-control( id='input-question', name='question', placeholder='Your question', data-constraints='@Required' )
+					button.btn.btn-lg.btn-primary( type='submit' ) Submit
+
+				#form-output-global.form-output.snackbar.snackbar-secondary

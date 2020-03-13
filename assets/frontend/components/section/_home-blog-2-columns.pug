@@ -1,0 +1,18 @@
+include ../post/_post
+
+// Home blog 2 columns
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Home Blog 2 Columns', category:'blog', reload:false, id:'home-blog-2-columns' } )
+	.container
+		.row.row-40.row-lg-80.row-xxl-110.justify-content-center
+			.col-xs-10.col-md-6( data-animate!={ class: 'fadeInUpBig' } )
+				+post-classic-4({
+					title:    post1.titleShort,
+					label:    'HTML',
+					img:      'image-05-620x398'
+				}).post-text-center.post-sm
+			.col-xs-10.col-md-6( data-animate!={ class: 'fadeInUpBig', delay: '0.15s' } )
+				+post-classic-4({
+					title:    post2.titleShort2,
+					label:    'HTML',
+					img:      'image-09-620x398'
+				}).post-text-center.post-sm

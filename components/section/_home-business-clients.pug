@@ -1,0 +1,22 @@
+// Clients
+section.section.section-lg.bg-200.text-center.novi-background( data-preset!={ title:'Clients', category:'partner', reload:false, id:'clients-2' } )
+	.container
+		h2( data-animate!={ class: 'fadeInUp' } ) Trusted by
+			br
+			| #[span.text-primary #[span( data-counter ) 700]+] happy clients
+	.owl-carousel.owl-style-4( data-owl= {
+		margin: 80,
+		loop: true,
+		autoWidth: true,
+		autoplayTimeout: 4500,
+		autoplaySpeed: 4500,
+		slideTransition: 'linear'
+	}, data-items='9' )
+		+img( 'partners/partner-1-180x49.png' )
+		+img( 'partners/partner-2-133x38.png' )
+		+img( 'partners/partner-3-180x45.png' )
+		+img( 'partners/partner-4-107x31.png' )
+		+img( 'partners/partner-6-154x53.png' )
+		+img( 'partners/partner-7-204x50.png' )
+		+img( 'partners/partner-8-190x43.png' )
+		+img( 'partners/partner-9-176x41.png' )

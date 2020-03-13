@@ -1,0 +1,54 @@
+-
+	var pieChart = {
+		credits: false,
+		colors: [ '#31c77f', '#F19711', '#6b39bd', '#28A8FF' ],
+		chart: {
+			type: 'pie'
+		},
+		title: {
+			text: null
+		},
+		legend: {
+			itemStyle: {
+				color: '#aaa',
+				fontWeight: 'normal'
+			},
+			itemHoverStyle: {
+				color: '#777'
+			}
+		},
+		tooltip: {
+			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		},
+		plotOptions: {
+			pie: {
+				allowPointSelect: true,
+				cursor: 'pointer',
+				borderColor: 'transparent',
+				dataLabels: {
+					enabled: false
+				},
+				showInLegend: true
+			}
+		},
+		series: [{
+			name: 'Brands',
+			colorByPoint: true,
+			data: [{
+				name: 'Chrome',
+				y: 61.41,
+				sliced: true,
+				selected: true
+			}, {
+				name: 'Internet Explorer',
+				y: 11.84
+			}, {
+				name: 'Firefox',
+				y: 10.85
+			}, {
+				name: 'Edge',
+				y: 4.67
+			}]
+		}]
+	}
+.highcharts-container( data-highcharts-options= pieChart )

@@ -1,0 +1,38 @@
+// Portfolio masonry horizontal
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Portfolio Masonry Horizontal', category:'thumbnail, gallery, isotope', reload:true, id:'portfolio-masonry-horizontal' } )
+	.container
+		h2 Masonry layout
+		.isotope-wrap.isotope-line
+			.isotope-filters
+				.isotope-filter.active( data-isotope-filter="*" ) All
+				.isotope-filter( data-isotope-filter=".design" ) Design
+				.isotope-filter( data-isotope-filter=".development" ) Development
+				.isotope-filter( data-isotope-filter=".marketing" ) Marketing
+			.isotope.row.row-40( data-lightgallery )
+				.col-6.col-md-4.isotope-item.development
+					a.thumbnail-up-shadow.lightgallery-item( href='images/image-07-1200x800.jpg' )
+						+img( 'image-07-400x620' )
+				.col-6.col-md-4.isotope-item.development
+					a.thumbnail-up-shadow.lightgallery-item( href='images/image-15-1200x800.jpg' )
+						+img( 'image-15-400x400' )
+				.col-6.col-md-4.isotope-item.development
+					a.thumbnail-up-shadow.lightgallery-item( href='images/image-16-1200x800.jpg' )
+						+img( 'image-16-400x400' )
+				.col-6.col-md-4.isotope-item.design
+					a.thumbnail-up-shadow.lightgallery-item( href='images/image-17-1200x800.jpg' )
+						+img( 'image-17-400x400' )
+				.col-6.col-md-4.isotope-item.design
+					a.thumbnail-up-shadow.lightgallery-item( href='images/image-05-1200x800.jpg' )
+						+img( 'image-05-400x620' )
+				.col-6.col-md-4.isotope-item.design
+					a.thumbnail-up-shadow.lightgallery-item( href='images/image-13-1200x800.jpg' )
+						+img( 'image-13-400x400' )
+				.col-6.col-md-4.isotope-item.marketing
+					a.thumbnail-up-shadow.lightgallery-item( href='images/image-06-1200x800.jpg' )
+						+img( 'image-06-400x620' )
+				.col-6.col-md-4.isotope-item.marketing
+					a.thumbnail-up-shadow.lightgallery-item( href='images/image-14-1200x800.jpg' )
+						+img( 'image-14-400x400' )
+				.col-6.col-md-4.isotope-item.marketing
+					a.thumbnail-up-shadow.lightgallery-item( href='images/image-20-1200x1000.jpg' )
+						+img( 'image-20-400x400' )

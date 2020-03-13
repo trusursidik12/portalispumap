@@ -1,0 +1,62 @@
+include ../post/_post
+include ../pag/_pag
+
+// Classic layout cretive
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blog Classic', category:'blog', reload:false, id:'blog-classic-4' } )
+	.container
+		h1.text-center Classic layout
+		.post-container
+			.post-container-item
+				+post-classic-1({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					title:    post1.title,
+					img:      'image-05-570x366',
+					postText: 'This year may bring us a lot of surprises as standards in web design change and we experience lots...',
+					coments:  '25'
+				})
+
+			.post-container-item
+				+post-classic-1({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					title:    post2.titleShort,
+					img:      'image-09-570x366',
+					postText: 'Nowadays, designing a landing page is way more difficult. The only challenge you face is getting all...',
+					coments:  '25'
+				})
+
+			.post-container-item
+				+post-classic-1({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					title:    post8.titleShort,
+					img:      'image-05-570x366',
+					postText: 'In this post, our founder John Wilson shared with us his opinion on modern web design trends...',
+					coments:  '25'
+				})
+
+			.post-container-item
+				+post-classic-1({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					title:    post5.title,
+					img:      'image-09-570x366',
+					postText: 'Our team of developers and designers constantly explores ways of refining the color palette to...',
+					coments:  '25'
+				})
+
+		+pag-simple([
+			{ value: '1', actionClass: 'active' },
+			{ value: '2' },
+			{ value: '3' },
+			{ value: '4' },
+			{ value: '5' },
+			{ value: '..', class: 'inactive' },
+			{ value: '24' },
+			{ next: true }
+		]).justify-content-center

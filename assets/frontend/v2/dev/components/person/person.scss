@@ -1,0 +1,181 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Variables
+$person-primary: $primary;
+$person-secondary: $secondary;
+$person-dark: $gray-900;
+$person-title-fsz: $h4-font-size;
+$person-icon-fsz: $person-title-fsz;
+
+
+// Base
+.person {
+	max-width: 330px;
+	display: inline-block;
+	text-align: left;
+}
+
+.person-title {
+	font-size: 22px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: $person-dark;
+
+	a {
+		color: inherit;
+
+		&:hover,
+		&:focus {
+			color: $person-secondary;
+		}
+	}
+}
+
+.person-img-link {
+	display: inline-block;
+	transition: $transition-base;
+
+	&:hover,
+	&:focus {
+		opacity: .9;
+	}
+}
+
+.person-social {
+	@include group( 20px, 10px );
+}
+
+.person-icon {
+	display: inline-block;
+	font-size: 18px;
+	color: $person-dark;
+
+	&:hover,
+	&:focus {
+		color: $person-secondary;
+	}
+}
+
+.person-mail {
+	display: inline-block;
+	font-weight: 400;
+	color: $person-secondary;
+
+	&:hover,
+	&:focus {
+		color: $person-primary;
+	}
+}
+
+.person-tel-icon {
+	color: $person-dark;
+}
+
+.person-tel-link {
+	display: inline-block;
+	margin-left: .2em;
+	font-weight: 400;
+	color: $person-dark;
+	vertical-align: middle;
+
+	&:hover,
+	&:focus {
+		color: $person-primary;
+	}
+}
+
+
+// Spacing
+* + .person-title { margin-top: 15px; }
+* + .person-subtitle { margin-top: 3px; }
+* + .person-text { margin-top: 15px; }
+* + .person-social { margin-top: 12px; }
+* + .person-mail { margin-top: 12px; }
+.person-tel + .person-mail { margin-top: 0; }
+* + .person-tel { margin-top: 12px; }
+
+
+// Modifying
+.person-rounded {
+	text-align: center;
+
+	.person-img-link,
+	.person-img {
+		border-radius: 50%;
+	}
+}
+
+.person-gray {
+	.person-img {
+		-webkit-filter: grayscale( 100% );
+		filter: grayscale( 100% );
+	}
+}
+
+
+// Context dark
+.context-dark {
+	.person-title,
+	.person-tel-icon {
+		color: inherit;
+
+		a {
+			color: inherit;
+
+			&:hover,
+			&:focus {
+				color: $person-secondary;
+			}
+		}
+	}
+
+	.person-icon,
+	.person-tel-link {
+		color: rgba( color-yiq( $person-dark ), .5 );
+
+		&:hover,
+		&:focus {
+			color: color-yiq( $person-dark );
+		}
+	}
+}
+
+// Media
+@include media-breakpoint-up( md ) {
+	.person {
+		max-width: 100%;
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.person-title { font-size: 26px; }
+	.person-icon { font-size: 20px; }
+
+	* + .person-title { margin-top: 21px; }
+}
+
+@include media-breakpoint-up( xxl ) {
+	.person-title { font-size: $person-title-fsz; }
+	.person-icon { font-size: $person-icon-fsz; }
+
+	* + .person-title { margin-top: 35px; }
+	* + .person-subtitle { margin-top: 12px; }
+	* + .person-text { margin-top: 22px; }
+	* + .person-social { margin-top: 20px; }
+	* + .person-mail { margin-top: 20px; }
+}
+
+
+// Layout
+@import "person-sm";
+@import "person-md";
+@import "person-lg";
+@import "person-xl";
+@import "person-thumbnail";
+@import "person-side";

@@ -1,0 +1,19 @@
+include ../blurb/_blurb
+
+// Mailform features
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Mailform Features', category:'blurb', reload:false, id:'mailform-features-2' } )
+	.container
+		.row.row-40.flex-md-row-reverse.justify-content-xl-between
+			.col-md-10.col-lg-5.col-xl-4.blurb-area
+				+blurb-inline({
+					embed: '<span class="icon icon-circle icon-md icon-primary mdi mdi-cellphone-link novi-icon"></span>',
+					title: 'Fully responsive',
+					text:  'Make use of responsive forms using this plugin. Whether visitors access your site via a desktop or smartphone, they can use your forms on all the devices.'
+				})
+				+blurb-inline({
+					embed: '<span class="icon icon-circle icon-md icon-primary-filled mdi mdi-grid novi-icon"></span>',
+					title: 'Modular structure',
+					text:  'RD Mailform and its built-in plugins can be used independently of Intense. The modular structure of this script allows you to integrate it into any other HTML templates.'
+				})
+			.col-md-8.col-lg-7
+				+img( 'features/feature-03-700x478.png' ).shadow-sm

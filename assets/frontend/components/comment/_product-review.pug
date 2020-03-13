@@ -1,0 +1,19 @@
+include ../rating/_rating
+
+//- Product review
+	@param {object} obj - data object
+	@param {string} obj.title - comment title
+	@param {string} obj.name - meta name
+	@param {string} obj.time - meta time
+	@param {string} obj.text - quote text
+mixin product-review( obj )
+	.comment&attributes( attributes )
+		.comment-title.h5= obj.title
+		+rating.rating-orange.comment-rating
+		.comment-panel
+			ul.comment-meta
+				li.comment-meta-item='by '
+					span.font-weight-medium= obj.name
+				li.comment-meta-item='Posted '
+					time.font-weight-medium( datetime= obj.time.date )= obj.time.text
+		.comment-text= obj.text

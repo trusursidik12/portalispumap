@@ -1,0 +1,57 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.thumbnail-louis {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 33.9% 0;
+	font-size: $font-size-sm;
+	background-color: $gray-100;
+}
+
+.thumbnail-louis-image {
+	position: absolute;
+}
+
+.thumbnail-louis-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 6% 3%;
+	background-color: $white;
+	transition: .3s;
+}
+
+
+// Contexts
+.desktop {
+	.thumbnail-louis-caption {
+		transform: translateY( 100% );
+	}
+
+	.thumbnail-louis:hover {
+		.thumbnail-louis-caption {
+			transform: none;
+		}
+	}
+}
+
+.context-dark {
+	.thumbnail-louis {
+		background-color: rgba($white, .09);
+	}
+
+	.thumbnail-louis-caption {
+		background: $gray-900;
+	}
+}

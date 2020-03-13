@@ -1,0 +1,56 @@
+include ../rating/_rating
+
+// Product overview
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Product Overview', category:'shop', reload:true, id:'product-overview-2' } )
+	.container
+		.row.row-50
+			.col-md-6.col-lg-7
+				.slick-modern
+					.slick-slider.slider-nav( data-slick!={
+						slidesToShow: 5,
+						slidesToScroll: 5,
+						arrows: false,
+						asNavFor: '.slider-for',
+						focusOnSelect: true,
+						vertical: true
+					} )
+						.slick-content: +img( 'products/product-18-542x694' )
+						.slick-content: +img( 'products/product-03-542x694' )
+						.slick-content: +img( 'products/product-19-542x694' )
+						.slick-content: +img( 'products/product-20-542x694' )
+						.slick-content: +img( 'products/product-21-542x694' )
+					.slick-slider.slider-for( data-slick!={
+						arrows: false,
+						asNavFor: '.slider-nav',
+						autoplay: true,
+						autoplaySpeed: 2000,
+						fade: true
+					} )
+						.slick-content: +img( 'products/product-18-542x694' )
+						.slick-content: +img( 'products/product-03-542x694' )
+						.slick-content: +img( 'products/product-19-542x694' )
+						.slick-content: +img( 'products/product-20-542x694' )
+						.slick-content: +img( 'products/product-21-542x694' )
+
+			.col-md-6.col-lg-5
+				.product-overview.pl-xxl-5
+					.product-overview-item
+						.small.font-weight-normal Accessories
+						h3.product-overview-name Ombré vinyl backpack
+						.product-overview-price
+							del $27
+							span $24
+						.product-overview-rating
+							+rating.rating-orange
+							a.product-overview-review.ml-4( href='#reviews', data-anchor-link='' ) 3 customer reviews
+					.product-overview-item
+						.d-flex.flex-wrap.align-items-end.group-20
+							.form-group
+								label.d-block( for='input-quality' ) Qty:
+								input.form-control.form-control-inline( id='input-quality', data-spinner, type='number', name='spinner', value='1' )
+							.flex-grow-1
+								a.btn.btn-block.btn-lg.btn-dark( href='cart.html' )
+									span.btn-icon.int-cart.novi-icon
+									span Add to Cart
+					.product-overview-description
+						p This comfy multipurpose vinyl female backpack is a perfect choice for everyday usage. Even if you are an avid traveler, you’ll surely find it useful.

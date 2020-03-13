@@ -1,0 +1,27 @@
+include ../quote/_quote
+
+// Quote default
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Quote Default', category:'quote', reload:false, id:'quote-default' } )
+	.container
+		.row.row-40.row-md-50( data-animate!={ class: 'fadeInUp' } )
+			.col-sm-6.col-lg-4
+				+quote({
+					text:     'Intense is full of great details and very useful tools. The template code is clear and easy-to-edit. Moreover, it  is well-documented and supported.',
+					img:      'persons/person-01-64x64',
+					name:     'Kevin Davis',
+					position: 'Client'
+				})
+			.col-sm-6.col-lg-4
+				+quote({
+					text:     'It is a great template with everything my website needed. It took me a few hours to figure all out but it was worth the investment.',
+					img:      'persons/person-02-64x64',
+					name:     'Paul Sanders',
+					position: 'Client'
+				})
+			.col-sm-6.col-lg-4
+				+quote({
+					text:     'This template has lots of preconfigured child themes, effects, and components. It is a great choice if you need a customizable website.',
+					img:      'persons/person-03-64x64',
+					name:     'Helen Wright',
+					position: 'Client'
+				})

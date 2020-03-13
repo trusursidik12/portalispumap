@@ -1,0 +1,229 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.thumbnail-rotate {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: px-to-rem( 16px );
+}
+
+.thumbnail-rotate-3d {
+	position: relative;
+	perspective: 1200px;
+	z-index: 1;
+
+	&::before {
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: 50%;
+		width: 77.2%;
+		padding-bottom: 77.2%;
+		transform: translateX( -50% );
+		box-shadow: 0 17px 34px rgba( $gray-900, .6 );
+		transition: .35s;
+	}
+}
+
+.thumbnail-rotate-body {
+	position: relative;
+	color: $white;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform: translateZ( -100px );
+	transition: .35s;
+}
+
+.thumbnail-rotate-banner,
+.thumbnail-rotate-content {
+	width: inherit;
+	height: inherit;
+
+	&::before {
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+		background: $gray-900;
+		transition: .35s;
+		pointer-events: none;
+	}
+}
+
+.thumbnail-rotate-banner {
+	display: block;
+	transform: translateZ( 99px );
+}
+
+.thumbnail-rotate-content {
+	display: none;
+	padding: 0 7% 12%;
+	background: $gray-900;
+	transform: rotateY( 90deg ) translateZ( 100px );
+
+	&::before {
+		opacity: .5;
+	}
+}
+
+.thumbnail-rotate-banner-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+}
+
+.thumbnail-rotate-figure {
+	margin-bottom: px-to-rem( -14px );
+}
+
+.thumbnail-rotate-button {
+	transform: translate3d( 0, 0, 0 );
+
+	.btn {
+		&:hover,
+		&.hover,
+		&:active,
+		&.active {
+			background-color: $secondary;
+			border-color: $secondary;
+		}
+	}
+}
+
+
+// Spacing
+* + .thumbnail-rotate-button {
+	margin-top: px-to-rem( 22px );
+}
+
+* + .thumbnail-rotate-title {
+	margin-top: px-to-rem( 40px );
+}
+
+
+// Modifying
+.thumbnail-rotate-inverse {
+	.thumbnail-rotate-content {
+		transform: rotateY( -90deg ) translateZ( 100px );
+	}
+}
+
+.thumbnail-rotate-gradient {
+	.thumbnail-rotate-content {
+		background-color: $gray-900;
+		background-image: linear-gradient(180deg, transparent 55%, $gray-900 80%), linear-gradient(270deg, #62EFAB 0%, #28A8FF 50%, #A771FF 98%);
+		background-size: 100% 50%;
+		background-repeat: no-repeat;
+	}
+}
+
+.thumbnail-rotate-gradient-2 {
+	.thumbnail-rotate-content {
+		background-color: $gray-900;
+		background-image: linear-gradient(180deg, transparent 54.35%, $gray-900 79.17%), linear-gradient(55.11deg, #00BCEA 11.87%, #95D966 76.28%);
+		background-size: 100% 50%;
+		background-repeat: no-repeat;
+	}
+}
+
+
+// Contexts
+.desktop {
+	.thumbnail-rotate-content {
+		display: block;
+	}
+
+	.thumbnail-rotate-banner {
+		position: absolute;
+	}
+
+	.thumbnail-rotate:hover {
+		.thumbnail-rotate-3d::before {
+			box-shadow: 0 24px 44px rgba( $gray-900, .6 );
+		}
+
+		.thumbnail-rotate-body {
+			transform: rotateY( -78deg ) translateZ( 20px );
+		}
+
+		.thumbnail-rotate-banner::before {
+			opacity: .8;
+		}
+
+		.thumbnail-rotate-content::before {
+			opacity: 0;
+		}
+	}
+
+	.thumbnail-rotate-inverse:hover {
+		.thumbnail-rotate-body {
+			transform: rotateY( 78deg ) translateZ( 20px );
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(xs) {
+	.thumbnail-rotate {
+		width: 200px;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.thumbnail-rotate {
+		width: 240px;
+	}
+
+	.thumbnail-rotate-body {
+		transform: translateZ( -120px );
+	}
+
+	.thumbnail-rotate-banner {
+		transform: translateZ( 119px );
+	}
+
+	.thumbnail-rotate-content {
+		padding-left: 11%;
+		padding-right: 11%;
+		transform: rotateY( 90deg ) translateZ( 120px );
+	}
+}
+
+
+@include media-breakpoint-up(xxl) {
+	.thumbnail-rotate {
+		width: 280px;
+		font-size: px-to-rem( 20px );
+	}
+
+	.thumbnail-rotate-body {
+		transform: translateZ( -140px );
+	}
+
+	.thumbnail-rotate-banner {
+		transform: translateZ( 139px );
+	}
+
+	.thumbnail-rotate-content {
+		padding-left: 9%;
+		padding-right: 9%;
+		transform: rotateY( 90deg ) translateZ( 140px );
+	}
+
+	* + .thumbnail-rotate-title {
+		margin-top: px-to-rem( 54px );
+	}
+}

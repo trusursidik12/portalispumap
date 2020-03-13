@@ -1,0 +1,67 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.content-row {
+	text-align: center;
+	padding-bottom: 1px;
+	@include group( 20px, 20px );
+}
+
+.content-row-body {
+	flex: 1;
+}
+
+.content-row-text {
+	font-size: $font-size-sm;
+}
+
+.content-row + .content-row {
+	margin-top: 25px;
+	padding-top: 25px;
+	border-top: 1px solid $border-color;
+}
+
+
+// Spacing
+* + .content-row { margin-top: 30px }
+* + .content-row-text { margin-top: 10px }
+
+
+// Modifying
+
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.content-row {
+		display: flex;
+		align-items: center;
+		text-align: left;
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.content-row {
+		@include group( 40px, 40px );
+	}
+
+	.content-row + .content-row {
+		margin-top: 60px;
+		padding-top: 60px;
+	}
+
+	.content-row-sm + .content-row-sm {
+		margin-top: 41px;
+		padding-top: 38px;
+	}
+
+	* + .content-row { margin-top: 79px }
+	* + .content-row-text { margin-top: 20px }
+	* + .content-row-sm { margin-top: 41px }
+}

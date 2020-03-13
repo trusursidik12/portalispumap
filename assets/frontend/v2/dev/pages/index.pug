@@ -1,0 +1,21 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Home';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_home-intro
+	include ../components/section/_home-novi
+	include ../components/section/_home-carousel
+	include ../components/section/_home-layouts
+	include ../components/section/_home-features
+	include ../components/section/_home-decoration
+	include ../components/section/_home-counter-cta
+	include ../components/section/_quote-default
+	include ../components/section/_cta-type-1
+	include ../components/section/_home-features-2
+	include ../components/section/_home-child-themes
+	include ../components/footer/_footer-extended

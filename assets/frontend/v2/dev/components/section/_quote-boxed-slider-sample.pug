@@ -1,0 +1,44 @@
+include ../quote/_quote
+
+// Quote boxed slider
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Quote Boxed Slider', category:'quote, carousel', reload:true, id:'quote-boxed-slider' } )
+	.container
+		h2.text-center Testimonials slider type #3
+		// Owl Carousel
+		.owl-carousel.owl-style-1( data-owl= { dots: true }, data-items='1', data-sm-items='2', data-md-items='3' )
+			+quote-boxed({
+				text:     quote1.text,
+				img:      'persons/person-01-90x90',
+				name:     quote1.name,
+				position: quote1.position
+			})
+			+quote-boxed({
+				text:     quote2.text,
+				img:      'persons/person-02-90x90',
+				name:     quote2.name,
+				position: quote2.position
+			}).quote-light
+			+quote-boxed({
+				text:     quote3.text,
+				img:      'persons/person-03-90x90',
+				name:     quote3.name,
+				position: quote3.position
+			}).quote-primary
+			+quote-boxed({
+				text:     quote4.text,
+				img:      'persons/person-01-90x90',
+				name:     quote4.name,
+				position: quote4.position
+			}).quote-info
+			+quote-boxed({
+				text:     quote5.text,
+				img:      'persons/person-02-90x90',
+				name:     quote5.name,
+				position: quote5.position
+			}).quote-warning
+			+quote-boxed({
+				text:     quote6.text,
+				img:      'persons/person-03-90x90',
+				name:     quote6.name,
+				position: quote6.position
+			}).quote-danger

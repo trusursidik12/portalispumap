@@ -1,0 +1,13 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'FAQ 2';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_faq-intro
+	include ../components/section/_general-question
+	include ../components/section/_other-question
+	include ../components/footer/_footer-default

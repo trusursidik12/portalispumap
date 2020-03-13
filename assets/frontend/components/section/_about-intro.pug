@@ -1,0 +1,13 @@
+include ../breadcrumb/_breadcrumb
+
+// Intro
+section.section.section-sm.section-layer.context-dark.pb-1( data-preset!={ title:'Intro', category:'intro', reload:false, id:'intro-4' } )
+	.bg-layer.bg-primary.novi-background( style='bottom: 9.4%;' )
+	.container
+		+breadcrumb( breadcrumbs )
+		h4= pageName
+		.row.row-30.mt-4
+			.col-xs-10.col-sm-5( style='padding-top: 8.6%;' )
+				h1 We're enabling everyone to create for the web.
+			.col-xs-10.col-sm-7
+				+img( 'image-22-730x730' )

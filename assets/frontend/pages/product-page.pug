@@ -1,0 +1,15 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Product page';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb-no-title
+	include ../components/section/_product-overview
+	include ../components/section/_product-reviews
+	include ../components/section/_product-form-review
+	include ../components/section/_product-popular
+	include ../components/footer/_footer-default

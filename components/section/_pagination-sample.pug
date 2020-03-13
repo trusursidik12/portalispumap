@@ -1,0 +1,60 @@
+// Pagination
+section.section.section-md.bg-transparent.novi-background( data-preset!={ title:'Pagination', category:'navigation, sample', reload:false, id:'pagination' } )
+	.container.text-center
+		h2 Classic paginations
+		+pag-simple([
+			{ prev: true, actionClass: 'disabled' },
+			{ value: '1', actionClass: 'active' },
+			{ value: '2' },
+			{ value: '3' },
+			{ value: '..', class: 'inactive' },
+			{ value: '24' },
+			{ next: true }
+		]).justify-content-center
+
+		+pagination-bs([
+			{ prev: true, actionClass: 'disabled' },
+			{ value: '1', actionClass: 'active' },
+			{ value: '2' },
+			{ value: '3' },
+			{ value: '..', class: 'inactive' },
+			{ value: '24' },
+			{ next: true }
+		]).justify-content-center
+
+		+pagination-bs([
+			{ prev: true, actionClass: 'disabled' },
+			{ value: '1', actionClass: 'active' },
+			{ value: '2' },
+			{ value: '3' },
+			{ value: '..', class: 'inactive' },
+			{ value: '24' },
+			{ next: true }
+		]).pagination-sm.justify-content-center
+
+		+pagination-bs([
+			{ prev: true, actionClass: 'disabled' },
+			{ value: '1', actionClass: 'active' },
+			{ value: '2' },
+			{ value: '3' },
+			{ value: '..', class: 'inactive' },
+			{ value: '24' },
+			{ next: true }
+		]).pagination-rounded.justify-content-center
+
+		+pag-extended({
+			prevTitle: '10 reasons to choose Intense over other popular templates',
+			prevBtn: 'Prev post',
+			nextTitle: 'How to benefit from creating a quality designed website',
+			nextBtn: 'Next post'
+		}).justify-content-center
+
+		+pag-short({
+			prevBtn: 'Prev post',
+			nextBtn: 'Next post'
+		}).pag-short-bordered.justify-content-center
+
+		+pag-short({
+			prevBtn: 'Prev post',
+			nextBtn: 'Next post'
+		}).justify-content-center

@@ -1,0 +1,123 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Variables
+$counter-color: $gray-900;
+$counter-icon-color: $primary;
+$counter-size: $h1-font-size;
+
+
+// Base
+.counter-icon,
+.counter-value {
+	font-size: $counter-size * .5;
+	line-height: $h1-line-height;
+}
+
+.counter-icon {
+	color: $counter-icon-color;
+}
+
+.counter-value {
+	font-weight: 400;
+	color: $counter-color;
+}
+
+.counter-body {
+	display: flex;
+	flex-direction: column;
+}
+
+
+// Spacing
+* + .counter-body { margin-top: 10px; }
+* + .counter-title { margin-top: 5px; }
+
+
+// Counter reverse title
+.counter-reverse {
+	.counter-body { flex-direction: column-reverse; }
+	.counter-value { margin-top: 5px; }
+
+	* + .counter-title { margin-top: 0; }
+}
+
+
+// Counter boxed
+.counter-boxed {
+	padding: 20px 15px;
+	border-radius: $border-radius;
+	box-shadow: $box-shadow-sm;
+	background-color: $white;
+}
+
+[class*='counter-boxed-'] {
+	.counter-value {
+		color: inherit;
+	}
+}
+
+
+// Contexts
+.context-dark {
+	.counter-boxed {
+		background-color: $gray-900;
+	}
+}
+
+
+// Theming
+@each $color, $value in $theme-colors {
+	.counter-boxed.counter-boxed-#{$color} {
+		color: color-yiq( $value );
+		background-color: $value;
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( sm ) {
+	* + .counter-body { margin-top: 0; }
+	* + .counter-title { margin-top: 0; }
+}
+
+@include media-breakpoint-up( md ) {
+	.counter-icon,
+	.counter-value {
+		font-size: $counter-size * .6;
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.counter-icon,
+	.counter-value {
+		font-size: $counter-size * .75;
+	}
+
+	.counter-boxed {
+		padding: 30px 20px;
+	}
+
+	.counter-reverse {
+		.counter-value {
+			margin-top: 8px;
+		}
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.counter-icon,
+	.counter-value {
+		font-size: $counter-size;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.counter-boxed {
+		padding: 48px 25px 61px;
+	}
+}

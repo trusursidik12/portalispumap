@@ -1,0 +1,112 @@
+// Variables
+$nav-link-color: $gray-400;
+$nav-link-active-color: $gray-900;
+$nav-link-hover-color: $nav-link-active-color;
+$nav-link-border-color: $secondary;
+$nav-link-border-radius: $border-radius-sm;
+
+
+// Base
+.nav-classic {
+	.nav-item {
+		margin-right: 25px;
+	}
+
+	.nav-link {
+		position: relative;
+		padding: 0 0 5px;
+		font-weight: 400;
+		color: $nav-link-color;
+
+		&:before {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 0;
+			height: 4px;
+			background-color: $nav-link-border-color;
+			border-radius: $nav-link-border-radius;
+			content: '';
+			transition: $transition-base;
+		}
+
+		&:hover {
+			color: $nav-link-hover-color;
+		}
+
+		&.active {
+			color: $nav-link-active-color;
+
+			&:before {
+				width: 20px;
+			}
+		}
+	}
+}
+
+
+// Spacing
+* + .nav-classic {
+	margin-top: 20px;
+}
+
+
+// Contexts
+.context-dark {
+	.nav-classic {
+		.nav-link {
+			color: rgba( color-yiq( $nav-link-active-color ), .4 );
+
+			&:hover,
+			&.active {
+				color: inherit;
+			}
+		}
+	}
+}
+
+[class*='bg-gradient'] {
+	.nav-classic {
+		.nav-link {
+			color: $gray-900;
+
+			&.active {
+				color: $secondary;
+			}
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.nav-classic {
+		.nav-link {
+			padding: 0 0 12px;
+		}
+	}
+
+	* + .nav-classic {
+		margin-top: 35px;
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	* + .nav-classic {
+		margin-top: 55px;
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.nav-classic {
+		.nav-item {
+			margin-right: 37px;
+		}
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	* + .nav-classic {
+		margin-top: 77px;
+	}
+}

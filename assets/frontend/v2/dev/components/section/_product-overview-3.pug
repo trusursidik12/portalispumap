@@ -1,0 +1,134 @@
+include ../rating/_rating
+include ../checkbox-color/_checkbox-color
+include ../comment/_product-review
+
+// Product overview
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Product Overview', category:'shop', reload:true, id:'product-overview-3' } )
+	.container
+		.row.row-50.justify-content-xl-between.novi-disabled
+			.col-sm-5.col-md-6
+				.row.row-sm-20.gutters-20.product-overview-gallery( data-lightgallery )
+					.col-12
+						a.thumbnail-up-shadow.lightgallery-item( href='images/products/product-05-624x800.jpg' )
+							+img( 'products/product-05-624x800' )
+					.col-12
+						a.thumbnail-up-shadow.lightgallery-item( href='images/products/product-22-624x800.jpg' )
+							+img( 'products/product-22-624x800' )
+					.col-12
+						a.thumbnail-up-shadow.lightgallery-item( href='images/products/product-23-624x800.jpg' )
+							+img( 'products/product-23-624x800' )
+					.col-12
+						a.thumbnail-up-shadow.lightgallery-item( href='images/products/product-24-624x800.jpg' )
+							+img( 'products/product-24-624x800' )
+					.col-12
+						a.thumbnail-up-shadow.lightgallery-item( href='images/products/product-25-624x800.jpg' )
+							+img( 'products/product-25-624x800' )
+			.col-sm-7.col-md-6.col-xl-5
+				.product-overview.pl-xxl-5
+					.product-overview-item
+						.small.font-weight-normal Stationery
+						h3.product-overview-name Stationery collection
+						.product-overview-price
+							del $67
+							span $33
+						.product-overview-rating
+							+rating.rating-orange
+							a.product-overview-review.ml-4( href='#reviews', data-anchor-link='' ) 3 customer reviews
+						.product-overview-item
+							h6.product-overview-title Select size:
+							.group-10.d-flex.flex-wrap
+								button.btn.btn-sm.btn-outline.btn-secondary XS
+								button.btn.btn-sm.btn-outline.btn-secondary S
+								button.btn.btn-sm.btn-outline.btn-secondary S Tall
+								button.btn.btn-sm.btn-outline.btn-secondary M
+								button.btn.btn-sm.btn-outline.btn-secondary M Tall
+								button.btn.btn-sm.btn-outline.btn-secondary L
+								button.btn.btn-sm.btn-outline.btn-secondary L Tall
+								button.btn.btn-sm.btn-outline.btn-secondary XL
+								button.btn.btn-sm.btn-outline.btn-secondary XL Tall
+								button.btn.btn-sm.btn-outline.btn-secondary 2XL
+								button.btn.btn-sm.btn-outline.btn-secondary 2XL Tall
+								button.btn.btn-sm.btn-outline.btn-secondary 3X
+								button.btn.btn-sm.btn-outline.btn-secondary 3X Tall
+								button.btn.btn-sm.btn-outline.btn-secondary 4XL
+								button.btn.btn-sm.btn-outline.btn-secondary 4XL Tall
+					.product-overview-item
+						h6.product-overview-title Select color:
+						.group-10.d-flex.flex-wrap
+							+checkbox-color()
+							+checkbox-color().checkbox-color-primary
+							+checkbox-color().checkbox-color-secondary
+							+checkbox-color().checkbox-color-warning
+							+checkbox-color().checkbox-color-danger
+							+checkbox-color().checkbox-color-dark
+							+checkbox-color().checkbox-color-info
+							+checkbox-color().checkbox-color-success
+					.product-overview-item
+						.d-flex.flex-wrap.align-items-end.group-20
+							.form-group
+								label.d-block( for='input-quality' ) Qty:
+								input.form-control.form-control-inline( id='input-quality', data-spinner, type='number', name='spinner', value='1' )
+							.flex-grow-1
+								a.btn.btn-block.btn-lg.btn-dark( href='cart.html' )
+									span.btn-icon.int-cart.novi-icon
+									span Add to Cart
+					.product-overview-description
+						p Make your notes and daily planning more stylish with this awesome set of stationery. This collection is a great fit for any girl as it includes:
+						ul.list.list-marked
+							li.list-item Diary with a slogan;
+							li.list-item Pom pom pen;
+							li.list-item 2 iridescent pencils;
+							li.list-item Weekly planner;
+							li.list-item Sticky notes and 3 pencil cases.
+
+						#reviews.accordion.accordion-classic
+							.accordion-item.accordion-1
+								a.accordion-header( href='#', data-multi-switch!={
+									targets: '.accordion-1'
+								} ) Size & fit
+								.accordion-body.accordion-1( data-multi-switch-target-slide )
+									ul.list.list-marked
+										li.list-item Designed to fit your daily style;
+										li.list-item Use our guide to pick the best purchase option.
+
+							.accordion-item.accordion-2
+								a.accordion-header( href='#', data-multi-switch!={
+									targets: '.accordion-2'
+								} ) Free shipping & returns
+								.accordion-body.accordion-2( data-multi-switch-target-slide )
+									p Free worldwide shipping and 30-day free returns, only with us. We offer 3 different shipping options:
+									ul.list.list-marked
+										li.list-item Standard / arrives 2-4 business days
+										li.list-item Two-day / arrives 2-3 business days
+										li.list-item Next-day / arrives 1-2 business days
+
+							.accordion-item.accordion-3
+								a.accordion-header( href='#', data-multi-switch!={
+									targets: '.accordion-3',
+									state: true
+								} ) Customer reviews
+								.accordion-body.accordion-3( data-multi-switch-target-slide )
+									.d-flex.align-items-center.mt-4
+										+rating.rating-orange
+										.small.ml-4 Based on 3 reviews
+									a.btn.btn-secondary( href='#' ) Write a review
+									+product-review({
+										title: 'Great product!',
+										name: 'Adam Smith',
+										time: {
+											date: '2019-09-16',
+											text: 'September 16, 2019'
+										},
+										text: 'Thank you for quick shipping and amazing quality of this product! My nephew is more than happy with what you provided.'
+									})
+									+product-review({
+										title: 'Best customer service',
+										name: 'Sarah Peters',
+										time: {
+											date: '2019-09-16',
+											text: 'September 16, 2019'
+										},
+										text: 'My mom recommended this store and I’m not disappointed at all. Thank you for quick delivery and easy payment, I’ll surely use your website again.'
+									})
+									.offset-xl
+										include ../product/_product-form-review

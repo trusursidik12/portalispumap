@@ -1,0 +1,9 @@
+// List shop right sidebar
+section.section.section-lg.bg-transparent( data-preset!={ title:'List Shop Right Sidebar', category:'shop', reload:true, id:'list-shop-right-sidebar' } )
+	.container
+		h1.text-center Listing view
+		.row.row-50.flex-lg-row-reverse.novi-background
+			.col-lg-3: .pl-4
+				include ../product/_sidebar-product
+			.col-lg-9
+				include ../product/_list-product

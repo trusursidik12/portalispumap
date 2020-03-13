@@ -1,0 +1,164 @@
+// Naira Effect
+.btn-naira-up,
+.btn-naira-down {
+	background-color: transparent;
+	transform: translateZ(0);
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		background: black;
+		transition: .25s;
+	}
+
+	.btn-icon {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		transition: .25s;
+	}
+
+	.btn-text {
+		position: relative;
+		transform: translateY(0);
+		opacity: 1;
+		transition: .25s;
+	}
+
+	&:hover {
+		background-color: transparent;
+
+		.btn-icon {
+			top: 50%;
+		}
+
+		.btn-text {
+			opacity: 0;
+		}
+	}
+
+	&.btn-outline {
+		&:hover {
+			background-color: transparent;
+		}
+	}
+}
+
+.btn-naira-up {
+	&::before {
+		transform: skewY(0);
+		transform-origin: 100% 100%;
+		bottom: 0;
+	}
+
+	.btn-icon {
+		top: 150%;
+	}
+
+	&:hover {
+		&::before {
+			transform: skewY(10deg);
+			bottom: 100%;
+		}
+
+		.btn-text {
+			transform: translateY(-200%);
+		}
+	}
+
+	&.btn-outline {
+		&::before {
+			transform: skewY(-10deg);
+			transform-origin: 100% 0;
+			top: 100%;
+			bottom: auto;
+		}
+
+		&:hover {
+			&::before {
+				transform: skewY(0);
+				top: 0;
+			}
+		}
+	}
+}
+
+.btn-naira-down {
+	&::before {
+		transform: skewY(0);
+		transform-origin: 0 0;
+		top: 0;
+	}
+
+	.btn-icon {
+		top: -150%;
+	}
+
+	&:hover {
+		&::before {
+			transform: skewY(10deg);
+			top: 100%;
+		}
+
+		.btn-text {
+			transform: translateY(200%);
+		}
+	}
+
+	&.btn-outline {
+		&::before {
+			transform: skewY(-10deg);
+			transform-origin: 0 0;
+			top: auto;
+			bottom: 100%;
+		}
+
+		&:hover {
+			&::before {
+				transform: skewY(0);
+				bottom: 0;
+			}
+		}
+	}
+}
+
+
+// Theming
+@each $color, $value in $theme-colors {
+	.btn-#{$color} {
+		&.btn-naira-up,
+		&.btn-naira-down {
+			border-color: $value;
+			color: color-yiq($value);
+
+			&::before {
+				background-color: $value;
+			}
+
+			.btn-icon {
+				color: $value;
+			}
+
+			&.btn-outline {
+				color: $value;
+
+				.btn-icon {
+					color: color-yiq($value);
+				}
+			}
+		}
+	}
+}

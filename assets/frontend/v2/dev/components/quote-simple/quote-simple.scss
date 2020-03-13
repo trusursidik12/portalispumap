@@ -1,0 +1,58 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.quote-simple {
+	padding: 25px 15px;
+	background-color: $gray-200;
+	border-radius: $border-radius;
+
+	q {
+		&:before,
+		&:after {
+			content: none;
+		}
+	}
+
+	cite {
+		font-style: normal;
+	}
+}
+
+.quote-simple-icon {
+	color: $gray-900;
+	font-size: $font-size-lg;
+	line-height: 1;
+}
+
+.quote-simple-author {
+	color: $primary;
+}
+
+
+// Spacing
+* + .quote-simple { margin-top: px-to-rem( 30px ); }
+* + .quote-simple-text { margin-top: px-to-rem( 12px ); }
+* + .quote-simple-author { margin-top: px-to-rem( 9px ); }
+
+
+// Quote simple shadow
+.quote-simple-shadow {
+	background-color: $white;
+	box-shadow: $box-shadow-sm;
+}
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.quote-simple {
+		padding: 6% 7% 5%;
+	}
+
+	* + .quote-simple { margin-top: px-to-rem( 59px ); }
+	* + .quote-simple-text { margin-top: px-to-rem( 29px ); }
+}

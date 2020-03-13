@@ -1,0 +1,36 @@
+include ../blurb/_blurb
+
+// Why choose us
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Why Us', category:'blurb', reload:false, id:'why-us-1' } )
+	.container
+		.row.row-30.row-md-40.justify-content-xl-between.novi-disabled
+			.col-xs-9.col-md-6.col-lg-5( data-animate!={ class: 'fadeInUp' } )
+				+img( 'image-17-510x510' )
+			.col-lg-7.col-xl-6( data-animate!={ class: 'fadeInRight' } )
+				h2 Why top eCommerce companies choose us
+				.row.row-40.row-lg-50
+					.col-12.col-xs-6
+						+blurb-classic({
+							embed: '<span class="blurb-icon ith-cart novi-icon"></span>',
+							title: 'We are dedicated to your success',
+							text: 'Our main goal is to help your online store stand out while putting your interest first.'
+						}).blurb-classic
+					.col-12.col-xs-6
+						+blurb-classic({
+							embed: '<span class="blurb-icon ith-chart novi-icon"></span>',
+							title: 'Our focus is on growth',
+							text: 'Our team focuses on our clients’ store growth at all times to give the best results.'
+						}).blurb-classic
+					.col-12.col-xs-6
+						+blurb-classic({
+							embed: '<span class="blurb-icon ith-glasses novi-icon"></span>',
+							title: 'Transparency is our middle name',
+							text: 'We’re transparent and we don’t nickel and dime our clients or charge excessive fees.'
+						}).blurb-classic
+					.col-12.col-xs-6
+						+blurb-classic({
+							embed: '<span class="blurb-icon ith-muscle novi-icon"></span>',
+							title: 'We’re experts',
+							text: 'We have been successfully working in the eCommerce consulting field for 10+ years.'
+						}).blurb-classic
+				a.btn.btn-lg.btn-primary( href='#' ) Learn More

@@ -1,0 +1,17 @@
+//- Thumbnail josip
+	@param {object} data - thumbnail data object
+	@param {array} data.img - thumbnail image params (path, width, height)
+	@param {string} data.title - thumbnail title
+	@param {string} data.link - thumbnail link
+	@param {string} data.description - thumbnail description text
+	@param {string} data.btnText - thumbnail button text
+mixin thumbnail-josip( data )
+	// Thumbnail josip
+	figure.thumbnail.thumbnail-josip&attributes( attributes )
+		+img( data.img ).thumbnail-josip-img
+		figcaption.thumbnail-josip-caption
+			.thumbnail-josip-inner
+				.thumbnail-josip-content
+					h5.thumbnail-josip-title= data.title
+					.thumbnail-josip-description= data.description
+				a.btn.btn-secondary.thumbnail-josip-btn( href= data.link ? data.link : '#' )= data.btnText ? data.btnText : 'Take a look'

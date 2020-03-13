@@ -1,0 +1,24 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Testimonials';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb
+	include ../components/section/_quote-default-sample
+	include ../components/section/_quote-cloud-sample
+	include ../components/section/_quote-boxed-sample
+	include ../components/section/_quote-minimal-sample
+	include ../components/section/_quote-classic-sample
+	include ../components/section/_quote-centered-sample
+	include ../components/section/_quote-default-slider-sample
+	include ../components/section/_quote-cloud-slider-sample
+	include ../components/section/_quote-boxed-slider-sample
+	include ../components/section/_quote-minimal-slider-sample
+	include ../components/section/_quote-classic-slider-sample
+	include ../components/section/_quote-centered-slider-sample
+	include ../components/section/_quote-slider-with-images-sample
+	include ../components/footer/_footer-default

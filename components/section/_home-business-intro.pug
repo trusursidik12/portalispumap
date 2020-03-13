@@ -1,0 +1,27 @@
+-
+	var
+		path1 = 'M 878 686.373 C 592.548 737.31 239.749 757.3 82.415 563.333 C -73.495 371.122 -2.746 105.45 248.559 20.391 C 320.296 0 411.125 3.994 524.295 8.988 C 639.081 14.053 763 20.391 878 0 L 878 686.373 Z';
+//		path2 = 'M 878 661.5 C 680 753.17 240.76 750.455 78.532 550.455 C -8.259 443.455 30.533 186.125 182.033 76.625 C 252.033 21.124 371.033 10.938 489.533 32.954 C 659.533 64.54 665 -21.5 878 45 L 878 661.5 Z',
+//		path3 = 'M 878 686.373 C 618.5 650 456 751.5 274.5 680.5 C 35.373 586.957 -57 213.52 147.5 75.5 C 244.5 10.034 456 5 534 25 C 612 45 765 50.5 878 17.5 L 878 686.373 Z',
+//		path4 = 'M 878 665.5 C 768.5 731 262.228 766.5 100 566.5 C -8 433.354 -21.5 241 111.5 126 C 244.501 11 349 14.5 488.5 14.5 C 628 14.5 798 14.5 878 56.5 L 878 665.5 Z';
+
+// Intro
+section.section.bg-transparent.position-relative.novi-background( style='padding: 10.4% 0 18%;', data-preset!={ title:'Intro', category:'intro', reload:false, id:'intro-5' } )
+	.container
+		.row
+			.col-md-6( data-animate!={ class: 'fadeInLeft' } )
+				h1 Great software is built by great teams
+				h5 We are a dedicated and professional team of web, desktop, and mobile software developers.
+				.offset-md.group-30
+					a.btn.btn-lg.btn-round.btn-primary( href='about-us.html' ) Learn More
+					a.btn.btn-lg.btn-round.btn-secondary( href='tel:#' )
+						span.btn-icon.int-phone.novi-icon
+						span +1 234 567 8901
+	.text-right.mt-5.mt-md-0( data-animate!={ class: 'fadeIn' } )
+		svg.image-mask.image-mask-1( width='90%', height='721', viewBox="0 0 878 721", preserveAspectRatio="xMidYMid slice" )
+			defs
+				mask#mask1
+					path( d= path1 fill="#fff" )
+						//animate( attributename='d', repeatcount='indefinite', dur='20s', values= path1 + ';' + path2 + ';' + path3 + ';' + path4 + ';' + path1 + ';' + path3 + ';' + path4 + ';' + path2 + ';' + path1 )
+
+			image( mask="url(#mask1)" xlink:href="images/image-17-1200x800.jpg" height="100%" width="100%" preserveAspectRatio="xMidYMid slice" )

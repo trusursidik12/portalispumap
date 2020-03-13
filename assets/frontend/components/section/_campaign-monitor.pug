@@ -1,0 +1,14 @@
+// Campaign monitor
+section.section.section-lg.bg-transparent.text-center.novi-background( data-preset!={ title:'Campaign Monitor', category:'form', reload:true, id:'campaign-monitor' } )
+	.container
+		.row.justify-content-center.novi-disabled
+			.col-md-9.col-lg-7.col-xl-6
+				h2 Campaign Monitor
+				p Sign up to our newsletter and be the first to know about the latest news, special offers, events, and discounts.
+
+				form.campaign-mailform.form-inline.justify-content-center.group-20.novi-disabled( data-form-output='campaign-monitor-output', action='https://templatermonster.createsend.com/t/j/s/zjjikd/', method='post' )
+					.form-inline-group
+						input.form-control( type='email', name='cm-zjjikd-zjjikd', placeholder='Enter your email address', data-constraints='@Email @Required' )
+					button.btn.btn-lg.btn-primary( type='submit' ) Subscribe
+
+#campaign-monitor-output.form-output.snackbar.snackbar-secondary

@@ -1,0 +1,13 @@
+//- Video
+	@param {string} obj.img - image name or path
+mixin video( obj )
+	// Video
+	-
+		obj.gradientId = obj.gradientId || Math.random().toString( 36 ).substring( 2 );
+	article.video.lightgallery-item( data-html=`#${obj.gradientId}` )&attributes( attributes )
+		+img( obj.img ).video-image
+		.video-link
+			.icon.icon-circle.icon-sm.video-icon.fa-play.novi-icon( class= obj.iconClass )
+	.d-none( id= obj.gradientId )
+		video.lg-video-object.lg-html5( controls='', preload='none' )
+			source( src= obj.video, type='video/mp4' )

@@ -1,0 +1,55 @@
+include ../thumbnail-gumba/_thumbnail-gumba
+
+// Why choose us
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Why Us', category:'content box, thumbnail, accordion', reload:true, id:'why-us-3' } )
+	.container
+		h6( data-animate!={ class: 'fadeInUp' } ) Collections
+		.row.row-50.row-offset-xl.justify-content-lg-between.novi-disabled
+			.col-md-6.col-lg-5
+				.row.row.row-30.row-md-60
+					.col-xs-6.col-md-12( data-animate!={ class: 'fadeInUp' } )
+						+thumbnail-gumba({
+							img: 'image-56-510x300',
+							title: 'Architecture'
+						})
+					.col-xs-6.col-md-12( data-animate!={ class: 'fadeInUp' } )
+						+thumbnail-gumba({
+							img: 'image-57-510x300',
+							title: 'Nature'
+						})
+					.col-xs-6.col-md-12( data-animate!={ class: 'fadeInUp' } )
+						+thumbnail-gumba({
+							img: 'image-58-510x300',
+							title: 'Lifestyle'
+						})
+			.col-md-6.col-xl-5
+				h1( data-animate!={ class: 'fadeInUp' } ) Why our clients choose us
+				.offset-xl( data-animate!={ class: 'fadeInUp' } )
+					p With so many photography studio companies out there it’s hard to know who to pick and who to avoid. We want to make this decision simple for you. You’ve found the right place – here’s why.
+				.offset-xxl
+					.accordion.accordion-classic
+						.accordion-item.accordion-home-portfolio-1( data-animate!={ class: 'fadeInRight' } )
+							a.accordion-header.accordion-home-portfolio-group-1( href='#', data-multi-switch!={
+								targets: '.accordion-home-portfolio-1',
+								isolate: '.accordion-home-portfolio-group-1'
+							} ) Care & Service
+							.accordion-body.accordion-home-portfolio-1( data-multi-switch-target-slide )
+								h4 We aim to deliver the best level of customer services to all our clients.
+								p.small.mt-4 As your photographers, this is not just a job to us but our passion, vocation, and full-time livelihood. We are constantly improving our craft and dedicated to our clients, so Intense is there for you when you need us.
+						.accordion-item.accordion-home-portfolio-2( data-animate!={ class: 'fadeInRight' } )
+							a.accordion-header.accordion-home-portfolio-group-1( href='#', data-multi-switch!={
+								targets: '.accordion-home-portfolio-2',
+								isolate: '.accordion-home-portfolio-group-1'
+							} ) Experience
+							.accordion-body.accordion-home-portfolio-2( data-multi-switch-target-slide )
+								h4 Intense can boast of the vast experience in photography.
+								p.small.mt-4 We have a proven track record and over 10 years experience photographing people, products, and events. Our experience includes commercial, charity and event photography, where speed is of the essence and both volume and quality is demanded.
+						.accordion-item.accordion-home-portfolio-3( data-animate!={ class: 'fadeInRight' } )
+							a.accordion-header.accordion-home-portfolio-group-1( href='#', data-multi-switch!={
+								targets: '.accordion-home-portfolio-3',
+								isolate: '.accordion-home-portfolio-group-1',
+								state: true
+							} ) High Quality
+							.accordion-body.accordion-home-portfolio-3( data-multi-switch-target-slide )
+								h4 At Intense, we make every effort to deliver high-quality photos.
+								p.small.mt-4 Intense is a team of expert photographers and we’re all perfectionists. It’s the linchpin of our working practices and our whole ethos. It matters that your event photographs are sharp and clear, that your wedding dress is correctly exposed and you can see every detail in the photograph. High quality photography means everything to us.

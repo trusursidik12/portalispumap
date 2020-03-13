@@ -1,0 +1,30 @@
+// Benefits
+section.section.section-xl.bg-transparent.novi-background( data-preset!={ title:'Benefits', category:'content box, tab', reload:false, id:'benefits' } )
+	.container
+		.row.row-30.row-xl-80
+			.col-md-6( data-animate!={ class: 'fadeIn' } )
+				h1 Everyone #[br]benefits with Intense
+				.tab
+					ul.nav.nav-line( role='tablist' )
+						li.nav-item: a.nav-link.h6.active( data-toggle='tab', href='#navHomeApp1', role='tab', aria-selected='true' ) Toolkit core
+						li.nav-item: a.nav-link.h6( data-toggle='tab', href='#navHomeApp2', role='tab', aria-selected='false' ) Ui kit
+						li.nav-item: a.nav-link.h6( data-toggle='tab', href='#navHomeApp3', role='tab', aria-selected='false' ) Plugins
+						li.nav-item: a.nav-link.h6( data-toggle='tab', href='#navHomeApp4', role='tab', aria-selected='false' ) Documentation
+					.tab-content
+						#navHomeApp1.tab-pane.fade.show.active( role='tabpanel' )
+							h3( style='max-width: 480px' ) Our professional services are the keys to your success.
+							p Nowadays, almost everyone has a website. Basically, this is a business card that you present every visitor or partner with. So, the better it is designed the more likely you can expect your further cooperation.
+
+						#navHomeApp2.tab-pane.fade( role='tabpanel' )
+							h3 Our professional services are the keys to your success.
+							p Nowadays, almost everyone has a website. Basically, this is a business card that you present every visitor or partner with. So, the better it is designed the more likely you can expect your further cooperation.
+
+						#navHomeApp3.tab-pane.fade( role='tabpanel' )
+							h3 Our professional services are the keys to your success.
+							p Nowadays, almost everyone has a website. Basically, this is a business card that you present every visitor or partner with. So, the better it is designed the more likely you can expect your further cooperation.
+
+						#navHomeApp4.tab-pane.fade( role='tabpanel' )
+							h3 Our professional services are the keys to your success.
+							p Nowadays, almost everyone has a website. Basically, this is a business card that you present every visitor or partner with. So, the better it is designed the more likely you can expect your further cooperation.
+			.col-md-6.text-md-right( data-animate!={ class: 'fadeIn', delay: '0.15s' } )
+				+img( 'image-57-610x599.png' )

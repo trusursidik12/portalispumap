@@ -1,0 +1,89 @@
+include ../post/_post
+include ../pag/_pag
+
+// Thumbnail layout without sidebar
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blog Thumbnail', category:'blog', reload:false, id:'blog-thumbnail-2' } )
+	.container
+		.row.row-40.row-md-60
+			.col-md-6
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    'Intense is the most powerful Bootstrap theme on TemplateMonster',
+					postText: 'I’ve always cared about great visual design, but a few years ago I learned that I loved to teach as well. That led to starting this blog...',
+					img:      'image-09-620x398',
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-sm
+
+			.col-md-6
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    'Intense is the most powerful Bootstrap theme on TemplateMonster',
+					postText: 'I’ve always cared about great visual design, but a few years ago I learned that I loved to teach as well. That led to starting this blog...',
+					img:      'persons/person-06-620x398',
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-sm
+
+			.col-md-6
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    'Intense is the most powerful Bootstrap theme on TemplateMonster',
+					postText: 'I’ve always cared about great visual design, but a few years ago I learned that I loved to teach as well. That led to starting this blog...',
+					img:      'image-06-620x398',
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-sm
+
+			.col-md-6
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    'Intense is the most powerful Bootstrap theme on TemplateMonster',
+					postText: 'I’ve always cared about great visual design, but a few years ago I learned that I loved to teach as well. That led to starting this blog...',
+					img:      'image-08-620x398',
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-sm
+
+			.col-md-6
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    'Intense is the most powerful Bootstrap theme on TemplateMonster',
+					postText: 'I’ve always cared about great visual design, but a few years ago I learned that I loved to teach as well. That led to starting this blog...',
+					img:      'image-11-620x398',
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-sm
+
+			.col-md-6
+				+post-thumbnail({
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					coments:  '25',
+					title:    'Intense is the most powerful Bootstrap theme on TemplateMonster',
+					postText: 'I’ve always cared about great visual design, but a few years ago I learned that I loved to teach as well. That led to starting this blog...',
+					img:      'image-05-620x398',
+					tags:     [ 'Design', 'UI/UX' ]
+				}).post-sm
+
+		+pag-simple([
+			{ value: '1', actionClass: 'active' },
+			{ value: '2' },
+			{ value: '3' },
+			{ value: '4' },
+			{ value: '5' },
+			{ value: '..', class: 'inactive' },
+			{ value: '24' },
+			{ next: true }
+		]).justify-content-center

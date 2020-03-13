@@ -1,0 +1,71 @@
+//- Person
+	@param {object} data - data object
+	@param {string} data.img - image name or path
+	@param {string} data.title - person title
+	@param {string} [data.subtitle] - person description
+	@param {string} [data.tel] - person telephone
+	@param {string} [data.telLink] - person telephone link
+	@param {string} [data.mailText] - person email
+	@param {string} [data.mailLink] - person email link
+	@param {string} [data.link] - person link path
+	@param {array} [data.links] - social links array
+		@param {object} link - object with icon link parameters
+		@param {string} link.iconClass - icon link class to set icon
+		@param {string} link.iconLink - icon link path
+mixin person( data )
+	// Person
+	.person&attributes( attributes )
+		a( href=data.link ? data.link : 'team-member.html' ).person-img-link
+			+img( data.img ).person-img
+		.person-title: a( href=data.link ? data.link : 'team-member.html' )!= data.title
+		if ( data.subtitle )
+			.person-subtitle= data.subtitle
+		if ( data.text )
+			.person-text= data.text
+		if ( data.tel )
+			.person-tel
+				small.person-tel-icon.int-phone.novi-icon
+				a.person-tel-link( href='tel:' + ( data.telLink ? data.telLink : '#' ) )= data.tel
+		if ( data.mailText )
+			a.person-mail( href='mailto:' + ( data.mailLink ? data.mailLink : '#' ) )= data.mailText
+		if (data.links)
+			.person-social
+				each link in data.links
+					a.person-icon.icon-social.novi-icon( class= link.iconClass, href= link.iconLink ? link.iconLink : '#' )
+
+//- Person hovered
+	@param {object} data - data object
+	@param {string} data.img - image name or path
+	@param {string} data.title - person title
+	@param {string} data.position - person description
+	@param {string} data.iconClass - icon class to set icon
+	@param {string} data.link - person link path
+mixin person-thumbnail( data )
+	// Person hovered
+	.person.person-thumbnail&attributes( attributes )
+		+img( data.img ).person-thumbnail-img
+		.person-thumbnail-inner
+			.person-title: a( href=data.link ? data.link : 'team-member.html' )= data.title
+			.person-subtitle= data.position
+			.person-icon
+				a.novi-icon( href= data.iconLink ? data.iconLink : '#', class= data.iconClass ? data.iconClass: 'int-twitter' )
+
+//- Person side
+	@param {object} data - data object
+	@param {string} data.img - image name or path
+	@param {string} data.title - person title
+	@param {string} data.description - person description
+mixin person-side( data )
+	// Person side
+	.person.person-side&attributes( attributes )
+		.person-side-left
+			+img( data.img ).person-img
+		.person-side-body
+			.person-title: a( href=data.link ? data.link : 'team-member.html' )= data.title
+			.person-subtitle= data.description
+			if ( data.text )
+				.person-text= data.text
+			if ( data.links )
+				.person-social
+					each link in data.links
+						a.person-icon.novi-icon( class= link.iconClass, href= link.iconLink ? link.iconLink : '#' )

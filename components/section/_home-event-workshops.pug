@@ -1,0 +1,20 @@
+include ../content-row/_content-row
+
+// Workshops
+section.section.section-xl.bg-200.novi-background( data-preset!={ title:'Workshops', category:'content box', reload:false, id:'workshops' } )
+	.container.content-row-area
+		h1.text-center.text-md-left( data-animate!={ class: 'fadeInUp' } ) Workshops
+		p.text-center.text-md-left( style='max-width: 680px', data-animate!={ class: 'fadeInUp' } ): span.h6
+				| Hands-on sessions with Design Systems experts which are hosted in Central London on the 22th November (9am - 5pm).
+				br
+				| Tickets can be purchased separately bellow.
+		+content-row({
+			img: 'image-51-180x180',
+			title: 'A Real-World Design Systems Workshop',
+			text: 'This workshop focuses on this real-world scenario most of us face in design systems, and how to move forward. Intended Audience: Intermediate Design Systems Practitioners'
+		})( data-animate!={ class: 'fadeInUp' } )
+		+content-row({
+			img: 'image-52-180x180',
+			title: 'A Real-World Design Systems Workshop',
+			text: 'This workshop focuses on this real-world scenario most of us face in design systems, and how to move forward. Intended Audience: Intermediate Design Systems Practitioners'
+		})( data-animate!={ class: 'fadeInUp' } )

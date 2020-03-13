@@ -1,0 +1,48 @@
+include ../input/_input
+include ../checkbox-color/_checkbox-color
+
+.row.row-40.row-md-50
+	.col-sm-6.col-md-4.col-lg-12
+		h6 Categories list
+		.offset-xs
+			+checkbox({ id: 'check1' }) All
+			+checkbox({ id: 'check2' }) Accessories
+			+checkbox({ id: 'check3' }) Glasses
+			+checkbox({ id: 'check4' }) iPhone Cases
+			+checkbox({ id: 'check5' }) Purses
+			+checkbox({ id: 'check6' }) Hats & Beanie
+			+checkbox({ id: 'check7' }) Hair accessories
+			+checkbox({ id: 'check8' }) Eau de Toilette
+			+checkbox({ id: 'check9' }) Stationery
+	.col-sm-6.col-md-4.col-lg-12
+		h6 Color
+		.offset-xs.group-10.d-flex.flex-wrap
+			+checkbox-color()
+			+checkbox-color().checkbox-color-primary
+			+checkbox-color().checkbox-color-secondary
+			+checkbox-color().checkbox-color-warning
+			+checkbox-color().checkbox-color-danger
+			+checkbox-color().checkbox-color-dark
+			+checkbox-color().checkbox-color-info
+			+checkbox-color().checkbox-color-success
+	.col-md-4.col-lg-12
+		h6 Price
+		.offset-xs
+			.rd-range-value
+				.rd-range-form-wrap
+					span $
+					input.rd-range-input.rd-range-input-value-1( type='text', name='value-1', size='3' )
+				.rd-range-form-wrap
+					span $
+					input.rd-range-input.rd-range-input-value-2( type='text', name='value-2', size='3' )
+			// RD Range
+			.rd-range(
+				data-min='0',
+				data-max='999',
+				data-min-diff='100',
+				data-start='[66, 335]',
+				data-step='1',
+				data-tooltip='false',
+				data-input='.rd-range-input-value-1',
+				data-input-2='.rd-range-input-value-2'
+			)

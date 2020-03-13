@@ -1,0 +1,27 @@
+//- Radio tag
+	@param {string} [data.id] - id label
+	@param {string} [data.name] - name input
+	@param {boolean} [data.checked] - input check state
+	@param {boolean} [data.disabled] - input disable state
+mixin checkbox-tag( data )
+	-
+		data = data || {};
+		data.id = data.id || Math.random().toString( 36 ).substring( 2 );
+	.checkbox-tag&attributes( attributes )
+		input.checkbox-tag-input( type='checkbox', id= data.id, name= data.name, checked= data.checked, disabled= data.disabled )
+		label.checkbox-tag-label( for= data.id )
+			block
+
+//- Radio tag
+	@param {string} [data.id] - id label
+	@param {string} [data.name] - name input
+	@param {boolean} [data.checked] - input check state
+	@param {boolean} [data.disabled] - input disable state
+mixin radio-tag( data )
+	-
+		data = data || {};
+		data.id = data.id || Math.random().toString( 36 ).substring( 2 );
+	.checkbox-tag&attributes( attributes )
+		input.checkbox-tag-input( type='radio', id= data.id, name= data.name, checked= data.checked, disabled= data.disabled )
+		label.checkbox-tag-label( for= data.id )
+			block

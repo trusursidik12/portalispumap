@@ -1,0 +1,85 @@
+include ../post/_post
+include ../pag/_pag
+
+// Classic layout 3 columns
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Blog Classic', category:'blog', reload:false, id:'blog-classic-3' } )
+	.container
+		h1.text-center Classic layout
+		.row.row-40.row-xl-70.row-xxl-100
+			.col-sm-6.col-lg-4
+				+post-classic-2({
+					title:    post1.title,
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-09-400x257',
+					postText: post1.textShort,
+					coments:  '25'
+				}).post-sm
+
+			.col-sm-6.col-lg-4
+				+post-classic-2({
+					title:    post2.title,
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-05-400x257',
+					postText: post2.textShort,
+					coments:  '25'
+				}).post-sm
+
+			.col-sm-6.col-lg-4
+				+post-classic-2({
+					title:    post3.titleShort,
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-08-400x257',
+					postText: post3.textShort,
+					coments:  '25'
+				}).post-sm
+
+			.col-sm-6.col-lg-4
+				+post-classic-2({
+					title:    post4.title,
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-06-400x257',
+					postText: post4.textShort3,
+					coments:  '25'
+				}).post-sm
+
+			.col-sm-6.col-lg-4
+				+post-classic-2({
+					title:    post5.title,
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-10-400x257',
+					postText: post5.textShort2,
+					coments:  '25'
+				}).post-sm
+
+			.col-sm-6.col-lg-4
+				+post-classic-2({
+					title:    post7.title,
+					label:    'HTML',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2019',
+					img:      'image-11-400x257',
+					postText: post7.textShort,
+					coments:  '25'
+				}).post-sm
+
+			.col-12
+				+pag-simple([
+					{ value: '1', actionClass: 'active' },
+					{ value: '2' },
+					{ value: '3' },
+					{ value: '4' },
+					{ value: '5' },
+					{ value: '..', class: 'inactive' },
+					{ value: '24' },
+					{ next: true }
+				]).justify-content-center

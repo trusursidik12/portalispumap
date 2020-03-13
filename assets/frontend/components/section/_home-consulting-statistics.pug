@@ -1,0 +1,37 @@
+include ../counter/_counter
+
+// Statistics
+section.section.section-lg.bg-transparent.text-center.novi-background( data-preset!={ title:'Statistics', category:'infographics', reload:true, id:'statistics' } )
+	.container
+		h3( data-animate!={ class: 'fadeInUp' } ) The proof is in the numbers!
+		.row.row-30.justify-content-center.justify-content-xl-between
+			.col-xs-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+counter({
+					prefix: '+',
+					value: 278,
+					postfix: '%',
+					title: 'Increase in revenue'
+				})
+					svg.text-primary(width='.62em', height='.62em', viewBox='0 0 41 41')
+						path(d='M11.5222 40.67L0.566195 29.714L21.0922 9.188L15.3502 3.446L40.4302 0.805998L37.7902 25.886L32.0482 20.144L11.5222 40.67Z', fill='currentColor')
+				+img( 'partners/partner-1-180x49.png' )
+			.col-xs-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+counter({
+					prefix: '+',
+					value: 146,
+					postfix: '%',
+					title: 'Increase in traffic'
+				})
+					svg.text-primary(width='.62em', height='.62em', viewBox='0 0 41 41')
+						path(d='M11.5222 40.67L0.566195 29.714L21.0922 9.188L15.3502 3.446L40.4302 0.805998L37.7902 25.886L32.0482 20.144L11.5222 40.67Z', fill='currentColor')
+				+img( 'partners/partner-2-133x38.png' )
+			.col-xs-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+counter({
+					prefix: '+',
+					value: 541,
+					postfix: '%',
+					title: 'Increase in conversion'
+				})
+					svg.text-primary(width='.62em', height='.62em', viewBox='0 0 41 41')
+						path(d='M11.5222 40.67L0.566195 29.714L21.0922 9.188L15.3502 3.446L40.4302 0.805998L37.7902 25.886L32.0482 20.144L11.5222 40.67Z', fill='currentColor')
+				+img( 'partners/partner-3-180x45.png' )

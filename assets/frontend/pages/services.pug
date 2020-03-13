@@ -1,0 +1,16 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Services';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_services-intro
+	include ../components/section/_services
+	include ../components/section/_divider-section
+	include ../components/section/_services-why-choose-us
+	include ../components/section/_divider-section
+	include ../components/section/_services-partners
+	include ../components/footer/_footer-default

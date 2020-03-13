@@ -1,0 +1,290 @@
+@import "../bootstrap/scss/_functions";
+@import "../base/_functions";
+@import "../base/_variables";
+@import "../bootstrap/scss/_variables";
+@import "../bootstrap/scss/_mixins";
+
+
+// Variables
+$slick-arrow-color: $gray-500;
+$slick-dot-color: $gray-500;
+$slick-prev-character: "\2190";
+$slick-next-character: "\2192";
+
+
+/* Slider */
+.slick-slider {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	user-select: none;
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+	-webkit-tap-highlight-color: transparent; 
+}
+
+.slick-list {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	margin: 0;
+	padding: 0;
+
+	&:focus {
+		outline: none;
+	}
+
+	&.dragging {
+		cursor: hand;
+	}
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+	transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+	position: relative;
+	left: 0;
+	top: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+
+	.slick-loading & {
+		visibility: hidden;
+	}
+}
+
+.slick-slide {
+	float: left;
+	height: 100%;
+	min-height: 1px;
+	[dir="rtl"] & {
+		float: right;
+	}
+	img {
+		display: block;
+		width: 100%;
+	}
+	&.slick-loading img {
+		display: none;
+	}
+
+	display: none;
+
+	&.dragging img {
+		pointer-events: none;
+	}
+
+	.slick-initialized & {
+		display: block;
+	}
+
+	.slick-loading & {
+		visibility: hidden;
+	}
+
+	.slick-vertical & {
+		display: block;
+		height: auto;
+	}
+}
+
+.slick-arrow.slick-hidden {
+	display: none;
+}
+
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+	position: absolute;
+	display: block;
+	height: 20px;
+	width: 20px;
+	line-height: 0px;
+	font-size: 0px;
+	cursor: pointer;
+	background: transparent;
+	color: transparent;
+	top: 50%;
+	-webkit-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	padding: 0;
+	border: none;
+	outline: none;
+	&:hover, &:focus {
+		outline: none;
+		background: transparent;
+		color: transparent;
+		&:before {
+			opacity: 1;
+		}
+	}
+	&.slick-disabled:before {
+		opacity: 0.25;
+	}
+	&:before {
+		font-size: 20px;
+		line-height: 1;
+		color: $slick-arrow-color;
+		opacity: 0.75;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+.slick-prev {
+	left: -25px;
+	[dir="rtl"] & {
+		left: auto;
+		right: -25px;
+	}
+	&:before {
+		content: $slick-prev-character;
+		[dir="rtl"] & {
+			content: $slick-next-character;
+		}
+	}
+}
+
+.slick-next {
+	right: -25px;
+	[dir="rtl"] & {
+		left: -25px;
+		right: auto;
+	}
+	&:before {
+		content: $slick-next-character;
+		[dir="rtl"] & {
+			content: $slick-prev-character;
+		}
+	}
+}
+
+
+// Slick modern
+.slick-modern {
+	display: flex;
+	max-width: 652px;
+
+	.slick-track {
+		margin: -5px 0;
+	}
+
+	.slick-slide {
+		font-size: 0;
+		line-height: 0;
+	}
+
+	.slider-nav {
+		max-width: 9%;
+		flex: 0 0 9%;
+		margin-right: 8%;
+
+		.slick-slide {
+			cursor: pointer;
+
+			> * {
+				margin: 5px 0;
+				transition: .3s;
+			}
+		}
+
+		.slick-current {
+			cursor: default;
+
+			> * {
+				transform: scale(.67);
+			}
+		}
+	}
+
+	.slider-for {
+		flex-basis: 83%;
+		max-width: 83%;
+	}
+}
+
+
+// Slick creative
+.slick-creative {
+	.slider-nav {
+		font-size: 0;
+		line-height: 0;
+
+		.slick-track {
+			display: flex;
+			align-items: baseline;
+		}
+
+		.slick-slide {
+			cursor: pointer;
+		}
+
+		.slick-dot {
+			font-size: 7.5vw;
+			line-height: 1;
+			font-weight: 400;
+			color: rgba( $gray-900, .3 );
+			transform: scale( .697 );
+			transform-origin: 50% 80%;
+			transition: .3s;
+		}
+
+		.slick-current {
+			cursor: default;
+
+			.slick-dot {
+				color: $gray-900;
+				transform-origin: 50% 50%;
+				transform: none;
+			}
+		}
+	}
+
+	.slick-slide img {
+		display: inline-block;
+		width: auto;
+	}
+
+	* + .slider-nav {
+		margin-top: px-to-rem( 30px );
+	}
+
+	* + .slider-for {
+		margin-top: px-to-rem( 38px );
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(md) {
+	.slick-creative {
+		.slider-nav {
+			width: 43vw;
+
+			.slick-dot {
+				font-size: 3.4375vw;
+			}
+		}
+
+		.slider-images {
+			width: 54.3vw;
+		}
+	}
+}

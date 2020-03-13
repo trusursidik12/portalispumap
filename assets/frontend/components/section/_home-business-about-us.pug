@@ -1,0 +1,17 @@
+include ../video/_video
+
+// About us
+section.section.section-lg.bg-transparent.text-center.novi-background( data-preset!={ title:'About Us', category:'content box, media', reload:true, id:'about-us-1' } )
+	.container
+		.row.justify-content-center.novi-disabled
+			.col-md-11.col-lg-9.col-xxl-8( data-lightgallery )
+				div( data-animate!={ class: 'fadeInUp' } )
+					h2 Leading companies trust us to
+						| #[br.d-none.d-xs-block]
+						| develop software
+					h5 Our company provides custom software development services to individual clients, start-ups, medium businesses, and large enterprises. You can find out more about who we are and what we do below.
+				+video({
+					img: 'image-45-840x473',
+					video: 'video/bg-video-3.mp4',
+					iconClass: 'icon-secondary-filled'
+				}).bg-secondary( data-animate!={ class: 'fadeInUp' } )

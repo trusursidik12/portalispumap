@@ -1,0 +1,69 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.isotope-filters {
+	display: inline-flex;
+	flex-wrap: nowrap;
+	max-width: 100%;
+	scrollbar-width: thin;
+	scrollbar-color: rgba( $dark, 1 ) rgba( $dark, .1 );
+	overflow-x: auto;
+	overflow-x: overlay;
+	overflow-y: hidden;
+
+	&::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+		background: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: rgba( $dark, .5);
+	}
+
+	.mobile &,
+	&:hover {
+		&::-webkit-scrollbar {
+			width: 3px;
+			height: 3px;
+		}
+	}
+}
+
+.isotope-filter {
+	cursor: pointer;
+	white-space: nowrap;
+	transition: $transition-base;
+}
+
+
+// Spacing
+* + .isotope-wrap { margin-top: 30px; }
+
+
+// Filters fullwidth
+.isotope-filters-wide {
+	max-width: calc( 100% - 30px );
+}
+
+// Media
+@include media-breakpoint-up( md ) {
+	* + .isotope-wrap { margin-top: 43px; }
+}
+
+@include media-breakpoint-up( xl ) {
+	* + .isotope-wrap { margin-top: 63px; }
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .isotope-wrap { margin-top: 73px; }
+}
+
+// Layouts
+@import "isotope-line";
+@import "isotope-scale";

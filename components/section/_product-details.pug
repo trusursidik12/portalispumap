@@ -1,0 +1,30 @@
+// Product details
+section#reviews.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Product Details', category:'shop, tab', reload:true, id:'product-details' } )
+	.container: .row.justify-content-lg-end: .col-lg-11
+		.tab
+			ul.nav.nav-classic( role='tablist' )
+				li.nav-item
+					a.nav-link.h4.active( data-toggle='tab', href='#navClassic1-1', role='tab', aria-selected='true' ) Information
+				li.nav-item
+					a.nav-link.h4( data-toggle='tab', href='#navClassic1-2', role='tab', aria-selected='false' ) Size & fit
+				li.nav-item
+					a.nav-link.h4( data-toggle='tab', href='#navClassic1-3', role='tab', aria-selected='false' ) Reviews
+			.tab-content
+				#navClassic1-1.tab-pane.fade.show.active( role='tabpanel' )
+					p This vinyl backpack is extremely durable and useful. It features a unique design and is a good choice for storing whatever you need. The backpack also offers:
+					ul.list.list-marked
+						li.list-item Reliable zip locks;
+						li.list-item One front pocket;
+						li.list-item Adjustable shoulder straps;
+						li.list-item Internal zip pocket;
+						li.list-item Synthetic lining.
+
+				#navClassic1-2.tab-pane.fade( role='tabpanel' )
+					ul.list.list-marked
+						li.list-item Height = 19 cm; Length = 16 cm; Depth = 8 cm;
+						li.list-item Handle = 2 cm; Shoulder strap = 45 cm.
+
+				#navClassic1-3.tab-pane.fade( role='tabpanel' )
+					include ../product/_product-reviews
+					.row.row-offset-xl: .col-md-11.col-lg-10.col-xl-9.novi-disabled
+						include ../product/_product-form-review

@@ -1,0 +1,35 @@
+include ../post/_post
+
+// Posts Carousel
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Posts Carousel', category:'blog, carousel', reload:true, id:'posts-carousel' } )
+	.container
+		h6( data-animate!={ class: 'fadeInUp' } ) Blog
+		h1( data-animate!={ class: 'fadeInUp' } ) Read the latest news & photography
+			| #[br.d-none.d-sm-block]
+			| tips published by our team
+		.owl-carousel.owl-style-2( data-owl= {
+			nav: true,
+			autoplaySpeed: 1000,
+			smartSpeed: 1000
+		}, data-items='1', data-sm-items='2', data-md-items='1' )
+			+post-side-large-2({
+				img:      'image-68-730x469',
+				date:     'September 16, 2019',
+				title:    'Top 10 photography tips to improve the look of your photos',
+				postText: 'Whether you are a beginner or more experienced with photography, here are some of our favorite tips...',
+				btnText:  'Learn more'
+			})
+			+post-side-large-2({
+				img:      'image-69-730x469',
+				date:     'September 16, 2019',
+				title:    'How to Take Your Everyday Photography to the Next Level',
+				postText: 'As with many hobbies, the great thing about photography is you can reignite your passion. So...',
+				btnText:  'Learn more'
+			})
+			+post-side-large-2({
+				img:      'image-70-730x469',
+				date:     'September 16, 2019',
+				title:    '12 Common Photography Mistakes You Should Avoid',
+				postText: 'None of us are perfect and we all make mistakes. While some photographers might be naturally...',
+				btnText:  'Learn more'
+			})

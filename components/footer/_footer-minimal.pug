@@ -1,0 +1,27 @@
+include ../logo/_logo
+include ../rights/_rights
+
+// Footer event
+footer.section.footer.footer-sm.bg-transparent.novi-background( data-preset!={ title:'Footer Minimal', category:'footer', reload:true, id:'footer-minimal' } )
+	.container
+		.row.row-30.justify-content-lg-between
+			.col-md-3
+				+logo
+			.col-auto.col-xs-4.col-md-3.col-lg-2
+				ul.list.list-xl.small.font-weight-normal
+					li.list-item: a.list-link( href='about-us.html' ) About Us
+					li.list-item: a.list-link( href='contact-us.html' ) Contacts
+					li.list-item: a.list-link( href='careers.html' ) Careers
+			.col-auto.col-xs-4.col-md-3.col-lg-2
+				ul.list.list-xl.small.font-weight-normal
+					li.list-item: a.list-link( href='#' ) Cookies
+					li.list-item: a.list-link( href='privacy-policy.html' ) Privacy Policy
+			.col-auto.col-xs-4.col-md-3.col-lg-2
+				ul.list.list-xl.small.font-weight-normal
+					li.list-item: a.list-link( href='#' ) Facebook
+					li.list-item: a.list-link( href='#' ) Instagram
+					li.list-item: a.list-link( href='#' ) Twitter
+
+		.row
+			.col-12
+				+rights-2

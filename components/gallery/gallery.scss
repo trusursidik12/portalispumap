@@ -1,0 +1,41 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.gallery-item {
+	flex: 0 0 50%;
+	width: 100%;
+	max-width: 50%;
+}
+
+
+// Media
+@include media-breakpoint-up( sm ) {
+	.gallery-item {
+		flex: 0 0 33.33333%;
+		max-width: 33.33333%;
+	}
+}
+
+@include media-breakpoint-up( md ) {
+	.gallery-item {
+		flex: 0 0 25%;
+		max-width: 25%;
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.gallery-item {
+		flex: 0 0 20%;
+		max-width: 20%;
+	}
+}

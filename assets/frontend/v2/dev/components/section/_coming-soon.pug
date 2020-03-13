@@ -1,0 +1,22 @@
+include ../countdown/_countdown
+include ../rights/_rights
+include ../logo/_logo
+
+// Coming soon
+section.section.section-one-screen.service-section.service-section-divided.novi-background( data-preset!={ title:'Coming Soon', category:'one screen page', reload:true, id:'coming-soon' } )
+	.container
+		+logo
+		.row.row-15.justify-content-center.service-section-row
+			.col-lg-6.service-section-col
+				h2 We're getting ready to launch in
+				+countdown-simple({ to: '2019-12-31' }).justify-content-start.service-section-countdown
+				p Our website is under construction, we are working very hard to give you the best experience on our new website.
+			.col-lg-2.service-section-col-divider
+			.col-lg-4.service-section-col
+				.widget.widget-subscribe
+					h6 Stay ready, we`re launching soon
+					.widget-body
+						.form-group.widget-form
+							input.form-control( type='email', placeholder='Your e-mail address' )
+						button.btn.btn-lg.btn-primary.widget-subscribe-btn Subscribe
+				+rights.service-section-rights

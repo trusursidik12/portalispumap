@@ -1,0 +1,19 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'About Me';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_breadcrumb-no-title
+	include ../components/section/_about-me-banner
+	include ../components/section/_about-me-biography
+	include ../components/section/_divider-section
+	include ../components/section/_about-me-skills
+	include ../components/section/_divider-section
+	include ../components/section/_about-me-counters
+	include ../components/section/_divider-section
+	include ../components/section/_about-me-testimonials
+	include ../components/footer/_footer-default

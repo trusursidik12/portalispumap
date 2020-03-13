@@ -1,0 +1,17 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+include ../components/input/_input
+include ../components/multiswitch/_multiswitch
+
+block variables
+	- pageName = 'Form elements';
+
+block page
+	+rd-navbar
+
+	include ../components/section/_input-states-sample
+	include ../components/section/_input-shapes-sample
+	include ../components/section/_input-sizes-sample
+	include ../components/section/_input-plugins-sample
+	include ../components/section/_input-toggles-sample
+	include ../components/footer/_footer-default
