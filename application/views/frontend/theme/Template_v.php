@@ -10,8 +10,7 @@
     <meta property="og:description" content="brevis, barbatus clabulares aliquando convertam de dexter, peritus capio. devatio clemens habitio est.">
     <meta property="og:image" content="http://digipunk.netii.net/images/radar.gif">
     <meta property="og:url" content="http://digipunk.netii.net">
-    <link rel="icon" href="<?= base_url('assets/frontend/images/favicon.ico'); ?>" type="<?= base_url('assets/frontend/image/x-icon'); ?>">
-    
+    <link rel="icon" href="<?= base_url('assets/frontend/images/favicon.ico'); ?>" type="<?= base_url('assets/frontend/image/x-icon'); ?>">    
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/components/base/base.css">
     <script type='text/javascript' src="<?= base_url() ?>assets/frontend/components/base/core.js"></script>
     <script type='text/javascript' src="<?= base_url() ?>assets/frontend/components/base/script.js"></script>
