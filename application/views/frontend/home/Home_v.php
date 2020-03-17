@@ -1,29 +1,47 @@
 <!-- <section class="section section-lg bg-gradient-animated text-center d-flex align-items-center min-vh-100 novi-background" data-preset='{"title":"Intro","category":"intro","reload":false,"id":"intro-10"}'> -->
-   		<div class="container">
+      <div class="container">
           <div class="row align-items-center slick-creative novi-disabled">
             <div class="col-md-7 d-md-flex flex-md-row-reverse">
-              <div class="slick-slider slider-for slider-images" data-slick='{"arrows":false,"vertical":true,"asNavFor":".slider-nav","adaptiveHeight":true}'>
-                <div class="text-right"><img src="<?= base_url() ?>assets/frontend/images/header/monas_hd.png" alt="" width="1042" height="910"/>
-                </div>
-                <div class="text-right"><img src="<?= base_url() ?>assets/frontend/images/header/bali_hd.png" alt="" width="1042" height="910"/>
-                </div>
-                <div class="text-right"><img src="<?= base_url() ?>assets/frontend/images/header/jogja_hd.png" alt="" width="1042" height="910"/>
+              <div class="slick-slider slider-for slider-images" data-slick='{"mobileFirst":true,"swipe":true,"arrows":false,"vertical":false,"asNavFor":".slider-nav","adaptiveHeight":true}'>
+              <div style="background:url(<?= base_url('assets/frontend/images/header/monas_hd1.png') ?>); position: relative; width: 100%; height: 400px; border-radius: 20px; background-size: 100% 100%; background-repeat: no-repeat; object-fit: contain;" class="image">
+                <div class="transparentbox">
+                  <!-- <img src="<?= base_url() ?>" width="1042" height="910" /> -->
+                  <div class="awesome-weather-header">DKI Jakarta</div>
+                  <div class="awesome-weather-current-temp"><strong>10<sup>&deg;</sup></strong></div>
+                  <div class="awe_desc">light rain</div><div class="awe_humidty">humidity: 53%</div><div class="awe_wind">wind: 8m/s WSW</div><div class="awe_highlow">H 10 &bull; L 7</div>
                 </div>
               </div>
-    	 </div>
+                <div style="background:url(<?= base_url('assets/frontend/images/header/bali1_hd.png') ?>); position: relative; width: 100%; height: 400px; border-radius: 20px; background-size: 100% 100%; background-repeat: no-repeat; object-fit: contain;" class="image">
+                  <div class="transparentbox">
+                    <!-- <img src="<?= base_url() ?>" width="1042" height="910"/> -->
+                    <div class="awesome-weather-header">Bali</div>
+                    <div class="awesome-weather-current-temp"><strong>10<sup>&deg;</sup></strong></div>
+                    <div class="awe_desc">light rain</div><div class="awe_humidty">humidity: 53%</div><div class="awe_wind">wind: 8m/s WSW</div><div class="awe_highlow">H 10 &bull; L 7</div>               
+                </div>
+              </div>
+                <div style="background:url(<?= base_url('assets/frontend/images/header/jogja_hd.png') ?>); position: relative; width: 100%; height: 400px; border-radius: 20px; background-size: 100% 100%; background-repeat: no-repeat; object-fit: contain;" class="image">
+                  <div class="transparentbox">
+                    <!-- <img src="<?= base_url() ?>" width="1042" height="910"/> -->
+                    <div class="awesome-weather-header">Yogyakarta</div>
+                    <div class="awesome-weather-current-temp"><strong>10<sup>&deg;</sup></strong></div>
+                    <div class="awe_desc">light rain</div><div class="awe_humidty">humidity: 53%</div><div class="awe_wind">wind: 8m/s WSW</div><div class="awe_highlow">H 10 &bull; L 7</div>
+                  </div>
+              </div>
+            </div>
+       </div>
             <div class="col-md-5 pt-5" style="padding-bottom: 14.2%">
               <div class="pl-xxl-3">
                 <h6 class="text-primary">Pilih Provinsi</h6>
-                <div class="slick-slider slider-nav" data-slick='{"arrows":false,"asNavFor":".slider-for","autoplay":true,"autoplaySpeed":3000,"focusOnSelect":true,"variableWidth":true}'>
+                <div style="position: relative;" class="slick-slider slider-nav" data-slick='{"mobileFirst":true,"swipe":true,"arrows":false,"asNavFor":".slider-for","autoplay":true,"autoplaySpeed":3000,"focusOnSelect":true,"variableWidth":true}'>
                   <div class="slick-dot">DKI Jakarta</div>
                   <div class="slick-dot">Bali</div>
                   <div class="slick-dot">Yogyakarta</div>
                 </div>
-                <div class="slick-slider slider-for" data-slick='{"arrows":false,"vertical":true,"asNavFor":".slider-nav"}'>
+            <!-- <div class="slick-slider slider-for" data-slick='{"mobileFirst":true,"swipe":true,"arrows":false,"vertical":false,"asNavFor":".slider-nav"}'>
                   <p>Intense gives you a variety of powerful options, useful tools, and unlimited designs to easily create a website of your dreams that your clients will love.</p>
                   <p>Use the built-in slider plugins to create appealing blocks with smooth sliders that are completely responsive and customizable.</p>
                   <p>Change the layout of Intense with the included content blocks ranging from counters to tabs and accordions and other impressive elements.</p>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

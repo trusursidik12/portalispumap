@@ -14,7 +14,9 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/components/base/base.css">
     <script type='text/javascript' src="<?= base_url() ?>assets/frontend/components/base/core.js"></script>
     <script type='text/javascript' src="<?= base_url() ?>assets/frontend/components/base/script.js"></script>
-  </head>
+    <link rel="stylesheet" type="text/css" href="<?= base_url()?>components/custom/custom.css">
+    <!-- <link rel="stylesheet" type="text/css" href="<?= base_url()?>components/custom/custom2.css"> --> 
+    <!-- <link rel="stylesheet" type="text/css" href="<?= base_url()?>components/custom/weather.css"> -->
   <body>
     <div class="page">
       <!--RD Navbar-->
@@ -24,7 +26,7 @@
             <div class="navbar-cell">
               <div class="navbar-panel">
                 <button class="navbar-switch int-hamburger novi-icon" data-multi-switch='{"targets":".rd-navbar","scope":".rd-navbar","isolate":"[data-multi-switch]"}'></button>
-                <div class="navbar-logo"><a class="navbar-logo-link" href="<?= base_url() ?>"><img class="navbar-logo-default" src="<?= base_url(); ?>assets/frontend/images/logo_ispumap.png" alt="Intense" width="280px" height="10px"/>
+                <div class="navbar-logo"><a class="navbar-logo-link" href="<?= base_url() ?>"><img style="position: relative; max-width: 100% ; max-height: 50px; object-fit: contain;" class="navbar-logo-default" src="<?= base_url(); ?>assets/frontend/images/logo_ispumap.png" alt="Intense"/>
                 	<img class="navbar-logo-inverse" alt="Intense" width="50px" height="85px"/></a></div>
               </div>
             </div>
