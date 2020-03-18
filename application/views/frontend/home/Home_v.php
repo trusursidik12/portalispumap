@@ -2,7 +2,7 @@
       <div class="container">
           <div class="row align-items-center slick-creative novi-disabled">
             <div class="col-md-7 d-md-flex flex-md-row-reverse">
-              <div class="slick-slider slider-for slider-images" data-slick='{"mobileFirst":true,"swipe":true,"arrows":false,"vertical":false,"asNavFor":".slider-nav","adaptiveHeight":true}'>
+              <div class="slick-slider slider-for slider-images" data-slick='{"useCSS":true,"mobileFirst":true,"swipe":true,"arrows":false,"vertical":false,"asNavFor":".slider-nav","adaptiveHeight":true}'>
               <div style="background:url(<?= base_url('assets/frontend/images/header/monas_hd1.png') ?>); position: relative; width: 100%; height: 400px; border-radius: 20px; background-size: 100% 100%; background-repeat: no-repeat; object-fit: contain;" class="image">
                 <div class="transparentbox">
                   <!-- <img src="<?= base_url() ?>" width="1042" height="910" /> -->
