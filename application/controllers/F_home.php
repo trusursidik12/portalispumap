@@ -5,7 +5,11 @@ class F_home extends CI_Controller {
 
 	public function index()
 	{
-		// $this->load->view('welcome_message');
-		$this->temp_frontend->load('frontend/theme/template_v', 'frontend/home/home_v');
+		$data['aqmdata'] 		= $this->f_home_m->get_aqmdata();
+		$data['aqmispu'] 		= $this->f_home_m->get_aqmispu();
+		$data['aqmstasiun'] 	= $this->f_home_m->get_aqmstasiun();
+		$data['aqmprovinsi'] 	= $this->f_home_m->get_aqmprovinsi();
+
+		$this->temp_frontend->load('frontend/theme/template_v', 'frontend/home/home_v', $data);
 	}
 }
