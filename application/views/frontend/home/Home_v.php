@@ -1,46 +1,45 @@
-test
-<?php foreach($aqmdata as $data) : ?>
-  <?= $data['id_stasiun'] ?>
-<?php endforeach ?>
-
 <!-- <section class="section section-lg bg-gradient-animated text-center d-flex align-items-center min-vh-100 novi-background" data-preset='{"title":"Intro","category":"intro","reload":false,"id":"intro-10"}'> -->
       <div class="container">
           <div class="row align-items-center slick-creative novi-disabled">
             <div class="col-md-7 d-md-flex flex-md-row-reverse">
               <div class="slick-slider slider-for slider-images" data-slick='{"useCSS":true,"mobileFirst":true,"swipe":true,"arrows":false,"vertical":false,"asNavFor":".slider-nav","adaptiveHeight":true}'>
-              <div style="background:url(<?= base_url('assets/frontend/images/header/monas_hd1.png') ?>); position: relative; width: 100%; height: 600px; border-radius: 20px; background-size: 100% 100%; background-repeat: no-repeat; object-fit: contain;" class="image">
+            <!--   <div style="background:url(<?= base_url('assets/frontend/images/header/monas_hd1.png') ?>); position: relative; width: 100%; height: 600px; border-radius: 20px; background-size: 100% 100%; background-repeat: no-repeat; object-fit: contain;" class="image">
                 <div style="height: 600px" class="transparentbox">
-                  <!-- <img src="<?= base_url() ?>" width="1042" height="910" /> -->
+                  <img src="<?= base_url() ?>" width="1042" height="910" />
                   <div class="awesome-weather-header">DKI Jakarta</div>
                   <div class="awesome-weather-current-temp"><strong>10<sup>&deg;</sup></strong></div>
                   <div class="awe_desc">light rain</div><div class="awe_humidty">humidity: 53%</div><div class="awe_wind">wind: 8m/s WSW</div><div class="awe_highlow">H 10 &bull; L 7</div>
                 </div>
-              </div>
-                <div style="background:url(<?= base_url('assets/frontend/images/header/bali1_hd.png') ?>); position: relative; width: 100%; height: 600px; border-radius: 20px; background-size: 100% 100%; background-repeat: no-repeat; object-fit: contain;" class="image">
+              </div> -->
+              <?php foreach($aqmprovinsilist as $province) : ?>
+                <div style="background:url(<?= base_url('assets/frontend/images/header/bali_hd.png') ?>); position: relative; width: 100%; height: 600px; border-radius: 20px; background-size: 100% 100%; background-repeat: no-repeat; object-fit: contain;" class="image">
                   <div style="height: 600px" class="transparentbox">
                     <!-- <img src="<?= base_url() ?>" width="1042" height="910"/> -->
-                    <div class="awesome-weather-header">Bali</div>
-                    <div class="awesome-weather-current-temp"><strong>10<sup>&deg;</sup></strong></div>
+                    <div class="awesome-weather-header"><?= $province['provinsi'] ?></div>
+                    <div class="awesome-weather-current-temp"><strong><br>10<sup>&deg;</sup></strong></div>
                     <div class="awe_desc">light rain</div><div class="awe_humidty">humidity: 53%</div><div class="awe_wind">wind: 8m/s WSW</div><div class="awe_highlow">H 10 &bull; L 7</div>               
+                  </div>
                 </div>
-              </div>
-                <div style="background:url(<?= base_url('assets/frontend/images/header/jogja_hd.png') ?>); position: relative; width: 100%; height: 600px; border-radius: 20px; background-size: 100% 100%; background-repeat: no-repeat; object-fit: contain;" class="image">
+                <?php endforeach ?>
+                <!-- <div style="background:url(<?= base_url('assets/frontend/images/header/jogja_hd.png') ?>); position: relative; width: 100%; height: 600px; border-radius: 20px; background-size: 100% 100%; background-repeat: no-repeat; object-fit: contain;" class="image">
                   <div style="height: 600px" class="transparentbox">
-                    <!-- <img src="<?= base_url() ?>" width="1042" height="910"/> -->
+                    <img src="<?= base_url() ?>" width="1042" height="910"/>
                     <div class="awesome-weather-header">Yogyakarta</div>
                     <div class="awesome-weather-current-temp"><strong>10<sup>&deg;</sup></strong></div>
                     <div class="awe_desc">light rain</div><div class="awe_humidty">humidity: 53%</div><div class="awe_wind">wind: 8m/s WSW</div><div class="awe_highlow">H 10 &bull; L 7</div>
-                  </div>
-              </div>
+                  </div> -->
+              <!-- </div> -->
             </div>
        </div>
             <div class="col-md-5 pt-5" style="padding-bottom: 14.2%">
               <div class="pl-xxl-3">
                 <h6 class="text-primary">Pilih Provinsi</h6>
                 <div style="position: relative;" class="slick-slider slider-nav" data-slick='{"mobileFirst":true,"swipe":true,"arrows":false,"asNavFor":".slider-for","autoplay":true,"autoplaySpeed":3000,"focusOnSelect":true,"variableWidth":true}'>
-                  <div class="slick-dot">DKI Jakarta</div>
-                  <div class="slick-dot">Bali</div>
-                  <div class="slick-dot">Yogyakarta</div>
+                  <!-- <div class="slick-dot">DKI Jakarta</div> -->
+                  <?php foreach($aqmprovinsilist as $province) : ?>
+                  <div class="slick-dot"><?= $province['provinsi'] ?></div>
+                  <?php endforeach ?>
+                  <!-- <div class="slick-dot">Yogyakarta</div> -->
                 </div>
             <!-- <div class="slick-slider slider-for" data-slick='{"mobileFirst":true,"swipe":true,"arrows":false,"vertical":false,"asNavFor":".slider-nav"}'>
                   <p>Intense gives you a variety of powerful options, useful tools, and unlimited designs to easily create a website of your dreams that your clients will love.</p>
