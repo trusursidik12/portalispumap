@@ -16,6 +16,26 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/style.css">
+    <style type="text/css">
+        .hero-content-height{
+            height: 300px;
+        }
+        .map-top-aligin{
+            margin-top: -200px;
+        }
+        .map-size{
+            height: 200px;
+        }
+        .explore-position{
+            padding-left: 100px;
+        }
+        .map-border{
+            border: 1px solid black;
+        }
+        .map-border-top{
+            border-top: 1px solid black;
+        }
+    </style>
 
 </head>
 
@@ -28,19 +48,6 @@
     </div>
     <!-- Preloader End -->
 
-    <!-- Grids -->
-    <div class="grids d-flex justify-content-between">
-        <div class="grid1"></div>
-        <div class="grid2"></div>
-        <div class="grid3"></div>
-        <div class="grid4"></div>
-        <div class="grid5"></div>
-        <div class="grid6"></div>
-        <div class="grid7"></div>
-        <div class="grid8"></div>
-        <div class="grid9"></div>
-    </div>
-
     <!-- ***** Main Menu Area Start ***** -->
     <div class="mainMenu d-flex align-items-center justify-content-between">
         <!-- Close Icon -->
@@ -49,10 +56,10 @@
         </div>
         <!-- Logo Area -->
         <div class="logo-area">
-            <a href="index.html"><img style="position: relative; max-width: 100% ; max-height: 100px; object-fit: contain; margin-top: 20px;" src="<?= base_url() ?>assets/frontend/img/logo-img/portalispumap1.png"></a>
+            <a href="<?= site_url() ?>"><img style="max-width: 100% ; max-height: 30px;" src="<?= base_url() ?>assets/frontend/img/logo-img/portalispumap1.png"></a>
         </div>
         <!-- Nav -->
-        <div class="sonarNav wow fadeInUp" data-wow-delay="1s">
+        <div class="sonarNav wow fadeInUp" data-wow-delay="1s" style="margin-bottom: 100px;">
             <nav>
                 <ul>
                     <li class="nav-item active">
@@ -79,13 +86,7 @@
                 </ul>
             </nav>
         </div>
-        <!-- Copwrite Text -->
-        <div class="copywrite-text">
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</p>
-        </div>
+
     </div>
     <!-- ***** Main Menu Area End ***** -->
 
@@ -97,7 +98,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     <div class="menu-area d-flex justify-content-between">
                         <!-- Logo Area  -->
                         <div class="logo-area">
-                            <a href="index.html"><img style="position: relative; max-width: 100% ; max-height: 80px; object-fit: contain;" src="<?= base_url() ?>assets/frontend/img/logo-img/portalispumap1.png"></a>
+                            <a href="<?= site_url() ?>"><img style="max-width: 100% ; max-height: 30px;" src="<?= base_url() ?>assets/frontend/img/logo-img/portalispumap1.png"></a>
                         </div>
 
                         <div class="menu-content-area d-flex align-items-center">

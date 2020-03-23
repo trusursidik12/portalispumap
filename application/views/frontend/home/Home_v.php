@@ -23,12 +23,20 @@
                                   <?= $data['co'] == '-1' || $data['co'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-white">CO</h4></div>'; ?>
                                   <?= $data['o3'] == '-1' || $data['o3'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-white">O3</h4></div>'; ?>
                                   <?= $data['no2'] == '-1' || $data['no2'] == ''? '' : '<div class="col-sm-3"><h4 class="text-white">NO2</h4></div>'; ?>
+                                  <?php if($data['id_stasiun'] == 'SKH_GUPIT' || $data['id_stasiun'] == 'SKH_PLESAN' || $data['id_stasiun'] == 'SKH_RUM') : ?>
+                                    <div class="col-sm-3"><h4 class="text-white">H2S</h4></div>
+                                    <div class="col-sm-3"><h4 class="text-white">CS2</h4></div>
+                                  <?php endif ?>
                                 </div>
                                 <div class="d-flex">
                                   <?= $data['so2'] == '-1' || $data['so2'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-white">'.$data['so2'].'</h6></div>'; ?>
                                   <?= $data['co'] == '-1' || $data['co'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-white">'.$data['co'].'</h6></div>'; ?>
                                   <?= $data['o3'] == '-1' || $data['o3'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-white">'.$data['o3'].'</h6></div>'; ?>
                                   <?= $data['no2'] == '-1' || $data['no2'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-white">'.$data['no2'].'</h6></div>'; ?>
+                                  <?php if($data['id_stasiun'] == 'SKH_GUPIT' || $data['id_stasiun'] == 'SKH_PLESAN' || $data['id_stasiun'] == 'SKH_RUM') : ?>
+                                    <div class="col-sm-3"><h6 class="text-white"><?= $data['h2s'] ?></h6></div>
+                                    <div class="col-sm-3"><h6 class="text-white"><?= $data['cs2'] ?></h6></div>
+                                  <?php endif ?>
                                 </div>
                                 <div class="d-flex">
                                   <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-white">TEMP</h4></div>'; ?>
@@ -79,8 +87,11 @@
                             <img class="dots" src="<?= base_url() ?>assets/frontend/img/core-img/dots.png" alt="">
                             <h2>ISPUMAP</h2>
                         </div>
-                        <div class="portfolio-thumb">
-                            <div id="googleMap" style="width:100%;height:600px;"></div>
+                        <div class="portfolio-thumb map-border">
+                            <div id="googleMap" style="width:100%;height:500px;"></div>
+                            <div class="col bg-light map-size map-top-aligin map-border-top">
+                                <a href="<?= site_url('pages/maps') ?>" class="btn sonar-btn" style="margin-left: 250px; margin-top: 120px;">Explore Map</a>
+                            </div>
                         </div>
                         <div class="portfolio-meta">
                             <p class="portfolio-date">Feb 02, 2018</p>
@@ -89,56 +100,58 @@
                     </div>
                 </div>
                 <!-- Single Portfoio Area -->
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6" style="position: relative;">
                     <div class="single-portfolio-item mt-230 portfolio-item-2 wow fadeIn">
                         <div class="backend-content">
                             <img class="dots" src="<?= base_url() ?>assets/frontend/img/core-img/dots.png" alt="">
                         </div>
-                        <div class="portfolio-thumb">
+                        <div class="portfolio-thumb map-border">
                           <h1>Ranking</h1>
                           <div class="row">
-                            <div class="col-sm-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-sm-4 card bg-success text-center"><h3>100</h3></div>
+                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
                           <div class="row">
-                            <div class="col-sm-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-sm-4 card bg-success text-center"><h3>100</h3></div>
+                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
                           <div class="row">
-                            <div class="col-sm-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-sm-4 card bg-success text-center"><h3>100</h3></div>
+                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
                           <div class="row">
-                            <div class="col-sm-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-sm-4 card bg-success text-center"><h3>100</h3></div>
+                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
                           <div class="row">
-                            <div class="col-sm-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-sm-4 card bg-success text-center"><h3>100</h3></div>
+                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
                           <div class="row">
-                            <div class="col-sm-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-sm-4 card bg-success text-center"><h3>100</h3></div>
+                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
                           <div class="row">
-                            <div class="col-sm-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-sm-4 card bg-success text-center"><h3>100</h3></div>
+                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
                           <div class="row">
-                            <div class="col-sm-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-sm-4 card bg-success text-center"><h3>100</h3></div>
+                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
                           <div class="row">
-                            <div class="col-sm-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-sm-4 card bg-success text-center"><h3>100</h3></div>
+                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
                           <div class="row">
-                            <div class="col-sm-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-sm-4 card bg-success text-center"><h3>100</h3></div>
+                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
                           <div class="d-flex">
                             <div class="mr-auto"><h3></h3></div>
-                            <div class="p-2 card"><h3>FULL RANKING</h3></div>
+                            <div class="p-2">
+                                <a href="<?= site_url('pages/ranking') ?>" class="btn sonar-btn">FULL RANKING</a>
+                            </div>
                           </div>
                         </div>
                     </div>
@@ -151,7 +164,6 @@
                     <div class="single-portfolio-item mt-100 portfolio-item-3 wow fadeIn">
                         <div class="backend-content">
                             <img class="dots" src="<?= base_url() ?>assets/frontend/img/core-img/dots.png" alt="">
-                            <h2>ISPUMAP.ID</h2>
                         </div>
                         <div class="portfolio-thumb">
                             <img src="<?= base_url() ?>assets/frontend/img/bg-img/p3.png" alt="">
