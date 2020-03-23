@@ -45,11 +45,11 @@
     <div class="mainMenu d-flex align-items-center justify-content-between">
         <!-- Close Icon -->
         <div class="closeIcon">
-            <i class="ti-close" aria-hidden="true"></i>
+            <i class="ti-close" aria-hidden="true" style="object-fit: contain;"></i>
         </div>
         <!-- Logo Area -->
         <div class="logo-area">
-            <a href="index.html">SonarAASD</a>
+            <a href="index.html"><img style="position: relative; max-width: 100% ; max-height: 100px; object-fit: contain; margin-top: 20px;" src="<?= base_url() ?>assets/frontend/img/logo-img/portalispumap1.png"></a>
         </div>
         <!-- Nav -->
         <div class="sonarNav wow fadeInUp" data-wow-delay="1s">
@@ -97,7 +97,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     <div class="menu-area d-flex justify-content-between">
                         <!-- Logo Area  -->
                         <div class="logo-area">
-                            <a href="index.html">Sonar</a>
+                            <a href="index.html"><img style="position: relative; max-width: 100% ; max-height: 80px; object-fit: contain;" src="<?= base_url() ?>assets/frontend/img/logo-img/portalispumap1.png"></a>
                         </div>
 
                         <div class="menu-content-area d-flex align-items-center">

@@ -4,7 +4,7 @@
 
           <?php foreach($aqmprovinsi as $provinsi) : ?>
             <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img slide-background-overlay" style="background-image: url(<?= base_url() ?>assets/frontend/img/bg-img/slide1.jpg);">
+            <div class="single-hero-slide bg-img slide-background-overlay" style="background-image: url(<?= base_url() ?>assets/frontend/img/header/bali.jpg);position: relative; max-width: 100%; max-height: 100%; background-repeat: no-repeat; object-fit: contain;">
                 <div class="container h-100">
                     <div class="row h-100 align-items-end">
                         <div class="col-12">
