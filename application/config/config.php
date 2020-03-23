@@ -25,6 +25,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['base_url'] = 'http://localhost/portalispumap/';
 
+$link = "http" .((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "s" : "") . "://";
+$server = isset($_SERVER['HTTP_HOST']) ?$_SERVER['HTTP_HOST'] : $_SERVER['SERVER_NAME'];
+$config['base_url']  = $link . $server;
+//$config['base_url'] .= dirname($_SERVER['SCRIPT_NAME']).'/';
+$dir=preg_replace('@/+$@','',dirname($_SERVER['SCRIPT_NAME'])).'/';
+$config['base_url'] .= $dir;
+
 /*
 |--------------------------------------------------------------------------
 | Index File

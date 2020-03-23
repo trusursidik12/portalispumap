@@ -11,6 +11,7 @@ class F_home_m extends CI_model
 	{
 		$this->_client 	= new Client([
 			'base_uri' 	=> 'http://ispumaps.id/ispumapapi/'
+			// 'base_uri' 	=> 'http://localhost/ispumapapi/'
 			// 'auth'		=> ['admin', 'cHQudHJ1c3VydW5nZ3VsdGVrbnVzYQ==']
 		]);
 	}
@@ -78,11 +79,11 @@ class F_home_m extends CI_model
 		}
 	}
 
-	public function get_aqmprovinsi()
+	public function get_aqmprovinsi_web()
 	{
 		try
 		{
-			$response = $this->_client->request('GET', 'api/aqmprovince', [
+			$response = $this->_client->request('GET', 'api/aqmprovinceweb', [
 				'query' => [
 					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
 				],
