@@ -2,7 +2,7 @@
 <div class="hero-area d-flex align-items-center">
    
     <!-- Hero Thumbnail -->
-    <div class="hero-thumbnail equalize bg-img" style="background-image: url(<?= base_url() ?>assets/frontend/img/bg-img/blog.jpg);"></div>
+    <div class="hero-thumbnail equalize bg-img" style="background-image:url(<?= base_url('assets/frontend/img/bg-img/maps_indo_grey.jpg') ?>); position: relative; max-width: 100% ; max-height: 100%;" ></div>
     
     <!-- Hero Content -->
     <div class="hero-content-height equalize">
