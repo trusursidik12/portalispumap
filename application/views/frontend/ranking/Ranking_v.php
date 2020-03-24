@@ -17,61 +17,44 @@
     </div>
 </div>
 <!-- ***** Hero Area End ***** -->
-<div class="table-responsive">
-    <table border="1" width="100%" class="text-center">
-        <thead>
-            <tr>
-                <th>NO</th>
-                <th>STASIUN</th>
-                <th>PM10</th>
-                <th>PM25</th>
-                <th>SO2</th>
-                <th>CO</th>
-                <th>O3</th>
-                <th>NO2</th>
-                <th>HC</th>
-                <th>VOC</th>
-                <th>NH3</th>
-                <th>H2S</th>
-                <th>CS2</th>
-                <th>WS</th>
-                <th>WD</th>
-                <th>HUM</th>
-                <th>TEMP</th>
-                <th>PRESS</th>
-                <th>SR</th>
-                <th>RAIN&nbsp;INT</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php $no=1; foreach($aqmdata as $data) : ?>
-            <?php foreach($aqmprovinsi as $provinsi) : ?>
-            <?php if($data['id_stasiun'] == $provinsi['id_stasiun']) : ?>
-                <tr>
-                    <td><?= $no++; ?></td>
-                    <td><?= $provinsi['id_stasiun'] ?></td>
-                    <td><?= $data['pm10'] ?></td>
-                    <td><?= $data['pm25'] ?></td>
-                    <td><?= $data['so2'] ?></td>
-                    <td><?= $data['co'] ?></td>
-                    <td><?= $data['o3'] ?></td>
-                    <td><?= $data['no2'] ?></td>
-                    <td><?= $data['hc'] ?></td>
-                    <td><?= $data['voc'] ?></td>
-                    <td><?= $data['nh3'] ?></td>
-                    <td><?= $data['h2s'] ?></td>
-                    <td><?= $data['cs2'] ?></td>
-                    <td><?= $data['ws'] ?></td>
-                    <td><?= $data['wd'] ?></td>
-                    <td><?= $data['humidity'] ?></td>
-                    <td><?= $data['temperature'] ?></td>
-                    <td><?= $data['pressure'] ?></td>
-                    <td><?= $data['sr'] ?></td>
-                    <td><?= $data['rain_intensity'] ?></td>
-                </tr>
-            <?php endif ?>
-            <?php endforeach ?>
-            <?php endforeach ?>
-        </tbody>
-    </table>
+<!-- ***** Portfolio Area Start ***** -->
+<div class="portfolio-area section-padding-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table border="1" width="100%" class="text-center">
+                        <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>STASIUN</th>
+                                <th>DATE</th>
+                                <th>SO2</th>
+                                <th>CO</th>
+                                <th>O3</th>
+                                <th>NO2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $no=1; foreach($aqmispu as $ispu) : ?>
+                            <?php foreach($aqmprovinsi as $provinsi) : ?>
+                            <?php if($ispu['id_stasiun'] == $provinsi['id_stasiun']) : ?>
+                                <tr>
+                                    <td><?= $no++; ?></td>
+                                    <td><?= $provinsi['id_stasiun'] ?></td>
+                                    <td><?= $ispu['waktu'] ?></td>
+                                    <td><?= $ispu['so2'] ?></td>
+                                    <td><?= $ispu['co'] ?></td>
+                                    <td><?= $ispu['o3'] ?></td>
+                                    <td><?= $ispu['no2'] ?></td>
+                                </tr>
+                            <?php endif ?>
+                            <?php endforeach ?>
+                            <?php endforeach ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
