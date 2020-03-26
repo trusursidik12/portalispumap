@@ -20,36 +20,36 @@
 
 <!-- ***** News Area Start ***** -->
 <div class="container">
+    <div class="row">
+    
+        <div class="col-md-12 col-lg-8" style="padding-top: 50px;">
             <div class="row">
+                
+                <div class="col-sm-6">
+                    <img src="<?= base_url() ?>assets/frontend/img/news-img/weather.jpg" alt="">
+                    <h4 class="pt-20"><a href="#"><b>Title Here Title Here</b></a></h4>
+                    <ul class="list-li-mr-20 pt-10 mb-30">
+                        <li class="color-lite-black">by <b>Ispumap.id,</b> Jan 25, 2018</li>
+                    </ul>
+                <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="<?= site_url('pages/news/title') ?>"><b>READ MORE</b></a>
+                </div><!-- col-sm-6 -->
+                
+            </div><!-- row -->
             
-                <div class="col-md-12 col-lg-8" style="padding-top: 50px;">
-                    <div class="row">
-                        
-                        <div class="col-sm-6">
-                            <img src="<?= base_url() ?>assets/frontend/img/news-img/weather.jpg" alt="">
-                            <h4 class="pt-20"><a href="#"><b>Title Here Title Here</b></a></h4>
-                            <ul class="list-li-mr-20 pt-10 mb-30">
-                                <li class="color-lite-black">by <b>Ispumap.id,</b> Jan 25, 2018</li>
-                            </ul>
-                        <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="<?= site_url('pages/news/title') ?>"><b>READ MORE</b></a>
-                        </div><!-- col-sm-6 -->
-                        
-                    </div><!-- row -->
-                    
-                </div><!-- col-md-9 -->
+        </div><!-- col-md-9 -->
 
-                <div class="d-none d-md-block d-lg-none col-md-3" ></div>
-                <div class="col-md-6 col-lg-4" style="padding-top: 50px;" >
-                    <div class="pl-20 pl-md-0">
-                        <ul class="list-block list-li-ptb-15 list-btm-border-black bg-primary text-center">
-                            <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
-                            <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
-                            <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
-                            <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
-                            <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
-                            <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
-                        </ul>
-                    </div>
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
+        <div class="d-none d-md-block d-lg-none col-md-3" ></div>
+        <div class="col-md-6 col-lg-4" style="padding-top: 50px;" >
+            <div class="pl-20 pl-md-0">
+                <ul class="list-block list-li-ptb-15 list-btm-border-black bg-primary text-center">
+                    <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
+                    <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
+                    <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
+                    <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
+                    <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
+                    <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
+                </ul>
+            </div>
+        </div>
+    </div> <!-- row -->
+</div> <!-- container -->

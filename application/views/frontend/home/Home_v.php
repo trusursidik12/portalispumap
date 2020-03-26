@@ -158,113 +158,50 @@
                 </div>
             </div>
 
-            <div class="row">
-                <!-- Single Portfoio Area -->
-                <div class="col-12 col-md-10">
-                    <div class="single-portfolio-item mt-100 portfolio-item-3 wow fadeIn">
-                        <div class="backend-content">
-                            <img class="dots" src="<?= base_url() ?>assets/frontend/img/core-img/dots.png" alt="">
-                        </div>
-                        <div class="portfolio-thumb">
-                            <img src="<?= base_url() ?>assets/frontend/img/bg-img/p3.png" alt="">
-                        </div>
-                        <div class="portfolio-meta">
-                            <p class="portfolio-date">Feb 02, 2018</p>
-                            <h2>Foggy sunset over the lake</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- ***** News Area Start ***** -->
+            <div class="container" style="padding-top: 50px;">
+                <div class="row">
+                
+                    <div class="col-md-12 col-lg-12 map-border" style="padding-top: 50px;">
+                    <h4>News</h4>
+                        <div class="row">
+                            
+                            <div class="col-sm-4">
+                                <img src="<?= base_url() ?>assets/frontend/img/news-img/weather.jpg" alt="">
+                                <h4 class="pt-20"><a href="<?= site_url('pages/news/title') ?>"><b>Title Here Title Here</b></a></h4>
+                                <ul class="list-li-mr-20 pt-10 mb-30">
+                                    <li class="color-lite-black">by <b>Ispumap.id,</b> Jan 25, 2018</li>
+                                </ul>
+                            <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="<?= site_url('pages/news/title') ?>"><b>READ MORE</b></a>
+                            </div><!-- col-sm-4 -->
+                            
+                            <div class="col-sm-4">
+                                <img src="<?= base_url() ?>assets/frontend/img/news-img/weather.jpg" alt="">
+                                <h4 class="pt-20"><a href="<?= site_url('pages/news/title') ?>"><b>Title Here Title Here</b></a></h4>
+                                <ul class="list-li-mr-20 pt-10 mb-30">
+                                    <li class="color-lite-black">by <b>Ispumap.id,</b> Jan 25, 2018</li>
+                                </ul>
+                            <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="<?= site_url('pages/news/title') ?>"><b>READ MORE</b></a>
+                            </div><!-- col-sm-4 -->
+                            
+                            <div class="col-sm-4">
+                                <img src="<?= base_url() ?>assets/frontend/img/news-img/weather.jpg" alt="">
+                                <h4 class="pt-20"><a href="<?= site_url('pages/news/title') ?>"><b>Title Here Title Here</b></a></h4>
+                                <ul class="list-li-mr-20 pt-10 mb-30">
+                                    <li class="color-lite-black">by <b>Ispumap.id,</b> Jan 25, 2018</li>
+                                </ul>
+                            <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="<?= site_url('pages/news/title') ?>"><b>READ MORE</b></a>
+                            </div><!-- col-sm-4 -->
+                            
+                        </div><!-- row -->
+                        
+                    </div><!-- col-md-9 -->
 
-            <div class="row justify-content-end">
-                <!-- Single Portfoio Area -->
-                <div class="col-12 col-md-6">
-                    <div class="single-portfolio-item portfolio-item-4 wow fadeIn">
-                        <div class="backend-content">
-                            <img class="dots" src="<?= base_url() ?>assets/frontend/img/core-img/dots.png" alt="">
-                        </div>
-                        <div class="portfolio-thumb">
-                            <img src="<?= base_url() ?>assets/frontend/img/bg-img/p2.png" alt="">
-                        </div>
-                        <div class="portfolio-meta">
-                            <p class="portfolio-date">Feb 02, 2018</p>
-                            <h2>Clouds on mountain top</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Single Portfoio Area -->
-                <div class="col-12 col-md-5">
-                    <div class="single-portfolio-item portfolio-item-5 wow fadeIn">
-                        <div class="backend-content">
-                            <img class="dots" src="<?= base_url() ?>assets/frontend/img/core-img/dots.png" alt="">
-                            <h2>Hope</h2>
-                        </div>
-                        <div class="portfolio-thumb">
-                            <img src="<?= base_url() ?>assets/frontend/img/bg-img/p5.png" alt="">
-                        </div>
-                        <div class="portfolio-meta">
-                            <p class="portfolio-date">Feb 02, 2018</p>
-                            <h2>Over the canion</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <!-- Single Portfoio Area -->
-                <div class="col-12 col-md-4">
-                    <div class="single-portfolio-item portfolio-item-6 wow fadeIn">
-                        <div class="portfolio-thumb">
-                            <img src="<?= base_url() ?>assets/frontend/img/bg-img/p6.png" alt="">
-                        </div>
-                        <div class="portfolio-meta">
-                            <p class="portfolio-date">Feb 02, 2018</p>
-                            <h2>Mirror lake</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-end">
-                <!-- Single Portfoio Area -->
-                <div class="col-12 col-md-4">
-                    <div class="single-portfolio-item portfolio-item-7 wow fadeIn">
-                        <div class="backend-content">
-                            <img class="dots" src="<?= base_url() ?>assets/frontend/img/core-img/dots.png" alt="">
-                            <h2>Future</h2>
-                        </div>
-                        <div class="portfolio-thumb">
-                            <img src="<?= base_url() ?>assets/frontend/img/bg-img/p7.png" alt="">
-                        </div>
-                        <div class="portfolio-meta">
-                            <p class="portfolio-date">Feb 02, 2018</p>
-                            <h2>Mirror lake</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+            
         </div>
     </div>
     <!-- ***** Portfolio Area End ***** -->
 
-    <!-- ***** Call to Action Area Start ***** -->
-    <div class="sonar-call-to-action-area section-padding-0-100">
-        <div class="backEnd-content">
-            <h2>Dream</h2>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="call-to-action-content wow fadeInUp" data-wow-delay="0.5s">
-                        <h2>I am an experienced photographer</h2>
-                        <h5>Let’s talk</h5>
-                        <a href="#" class="btn sonar-btn mt-100">contact me</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ***** Call to Action Area End ***** -->
+    
