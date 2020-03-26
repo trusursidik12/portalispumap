@@ -47,34 +47,38 @@
                 <div class="pl-20 pl-md-0">
 
                     <div class="mtb-50">
-                        <h4 class="p-title"><b>POPULAR POSTS</b></h4>
-                        <a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
-                            <div class="wh-100x abs-tlr"><img src="<?= base_url() ?>assets/frontend/img/news-img/thumbnail.jpg ?>" alt=""></div>
-                            <div class="ml-120 min-h-100x">
+                        <h4 class="p-title" style="position: relative; padding-bottom: 30px; margin-bottom: 20px;">
+                            <p style="content: ''; position: absolute; bottom: 0; left: 0; width: 80px; height: 5px; background: #009EE5; z-index: 1; box-sizing: inherit;"></p>
+                            <b>POPULAR POSTS</b>
+                            <p style="content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px; background: #ccc;"></p>
+                        </h4>
+                        <a class="oflow-hidden pos-relative mb-20 dplay-block" href="#" style="margin-bottom: 20px!important; position: relative; z-index: 1;     display: block; overflow: hidden;">
+                            <div class="wh-100x abs-tlr"><img style="height: 100px; width: 100px!important; position: absolute; top: 0; left: 0; right: 0; z-index: 1; box-sizing: inherit;" src="<?= base_url() ?>assets/frontend/img/news-img/weather.jpg" alt=""></div>
+                            <div class="ml-120 min-h-100x" style="margin-left: 120px!important; min-height: 100px!important;">
                                 <h5><b>Bitcoin Billionares Hidding in Plain Sight</b></h5>
                                 <h6 class="color-lite-black pt-10">by <span class="color-black"><b>Danile Palmer,</b></span> Jan 25, 2018</h6>
                             </div>
                         </a><!-- oflow-hidden -->
                         
-                        <a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
-                            <div class="wh-100x abs-tlr"><img src="images/polular-2-100x100.jpg" alt=""></div>
-                            <div class="ml-120 min-h-100x">
+                        <a class="oflow-hidden pos-relative mb-20 dplay-block" href="#" style="margin-bottom: 20px!important; position: relative; z-index: 1;     display: block; overflow: hidden;">
+                            <div class="wh-100x abs-tlr"><img style="height: 100px; width: 100px!important; position: absolute; top: 0; left: 0; right: 0; z-index: 1; box-sizing: inherit;" src="<?= base_url() ?>assets/frontend/img/news-img/weather.jpg" alt=""></div>
+                            <div class="ml-120 min-h-100x" style="margin-left: 120px!important; min-height: 100px!important;">
                                 <h5><b>Bitcoin Billionares Hidding in Plain Sight</b></h5>
                                 <h6 class="color-lite-black pt-10">by <span class="color-black"><b>Danile Palmer,</b></span> Jan 25, 2018</h6>
                             </div>
                         </a><!-- oflow-hidden -->
                         
-                        <a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
-                            <div class="wh-100x abs-tlr"><img src="images/polular-3-100x100.jpg" alt=""></div>
-                            <div class="ml-120 min-h-100x">
+                        <a class="oflow-hidden pos-relative mb-20 dplay-block" href="#" style="margin-bottom: 20px!important; position: relative; z-index: 1;     display: block; overflow: hidden;">
+                            <div class="wh-100x abs-tlr"><img style="height: 100px; width: 100px!important; position: absolute; top: 0; left: 0; right: 0; z-index: 1; box-sizing: inherit;" src="<?= base_url() ?>assets/frontend/img/news-img/weather.jpg" alt=""></div>
+                            <div class="ml-120 min-h-100x" style="margin-left: 120px!important; min-height: 100px!important;">
                                 <h5><b>Bitcoin Billionares Hidding in Plain Sight</b></h5>
                                 <h6 class="color-lite-black pt-10">by <span class="color-black"><b>Danile Palmer,</b></span> Jan 25, 2018</h6>
                             </div>
                         </a><!-- oflow-hidden -->
                         
-                        <a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
-                            <div class="wh-100x abs-tlr"><img src="images/polular-4-100x100.jpg" alt=""></div>
-                            <div class="ml-120 min-h-100x">
+                        <a class="oflow-hidden pos-relative mb-20 dplay-block" href="#" style="margin-bottom: 20px!important; position: relative; z-index: 1;     display: block; overflow: hidden;">
+                            <div class="wh-100x abs-tlr"><img style="height: 100px; width: 100px!important; position: absolute; top: 0; left: 0; right: 0; z-index: 1; box-sizing: inherit;" src="<?= base_url() ?>assets/frontend/img/news-img/weather.jpg" alt=""></div>
+                            <div class="ml-120 min-h-100x" style="margin-left: 120px!important; min-height: 100px!important;">
                                 <h5><b>Bitcoin Billionares Hidding in Plain Sight</b></h5>
                                 <h6 class="color-lite-black pt-10">by <span class="color-black"><b>Danile Palmer,</b></span> Jan 25, 2018</h6>
                             </div>
