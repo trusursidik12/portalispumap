@@ -5,12 +5,20 @@ class F_news extends CI_Controller {
 
 	public function index()
 	{
-		$this->temp_frontend->load('frontend/theme/template_v', 'frontend/news/news/news_v');
+		$data['news'] = $this->f_home_m->get_aqmnews();
+		$this->temp_frontend->load('frontend/theme/template_v', 'frontend/news/news/news_v', $data);
 	}
 
 
-	public function readmore()
+	public function readmore($slug = NULL)
 	{
-		$this->temp_frontend->load('frontend/theme/template_v', 'frontend/news/readmore/readmore_v');
+		$data['singlenews'] 		= $this->f_home_m->get_aqmnews_slug($slug);
+		$data['news'] 				= $this->f_home_m->get_aqmnews();
+
+		if(empty($data['singlenews'])){
+			show_404();
+		}
+
+		$this->temp_frontend->load('frontend/theme/template_v', 'frontend/news/readmore/readmore_v', $data);
 	}
 }

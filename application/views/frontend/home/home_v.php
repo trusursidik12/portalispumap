@@ -166,32 +166,16 @@
                     <h4>News</h4>
                         <div class="row">
                             
+                          <?php foreach(array_slice($news, 0, 3) as $newsdata) : ?>
                             <div class="col-sm-4">
-                                <img src="<?= base_url() ?>assets/frontend/img/news-img/weather.jpg" alt="">
-                                <h4 class="pt-20"><a href="<?= site_url('pages/news/title') ?>"><b>Title Here Title Here</b></a></h4>
+                                <img src="<?= $newsdata['image'] ?>" alt="">
+                                <h4 class="pt-20"><a href="<?= site_url('pages/news/'.$newsdata['slug']) ?>"><b><?= $newsdata['title'] ?></b></a></h4>
                                 <ul class="list-li-mr-20 pt-10 mb-30">
-                                    <li class="color-lite-black">by <b>Ispumap.id,</b> Jan 25, 2018</li>
+                                    <li class="color-lite-black">by <b>Ispumap.id,</b> <?= $newsdata['created_at'] ?></li>
                                 </ul>
-                            <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="<?= site_url('pages/news/title') ?>"><b>READ MORE</b></a>
+                            <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="<?= site_url('pages/news/'.$newsdata['slug']) ?>"><b>READ MORE</b></a>
                             </div><!-- col-sm-4 -->
-                            
-                            <div class="col-sm-4">
-                                <img src="<?= base_url() ?>assets/frontend/img/news-img/weather.jpg" alt="">
-                                <h4 class="pt-20"><a href="<?= site_url('pages/news/title') ?>"><b>Title Here Title Here</b></a></h4>
-                                <ul class="list-li-mr-20 pt-10 mb-30">
-                                    <li class="color-lite-black">by <b>Ispumap.id,</b> Jan 25, 2018</li>
-                                </ul>
-                            <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="<?= site_url('pages/news/title') ?>"><b>READ MORE</b></a>
-                            </div><!-- col-sm-4 -->
-                            
-                            <div class="col-sm-4">
-                                <img src="<?= base_url() ?>assets/frontend/img/news-img/weather.jpg" alt="">
-                                <h4 class="pt-20"><a href="<?= site_url('pages/news/title') ?>"><b>Title Here Title Here</b></a></h4>
-                                <ul class="list-li-mr-20 pt-10 mb-30">
-                                    <li class="color-lite-black">by <b>Ispumap.id,</b> Jan 25, 2018</li>
-                                </ul>
-                            <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="<?= site_url('pages/news/title') ?>"><b>READ MORE</b></a>
-                            </div><!-- col-sm-4 -->
+                          <?php endforeach ?>
                             
                         </div><!-- row -->
                         
