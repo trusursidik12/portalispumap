@@ -90,7 +90,7 @@
                         <div class="portfolio-thumb map-border">
                             <div id="googleMap" style="width:100%;height:500px;"></div>
                             <div class="col bg-light map-size map-top-aligin map-border-top">
-                                <a href="<?= site_url('pages/maps') ?>" class="btn sonar-btn" style="margin-left: 250px; margin-top: 120px;">Explore Map</a>
+                                <a href="<?= site_url('pages/maps') ?>" class="btn sonar-btn" style="margin-left: 130px; margin-top: 120px;">Explore Map</a>
                             </div>
                         </div>
                         <div class="portfolio-meta">
