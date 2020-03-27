@@ -1,5 +1,5 @@
 <!-- ***** Hero Area Start ***** -->
-<div class="hero-area d-flex align-items-center">
+<div class="hero-area d-flex align-items-center" style="background-color: #009EE5;">
    
     <!-- Hero Thumbnail -->
     <div class="hero-thumbnail equalize bg-img" style="background-image:url(<?= base_url('assets/frontend/img/news-img/weather.jpg') ?>); position: relative; max-width: 100% ; max-height: 100%;" ></div>
@@ -44,7 +44,7 @@
         <div class="d-none d-md-block d-lg-none col-md-3" ></div>
         <div class="col-md-6 col-lg-4" style="padding-top: 50px;" >
             <div class="pl-20 pl-md-0">
-                <ul class="list-block list-li-ptb-15 list-btm-border-black bg-primary text-center">
+                <ul class="list-block list-li-ptb-15 list-btm-border-black text-center" style="background-color: #009EE5;">
                     <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
                     <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
                     <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>

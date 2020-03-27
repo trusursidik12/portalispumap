@@ -9,10 +9,10 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>Sonar - Photography Template</title>
+    <title>ISPUMAP</title>
 
     <!-- Favicon  -->
-    <link rel="icon" href="<?= base_url() ?>assets/frontend/img/core-img/favicon.ico">
+    <link rel="icon" href="<?= base_url() ?>assets/frontend/img/logo-img/icon_ispumap_transparent.png">
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/style.css">
@@ -56,7 +56,7 @@
         </div>
         <!-- Logo Area -->
         <div class="logo-area">
-            <a href="<?= site_url() ?>"><img style="max-width: 100% ; max-height: 30px;" src="<?= base_url() ?>assets/frontend/img/logo-img/portalispumap1.png"></a>
+            <a href="<?= site_url() ?>"><img style="max-width: 100% ; max-height: 40px;" src="<?= base_url() ?>assets/frontend/img/logo-img/portalispumap1.png"></a>
         </div>
         <!-- Nav -->
         <div class="sonarNav wow fadeInUp" data-wow-delay="1s" style="margin-bottom: 100px;">
@@ -92,7 +92,7 @@
                     <div class="menu-area d-flex justify-content-between">
                         <!-- Logo Area  -->
                         <div class="logo-area">
-                            <a href="<?= site_url() ?>"><img style="max-width: 100% ; max-height: 30px;" src="<?= base_url() ?>assets/frontend/img/logo-img/portalispumap1.png"></a>
+                            <a href="<?= site_url() ?>"><img style="max-width: 100% ; max-height: 40px;" src="<?= base_url() ?>assets/frontend/img/logo-img/portalispumap1.png"></a>
                         </div>
 
                         <div class="menu-content-area d-flex align-items-center">

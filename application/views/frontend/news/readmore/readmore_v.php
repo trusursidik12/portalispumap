@@ -1,5 +1,5 @@
 <!-- ***** Hero Area Start ***** -->
-<div class="hero-area d-flex align-items-center">
+<div class="hero-area d-flex align-items-center" style="background-color: #009EE5;">
    
     <!-- Hero Thumbnail -->
     <div class="hero-thumbnail equalize bg-img" style="background-image:url(<?= base_url('assets/frontend/img/news-img/weather.jpg') ?>); position: relative; max-width: 100% ; max-height: 100%;" ></div>
@@ -41,7 +41,7 @@
                             <p style="content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px; background: #ccc;"></p>
                         </h4>
                         <?php foreach(array_slice($news, 0, 10) as $newsdata) : ?>
-                            <a class="oflow-hidden pos-relative mb-20 dplay-block" href="<?= site_url('pages/news/'.$newsdata['slug']) ?>" style="margin-bottom: 20px!important; position: relative; z-index: 1;     display: block; overflow: hidden;">
+                            <a class="oflow-hidden pos-relative mb-20 dplay-block" href="<?= site_url('pages/news/'.$newsdata['slug']) ?>" style="margin-bottom: 20px!important; position: relative; z-index: 1; display: block; overflow: hidden;">
                                 <div class="wh-100x abs-tlr"><img style="height: 100px; width: 100px!important; position: absolute; top: 0; left: 0; right: 0; z-index: 1; box-sizing: inherit;" src="<?= $newsdata['image'] ?>" alt=""></div>
                                 <div class="ml-120 min-h-100x" style="margin-left: 120px!important; min-height: 100px!important;">
                                     <h5><b><?= $newsdata['title'] ?></b></h5>

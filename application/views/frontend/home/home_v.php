@@ -11,49 +11,49 @@
                         <div class="row h-100 align-items-end">
                             <div class="col-12">
                                     <div class="d-flex" style="margin-top: 50px;">
-                                      <?= $data['pm10'] == '-1' || $data['pm10'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-white">PM10</h4></div>'; ?>
-                                      <?= $data['pm25'] == '-1' || $data['pm25'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-white">PM2.5</h4></div>'; ?>                                  
+                                      <?= $data['pm10'] == '-1' || $data['pm10'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">PM10</h4></div>'; ?>
+                                      <?= $data['pm25'] == '-1' || $data['pm25'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">PM2.5</h4></div>'; ?>                                  
                                     </div>
                                     <div class="d-flex">
-                                      <?= $data['pm10'] == '-1' || $data['pm10'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-white">'.$data['pm10'].'</h6></div>'; ?>
-                                      <?= $data['pm25'] == '-1' || $data['pm25'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-white">'.$data['pm25'].'</h6></div>'; ?>
+                                      <?= $data['pm10'] == '-1' || $data['pm10'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['pm10'].'</h6></div>'; ?>
+                                      <?= $data['pm25'] == '-1' || $data['pm25'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['pm25'].'</h6></div>'; ?>
                                     </div>
                                     <div class="d-flex">
-                                      <?= $data['so2'] == '-1' || $data['so2'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-white">SO2</h4></div>'; ?>
-                                      <?= $data['co'] == '-1' || $data['co'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-white">CO</h4></div>'; ?>
-                                      <?= $data['o3'] == '-1' || $data['o3'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-white">O3</h4></div>'; ?>
-                                      <?= $data['no2'] == '-1' || $data['no2'] == ''? '' : '<div class="col-sm-3"><h4 class="text-white">NO2</h4></div>'; ?>
+                                      <?= $data['so2'] == '-1' || $data['so2'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">SO2</h4></div>'; ?>
+                                      <?= $data['co'] == '-1' || $data['co'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">CO</h4></div>'; ?>
+                                      <?= $data['o3'] == '-1' || $data['o3'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">O3</h4></div>'; ?>
+                                      <?= $data['no2'] == '-1' || $data['no2'] == ''? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">NO2</h4></div>'; ?>
                                       <?php if($data['id_stasiun'] == 'SKH_GUPIT' || $data['id_stasiun'] == 'SKH_PLESAN' || $data['id_stasiun'] == 'SKH_RUM') : ?>
                                         <div class="col-sm-3"><h4 class="text-white">H2S</h4></div>
                                         <div class="col-sm-3"><h4 class="text-white">CS2</h4></div>
                                       <?php endif ?>
                                     </div>
                                     <div class="d-flex">
-                                      <?= $data['so2'] == '-1' || $data['so2'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-white">'.$data['so2'].'</h6></div>'; ?>
-                                      <?= $data['co'] == '-1' || $data['co'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-white">'.$data['co'].'</h6></div>'; ?>
-                                      <?= $data['o3'] == '-1' || $data['o3'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-white">'.$data['o3'].'</h6></div>'; ?>
-                                      <?= $data['no2'] == '-1' || $data['no2'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-white">'.$data['no2'].'</h6></div>'; ?>
+                                      <?= $data['so2'] == '-1' || $data['so2'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['so2'].'</h6></div>'; ?>
+                                      <?= $data['co'] == '-1' || $data['co'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['co'].'</h6></div>'; ?>
+                                      <?= $data['o3'] == '-1' || $data['o3'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['o3'].'</h6></div>'; ?>
+                                      <?= $data['no2'] == '-1' || $data['no2'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['no2'].'</h6></div>'; ?>
                                       <?php if($data['id_stasiun'] == 'SKH_GUPIT' || $data['id_stasiun'] == 'SKH_PLESAN' || $data['id_stasiun'] == 'SKH_RUM') : ?>
-                                        <div class="col-sm-3"><h6 class="text-white"><?= $data['h2s'] ?></h6></div>
-                                        <div class="col-sm-3"><h6 class="text-white"><?= $data['cs2'] ?></h6></div>
+                                        <div class="col-sm-3"><h6 class="text-success font-weight-bold"><?= $data['h2s'] ?></h6></div>
+                                        <div class="col-sm-3"><h6 class="text-success font-weight-bold"><?= $data['cs2'] ?></h6></div>
                                       <?php endif ?>
                                     </div>
                                     <div class="d-flex">
-                                      <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-white">TEMP</h4></div>'; ?>
-                                      <?= $data['ws'] == '-1' || $data['ws'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-white">WS</h4></div>'; ?>
-                                      <?= $data['humidity'] == '-1' || $data['humidity'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-white">HUM</h4></div>'; ?>
-                                      <?= $data['rain_intensity'] == '-1' || $data['rain_intensity'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-white">RAIN&nbsp;INT</h4></div>'; ?>
+                                      <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">TEMP</h4></div>'; ?>
+                                      <?= $data['ws'] == '-1' || $data['ws'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">WS</h4></div>'; ?>
+                                      <?= $data['humidity'] == '-1' || $data['humidity'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">HUM</h4></div>'; ?>
+                                      <?= $data['rain_intensity'] == '-1' || $data['rain_intensity'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">RAIN&nbsp;INT</h4></div>'; ?>
                                     </div>
                                     <div class="d-flex">
-                                      <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-white">'.$data['temperature'].'<sup>o</sup></h6></div>'; ?>
-                                      <?= $data['ws'] == '-1' || $data['ws'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-white">'.$data['ws'].'km/h</h6></div>'; ?>
-                                      <?= $data['humidity'] == '-1' || $data['humidity'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-white">'.$data['humidity'].'%</h6></div>'; ?>
-                                      <?= $data['rain_intensity'] == '-1' || $data['rain_intensity'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-white">'.$data['rain_intensity'].'</h6></div>'; ?>
+                                      <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div style="background-image:url(<?= base_url(); ?>assets/frontend/img/core-img/001-thermometer.png);" class="col-sm-3"><h6 class="text-success text-center font-weight-bold">'.$data['temperature'].'<sup>o</sup></img></h6></div>'; ?>
+                                      <?= $data['ws'] == '-1' || $data['ws'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['ws'].'km/h</h6></div>'; ?>
+                                      <?= $data['humidity'] == '-1' || $data['humidity'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['humidity'].'%</h6></div>'; ?>
+                                      <?= $data['rain_intensity'] == '-1' || $data['rain_intensity'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['rain_intensity'].'</h6></div>'; ?>
                                     </div>
                                 <div class="hero-slides-content">
                                     <div class="line"></div>
                                     <h2><?= $provinsi['id_stasiun'] ?></h2>
-                                    <h4 class="text-white"><?= $provinsi['provinsi'] ?></h4>
+                                    <h4 class="text-white"><?= $provinsi['provinsi'] ?><img style="margin-top: 20px;max-width: 100px; max-height: 100%;" src="<?= base_url() ?>assets/frontend/img/provinsi-img/dki_jakarta.png"></h4>
                                     <p><?= $provinsi['alamat'] ?></p>
                                 </div>
                             </div>
