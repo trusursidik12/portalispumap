@@ -106,45 +106,45 @@
                             <img class="dots" src="<?= base_url() ?>assets/frontend/img/core-img/dots.png" alt="">
                         </div>
                         <div class="portfolio-thumb map-border">
-                          <h1>Ranking</h1>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <h1 style="margin-left: 10px;">Ranking</h1>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
                           <div class="d-flex">
