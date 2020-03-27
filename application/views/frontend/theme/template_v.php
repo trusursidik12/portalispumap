@@ -66,7 +66,7 @@
                         <a class="nav-link" href="<?= site_url() ?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('pages/about') ?>">About Me</a>
+                        <a class="nav-link" href="<?= site_url('pages/about-us') ?>">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= site_url('pages/news') ?>">News</a>

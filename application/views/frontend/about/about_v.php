@@ -10,7 +10,7 @@
             <div class="row h-10 align-items-center justify-content-center">
                 <div class="col-12 col-md-8" style="margin-top: 100px;">
                     <div class="line"></div>
-                    <h2 class="text-white">ABOUT US</h2>
+                    <h2 class="text-white">ABOUT&nbsp;US</h2>
                 </div>
             </div>
         </div>
@@ -18,6 +18,8 @@
 </div>
 <!-- ***** Hero Area End ***** -->
 <main role="main" class="container" style="margin-top: 50px;">
-      <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
-      <p>Back to <a href="../sticky-footer/">the default sticky footer</a> minus the navbar.</p>
+    <?php foreach($about as $aboutus) : ?>
+      <p class="lead"><?= $aboutus['content'] ?></p>
+      <?php break ?>
+    <?php endforeach ?>
 </main>

@@ -142,8 +142,6 @@ class F_home_m extends CI_model
 		}
 	}
 
-
-
 	public function get_aqmnews_slug($slug)
 	{
 		try
@@ -152,6 +150,27 @@ class F_home_m extends CI_model
 				'query' => [
 					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==',
 					'slug' => $slug
+				],
+			]);
+
+			$result = json_decode($response->getBody()->getContents(), true);
+
+			return $result['data'];
+		}
+		catch (GuzzleHttp\Exception\ClientException $e)
+		{
+			$response = $e->getResponse();
+			$responseBodyAsString = $response->getBody()->getContents();
+		}
+	}
+
+	public function get_aqmabout()
+	{
+		try
+		{
+			$response = $this->_client->request('GET', 'api/aqmabout', [
+				'query' => [
+					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
 				],
 			]);
 
