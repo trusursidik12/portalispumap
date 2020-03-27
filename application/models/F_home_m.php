@@ -184,4 +184,151 @@ class F_home_m extends CI_model
 			$responseBodyAsString = $response->getBody()->getContents();
 		}
 	}
+
+	public function get_aqmfaqs()
+	{
+		try
+		{
+			$response = $this->_client->request('GET', 'api/aqmfaqs', [
+				'query' => [
+					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
+				],
+			]);
+
+			$result = json_decode($response->getBody()->getContents(), true);
+
+			return $result['data'];
+		}
+		catch (GuzzleHttp\Exception\ClientException $e)
+		{
+			$response = $e->getResponse();
+			$responseBodyAsString = $response->getBody()->getContents();
+		}
+	}
+
+	public function get_aqmrankpm10()
+	{
+		try
+		{
+			$response = $this->_client->request('GET', 'api/aqmrankpm10', [
+				'query' => [
+					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
+				],
+			]);
+
+			$result = json_decode($response->getBody()->getContents(), true);
+
+			return $result['data'];
+		}
+		catch (GuzzleHttp\Exception\ClientException $e)
+		{
+			$response = $e->getResponse();
+			$responseBodyAsString = $response->getBody()->getContents();
+		}
+	}
+
+	public function get_aqmrankpm25()
+	{
+		try
+		{
+			$response = $this->_client->request('GET', 'api/aqmrankpm25', [
+				'query' => [
+					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
+				],
+			]);
+
+			$result = json_decode($response->getBody()->getContents(), true);
+
+			return $result['data'];
+		}
+		catch (GuzzleHttp\Exception\ClientException $e)
+		{
+			$response = $e->getResponse();
+			$responseBodyAsString = $response->getBody()->getContents();
+		}
+	}
+
+	public function get_aqmrankso2()
+	{
+		try
+		{
+			$response = $this->_client->request('GET', 'api/aqmrankso2', [
+				'query' => [
+					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
+				],
+			]);
+
+			$result = json_decode($response->getBody()->getContents(), true);
+
+			return $result['data'];
+		}
+		catch (GuzzleHttp\Exception\ClientException $e)
+		{
+			$response = $e->getResponse();
+			$responseBodyAsString = $response->getBody()->getContents();
+		}
+	}
+
+	public function get_aqmrankco()
+	{
+		try
+		{
+			$response = $this->_client->request('GET', 'api/aqmrankco', [
+				'query' => [
+					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
+				],
+			]);
+
+			$result = json_decode($response->getBody()->getContents(), true);
+
+			return $result['data'];
+		}
+		catch (GuzzleHttp\Exception\ClientException $e)
+		{
+			$response = $e->getResponse();
+			$responseBodyAsString = $response->getBody()->getContents();
+		}
+	}
+
+	public function get_aqmranko3()
+	{
+		try
+		{
+			$response = $this->_client->request('GET', 'api/aqmranko3', [
+				'query' => [
+					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
+				],
+			]);
+
+			$result = json_decode($response->getBody()->getContents(), true);
+
+			return $result['data'];
+		}
+		catch (GuzzleHttp\Exception\ClientException $e)
+		{
+			$response = $e->getResponse();
+			$responseBodyAsString = $response->getBody()->getContents();
+		}
+	}
+
+	public function get_aqmrankno2()
+	{
+		try
+		{
+			$response = $this->_client->request('GET', 'api/aqmrankno2', [
+				'query' => [
+					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
+				],
+			]);
+
+			$result = json_decode($response->getBody()->getContents(), true);
+
+			return $result['data'];
+		}
+		catch (GuzzleHttp\Exception\ClientException $e)
+		{
+			$response = $e->getResponse();
+			$responseBodyAsString = $response->getBody()->getContents();
+		}
+	}
 }

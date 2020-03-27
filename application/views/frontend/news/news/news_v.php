@@ -31,7 +31,7 @@
                     <ul class="list-li-mr-20 pt-10 mb-30">
                         <li class="color-lite-black">by <b>Ispumap.id,</b> <?= $newsdata['created_at'] ?></li>
                     </ul>
-                    <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="<?= site_url('pages/news/title') ?>">
+                    <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="<?= site_url('pages/news/'.$newsdata['slug']) ?>">
                         <b>READ MORE</b>
                     </a>
                 </div><!-- col-sm-6 -->

@@ -36,6 +36,8 @@
             border-top: 1px solid black;
         }
     </style>
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="<?= base_url() ?>assets/frontend/js/jquery/jquery-2.2.4.min.js"></script>
 
 </head>
 
@@ -125,8 +127,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     </footer>
     <!-- ***** Footer Area End ***** -->
 
-    <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="<?= base_url() ?>assets/frontend/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
     <script src="<?= base_url() ?>assets/frontend/js/popper.min.js"></script>
     <!-- Bootstrap js -->
