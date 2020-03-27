@@ -107,46 +107,36 @@
                         </div>
                         <div class="portfolio-thumb map-border">
                           <h1 style="margin-left: 10px;">Ranking</h1>
-                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
-                            <div class="col-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
-                          </div>
-                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
-                            <div class="col-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
-                          </div>
-                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
-                            <div class="col-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
-                          </div>
-                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
-                            <div class="col-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
-                          </div>
-                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
-                            <div class="col-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
-                          </div>
-                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
-                            <div class="col-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
-                          </div>
-                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
-                            <div class="col-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
-                          </div>
-                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
-                            <div class="col-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
-                          </div>
-                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
-                            <div class="col-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
-                          </div>
-                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
-                            <div class="col-8 card"><h3>SURABAYA</h3></div>
-                            <div class="col-3 card bg-success text-center"><h3>100</h3></div>
-                          </div>
+                            <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                              <div class="col-2 card"><h3>NO</h3></div>
+                              <div class="col-8 card"><h3>PROVINSI</h3></div>
+                              <div class="col-2 card text-center "><h3>SO2</h3></div>
+                            </div>
+                            <?php
+                            $no=1; rsort($aqmrankso2);
+                            foreach(array_slice($aqmrankso2, 0, 10) as $dataso2) : ?>
+                              <?php foreach($aqmprovinsi as $provinsi) : ?>
+                                <?php if($provinsi['id_stasiun'] == $dataso2['id_stasiun']) : ?>
+                                  <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                                    <div class="col-2 card"><h3><?= $no++; ?></h3></div>
+                                    <div class="col-8 card"><h3><?= $provinsi['provinsi'] ?></h3></div>
+                                    <div class="col-2 card text-center 
+                                    <?php if($dataso2['so2'] >= 0 & $dataso2['so2'] <= 50) : ?>
+                                      <?= 'text-white bg-success'; ?>
+                                    <?php elseif($dataso2['so2'] >= 51 & $dataso2['so2'] <= 100) : ?>
+                                      <?= 'text-white bg-primary'; ?>
+                                    <?php elseif($dataso2['so2'] >= 101 & $dataso2['so2'] <= 200) : ?>
+                                      <?= 'text-white bg-warning'; ?>
+                                    <?php elseif($dataso2['so2'] >= 201 & $dataso2['so2'] <= 300) : ?>
+                                      <?= 'text-white bg-danger'; ?>
+                                    <?php elseif($dataso2['so2'] > 300) : ?>
+                                      <?= 'text-white bg-dark'; ?>
+                                    <?php endif ?>
+                                     "><h3><?= $dataso2['so2'] ?></h3></div>
+                                  </div>
+                                <?php endif ?>
+                              <?php endforeach ?>
+                            <?php endforeach ?>
                           <div class="d-flex">
                             <div class="mr-auto"><h3></h3></div>
                             <div class="p-2">

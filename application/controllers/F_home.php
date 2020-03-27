@@ -11,6 +11,7 @@ class F_home extends CI_Controller {
 		$data['aqmprovinsi'] 		= $this->f_home_m->get_aqmprovinsi_web();
 		$data['aqmprovinsilist'] 	= $this->f_home_m->get_aqmprovinsi_list();
 		$data['news'] 				= $this->f_home_m->get_aqmnews();
+		$data['aqmrankso2'] 		= $this->f_home_m->get_aqmrankso2();
 
 		$this->temp_frontend->load('frontend/theme/template_v', 'frontend/home/home_v', $data);
 	}
