@@ -90,7 +90,7 @@
                         <div class="portfolio-thumb map-border">
                             <div id="googleMap" style="width:100%;height:500px;"></div>
                             <div class="col bg-light map-size map-top-aligin map-border-top">
-                                <a href="<?= site_url('pages/maps') ?>" class="btn sonar-btn" style="margin-left: 250px; margin-top: 120px;">Explore Map</a>
+                                <a href="<?= site_url('pages/maps') ?>" class="btn sonar-btn" style="margin-left: 130px; margin-top: 120px;">Explore Map</a>
                             </div>
                         </div>
                         <div class="portfolio-meta">
@@ -106,45 +106,45 @@
                             <img class="dots" src="<?= base_url() ?>assets/frontend/img/core-img/dots.png" alt="">
                         </div>
                         <div class="portfolio-thumb map-border">
-                          <h1>Ranking</h1>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <h1 style="margin-left: 10px;">Ranking</h1>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
-                          <div class="row">
-                            <div class="col-9 card"><h3>SURABAYA</h3></div>
+                          <div class="row" style="margin-right: 0px; margin-left: 10px;">
+                            <div class="col-8 card"><h3>SURABAYA</h3></div>
                             <div class="col-3 card bg-success text-center"><h3>100</h3></div>
                           </div>
                           <div class="d-flex">
