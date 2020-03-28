@@ -138,9 +138,8 @@
                               <?php endforeach ?>
                             <?php endforeach ?>
                           <div class="d-flex">
-                            <div class="mr-auto"><h3></h3></div>
                             <div class="p-2">
-                                <a href="<?= site_url('pages/ranking') ?>" class="btn sonar-btn">FULL RANKING</a>
+                                <a href="<?= site_url('pages/ranking') ?>" class="btn sonar-btn" style="margin-left: 180px; margin-top: 100px;">FULL RANKING</a>
                             </div>
                           </div>
                         </div>
