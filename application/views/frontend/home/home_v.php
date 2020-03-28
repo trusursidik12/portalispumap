@@ -10,15 +10,15 @@
                     <div class="container h-100">
                         <div class="row h-100 align-items-end">
                             <div class="col-12">
-                                    <div class="d-flex" style="margin-top: 50px;">
+                                    <div class="d-flex text-center" style="margin-top: 50px; margin-left: -60px;">
                                       <?= $data['pm10'] == '-1' || $data['pm10'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">PM10</h4></div>'; ?>
                                       <?= $data['pm25'] == '-1' || $data['pm25'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">PM2.5</h4></div>'; ?>                                  
                                     </div>
-                                    <div class="d-flex">
+                                    <div class="d-flex text-center" style="margin-left: -60px;">
                                       <?= $data['pm10'] == '-1' || $data['pm10'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['pm10'].'</h6></div>'; ?>
                                       <?= $data['pm25'] == '-1' || $data['pm25'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['pm25'].'</h6></div>'; ?>
                                     </div>
-                                    <div class="d-flex">
+                                    <div class="d-flex text-center" style="margin-left: -60px;">
                                       <?= $data['so2'] == '-1' || $data['so2'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">SO2</h4></div>'; ?>
                                       <?= $data['co'] == '-1' || $data['co'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">CO</h4></div>'; ?>
                                       <?= $data['o3'] == '-1' || $data['o3'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">O3</h4></div>'; ?>
@@ -28,7 +28,7 @@
                                         <div class="col-sm-3"><h4 class="text-white">CS2</h4></div>
                                       <?php endif ?>
                                     </div>
-                                    <div class="d-flex">
+                                    <div class="d-flex text-center" style="margin-left: -60px;">
                                       <?= $data['so2'] == '-1' || $data['so2'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['so2'].'</h6></div>'; ?>
                                       <?= $data['co'] == '-1' || $data['co'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['co'].'</h6></div>'; ?>
                                       <?= $data['o3'] == '-1' || $data['o3'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['o3'].'</h6></div>'; ?>
@@ -38,23 +38,23 @@
                                         <div class="col-sm-3"><h6 class="text-success font-weight-bold"><?= $data['cs2'] ?></h6></div>
                                       <?php endif ?>
                                     </div>
-                                    <div class="d-flex">
+                                    <div class="d-flex text-center" style="margin-left: -60px;">
                                       <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">TEMP</h4></div>'; ?>
                                       <?= $data['ws'] == '-1' || $data['ws'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">WS</h4></div>'; ?>
                                       <?= $data['humidity'] == '-1' || $data['humidity'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">HUM</h4></div>'; ?>
                                       <?= $data['rain_intensity'] == '-1' || $data['rain_intensity'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">RAIN&nbsp;INT</h4></div>'; ?>
                                     </div>
-                                    <div class="d-flex">
-                                      <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div style="background-image:url(<?= base_url(); ?>assets/frontend/img/core-img/001-thermometer.png);" class="col-sm-3"><h6 class="text-success text-center font-weight-bold">'.$data['temperature'].'<sup>o</sup></img></h6></div>'; ?>
+                                    <div class="d-flex text-center" style="margin-left: -60px;">
+                                      <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success text-center font-weight-bold">'.$data['temperature'].'<sup>o</sup></img></h6></div>'; ?>
                                       <?= $data['ws'] == '-1' || $data['ws'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['ws'].'km/h</h6></div>'; ?>
                                       <?= $data['humidity'] == '-1' || $data['humidity'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['humidity'].'%</h6></div>'; ?>
-                                      <?= $data['rain_intensity'] == '-1' || $data['rain_intensity'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['rain_intensity'].'</h6></div>'; ?>
+                                      <?= $data['rain_intensity'] == '-1' || $data['rain_intensity'] == '' ? '' : '<div class="col-sm-3 text-center"><h6 class="text-success font-weight-bold text-center">'.$data['rain_intensity'].'</h6></div>'; ?>
                                     </div>
                                 <div class="hero-slides-content">
                                     <div class="line"></div>
                                     <h2><?= $provinsi['id_stasiun'] ?></h2>
-                                    <h4 class="text-white"><?= $provinsi['provinsi'] ?><img style="margin-top: 20px;max-width: 100px; max-height: 100%;" src="<?= base_url() ?>assets/frontend/img/provinsi-img/dki_jakarta.png"></h4>
-                                    <p><?= $provinsi['alamat'] ?></p>
+                                    <h4 class="text-white"><?= $provinsi['provinsi'] ?></h4>
+                                    <p><?= $data['waktu'] ?></p>
                                 </div>
                             </div>
                         </div>
@@ -108,9 +108,9 @@
                         <div class="portfolio-thumb map-border">
                           <h1 style="margin-left: 10px;">Ranking</h1>
                             <div class="row" style="margin-right: 0px; margin-left: 10px;">
-                              <div class="col-2 card"><h3>NO</h3></div>
-                              <div class="col-8 card"><h3>PROVINSI</h3></div>
-                              <div class="col-2 card text-center "><h3>SO2</h3></div>
+                              <div class="col-3 card"><h5>NO</h5></div>
+                              <div class="col-6 card"><h5>PROVINSI</h5></div>
+                              <div class="col-3 card text-center "><h5>SO2</h5></div>
                             </div>
                             <?php
                             $no=1; rsort($aqmrankso2);
@@ -118,9 +118,9 @@
                               <?php foreach($aqmprovinsi as $provinsi) : ?>
                                 <?php if($provinsi['id_stasiun'] == $dataso2['id_stasiun']) : ?>
                                   <div class="row" style="margin-right: 0px; margin-left: 10px;">
-                                    <div class="col-2 card"><h3><?= $no++; ?></h3></div>
-                                    <div class="col-8 card"><h3><?= $provinsi['provinsi'] ?></h3></div>
-                                    <div class="col-2 card text-center 
+                                    <div class="col-3 card"><h5><?= $no++; ?></h5></div>
+                                    <div class="col-6 card"><h5><?= $provinsi['provinsi'] ?></h5></div>
+                                    <div class="col-3 card text-center 
                                     <?php if($dataso2['so2'] >= 0 & $dataso2['so2'] <= 50) : ?>
                                       <?= 'text-white bg-success'; ?>
                                     <?php elseif($dataso2['so2'] >= 51 & $dataso2['so2'] <= 100) : ?>
@@ -132,7 +132,7 @@
                                     <?php elseif($dataso2['so2'] > 300) : ?>
                                       <?= 'text-white bg-dark'; ?>
                                     <?php endif ?>
-                                     "><h3><?= $dataso2['so2'] ?></h3></div>
+                                     "><h5><?= $dataso2['so2'] ?></h5></div>
                                   </div>
                                 <?php endif ?>
                               <?php endforeach ?>

@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/portalispumap/';
+$config['base_url'] = 'http://ispumaps.id/portalispumap/';
 
 $link = "http" .((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "s" : "") . "://";
 $server = isset($_SERVER['HTTP_HOST']) ?$_SERVER['HTTP_HOST'] : $_SERVER['SERVER_NAME'];
