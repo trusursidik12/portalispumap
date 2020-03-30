@@ -70,12 +70,12 @@
             <div class="col-12">
                 <div class="d-flex nav nav-tabs justify-content-center">
 
-                    <a href="#pm10" class="col-sm btn btn-primary btn-sm"><i class="fa fa-align-left"></i> PM10</a>&nbsp;
-                    <a href="#pm25" class="col-sm btn btn-primary btn-sm"><i class="fa fa-align-left"></i> PM25</a>&nbsp;
-                    <a href="#so2" class="col-sm btn btn-primary btn-sm active"><i class="fa fa-align-left"></i> SO2</a>&nbsp;
-                    <a href="#co" class="col-sm btn btn-primary btn-sm"><i class="fa fa-align-left"></i> CO</a>&nbsp;
-                    <a href="#o3" class="col-sm btn btn-primary btn-sm"><i class="fa fa-align-left"></i> O3</a>&nbsp;
-                    <a href="#no2" class="col-sm btn btn-primary btn-sm"><i class="fa fa-align-left"></i> NO2</a>
+                    <a href="#pm10" class="btn btn-primary btn-sm"><i class="fa fa-align-left"></i> PM10</a>&nbsp;
+                    <a href="#pm25" class="btn btn-primary btn-sm"><i class="fa fa-align-left"></i> PM25</a>&nbsp;
+                    <a href="#so2" class="btn btn-primary btn-sm active"><i class="fa fa-align-left"></i> SO2</a>&nbsp;
+                    <a href="#co" class="btn btn-primary btn-sm"><i class="fa fa-align-left"></i> CO</a>&nbsp;
+                    <a href="#o3" class="btn btn-primary btn-sm"><i class="fa fa-align-left"></i> O3</a>&nbsp;
+                    <a href="#no2" class="btn btn-primary btn-sm"><i class="fa fa-align-left"></i> NO2</a>
 
                 </div>
                 <div class="table-responsive" style="margin-top: 20px;">
