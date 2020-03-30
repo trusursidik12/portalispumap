@@ -10,15 +10,15 @@
                     <div class="container h-100">
                         <div class="row h-100 align-items-end">
                             <div class="col-12">
-                                    <div class="d-flex text-center" style="margin-top: 50px; margin-left: -60px;">
+                                    <div class="d-flex text-center" style="margin-top: 50px;">
                                       <?= $data['pm10'] == '-1' || $data['pm10'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">PM10</h4></div>'; ?>
                                       <?= $data['pm25'] == '-1' || $data['pm25'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">PM2.5</h4></div>'; ?>                                  
                                     </div>
-                                    <div class="d-flex text-center" style="margin-left: -60px;">
+                                    <div class="d-flex text-center">
                                       <?= $data['pm10'] == '-1' || $data['pm10'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['pm10'].'</h6></div>'; ?>
                                       <?= $data['pm25'] == '-1' || $data['pm25'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['pm25'].'</h6></div>'; ?>
                                     </div>
-                                    <div class="d-flex text-center" style="margin-left: -60px;">
+                                    <div class="d-flex text-center">
                                       <?= $data['so2'] == '-1' || $data['so2'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">SO2</h4></div>'; ?>
                                       <?= $data['co'] == '-1' || $data['co'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">CO</h4></div>'; ?>
                                       <?= $data['o3'] == '-1' || $data['o3'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">O3</h4></div>'; ?>
@@ -28,7 +28,7 @@
                                         <div class="col-sm-3"><h4 class="text-primary font-weight-bold">CS2</h4></div>
                                       <?php endif ?>
                                     </div>
-                                    <div class="d-flex text-center" style="margin-left: -60px;">
+                                    <div class="d-flex text-center">
                                       <?= $data['so2'] == '-1' || $data['so2'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['so2'].'</h6></div>'; ?>
                                       <?= $data['co'] == '-1' || $data['co'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['co'].'</h6></div>'; ?>
                                       <?= $data['o3'] == '-1' || $data['o3'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['o3'].'</h6></div>'; ?>
@@ -38,13 +38,13 @@
                                         <div class="col-sm-3"><h6 class="text-success font-weight-bold"><?= $data['cs2'] ?></h6></div>
                                       <?php endif ?>
                                     </div>
-                                    <div class="d-flex text-center" style="margin-left: -60px;">
-                                      <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div class="col-sm-3"></div>'; ?><img style="position:left; max-width:50px; max-height: 50px; margin-left: -75px; text-align: center;" src="<?= base_url() ?>assets/frontend/img/weather-color-img/001_thermometer.png">
-                                      <?= $data['ws'] == '-1' || $data['ws'] == '' ? '' : '<div class="col-sm-3"></div>'; ?><img style="position:left; max-width:50px; max-height: 50px; margin-left: -35px; text-align: center;" src="<?= base_url() ?>assets/frontend/img/weather-color-img/040_windsock.png">
-                                      <?= $data['humidity'] == '-1' || $data['humidity'] == '' ? '' : '<div class="col-sm-3"></div>'; ?><img style="position:left; max-width:50px; max-height: 50px; margin-left: -55px; text-align: center;" src="<?= base_url() ?>assets/frontend/img/weather-color-img/007_drops.png">
-                                      <?= $data['rain_intensity'] == '-1' || $data['rain_intensity'] == '' ? '' : '<div class="col-sm-3"></div>'; ?><img style="position:left; max-width:50px; max-height: 50px; margin-left: -45px;" align="center" src="<?= base_url() ?>assets/frontend/img/weather-color-img/024_rain_2.png">
+                                    <div class="d-flex text-center">
+                                      <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div class="col-sm-3"><img style="position:center; max-width:50px; max-height: 50px; text-align: center;" src="'.base_url().'assets/frontend/img/weather-color-img/001_thermometer.png"></div>'; ?>
+                                      <?= $data['ws'] == '-1' || $data['ws'] == '' ? '' : '<div class="col-sm-3"><img style="position:center; max-width:50px; max-height: 50px; margin-left:10px; text-align: center;" src="'.base_url().'assets/frontend/img/weather-color-img/040_windsock.png"></div>'; ?>
+                                      <?= $data['humidity'] == '-1' || $data['humidity'] == '' ? '' : '<div class="col-sm-3"><img style="position:center; max-width:50px; max-height: 50px; margin-left:5px; text-align: center;" src="'.base_url().'assets/frontend/img/weather-color-img/007_drops.png"></div>'; ?>
+                                      <?= $data['rain_intensity'] == '-1' || $data['rain_intensity'] == '' ? '' : '<div class="col-sm-3"><img style="position:center; max-width:50px; max-height: 50px; margin-left:10px; align="center" src="'.base_url().'assets/frontend/img/weather-color-img/024_rain_2.png"></div>'; ?>
                                     </div>
-                                    <div class="d-flex text-center" style="margin-left: -60px;">
+                                    <div class="d-flex text-center">
                                       <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success text-center font-weight-bold">'.$data['temperature'].'<sup>o</sup></h6></div>'; ?>
                                       <?= $data['ws'] == '-1' || $data['ws'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['ws'].'km/h</h6></div>'; ?>
                                       <?= $data['humidity'] == '-1' || $data['humidity'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['humidity'].'%</h6></div>'; ?>
