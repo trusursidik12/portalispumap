@@ -6,7 +6,7 @@
             <?php foreach($aqmdata as $data) : ?>
               <?php if($provinsi['id_stasiun'] == $data['id_stasiun']) : ?>
                 <!-- Single Hero Slide -->
-                <div class="single-hero-slide bg-img slide-background-overlay" style="background-image: url(http://ispumaps.id/ispumapapi/assets/icon/province/<?= $provinsi['icon'] ?>);">
+                <div class="single-hero-slide slide-background-overlay" style="background-image: url(http://ispumaps.id/ispumapapi/assets/icon/province/<?= $provinsi['icon'] ?>); background-position: center center; background-size: cover; background-repeat: no-repeat; ">
                     <div class="container h-100">
                         <div class="row h-100 align-items-end">
                             <div class="col-12">
@@ -24,8 +24,8 @@
                                       <?= $data['o3'] == '-1' || $data['o3'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">O3</h4></div>'; ?>
                                       <?= $data['no2'] == '-1' || $data['no2'] == ''? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">NO2</h4></div>'; ?>
                                       <?php if($data['id_stasiun'] == 'SKH_GUPIT' || $data['id_stasiun'] == 'SKH_PLESAN' || $data['id_stasiun'] == 'SKH_RUM') : ?>
-                                        <div class="col-sm-3"><h4 class="text-white">H2S</h4></div>
-                                        <div class="col-sm-3"><h4 class="text-white">CS2</h4></div>
+                                        <div class="col-sm-3"><h4 class="text-primary font-weight-bold">H2S</h4></div>
+                                        <div class="col-sm-3"><h4 class="text-primary font-weight-bold">CS2</h4></div>
                                       <?php endif ?>
                                     </div>
                                     <div class="d-flex text-center" style="margin-left: -60px;">
@@ -39,13 +39,13 @@
                                       <?php endif ?>
                                     </div>
                                     <div class="d-flex text-center" style="margin-left: -60px;">
-                                      <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">TEMP</h4></div>'; ?>
-                                      <?= $data['ws'] == '-1' || $data['ws'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">WS</h4></div>'; ?>
-                                      <?= $data['humidity'] == '-1' || $data['humidity'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">HUM</h4></div>'; ?>
-                                      <?= $data['rain_intensity'] == '-1' || $data['rain_intensity'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">RAIN&nbsp;INT</h4></div>'; ?>
+                                      <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div class="col-sm-3"></div>'; ?><img style="position:left; max-width:50px; max-height: 50px; margin-left: -75px; text-align: center;" src="<?= base_url() ?>assets/frontend/img/weather-color-img/001_thermometer.png">
+                                      <?= $data['ws'] == '-1' || $data['ws'] == '' ? '' : '<div class="col-sm-3"></div>'; ?><img style="position:left; max-width:50px; max-height: 50px; margin-left: -35px; text-align: center;" src="<?= base_url() ?>assets/frontend/img/weather-color-img/040_windsock.png">
+                                      <?= $data['humidity'] == '-1' || $data['humidity'] == '' ? '' : '<div class="col-sm-3"></div>'; ?><img style="position:left; max-width:50px; max-height: 50px; margin-left: -55px; text-align: center;" src="<?= base_url() ?>assets/frontend/img/weather-color-img/007_drops.png">
+                                      <?= $data['rain_intensity'] == '-1' || $data['rain_intensity'] == '' ? '' : '<div class="col-sm-3"></div>'; ?><img style="position:left; max-width:50px; max-height: 50px; margin-left: -45px;" align="center" src="<?= base_url() ?>assets/frontend/img/weather-color-img/024_rain_2.png">
                                     </div>
                                     <div class="d-flex text-center" style="margin-left: -60px;">
-                                      <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success text-center font-weight-bold">'.$data['temperature'].'<sup>o</sup></img></h6></div>'; ?>
+                                      <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success text-center font-weight-bold">'.$data['temperature'].'<sup>o</sup></h6></div>'; ?>
                                       <?= $data['ws'] == '-1' || $data['ws'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['ws'].'km/h</h6></div>'; ?>
                                       <?= $data['humidity'] == '-1' || $data['humidity'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['humidity'].'%</h6></div>'; ?>
                                       <?= $data['rain_intensity'] == '-1' || $data['rain_intensity'] == '' ? '' : '<div class="col-sm-3 text-center"><h6 class="text-success font-weight-bold text-center">'.$data['rain_intensity'].'</h6></div>'; ?>
@@ -83,14 +83,14 @@
                 <!-- Single Portfoio Area -->
                 <div class="col-12 col-md-5">
                     <div class="single-portfolio-item mt-100 portfolio-item-1 wow fadeIn">
-                        <div class="backend-content">
+                      <!--   <div class="backend-content">
                             <img class="dots" src="<?= base_url() ?>assets/frontend/img/core-img/dots.png" alt="">
                             <h2>ISPUMAP</h2>
-                        </div>
+                        </div> -->
                         <div class="portfolio-thumb map-border">
                             <div id="googleMap" style="width:100%;height:500px;"></div>
                             <div class="col bg-light map-size map-top-aligin map-border-top">
-                                <a href="<?= site_url('pages/maps') ?>" class="btn sonar-btn" style="margin-left: 130px; margin-top: 120px;">Explore Map</a>
+                                <a href="<?= site_url('pages/maps') ?>" class="btn sonar-btn">Explore Map</a>
                             </div>
                         </div>
                         <div class="portfolio-meta">
@@ -102,9 +102,9 @@
                 <!-- Single Portfoio Area -->
                 <div class="col-12 col-md-6" style="position: relative;">
                     <div class="single-portfolio-item mt-230 portfolio-item-2 wow fadeIn">
-                        <div class="backend-content">
+                      <!--   <div class="backend-content">
                             <img class="dots" src="<?= base_url() ?>assets/frontend/img/core-img/dots.png" alt="">
-                        </div>
+                        </div> -->
                         <div class="portfolio-thumb map-border">
                           <h1 style="margin-left: 10px;">Ranking</h1>
                             <div class="row" style="margin-right: 0px; margin-left: 10px;">
@@ -138,8 +138,8 @@
                               <?php endforeach ?>
                             <?php endforeach ?>
                           <div class="d-flex">
-                            <div class="p-2">
-                                <a href="<?= site_url('pages/ranking') ?>" class="btn sonar-btn" style="margin-left: 180px; margin-top: 100px;">FULL RANKING</a>
+                            <div class="col bg-light map-size map-top-aligin map-border-top">
+                                <a href="<?= site_url('pages/ranking') ?>" class="btn sonar-btn">FULL RANKING</a>
                             </div>
                           </div>
                         </div>

@@ -21,7 +21,7 @@
             height: 300px;
         }
         .map-top-aligin{
-            margin-top: -200px;
+            margin-top: -5px;
         }
         .map-size{
             height: 200px;

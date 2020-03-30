@@ -67,7 +67,7 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #28a745;
+  background-color: #232323;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -199,9 +199,12 @@ img {
       margin-top: 100px; } }
 
 .bg-img {
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  max-height: 100px;
+  max-width: 100px; }
 
 .bg-transparent {
   background-color: transparent; }
@@ -241,7 +244,7 @@ img {
   top: 10px; }
 
 #scrollUp {
-  background-color: #009EE5;
+  background-color: #232323;
   border-radius: 50%;
   bottom: 60px;
   right: 60px;
@@ -309,7 +312,7 @@ img {
   .section-heading .line {
     width: 100px;
     height: 1px;
-    background-color: #28a745;
+    background-color: #232323;
     margin-bottom: 30px;
     display: block; }
   .section-heading h2 {
@@ -327,20 +330,22 @@ img {
         font-size: 30px; } }
 
 .sonar-btn {
-  position: relative;
+  position: absolute;
+  top: 100px;
+  right: 20px;
   z-index: 1;
   min-width: 180px;
   height: 66px;
   border: 1px solid;
-  border-color: #009EE5;
+  border-color: #ffffff;
   text-transform: uppercase;
-  color: #2f2f2f;
+  color: #ffffff;
   font-size: 12px;
   letter-spacing: 1px;
   border-radius: 0;
   line-height: 64px;
   padding: 0;
-  background-color: #009EE5; }
+  background-color: #232323; }
   .sonar-btn:hover, .sonar-btn:focus {
     background-color: #28a745;
     font-size: 12px;
@@ -363,9 +368,9 @@ img {
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: #009EE5;
+      background-color: #232323;
       border: 1px solid;
-      border-color: #009EE5;
+      border-color: #232323;
       right: -6px;
       bottom: -6px;
       content: '';
@@ -481,7 +486,7 @@ img {
       .header-area .menu-content-area .header-social-area {
         margin-right: 15px; } }
   .header-area.sticky {
-    background-color: rgba(0, 122, 179, 1); }
+    background-color: rgba(35, 35, 35, 1); }
   @media only screen and (max-width: 767px) {
     .header-area {
       padding: 10px 0; } }
@@ -496,7 +501,7 @@ img {
   height: 100%;
   top: 0;
   right: -500px;
-  background-color: rgba(0, 122, 179, 1);
+  background-color: rgba(35, 35, 35, 1);
   z-index: 99999;
   text-align: center;
   -webkit-box-orient: vertical;
@@ -633,7 +638,7 @@ img {
   @media only screen and (max-width: 767px) {
     .hero-slides .single-hero-slide {
       height: 550px; } }
-.hero-slides .owl-dots {
+/*.hero-slides .owl-dots {
   position: absolute;
   left: 50px;
   bottom: 50px; }
@@ -646,7 +651,7 @@ img {
     display: inline-block; }
     .hero-slides .owl-dots .owl-dot.active {
       border: 1px solid #ffffff;
-      background-color: #ffffff; }
+      background-color: #ffffff; }*/
 
 /* :: Portfolio Area CSS */
 .portfolio-area {
@@ -668,12 +673,12 @@ img {
   position: relative;
   z-index: 1; }
   .single-portfolio-item .backend-content .dots {
-    position: absolute;
+    position: relative;
     z-index: -1;
     top: -100px;
     left: -150px; }
   .single-portfolio-item .backend-content h2 {
-    position: absolute;
+    position: relative;
     font-size: 230px;
     color: #f0f0f0;
     z-index: -10;
@@ -703,7 +708,7 @@ img {
         .single-portfolio-item .portfolio-meta h2 {
           font-size: 24px; } }
   .single-portfolio-item.portfolio-item-2 .backend-content .dots {
-    position: absolute;
+    position: relative;
     z-index: -1;
     top: 0;
     left: auto;
@@ -765,7 +770,7 @@ img {
   .single-portfolio-item.portfolio-item-7 {
     margin-top: 50px; }
     .single-portfolio-item.portfolio-item-7 .backend-content .dots {
-      position: absolute;
+      position: relative;
       z-index: -1;
       top: auto;
       bottom: 0;
