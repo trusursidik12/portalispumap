@@ -2,7 +2,7 @@
 <div class="hero-area d-flex align-items-center" style="background-color: #009EE5;">
    
     <!-- Hero Thumbnail -->
-    <div class="hero-thumbnail equalize bg-img" style="background-image:url(<?= base_url('assets/frontend/img/news-img/weather2.jpg') ?>);" ></div>
+    <div class="hero-thumbnail equalize bg-img" style="background-image:url(<?= base_url('assets/frontend/img/news-img/weather2.jpg') ?>); position: relative; max-width: 100% ; max-height: 100%;" ></div>
     
     <!-- Hero Content -->
     <div class="hero-content-height equalize">
