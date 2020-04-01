@@ -19,6 +19,23 @@
 @import url(css/font-awesome.min.css);
 @import url(css/themify-icons.css);
 /* :: Base CSS */
+@-ms-viewport {
+    width: device-width;
+    height: device-height;
+  }
+
+  body {
+    -ms-overflow-style: scrollbar;
+  }
+
+  @media screen and (max-width: 480px) {
+
+    html, body {
+      min-width: 320px;
+    }
+
+  }
+
 * {
   margin: 0;
   padding: 0; }
@@ -55,6 +72,7 @@ a {
     outline: none;
     font-size: 12px;
     font-weight: 400; }
+
 
 #preloader {
   display: -webkit-box;
@@ -203,8 +221,8 @@ img {
   background-size: contain;
   background-repeat: no-repeat;
   object-fit: contain;
-  max-height: 100px;
-  max-width: 100px; }
+  max-height: 100vh;
+  max-width: 100vh; }
 
 .bg-transparent {
   background-color: transparent; }
@@ -586,6 +604,74 @@ img {
     .mainMenu {
       padding: 15px;
       width: 300px; } }
+
+/* :: Viewport */
+  @-ms-viewport{
+    width: device-width;
+  }
+
+  html {
+    height: 100%;
+    width: 100%;
+  }
+  body {
+    height: 2000px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+    div.bar {
+      width: 20px;
+      top: 0px;
+    }
+
+    .fixedpercent {
+      position: fixed;
+      height: 99%;
+      background-color: lightsteelblue;
+    }
+
+    .fixedvh {
+      position: fixed;
+      height: 99vh;
+      background-color: lightskyblue;
+    }
+
+    .abspercent {
+      position: absolute;
+      height: 99%;
+      background-color: darksalmon;
+    }
+
+    .absvh {
+      position:absolute;
+      height: 99vh;
+      background-color: coral;
+    }
+
+    .textfixed {
+      width: 600px;
+      height: 20px;
+      padding: 0px 20px;
+      transform: rotate(90deg);
+      transform-origin: left bottom 0;
+    }
+
+    .textabs {
+      width: 600px;
+      height: 20px;
+      padding: 0px 120px;
+      transform: rotate(90deg);
+      transform-origin: left bottom 0;
+    }
+
+    #console {
+      position: absolute;
+      left: 0px;
+      right: 100px;
+    }
+  
 
 /* :: Menu Open CSS */
 .menu-open .mainMenu {
