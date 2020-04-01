@@ -11,8 +11,7 @@ class B_about_m extends CI_Model
 	{
 		date_default_timezone_set('Asia/Jakarta');
 		$this->_client 	= new Client([
-			// 'base_uri' 	=> 'http://ispumaps.id/ispumapapi/'
-			'base_uri' 	=> 'http://localhost/ispumapapi/'
+			'base_uri' 	=> 'http://ispumaps.id/ispumapapi/'
 		]);
 	}	
 
