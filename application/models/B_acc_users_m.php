@@ -61,7 +61,7 @@ class B_acc_users_m extends CI_Model {
 			'usr_fullname' 				=> $this->input->post('usr_fullname'),
 			'usr_slug' 					=> strtolower($slug),
 			'usr_email' 				=> $this->input->post('usr_email'),
-			'usr_password' 				=> password_hash($this->input->post('usr_password'), PASSWORD_ARGON2ID),
+			'usr_password' 				=> password_hash($this->input->post('usr_password'), PASSWORD_ARGON2I),
 			'usr_phone' 				=> $this->input->post('usr_phone'),
 			'usr_address' 				=> $this->input->post('usr_address'),
 			'usr_photo' 				=> $photo,
@@ -85,7 +85,7 @@ class B_acc_users_m extends CI_Model {
 			'usr_edited_by' 			=> '1'
 		);
 		if(!empty($this->input->post('usr_password'))){
-		$data['usr_password'] = password_hash($this->input->post('usr_password'), PASSWORD_ARGON2ID);
+		$data['usr_password'] = password_hash($this->input->post('usr_password'), PASSWORD_ARGON2I);
 		}
 		$this->db->where('usr_id', $this->input->post('usr_id'));
 		return $this->db->update('acc_users', $data);
