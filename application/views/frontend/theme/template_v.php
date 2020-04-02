@@ -58,31 +58,32 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <div class="menu-area d-flex justify-content-between">
+                    
                         <!-- Logo Area  -->
-                        <div class="logo-area">
+                       
+    <nav class="navbar navbar-expand-lg navbar-dark">
+         <div class="slicknav_brand">
                             <a href="<?= site_url() ?>"><img style="max-width: 100% ; max-height: 40px;" src="<?= base_url() ?>assets/frontend/img/logo-img/portalispumap1.png"></a>
                         </div>
-    <nav class="navbar navbar-expand-lg navbar-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-               <li class="nav-item active">
-                   <a class="nav-link" href="<?= site_url() ?>">Home</a>
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item active" style="padding: 0px 10px 0px 10px">
+                   <a class="nav-link" style="padding: 10px 0px 10px 10px" href="<?= site_url() ?>">Home</a>
                </li>
-               <li class="nav-item">
-                   <a class="nav-link" href="<?= site_url('pages/about-us') ?>">About Us</a>
+               <li class="nav-item" style="padding: 0px 10px 0px 10px">
+                   <a class="nav-link" style="padding: 10px 0px 10px 10px" href="<?= site_url('pages/about-us') ?>">About Us</a>
                </li>
-               <li class="nav-item">
-                   <a class="nav-link" href="<?= site_url('pages/news') ?>">News</a>
+               <li class="nav-item" style="padding: 0px 10px 0px 10px">
+                   <a class="nav-link" style="padding: 10px 0px 10px 10px" href="<?= site_url('pages/news') ?>">News</a>
                </li>
-               <li class="nav-item">
-                   <a class="nav-link" href="<?= site_url('pages/contact') ?>">Contact</a>
+               <li class="nav-item" style="padding: 0px 10px 0px 10px">
+                   <a class="nav-link" style="padding: 10px 0px 10px 10px" href="<?= site_url('pages/contact') ?>">Contact</a>
                </li>
-               <li class="nav-item">
-                   <a class="nav-link" href="<?= site_url('pages/faq') ?>">FAQ</a>
+               <li class="nav-item" style="padding: 0px 10px 0px 10px">
+                   <a class="nav-link" style="padding: 10px 0px 10px 10px" href="<?= site_url('pages/faq') ?>">FAQ</a>
                </li>
             </ul>
 <!--       <form class="form-inline my-2 my-lg-0">
@@ -91,7 +92,7 @@
       </form> -->
         </div>
     </nav>
-                    </div>
+                    
                 </div>
             </div>
         </div>
