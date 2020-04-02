@@ -1,58 +1,51 @@
-<!-- ***** Hero Area Start ***** -->
-<div class="hero-area d-flex align-items-center" style="background-color: #009EE5;">
-   
-    <!-- Hero Thumbnail -->
-    <div class="hero-thumbnail equalize bg-img" style="background-image:url(<?= base_url('assets/frontend/img/news-img/weather2.jpg') ?>);position: relative; max-width: 100% ; max-height: 100%;" ></div>
-    
-    <!-- Hero Content -->
-    <div class="hero-content-height equalize">
-        <div class="container-fluid h-10">
-            <div class="row h-10 align-items-center justify-content-center">
-                <div class="col-12 col-md-8" style="margin-top: 100px;">
-                    <div class="line"></div>
-                    <h2 class="text-white">NEWS</h2>
-                </div>
-            </div>
-        </div>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero-blog">
+    <div class="hero-container" data-aos="fade-up">
+      <h1>News</h1>
     </div>
-</div>
-<!-- ***** Hero Area End ***** -->
+  </section><!-- End Hero -->
 
-<!-- ***** News Area Start ***** -->
-<div class="container">
-    <div class="row">
-    
-        <div class="col-md-12 col-lg-8" style="padding-top: 50px;">
-            <div class="row">
-                <?php foreach($news as $newsdata) : ?>
-                <div class="col-sm-6">
-                    <img src="<?= $newsdata['image'] ?>" alt="">
-                    <h4 class="pt-20"><a href="<?= site_url('pages/news/'.$newsdata['slug']) ?>"><b><?= $newsdata['title'] ?></b></a></h4>
-                    <ul class="list-li-mr-20 pt-10 mb-30">
-                        <li class="color-lite-black">by <b>Ispumap.id,</b> <?= $newsdata['created_at'] ?></li>
-                    </ul>
-                    <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="<?= site_url('pages/news/'.$newsdata['slug']) ?>">
-                        <b>READ MORE</b>
-                    </a>
-                </div><!-- col-sm-6 -->
-                <?php endforeach ?>
-                
-            </div><!-- row -->
-            
-        </div><!-- col-md-9 -->
+  <main id="main">
 
-        <div class="d-none d-md-block d-lg-none col-md-3" ></div>
-        <div class="col-md-6 col-lg-4" style="padding-top: 50px;" >
-            <div class="pl-20 pl-md-0">
-                <ul class="list-block list-li-ptb-15 list-btm-border-black text-center" style="background-color: #009EE5;">
-                    <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
-                    <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
-                    <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
-                    <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
-                    <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
-                    <li><b>ID STASIUN/PROVINSI = SUHU SAAT INI</b></li>
-                </ul>
-            </div>
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title" style="margin-bottom: -70px;">
         </div>
-    </div> <!-- row -->
-</div> <!-- container -->
+        
+        <div id="colorlib-blog">
+          <div class="container">
+            <div class="row text-center">
+              <h2 class="bold">News</h2>
+            </div>
+            <div class="row row-pb-md">
+                <?php foreach($news as $newsdata) : ?>
+                    <div class="col-md-4">
+                        <div class="article animate-box">
+                            <a href="<?= site_url('pages/news/'.$newsdata['slug']) ?>" class="blog-img">
+                                <img class="img-responsive" src="<?= $newsdata['image'] ?>" alt="html5 bootstrap by colorlib.com">
+                                <div class="overlay"></div>
+                                <div class="link">
+                                    <span class="read">Read more</span>
+                                </div>
+                            </a>
+                            <div class="desc">
+                                <span class="meta"><?= date('d-m-Y', strtotime($newsdata['created_at'])) ?></span>
+                                <h2><a href="<?= site_url('pages/news/'.$newsdata['slug']) ?>"><?= $newsdata['title'] ?></a></h2>
+                                <p><?= substr($newsdata['content'], 0, 100) ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach ?>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+  </main><!-- End #main -->

@@ -1,180 +1,176 @@
-<!-- ***** Hero Area Start ***** -->
-    <section class="hero-area">
-        <div class="hero-slides owl-carousel">
 
-          <?php foreach($aqmprovinsi as $provinsi) : ?>
-            <?php foreach($aqmdata as $data) : ?>
-              <?php if($provinsi['id_stasiun'] == $data['id_stasiun']) : ?>
-                <!-- Single Hero Slide -->
-                <div class="single-hero-slide slide-background-overlay" style="background-image: url(http://ispumaps.id/ispumapapi/assets/icon/province/<?= $provinsi['icon'] ?>); background-position: center center; background-size: cover; background-repeat: no-repeat; ">
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-end">
-                            <div class="col-12">
-                                    <div class="d-flex text-center" style="margin-top: 50px;">
-                                      <?= $data['pm10'] == '-1' || $data['pm10'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">PM10</h4></div>'; ?>
-                                      <?= $data['pm25'] == '-1' || $data['pm25'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">PM2.5</h4></div>'; ?>                                  
-                                    </div>
-                                    <div class="d-flex text-center">
-                                      <?= $data['pm10'] == '-1' || $data['pm10'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['pm10'].'</h6></div>'; ?>
-                                      <?= $data['pm25'] == '-1' || $data['pm25'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['pm25'].'</h6></div>'; ?>
-                                    </div>
-                                    <div class="d-flex text-center">
-                                      <?= $data['so2'] == '-1' || $data['so2'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">SO2</h4></div>'; ?>
-                                      <?= $data['co'] == '-1' || $data['co'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">CO</h4></div>'; ?>
-                                      <?= $data['o3'] == '-1' || $data['o3'] == '' ? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">O3</h4></div>'; ?>
-                                      <?= $data['no2'] == '-1' || $data['no2'] == ''? '' : '<div class="col-sm-3"><h4 class="text-primary font-weight-bold">NO2</h4></div>'; ?>
-                                      <?php if($data['id_stasiun'] == 'SKH_GUPIT' || $data['id_stasiun'] == 'SKH_PLESAN' || $data['id_stasiun'] == 'SKH_RUM') : ?>
-                                        <div class="col-sm-3"><h4 class="text-primary font-weight-bold">H2S</h4></div>
-                                        <div class="col-sm-3"><h4 class="text-primary font-weight-bold">CS2</h4></div>
-                                      <?php endif ?>
-                                    </div>
-                                    <div class="d-flex text-center">
-                                      <?= $data['so2'] == '-1' || $data['so2'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['so2'].'</h6></div>'; ?>
-                                      <?= $data['co'] == '-1' || $data['co'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['co'].'</h6></div>'; ?>
-                                      <?= $data['o3'] == '-1' || $data['o3'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['o3'].'</h6></div>'; ?>
-                                      <?= $data['no2'] == '-1' || $data['no2'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['no2'].'</h6></div>'; ?>
-                                      <?php if($data['id_stasiun'] == 'SKH_GUPIT' || $data['id_stasiun'] == 'SKH_PLESAN' || $data['id_stasiun'] == 'SKH_RUM') : ?>
-                                        <div class="col-sm-3"><h6 class="text-success font-weight-bold"><?= $data['h2s'] ?></h6></div>
-                                        <div class="col-sm-3"><h6 class="text-success font-weight-bold"><?= $data['cs2'] ?></h6></div>
-                                      <?php endif ?>
-                                    </div>
-                                    <div class="d-flex text-center">
-                                      <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div class="col-sm-3"><img style="position:center; max-width:50px; max-height: 50px; text-align: center;" src="'.base_url().'assets/frontend/img/weather-color-img/001_thermometer.png"></div>'; ?>
-                                      <?= $data['ws'] == '-1' || $data['ws'] == '' ? '' : '<div class="col-sm-3"><img style="position:center; max-width:50px; max-height: 50px; margin-left:10px; text-align: center;" src="'.base_url().'assets/frontend/img/weather-color-img/040_windsock.png"></div>'; ?>
-                                      <?= $data['humidity'] == '-1' || $data['humidity'] == '' ? '' : '<div class="col-sm-3"><img style="position:center; max-width:50px; max-height: 50px; margin-left:5px; text-align: center;" src="'.base_url().'assets/frontend/img/weather-color-img/007_drops.png"></div>'; ?>
-                                      <?= $data['rain_intensity'] == '-1' || $data['rain_intensity'] == '' ? '' : '<div class="col-sm-3"><img style="position:center; max-width:50px; max-height: 50px; margin-left:10px; align="center" src="'.base_url().'assets/frontend/img/weather-color-img/024_rain_2.png"></div>'; ?>
-                                    </div>
-                                    <div class="d-flex text-center">
-                                      <?= $data['temperature'] == '-1' || $data['temperature'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success text-center font-weight-bold">'.$data['temperature'].'<sup>o</sup></h6></div>'; ?>
-                                      <?= $data['ws'] == '-1' || $data['ws'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['ws'].'km/h</h6></div>'; ?>
-                                      <?= $data['humidity'] == '-1' || $data['humidity'] == '' ? '' : '<div class="col-sm-3"><h6 class="text-success font-weight-bold">'.$data['humidity'].'%</h6></div>'; ?>
-                                      <?= $data['rain_intensity'] == '-1' || $data['rain_intensity'] == '' ? '' : '<div class="col-sm-3 text-center"><h6 class="text-success font-weight-bold text-center">'.$data['rain_intensity'].'</h6></div>'; ?>
-                                    </div>
-                                <div class="hero-slides-content">
-                                    <div class="line"></div>
-                                    <h2><?= $provinsi['id_stasiun'] ?></h2>
-                                    <h4 class="text-white"><?= $provinsi['provinsi'] ?></h4>
-                                    <p><?= $data['waktu'] ?></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              <?php endif ?>
-            <?php endforeach ?>
-          <?php endforeach ?>
+<!-- ======= Hero Section ======= -->
+<section id="hero" style="background-image: url(<?= base_url() ?>assets/frontend/assets/img/hero-bg.jpg);">
+  <div class="hero-container" data-aos="fade-up">
+    <h1>Ispumap.id</h1>
+    <h2>Real Sensoring, Real Measurement, Real Air Pollution Map</h2>
+    <a href="#about" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
+  </div>
+</section><!-- End Hero -->
 
+<main id="main">
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container">
+
+      <div class="row no-gutters">
+        <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+          <div class="content">
+            <h3>Ispumap.id Apps</h3>
+            <p>
+              Kini kamu bisa mengetahui polusi udara disekitarmu, ayo download aplikasi Ispumap.id
+            </p>
+            <a href="https://play.google.com/store/search?q" target="_blank" class="about-btn">Download Apps <i class="bx bx-chevron-right"></i></a>
+          </div>
         </div>
-    </section>
-    <!-- ***** Hero Area End ***** -->
-
-    <!-- ***** Portfolio Area Start ***** -->
-    <div class="portfolio-area section-padding-100">
-        <div class="container">
+        <div class="col-xl-7 d-flex justify-content-center">
+          <div class="icon-boxes d-flex flex-column">
             <div class="row">
-                <div class="col-12">
-                    <div class="portfolio-title">
-                        <h2>“Ayo cek kualitas udara sekitarmu, apakah baik untuk <span>kesehatanmu</span> atau tidak.”</h2>
-                    </div>
+              <div class="col-md-12 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="content">
+                  <i class="bx bx-receipt"></i>
+                  <h4>Data Polusi Berdasarkan Provinsi</h4>
+                  <p>Data Polusi Berdasarkan Provinsi di Indonesia<br>dalam kondisi data saat ini</p>
+                  <a href="<?= site_url('pages/provinsi') ?>" class="about-btn">Semua Provinsi <i class="bx bx-chevron-right"></i></a>
                 </div>
+              </div>
             </div>
-
-            <div class="row justify-content-between">
-                <!-- Single Portfoio Area -->
-                <div class="col-12 col-md-5">
-                    <div class="single-portfolio-item mt-100 portfolio-item-1 wow fadeIn">
-                      <!--   <div class="backend-content">
-                            <img class="dots" src="<?= base_url() ?>assets/frontend/img/core-img/dots.png" alt="">
-                            <h2>ISPUMAP</h2>
-                        </div> -->
-                        <div class="portfolio-thumb map-border">
-                            <div id="googleMap" style="width:100%;height:500px;"></div>
-                            <div class="col bg-light map-size map-top-aligin map-border-top">
-                                <a href="<?= site_url('pages/maps') ?>" class="btn sonar-btn">Explore Map</a>
-                            </div>
-                        </div>
-                        <div class="portfolio-meta">
-                            <p class="portfolio-date">Feb 02, 2018</p>
-                            <h2>Last Update</h2>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Portfoio Area -->
-                <div class="col-12 col-md-6" style="position: relative;">
-                    <div class="single-portfolio-item mt-230 portfolio-item-2 wow fadeIn">
-                      <!--   <div class="backend-content">
-                            <img class="dots" src="<?= base_url() ?>assets/frontend/img/core-img/dots.png" alt="">
-                        </div> -->
-                        <div class="portfolio-thumb map-border">
-                          <h1 style="margin-left: 10px;">Ranking</h1>
-                            <div class="row" style="margin-right: 0px; margin-left: 10px;">
-                              <div class="col-3 card"><h5>NO</h5></div>
-                              <div class="col-6 card"><h5>PROVINSI</h5></div>
-                              <div class="col-3 card text-center "><h5>SO2</h5></div>
-                            </div>
-                            <?php
-                            $no=1; rsort($aqmrankso2);
-                            foreach(array_slice($aqmrankso2, 0, 10) as $dataso2) : ?>
-                              <?php foreach($aqmprovinsi as $provinsi) : ?>
-                                <?php if($provinsi['id_stasiun'] == $dataso2['id_stasiun']) : ?>
-                                  <div class="row" style="margin-right: 0px; margin-left: 10px;">
-                                    <div class="col-3 card"><h5><?= $no++; ?></h5></div>
-                                    <div class="col-6 card"><h5><?= $provinsi['provinsi'] ?></h5></div>
-                                    <div class="col-3 card text-center 
-                                    <?php if($dataso2['so2'] >= 0 & $dataso2['so2'] <= 50) : ?>
-                                      <?= 'text-white bg-success'; ?>
-                                    <?php elseif($dataso2['so2'] >= 51 & $dataso2['so2'] <= 100) : ?>
-                                      <?= 'text-white bg-primary'; ?>
-                                    <?php elseif($dataso2['so2'] >= 101 & $dataso2['so2'] <= 200) : ?>
-                                      <?= 'text-white bg-warning'; ?>
-                                    <?php elseif($dataso2['so2'] >= 201 & $dataso2['so2'] <= 300) : ?>
-                                      <?= 'text-white bg-danger'; ?>
-                                    <?php elseif($dataso2['so2'] > 300) : ?>
-                                      <?= 'text-white bg-dark'; ?>
-                                    <?php endif ?>
-                                     "><h5><?= $dataso2['so2'] ?></h5></div>
-                                  </div>
-                                <?php endif ?>
-                              <?php endforeach ?>
-                            <?php endforeach ?>
-                          <div class="d-flex">
-                            <div class="col bg-light map-size map-top-aligin map-border-top">
-                                <a href="<?= site_url('pages/ranking') ?>" class="btn sonar-btn">FULL RANKING</a>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ***** News Area Start ***** -->
-            <div class="container" style="padding-top: 50px;">
-                <div class="row">
-                
-                    <div class="col-md-12 col-lg-12 map-border" style="padding-top: 50px;">
-                    <h4>News</h4>
-                        <div class="row">
-                            
-                          <?php foreach(array_slice($news, 0, 3) as $newsdata) : ?>
-                            <div class="col-sm-4">
-                                <img src="<?= $newsdata['image'] ?>" alt="">
-                                <h4 class="pt-20"><a href="<?= site_url('pages/news/'.$newsdata['slug']) ?>"><b><?= $newsdata['title'] ?></b></a></h4>
-                                <ul class="list-li-mr-20 pt-10 mb-30">
-                                    <li class="color-lite-black">by <b>Ispumap.id,</b> <?= $newsdata['created_at'] ?></li>
-                                </ul>
-                            <a class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="<?= site_url('pages/news/'.$newsdata['slug']) ?>"><b>READ MORE</b></a>
-                            </div><!-- col-sm-4 -->
-                          <?php endforeach ?>
-                            
-                        </div><!-- row -->
-                        
-                    </div><!-- col-md-9 -->
-
-                </div> <!-- row -->
-            </div> <!-- container -->
-            
+          </div><!-- End .content-->
         </div>
-    </div>
-    <!-- ***** Portfolio Area End ***** -->
+      </div>
 
-    
+    </div>
+  </section><!-- End About Section -->
+
+  <!-- ======= Cta Section ======= -->
+  <section id="ranking" class="cta">
+    <div class="container" data-aos="zoom-in">
+
+      <div class="text-center">
+        <h3>Ranking</h3>
+        <p> Ranking PM10, PM25, SO2, CO, O3, NO2.</p>
+        <a class="cta-btn" href="<?= site_url('pages/ranking') ?>">Semua Ranking</a>
+      </div>
+
+    </div>
+  </section><!-- End Cta Section -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services" style="margin-bottom: -200px;">
+    <div class="container">
+
+      <div class="section-title" style="margin-bottom: -150px;">
+        <h2>News</h2>
+      </div>
+
+      <div id="colorlib-blog">
+        <div class="container">
+          <div class="row text-center">
+            <h2 class="bold">News</h2>
+          </div>
+          <div class="row row-pb-md">
+
+            <?php foreach(array_slice($news, 0, 3) as $newsdata) : ?>
+              <div class="col-md-4">
+                <div class="article animate-box">
+                  <a href="<?= site_url('pages/news/'.$newsdata['slug']) ?>" class="blog-img">
+                    <img class="img-responsive" src="<?= $newsdata['image'] ?>" alt="html5 bootstrap by colorlib.com">
+                    <div class="overlay"></div>
+                    <div class="link">
+                      <span class="read">Read more</span>
+                    </div>
+                  </a>
+                  <div class="desc">
+                    <span class="meta"><?= date('d-m-Y', strtotime($newsdata['created_at'])) ?></span>
+                    <h2><a href="<?= site_url('pages/news/'.$newsdata['slug']) ?>"><?= $newsdata['title'] ?></a></h2>
+                                <p><?= substr($newsdata['content'], 0, 100) ?></p>
+                  </div>
+                </div>
+              </div>
+            <?php endforeach ?>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact section-bg">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2>Contact</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-6">
+          <div class="info-box mb-4">
+            <i class="bx bx-map"></i>
+            <h3>Our Address</h3>
+            <p>A108 Adam Street, New York, NY 535022</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="info-box  mb-4">
+            <i class="bx bx-envelope"></i>
+            <h3>Email Us</h3>
+            <p>contact@example.com</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="info-box  mb-4">
+            <i class="bx bx-phone-call"></i>
+            <h3>Call Us</h3>
+            <p>+1 5589 55488 55</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="col-lg-6 ">
+          <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+        </div>
+
+        <div class="col-lg-6">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validate"></div>
+            </div>
+            <div class="mb-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+</main><!-- End #main -->

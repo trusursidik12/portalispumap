@@ -11,8 +11,6 @@ class F_home_m extends CI_model
 	{
 		$this->_client 	= new Client([
 			'base_uri' 	=> 'http://ispumaps.id/ispumapapi/'
-			// 'base_uri' 	=> 'http://localhost/ispumapapi/'
-			// 'auth'		=> ['admin', 'cHQudHJ1c3VydW5nZ3VsdGVrbnVzYQ==']
 		]);
 	}
 

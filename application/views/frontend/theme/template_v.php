@@ -2,151 +2,166 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- Title  -->
-    <title>ISPUMAP</title>
+  <title>Ispumap.id</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
 
-    <!-- Favicon  -->
-    <link rel="icon" href="<?= base_url() ?>assets/frontend/img/logo-img/icon_ispumap_transparent.png">
+  <!-- Favicons -->
+  <link href="<?= base_url() ?>assets/frontend/assets/img/favicon.png" rel="icon">
+  <link href="<?= base_url() ?>assets/frontend/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/style.css">
-    <style type="text/css">
-        .hero-content-height{
-            height: 300px;
-        }
-        .map-top-aligin{
-            margin-top: -5px;
-        }
-        .map-size{
-            height: 200px;
-        }
-        .explore-position{
-            padding-left: 100px;
-        }
-        .map-border{
-            border: 1px solid black;
-        }
-        .map-border-top{
-            border-top: 1px solid black;
-        }
-    </style>
-    <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="<?= base_url() ?>assets/frontend/js/jquery/jquery-2.2.4.min.js"></script>
+  <!-- Google Fonts -->
+  <link href="https:/fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+  <!-- Vendor CSS Files -->
+  <link href="<?= base_url() ?>assets/frontend/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?= base_url() ?>assets/frontend/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="<?= base_url() ?>assets/frontend/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="<?= base_url() ?>assets/frontend/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="<?= base_url() ?>assets/frontend/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="<?= base_url() ?>assets/frontend/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="<?= base_url() ?>assets/frontend/assets/css/style.css" rel="stylesheet">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/assets/vendor/css/animate.css">
+  <!-- Style -->
+  <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/assets/vendor/css/styleblog.css">
+
+  <!-- js -->
+  <!-- <script src="<?= base_url() ?>assets/frontend/assets/js/jquery-2.2.4.min.js"></script> -->
+  <script src="<?= base_url() ?>assets/frontend/assets/vendor/js/jquery.min.js"></script>
 </head>
 
 <body>
-    <!-- Preloader Start -->
-    <div id="preloader">
-        <div class="preload-content">
-            <div id="sonar-load"></div>
-        </div>
-    </div>
-    <!-- Preloader End -->
 
-    <!-- ***** Main Menu Area Start ***** -->
-    <div class="mainMenu d-flex align-items-center justify-content-between">
-        <!-- Close Icon -->
-        <div class="closeIcon">
-            <i class="ti-close" aria-hidden="true" style="object-fit: contain;"></i>
-        </div>
-        <!-- Logo Area -->
-        <div class="logo-area">
-            <a href="<?= site_url() ?>"><img style="max-width: 100% ; max-height: 40px;" src="<?= base_url() ?>assets/frontend/img/logo-img/portalispumap1.png"></a>
-        </div>
-        <!-- Nav -->
-        <div class="sonarNav wow fadeInUp" data-wow-delay="1s" style="margin-bottom: 100px;">
-            <nav>
-                <ul>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="<?= site_url() ?>">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('pages/about-us') ?>">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('pages/news') ?>">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('pages/contact') ?>">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('pages/faq') ?>">FAQ</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <a href="<?= site_url() ?>"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/ispumap.png"></a>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="<?= base_url() ?>assets/frontend/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="<?=$this->uri->uri_string() == '' ? 'active' : '' ?>">
+            <a href="<?= site_url() ?>">Home</a>
+          </li>
+          <li class="<?=$this->uri->uri_string() == 'pages/about-us' ? 'active' : '' ?>">
+            <a href="<?= site_url('pages/about-us') ?>">About Us</a>
+          </li>
+          <li class="<?=$this->uri->uri_string() == 'pages/ranking' ? 'active' : '' ?>">
+            <a href="<?= site_url('pages/ranking') ?>">Ranking</a>
+          </li>
+          <li class="<?=$this->uri->uri_string() == 'pages/provinsi' ? 'active' : '' ?>">
+            <a href="<?= site_url('pages/provinsi') ?>">Provinsi</a>
+          </li>
+          <li class="<?=$this->uri->uri_string() == 'pages/news' ? 'active' : '' ?>">
+            <a href="<?= site_url('pages/news') ?>">News</a>
+          </li>
+          <li class="<?=$this->uri->uri_string() == 'pages/contact' ? 'active' : '' ?>">
+            <a href="<?= site_url('pages/contact') ?>">Contact Us</a>
+          </li>
+        </ul>
+      </nav><!-- .nav-menu -->
 
     </div>
-    <!-- ***** Main Menu Area End ***** -->
+  </header><!-- End Header -->
+  <?= $contentsfrontend; ?>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
 
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="menu-area d-flex justify-content-between">
-                        <!-- Logo Area  -->
-                        <div class="logo-area">
-                            <a href="<?= site_url() ?>"><img style="max-width: 100% ; max-height: 40px;" src="<?= base_url() ?>assets/frontend/img/logo-img/portalispumap1.png"></a>
-                        </div>
-
-                        <div class="menu-content-area d-flex align-items-center">
-                            <span class="navbar-toggler-icon" id="menuIcon"></span>
-                        </div>
-                    </div>
-                </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info" data-aos="fade-up" data-aos-delay="50">
+              <h3>Squadfree</h3>
+              <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
+              <p>
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
             </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="150">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="250">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter" data-aos="fade-up" data-aos-delay="350">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
         </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
+      </div>
+    </div>
 
-    <?= $contentsfrontend; ?>
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Squadfree</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
 
-    <!-- ***** Footer Area Start ***** -->
-    <footer class="footer-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Copywrite Text -->
-                    <div class="copywrite-text">
-                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <a href="<?= site_url() ?>" target="_blank">Ispumap.id</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- ***** Footer Area End ***** -->
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
-    <!-- Popper js -->
-    <script src="<?= base_url() ?>assets/frontend/js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="<?= base_url() ?>assets/frontend/js/bootstrap.min.js"></script>
-    <!-- Plugins js -->
-    <script src="<?= base_url() ?>assets/frontend/js/plugins.js"></script>
-    <!-- Active js -->
-    <script src="<?= base_url() ?>assets/frontend/js/active.js"></script>
-    <!-- api google -->
+  <!-- Vendor JS Files -->
+  <script src="<?= base_url() ?>assets/frontend/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="<?= base_url() ?>assets/frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url() ?>assets/frontend/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="<?= base_url() ?>assets/frontend/assets/vendor/php-email-form/validate.js"></script>
+  <script src="<?= base_url() ?>assets/frontend/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="<?= base_url() ?>assets/frontend/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="<?= base_url() ?>assets/frontend/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="<?= base_url() ?>assets/frontend/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="<?= base_url() ?>assets/frontend/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="<?= base_url() ?>assets/frontend/assets/vendor/aos/aos.js"></script>
 
-    <script>
-    function myMap() {
-    var mapProp= {
-      center:new google.maps.LatLng(51.508742,-0.120850),
-      zoom:5,
-    };
-    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoke7YmcL6DQLqWuh62U5y0oKRID90kF4&callback=myMap"></script>
+  <!-- Template Main JS File -->
+  <script src="<?= base_url() ?>assets/frontend/assets/js/main.js"></script>
+
+  <script src="<?= base_url() ?>assets/frontend/assets/vendor/js/jquery.waypoints.min.js"></script>
+  <script src="<?= base_url() ?>assets/frontend/assets/vendor/js/main.js"></script>
 
 </body>
 

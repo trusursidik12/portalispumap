@@ -1,76 +1,86 @@
-<!-- ***** Hero Area Start ***** -->
-<div class="hero-area d-flex align-items-center" style="background-color: #009EE5;">
-   
-    <!-- Hero Thumbnail -->
-    <div class="hero-thumbnail equalize bg-img" style="background-image:url(<?= base_url('assets/frontend/img/bg-img/contact.jpg') ?>); position: relative; max-width: 100% ; max-height: 100%;" ></div>
-    
-    <!-- Hero Content -->
-    <div class="hero-content-height equalize">
-        <div class="container-fluid h-10">
-            <div class="row h-10 align-items-center justify-content-center">
-                <div class="col-12 col-md-8" style="margin-top: 100px;">
-                    <div class="line"></div>
-                    <h2 class="text-white">CONTACT</h2>
-                    <div class="row">
-                        <div class="col-12">
-                            <h6 class="text-white">Email : help@trusur.com</h6>
-                            <h6 class="text-white">Phone : +62 (21) 2962 7001 - 3 / +62 (21) 2962 7005</h6>
-                            <h6 class="text-white">Address : Jl. lapangan Tembak Raya No.64 G. Cibubur,Jakarta 13720</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero-blog">
+    <div class="hero-container" data-aos="fade-up">
+      <h1>Contact</h1>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2>Contact Us</h2>
         </div>
-    </div>
-</div>
-<!-- ***** Hero Area End ***** -->
 
-<section class="sonar-contact-area section-padding-100">
-    <!-- back end content -->
-    <div class="backEnd-content">
-        <img class="dots" src="img/core-img/dots.png" alt="">
-    </div>
-    
-    <div class="container">
-        <div class="row">
-            <!-- Contact Form Area -->
-            <div class="col-12">
-                <div class="contact-form text-center">
-
-                    <form action="#" method="post">
-                        <div class="row">
-                            <div class="col-12 col-md-4">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="contact-name" placeholder="Your Name">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="contact-email" placeholder="Your Email">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="contact-email" placeholder="Subject">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn sonar-btn">Contact Us</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>Address : Jl. lapangan Tembak Raya No.64 G. Cibubur,Jakarta 13720</p>
             </div>
-        </div>
-    </div>
-</section>
+          </div>
 
-<!-- Google Maps -->
-<div class="map-area">
-    <iframe width="100%" height="559" id="gmap_canvas" src="https://maps.google.com/maps?q=PT%20Trusur%20Unggul%20Teknusa&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-</div>
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>help@trusur.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>+62 (21) 2962 7001 - 3 <br> +62 (21) 2962 7005</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-6 ">
+            <iframe class="mb-4 mb-lg-0" src="https://maps.google.com/maps?q=PT%20Trusur%20Unggul%20Teknusa&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
