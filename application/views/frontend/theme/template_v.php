@@ -51,39 +51,6 @@
     <!-- Preloader End -->
 
     <!-- ***** Main Menu Area Start ***** -->
-    <div class="mainMenu d-flex align-items-center justify-content-between">
-        <!-- Close Icon -->
-        <div class="closeIcon">
-            <i class="ti-close" aria-hidden="true" style="object-fit: contain;"></i>
-        </div>
-        <!-- Logo Area -->
-        <div class="logo-area">
-            <a href="<?= site_url() ?>"><img style="max-width: 100% ; max-height: 40px;" src="<?= base_url() ?>assets/frontend/img/logo-img/portalispumap1.png"></a>
-        </div>
-        <!-- Nav -->
-        <div class="sonarNav wow fadeInUp" data-wow-delay="1s" style="margin-bottom: 100px;">
-            <nav>
-                <ul>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="<?= site_url() ?>">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('pages/about-us') ?>">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('pages/news') ?>">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('pages/contact') ?>">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('pages/faq') ?>">FAQ</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-    </div>
     <!-- ***** Main Menu Area End ***** -->
 
     <!-- ***** Header Area Start ***** -->
@@ -96,10 +63,34 @@
                         <div class="logo-area">
                             <a href="<?= site_url() ?>"><img style="max-width: 100% ; max-height: 40px;" src="<?= base_url() ?>assets/frontend/img/logo-img/portalispumap1.png"></a>
                         </div>
-
-                        <div class="menu-content-area d-flex align-items-center">
-                            <span class="navbar-toggler-icon" id="menuIcon"></span>
-                        </div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                   <a class="nav-link" href="<?= site_url() ?>">Home</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="<?= site_url('pages/about-us') ?>">About Us</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="<?= site_url('pages/news') ?>">News</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="<?= site_url('pages/contact') ?>">Contact</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="<?= site_url('pages/faq') ?>">FAQ</a>
+               </li>
+            </ul>
+<!--       <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Cari" aria-label="Cari">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari</button>
+      </form> -->
+        </div>
+    </nav>
                     </div>
                 </div>
             </div>
