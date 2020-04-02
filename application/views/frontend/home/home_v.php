@@ -60,7 +60,7 @@
   <section id="services" class="services" style="margin-bottom: -200px;">
     <div class="container">
 
-      <div class="section-title" style="margin-bottom: -150px;">
+      <div class="section-title" style="margin-bottom: -70px;">
         <h2>News</h2>
       </div>
 
