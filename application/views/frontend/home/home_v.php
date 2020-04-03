@@ -133,10 +133,10 @@
       </div>
 
       <div class="row" data-aos="fade-up" data-aos-delay="200">
-
+        
         <div class="col-lg-6 ">
-          <iframe class="https://maps.google.com/maps?q=PT%20Trusur%20Unggul%20Teknusa&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
-        </div>
+            <iframe class="mb-4 mb-lg-0" src="https://maps.google.com/maps?q=PT%20Trusur%20Unggul%20Teknusa&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+          </div>
 
         <div class="col-lg-6">
           <form action="forms/contact.php" method="post" role="form" class="php-email-form">
