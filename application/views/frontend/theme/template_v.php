@@ -92,7 +92,7 @@
           </div>
 
           <div class="col-lg-8 col-md-6">
-            <div class="footer-info" data-aos="fade-up" data-aos-delay="50" style="padding-bottom: 77px;">
+            <div class="footer-info" data-aos="fade-up" data-aos-delay="50" style="padding-bottom: 38px;">
               <h3>Menu</h3>
               <nav class="nav-menu d-lg-block">
                 <ul>
