@@ -83,13 +83,42 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="footer-info" data-aos="fade-up" data-aos-delay="50">
-              <h3>Squadfree</h3>
-              <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
+              <h3>Ispumap.id Apps</h3>
+              <p class="pb-3"><em>Aplikasi Ispumap apps merupakan aplikasi yang dibuat untuk seluruh masyarakat indonesia guna mengetahui tingkat polusi yang ada di daerah wilayah masing masing</em></p>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                <a href="https://play.google.com/store/search?q" target="_blank" class="btn btn-info btn-sm">Download Apps <i class="bx bx-chevron-right"></i></a><br>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-8 col-md-6">
+            <div class="footer-info" data-aos="fade-up" data-aos-delay="50" style="padding-bottom: 77px;">
+              <h3>Menu</h3>
+              <nav class="nav-menu d-lg-block">
+                <ul>
+                  <li class="<?=$this->uri->uri_string() == '' ? 'active' : '' ?>">
+                    <a href="<?= site_url() ?>">Home</a>
+                  </li>
+                  <li class="<?=$this->uri->uri_string() == 'pages/about-us' ? 'active' : '' ?>">
+                    <a href="<?= site_url('pages/about-us') ?>">About Us</a>
+                  </li>
+                  <li class="<?=$this->uri->uri_string() == 'pages/ranking' ? 'active' : '' ?>">
+                    <a href="<?= site_url('pages/ranking') ?>">Ranking</a>
+                  </li>
+                  <li class="<?=$this->uri->uri_string() == 'pages/provinsi' ? 'active' : '' ?>">
+                    <a href="<?= site_url('pages/provinsi') ?>">Provinsi</a>
+                  </li>
+                  <li class="<?=$this->uri->uri_string() == 'pages/news' ? 'active' : '' ?>">
+                    <a href="<?= site_url('pages/news') ?>">News</a>
+                  </li>
+                  <li class="<?=$this->uri->uri_string() == 'pages/contact' ? 'active' : '' ?>">
+                    <a href="<?= site_url('pages/contact') ?>">Contact Us</a>
+                  </li>
+                </ul>
+              </nav><!-- .nav-menu -->
+              <p>
+                <br>
+                <h3>&nbsp;</h3>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -101,44 +130,17 @@
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="150">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="250">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter" data-aos="fade-up" data-aos-delay="350">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-
+          <div class="col-lg-4 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="150" style="margin-top: -120px;">
+            <h4>&nbsp;</h4>
           </div>
 
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" style="margin-bottom: -90px;">
       <div class="copyright">
-        &copy; Copyright <strong><span>Squadfree</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Ispumap.id</span></strong>. All Rights Reserved
       </div>
     </div>
   </footer><!-- End Footer -->
