@@ -84,7 +84,7 @@
                   <div class="desc">
                     <span class="meta"><?= date('d-m-Y', strtotime($newsdata['created_at'])) ?></span>
                     <h2><a href="<?= site_url('pages/news/'.$newsdata['slug']) ?>"><?= $newsdata['title'] ?></a></h2>
-                                <p><?= substr($newsdata['content'], 0, 100) ?></p>
+                                <p><?= substr($newsdata['content'], 0, 200) ?></p>
                   </div>
                 </div>
               </div>
