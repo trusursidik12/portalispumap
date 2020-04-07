@@ -67,6 +67,7 @@
             </div>
             <div class="row row-pb-md">
                 <div class="col-12">
+                    <h5 class="text-center">Update : <?= date('d-M-Y') ?></h5>
                     <div class="d-flex nav nav-tabs justify-content-center">
 
                         <a href="#pm10" class="btn btn-info btn-sm"> PM10</a>
@@ -88,7 +89,6 @@
                                             <th>NO</th>
                                             <th>STASIUN</th>
                                             <th>PROVINSI</th>
-                                            <th>DATE</th>
                                             <th>PM10</th>
                                         </tr>
                                     </thead>
@@ -100,7 +100,6 @@
                                                         <td><?= $no++; ?></td>
                                                         <td><?= $datapm10['id_stasiun'] ?></td>
                                                         <td><?= $provinsi['provinsi'] ?></td>
-                                                        <td><?= $datapm10['waktu'] ?></td>
                                                         <td class="
                                                             <?php if($datapm10['pm10'] >= 0 & $datapm10['pm10'] <= 50) : ?>
                                                                 <?= 'text-white bg-success'; ?>
@@ -129,7 +128,6 @@
                                             <th>NO</th>
                                             <th>STASIUN</th>
                                             <th>PROVINSI</th>
-                                            <th>DATE</th>
                                             <th>PM25</th>
                                         </tr>
                                     </thead>
@@ -141,7 +139,6 @@
                                                         <td><?= $no++; ?></td>
                                                         <td><?= $datapm25['id_stasiun'] ?></td>
                                                         <td><?= $provinsi['provinsi'] ?></td>
-                                                        <td><?= $datapm25['waktu'] ?></td>
                                                         <td class="
                                                             <?php if($datapm25['pm25'] >= 0 & $datapm25['pm25'] <= 50) : ?>
                                                                 <?= 'text-white bg-success'; ?>
@@ -170,7 +167,6 @@
                                             <th>NO</th>
                                             <th>STASIUN</th>
                                             <th>PROVINSI</th>
-                                            <th>DATE</th>
                                             <th>SO2</th>
                                         </tr>
                                     </thead>
@@ -182,7 +178,6 @@
                                                         <td><?= $no++; ?></td>
                                                         <td><?= $dataso2['id_stasiun'] ?></td>
                                                         <td><?= $provinsi['provinsi'] ?></td>
-                                                        <td><?= $dataso2['waktu'] ?></td>
                                                         <td class="
                                                             <?php if($dataso2['so2'] >= 0 & $dataso2['so2'] <= 50) : ?>
                                                                 <?= 'text-white bg-success'; ?>
@@ -211,7 +206,6 @@
                                             <th>NO</th>
                                             <th>STASIUN</th>
                                             <th>PROVINSI</th>
-                                            <th>DATE</th>
                                             <th>CO</th>
                                         </tr>
                                     </thead>
@@ -223,7 +217,6 @@
                                                         <td><?= $no++; ?></td>
                                                         <td><?= $dataco['id_stasiun'] ?></td>
                                                         <td><?= $provinsi['provinsi'] ?></td>
-                                                        <td><?= $dataco['waktu'] ?></td>
                                                         <td class="
                                                             <?php if($dataco['co'] >= 0 & $dataco['co'] <= 50) : ?>
                                                                 <?= 'text-white bg-success'; ?>
@@ -252,7 +245,6 @@
                                             <th>NO</th>
                                             <th>STASIUN</th>
                                             <th>PROVINSI</th>
-                                            <th>DATE</th>
                                             <th>O3</th>
                                         </tr>
                                     </thead>
@@ -264,7 +256,6 @@
                                                         <td><?= $no++; ?></td>
                                                         <td><?= $datao3['id_stasiun'] ?></td>
                                                         <td><?= $provinsi['provinsi'] ?></td>
-                                                        <td><?= $datao3['waktu'] ?></td>
                                                         <td class="
                                                             <?php if($datao3['o3'] >= 0 & $datao3['o3'] <= 50) : ?>
                                                                 <?= 'text-white bg-success'; ?>
@@ -293,7 +284,6 @@
                                             <th>NO</th>
                                             <th>STASIUN</th>
                                             <th>PROVINSI</th>
-                                            <th>DATE</th>
                                             <th>NO2</th>
                                         </tr>
                                     </thead>
@@ -305,7 +295,6 @@
                                                         <td><?= $no++; ?></td>
                                                         <td><?= $datano2['id_stasiun'] ?></td>
                                                         <td><?= $provinsi['provinsi'] ?></td>
-                                                        <td><?= $datano2['waktu'] ?></td>
                                                         <td class="
                                                             <?php if($datano2['no2'] >= 0 & $datano2['no2'] <= 50) : ?>
                                                                 <?= 'text-white bg-success'; ?>

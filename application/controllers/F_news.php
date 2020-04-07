@@ -9,7 +9,6 @@ class F_news extends CI_Controller {
 		$this->temp_frontend->load('frontend/theme/template_v', 'frontend/news/news/news_v', $data);
 	}
 
-
 	public function readmore($slug = NULL)
 	{
 		$data['singlenews'] 		= $this->f_home_m->get_aqmnews_slug($slug);
