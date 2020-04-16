@@ -5,8 +5,12 @@ class F_news extends CI_Controller {
 
 	public function index()
 	{
-		$data['news'] = $this->f_home_m->get_aqmnews();
+		if(isset($_GET["keyword"])) $data['news'] 		= $this->f_home_m->get_aqmnews($_GET["keyword"]);
+		else $data['news'] 		= $this->f_home_m->get_aqmnews();
+		
 		$this->temp_frontend->load('frontend/theme/template_v', 'frontend/news/news/news_v', $data);
+		// $data['news'] = $this->f_home_m->get_aqmnews();
+		// $this->temp_frontend->load('frontend/theme/template_v', 'frontend/news/news/news_v', $data);
 	}
 
 	public function readmore($slug = NULL)

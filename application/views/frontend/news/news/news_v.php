@@ -11,15 +11,22 @@
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container">
-
+        <form class="">
         <div class="section-title" style="margin-bottom: -70px;">
+          <div class="p-1">
+          <input class="form-control" type="search" placeholder="Search" name="keyword" id="keyword" aria-label="Search">
         </div>
+        <div class="p-1">
+          <button class="btn btn-light" type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        </div>
+      </form>
         
-        <div id="colorlib-blog">
-          <div class="container">
-            <div class="row text-center">
+        <!-- <div id="colorlib-blog"> -->
+          <div class="container" style="margin-top:70px;">
+            <!-- <div class="row text-center">
               <h2 class="bold">News</h2>
-            </div>
+            </div> -->
             <div class="row row-pb-md">
                 <?php foreach($news as $newsdata) : ?>
                     <div class="col-md-4">
@@ -43,7 +50,7 @@
             </div>
 
           </div>
-        </div>
+        <!-- </div> -->
 
       </div>
     </section><!-- End Services Section -->

@@ -57,6 +57,9 @@
           <li class="<?=$this->uri->uri_string() == 'pages/about-us' ? 'active' : '' ?>">
             <a href="<?= site_url('pages/about-us') ?>">About Us</a>
           </li>
+          <li class="<?=$this->uri->uri_string() == 'pages/maps' ? 'active' : '' ?>">
+            <a href="<?= site_url('pages/maps') ?>">Maps</a>
+          </li>
           <li class="<?=$this->uri->uri_string() == 'pages/ranking' ? 'active' : '' ?>">
             <a href="<?= site_url('pages/ranking') ?>">Ranking</a>
           </li>
