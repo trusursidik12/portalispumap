@@ -28,6 +28,9 @@
               <h2 class="bold">News</h2>
             </div>
             <div class="row row-pb-md">
+                <?php if(empty($news)) : ?>
+                  <h1>DATA NOT FOUND</h1>
+                <?php else : ?>
                 <?php foreach($news as $newsdata) : ?>
                     <div class="col-md-4">
                         <div class="article animate-box">
@@ -46,6 +49,7 @@
                         </div>
                     </div>
                 <?php endforeach ?>
+              <?php endif ?>
 
             </div>
 

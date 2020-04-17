@@ -140,32 +140,33 @@ class F_home_m extends CI_model
 			$responseBodyAsString = $response->getBody()->getContents();
 		}
 	}
-	// public function get_aqmnews()
-	// {
-	// 	try
-	// 	{
-	// 		$response = $this->_client->request('GET', 'api/aqmnews', [
-	// 			'query' => [
-	// 				'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
-	// 			],
-	// 		]);
+	public function get_newssearch($keyword)
+	{
+		try
+		{
+			$response = $this->_client->request('GET', 'api/news/search', [
+				'query' => [
+					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==',
+					'title' => $keyword
+				],
+			]);
 
-	// 		$result = json_decode($response->getBody()->getContents(), true);
+			$result = json_decode($response->getBody()->getContents(), true);
 
-	// 		return $result['data'];
-	// 	}
-	// 	catch (GuzzleHttp\Exception\ClientException $e)
-	// 	{
-	// 		$response = $e->getResponse();
-	// 		$responseBodyAsString = $response->getBody()->getContents();
-	// 	}
-	// }
+			return $result['data'];
+		}
+		catch (GuzzleHttp\Exception\ClientException $e)
+		{
+			$response = $e->getResponse();
+			$responseBodyAsString = $response->getBody()->getContents();
+		}
+	}
 
 	public function get_aqmnews_slug($slug)
 	{
 		try
 		{
-			$response = $this->_client->request('GET', 'api/aqmnews', [
+			$response = $this->_client->request('GET', 'api/aqmnewsslug', [
 				'query' => [
 					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==',
 					'slug' => $slug
