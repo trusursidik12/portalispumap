@@ -43,13 +43,75 @@
     
     
     //isi content
-        var contentString = '<div id="content">'+
-            '<h3 id="firstHeading" class="firstHeading">Jakarta : Baik </h3>'+
-            '<div class="row">'+
-            '<div class="col-6"><b>co2</b></div>'+
-            '<div class="col-6"><b>co2</b></div>'+
-            '</div>'+
-            '</div>';
+        var contentString = '<table class="table">'+
+           '<thead>'+
+            '<tr>'+
+              '<th scope="col">#</th>'+
+              '<th scope="col">First</th>'+
+              '<th scope="col">Last</th>'+
+              '<th scope="col">Handle</th>'+
+            '</tr>'+
+          '</thead>'+
+          '<tbody>'+
+            '<tr>'+
+              '<th scope="row">1</th>'+
+              '<td>Mark</td>'+
+              '<td>Otto</td>'+
+              '<td>@mdo</td>'+
+            '</tr>'+
+            '<tr>'+
+              '<th scope="row">2</th>'+
+              '<td>Jacob</td>'+
+              '<td>Thornton</td>'+
+              '<td>@fat</td>'+
+            '</tr>'+
+            '<tr>'+
+              '<th scope="row">3</th>'+
+              '<td>Larry</td>'+
+              '<td>the Bird</td>'+
+              '<td>@twitter</td>'+
+            '</tr>'+
+          '</tbody>'+
+        '</table>';
+
+        // var contentString = '<div id="content">'+
+        //     '<h3 id="firstHeading" class="firstHeading">Jakarta : Baik </h3>'+
+        //     '<div class="row">'+
+        //     '<div class="col-6"><b>co2</b></div>'+
+        //     '<div class="col-6"><b>co2</b></div>'+
+        //     '</div>'+
+        //     '</div>';
+
+//             <table class="table">
+//   <thead>
+//     <tr>
+//       <th scope="col">#</th>
+//       <th scope="col">First</th>
+//       <th scope="col">Last</th>
+//       <th scope="col">Handle</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <th scope="row">1</th>
+//       <td>Mark</td>
+//       <td>Otto</td>
+//       <td>@mdo</td>
+//     </tr>
+//     <tr>
+//       <th scope="row">2</th>
+//       <td>Jacob</td>
+//       <td>Thornton</td>
+//       <td>@fat</td>
+//     </tr>
+//     <tr>
+//       <th scope="row">3</th>
+//       <td>Larry</td>
+//       <td>the Bird</td>
+//       <td>@twitter</td>
+//     </tr>
+//   </tbody>
+// </table>
 
         var infowindow = new google.maps.InfoWindow({
           content: contentString
@@ -60,14 +122,17 @@
           position: jakarta,
           map: map,
           title: 'Jakarta',
-      icon: '/maps/icons/titik-48.png'
+        // icon: '/maps/icons/titik-48.png'
+        icon:  '<?= base_url() ?>assets/frontend/assets/img/titik-48.png'
+        // icon: '/maps/icons/titik-48.png'
         });
     
         var marker1 = new google.maps.Marker({
           position: tangerang,
           map: map,
           title: 'Tangerang',
-          icon: '/maps/icons/titik-48.png'
+          // url(<?= base_url() ?>assets/frontend/assets/img/hero-bg.jpg)
+          icon:  '<?= base_url() ?>assets/frontend/assets/img/titik-48.png'
         });
     
     //Function Click
@@ -79,8 +144,9 @@
           infowindow.open(map, marker1);
         });
       }
+
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwCheQHsowHdCkSGlJUKNyVZsjgZquAS4&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgK9OgCz1BvEMiJn5oZqScEN49GbYM63Q&callback=initMap">
     </script>
   </main><!-- End #main -->
