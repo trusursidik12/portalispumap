@@ -14,7 +14,7 @@
         <form class="">
         <div class="section-title" style="margin-bottom: -50px;">
           <div class="p-1">
-          <input class="form-control" type="search" placeholder="Search" name="keyword" id="keyword" aria-label="Search">
+          <input class="form-control" type="search" placeholder="Search" name="keyword" id="keyword" aria-label="Search" style="border-style: groove;">
         </div>
         <div class="p-1">
           <button class="btn btn-light" type="submit" hidden><i class="fas fa-search"></i></button>

@@ -29,7 +29,21 @@
       </div>
     </section><!-- End Contact Section -->
       <script>
+
+
+// You can use jQuery .getJSON() function:
+
+
+    // $.get(
+    // "http://loopinc.id/api/jenis-assessment",
+    
+    // function(data) {
+    //    alert('page content: ' + data);
+    //   }
+    // );
+
   // var map;
+  
   //     function initMap() {
   //       map = new google.maps.Map(document.getElementById('map'), {
   //         zoom: 2,
@@ -41,33 +55,49 @@
   //       var script = document.createElement('script');
   //       // This example uses a local copy of the GeoJSON stored at
   //       // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-  //       script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
+  //       var url = 'http://ispumaps.id/ispumapapi/api/aqmstasiun?trusur_api_key=';
+  //       var key = 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==';
+  //       script.src = url + key;
+  //       // script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
   //       document.getElementsByTagName('head')[0].appendChild(script);
   //     }
 
   //     // Loop through the results array and place a marker for each
   //     // set of coordinates.
-  //     window.eqfeed_callback = function(results) {
-  //       for (var i = 0; i < results.features.length; i++) {
-  //         var coords = results.features[i].geometry.coordinates;
-  //         var latLng = new google.maps.LatLng(coords[1],coords[0]);
+  //     function tes(results) {
+  //       for (var i = 0; i < results.data.length; i++) {
+  //         var coords = results.data[i];
+  //         var latLng = new google.maps.LatLng(coords[3],coords[4]);
   //         var marker = new google.maps.Marker({
   //           position: latLng,
   //           map: map
   //         });
   //       }
-  //     }
+      // }
       // This example displays a marker at the center of Australia.
       // When the user clicks the marker, an info window opens.
 
       function initMap() {
-        var infowindow = new google.maps.InfoWindow();
+        var infowindow = new google.maps.InfoWindow({
+          maxWidth: 350
+        });
         var jakarta = {lat: -6.200000, lng: 106.816666};
         var tangerang = {lat: -6.178306, lng: 106.631889};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 7,
           center: jakarta
-    });
+        });
+
+    //     function tester(){
+    //         var request = $.ajax({
+    //           url: "http://ispumaps.id/ispumapapi/api/aqmstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==",
+    //           data: {f: "data"},
+    //           datatype: 'json'
+    //         });
+
+    //         console.log(tester);
+    //     }
+
 
         var iconBase =
             'https://developers.google.com/maps/documentation/javascript/examples/full/images/';
@@ -96,10 +126,10 @@
           }
         ];
 
-        var locations_ = [
-          { lat: -7.786879,lng: 110.387862},
-          { lat: -7.25899764,lng: 112.67793493},
-        ];
+        // var locations_ = [
+        //   { lat: -7.786879,lng: 110.387862},
+        //   { lat: -7.25899764,lng: 112.67793493},
+        // ];
 
         var locations = [
          {  id: "103",
@@ -115,7 +145,8 @@
             use_internet: "0",
             dbsource: "http://iku.menlhk.go.id/aqms/",
             old_id: null,
-            xtimetimes: "2020-04-08 10:30:04"},
+            xtimetimes: "2020-04-08 10:30:04"
+          },
           { id: "104",
             id_stasiun: "KLHK-SEMARANG",
             nama: "Jl. Raya Semarang-Boja, Tambangan, Kec. Mijen, Kota Semarang, Jawa Tengah",
@@ -129,7 +160,8 @@
             use_internet: "0",
             dbsource: "http://iku.menlhk.go.id/aqms/",
             old_id: null,
-            xtimetimes: "2020-04-08 10:30:04"},
+            xtimetimes: "2020-04-08 10:30:04"
+          },
         ];
         // Create markers.
         // for (var i = 0; i < features.length; i++) {
@@ -149,14 +181,89 @@
               infowindow.setContent(`<table class="table">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Nama</th>
+                  <th scope="col" style="width: 100px;"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/ic_emote_baik.png" style="width: 50px;"></img></th>
+                  <th scope="col" style="vertical-align: inherit;"><h3 style="margin: 0 0 0px 0;">Status : <kondisi></h3></th>
                 </tr>
               </thead>
+              </table>
+              <table class="table">
               <tbody>
                 <tr>
-                  <th scope="row">1</th>
+                  <th scope="row" style="width: 106px;">Nama Stasiun</th>
+                  <th scope="row">:</th>
                   <td>${loc.nama}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Kota</th>
+                  <th scope="row">:</th>
+                  <td>${loc.kota}</td>
+                </tr>
+                <tr>
+                  <th scope="row">provinsi</th>
+                  <th scope="row">:</th>
+                  <td>${loc.provinsi}</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row" style="width: 106px;">PM10</th>
+                  <td>0</td>
+                  <th scope="row">O3</th>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <th scope="row" style="width: 106px;">SO2</th>
+                  <td>0</td>
+                  <th scope="row">N02</th>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <th scope="row" style="width: 106px;">CO</th>
+                  <td>0</td>
+                  <th scope="row" style="width: 106px;"></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                  <th scope="row"></th>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th class="text-center" class="align-middle" scope="row" style="border-top: 0px;"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/pressure.png" style="width: 25px;"></img></th>
+                  <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/temparature.png" style="width: 25px;"></img></th>
+                  <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/wind_direction.png" style="width: 25px;"></img></th>
+                  <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/wind_speed.png" style="width: 25px;"></img></th>
+                </tr>
+                <tr>
+                  <td class="text-center" style="border-top: 0px;">0</td>
+                  <td class="text-center" style="border-top: 0px;">0</td>
+                  <td class="text-center" style="border-top: 0px;">0</td>
+                  <td class="text-center" style="border-top: 0px;">0</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th class="text-center" class="align-middle" scope="row" style="border-top: 0px;"></th>
+                  <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/humidity.png" style="width: 25px;"></img></th>
+                  <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/rain_rate.png" style="width: 25px;"></img></th>
+                  <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/solar_radiation.png" style="width: 25px;"></img></th>
+                  <th class="text-center" scope="row" style="border-top: 0px"></th>
+                </tr>
+                <tr>
+                  <td class="text-center" style="border-top: 0px;"></td>
+                  <td class="text-center" style="border-top: 0px;">0</td>
+                  <td class="text-center" style="border-top: 0px;">0</td>
+                  <td class="text-center" style="border-top: 0px;">0</td>
+                  <td class="text-center" style="border-top: 0px;"></td>
                 </tr>
               </tbody>
             </table>`);
