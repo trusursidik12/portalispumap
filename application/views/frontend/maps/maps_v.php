@@ -29,6 +29,13 @@
       </div>
     </section><!-- End Contact Section -->
       <script>
+// const http = new XMLHttpRequest()
+
+// http.open("GET", "http://ispumaps.id/ispumapapi/api/aqmdetailstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==&lat=-7.25899764&lon=112.67793493")
+// http.send()
+
+// http.onload = () => console.log(http.responseText)
+
 
 
 // You can use jQuery .getJSON() function:
@@ -77,16 +84,26 @@
       // This example displays a marker at the center of Australia.
       // When the user clicks the marker, an info window opens.
 
+      
+
+        
+
       function initMap() {
         var infowindow = new google.maps.InfoWindow({
-          maxWidth: 350
+            maxWidth: 350
         });
+        // var infowindow = new google.maps.InfoWindow({
+        //       // maxWidth: 350,
+
+        //       // content : contentString
+        //     });
         var jakarta = {lat: -6.200000, lng: 106.816666};
         var tangerang = {lat: -6.178306, lng: 106.631889};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 7,
           center: jakarta
         });
+
 
     //     function tester(){
     //         var request = $.ajax({
@@ -97,87 +114,84 @@
 
     //         console.log(tester);
     //     }
+      // console.log(contents)
 
+        // var iconBase =
+        //     'https://developers.google.com/maps/documentation/javascript/examples/full/images/';
 
-        var iconBase =
-            'https://developers.google.com/maps/documentation/javascript/examples/full/images/';
+        // var icons = {
+        //   parking: {
+        //     icon: iconBase + 'parking_lot_maps.png'
+        //   },
+        //   library: {
+        //     icon: iconBase + 'library_maps.png'
+        //   },
+        //   info: {
+        //     icon: iconBase + 'info-i_maps.png'
+        //   }
+        // };
 
-        var icons = {
-          parking: {
-            icon: iconBase + 'parking_lot_maps.png'
-          },
-          library: {
-            icon: iconBase + 'library_maps.png'
-          },
-          info: {
-            icon: iconBase + 'info-i_maps.png'
-          }
-        };
-
-        var features = [
-          {
-            position: new google.maps.LatLng(-6.200000, 106.816666),
-            type: 'info',
-            content : 'tes'
-          }, {
-            position: new google.maps.LatLng(-6.178306, 106.631889),
-            type: 'info',
-            content : 'kocak'
-          }
-        ];
+        // var features = [
+        //   {
+        //     position: new google.maps.LatLng(-6.200000, 106.816666),
+        //     type: 'info',
+        //     content : 'tes'
+        //   }, {
+        //     position: new google.maps.LatLng(-6.178306, 106.631889),
+        //     type: 'info',
+        //     content : 'kocak'
+        //   }
+        // ];
 
         // var locations_ = [
         //   { lat: -7.786879,lng: 110.387862},
         //   { lat: -7.25899764,lng: 112.67793493},
         // ];
+        // var locations = tester();
 
-        var locations = [
-         {  id: "103",
-            id_stasiun: "KLHK-SURABAYA-TANDES",
-            nama: "Surabaya, Balongsari, Tandes, Kota Surabaya, Jawa Timur 60186",
-            lat: "-7.25899764",
-            lng: "112.67793493",
-            alamat: "Surabaya, Balongsari, Tandes, Kota Surabaya, Jawa Timur 60186",
-            kota: "Surabaya",
-            provinsi: "Jawa Timur",
-            icon: "",
-            geojson: null,
-            use_internet: "0",
-            dbsource: "http://iku.menlhk.go.id/aqms/",
-            old_id: null,
-            xtimetimes: "2020-04-08 10:30:04"
-          },
-          { id: "104",
-            id_stasiun: "KLHK-SEMARANG",
-            nama: "Jl. Raya Semarang-Boja, Tambangan, Kec. Mijen, Kota Semarang, Jawa Tengah",
-            lat: "-7.076239",
-            lng: "110.30954",
-            alamat: "Jl. Raya Semarang-Boja, Tambangan, Kec. Mijen, Kota Semarang, Jawa Tengah",
-            kota: "Semarang",
-            provinsi: "Jawa Tengah",
-            icon: "",
-            geojson: null,
-            use_internet: "0",
-            dbsource: "http://iku.menlhk.go.id/aqms/",
-            old_id: null,
-            xtimetimes: "2020-04-08 10:30:04"
-          },
-        ];
-        // Create markers.
-        // for (var i = 0; i < features.length; i++) {
-        //   var marker = new google.maps.Marker({
-        //     position: features[i].position,
-        //     icon: icons[features[i].type].icon,
-        //     map: map
-        //   });
+        // function tester(){
+        // const proxyurl = "https://cors-anywhere.herokuapp.com/";
+        // const url = "http://ispumaps.id/ispumapapi/api/aqmdetailstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==&lat=-7.25899764&lon=112.67793493"; // site that doesn’t send Access-Control-*
+        // fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
+        // .then(response => response.json())
+        // .then(contents => console.log(contents))
+        // .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+        // // return contents;
+        // }
+        var latitude_api = -7.25899764;
+        var longitude_api = 112.67793493; 
+        let url = "https://cors-anywhere.herokuapp.com/http://ispumaps.id/ispumapapi/api/aqmstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==";
+        let url_detail = "https://cors-anywhere.herokuapp.com/http://http://ispumaps.id/ispumapapi/api/aqmdetailstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==&lat=" + latitude_api +"&lon="+longitude_api;
 
-        function placeMarker( loc ) {
-          var marker = new google.maps.Marker({
-            position : new google.maps.LatLng( loc.lat, loc.lng ),
-            map : map
-          });
-          google.maps.event.addListener(marker, 'click', function(){
-              infowindow.close(); // Close previously opened infowindow
+        // var url = "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=ecd69f2e5c6f47039e492deedbf8223a";
+        var content = [];
+        $.getJSON(url, function(data){
+          console.log(data);
+          content = data.data;
+            for(var x =0; x < content.length; x++){
+              let id_stasiun = content[x].id_stasiun;
+              let nama = content[x].nama;
+              let latitude = parseFloat(content[x].lat);
+              let longitude = parseFloat(content[x].lon); 
+
+              dropMarker(latitude,longitude,id_stasiun,nama);
+
+            }
+        });
+
+        function dropMarker(lat,lng,id_stasiun,nama){
+          var location = {lat: lat, lng: lng};
+          // var contentString = "<h4>" + nama + "</h4>";
+          
+            
+            var marker = new google.maps.Marker({
+              position : location,
+              map : map,
+              title : id_stasiun
+            });
+              
+            marker.addListener('click', function(){
+              infowindow.close();
               infowindow.setContent(`<table class="table">
               <thead>
                 <tr>
@@ -191,17 +205,17 @@
                 <tr>
                   <th scope="row" style="width: 106px;">Nama Stasiun</th>
                   <th scope="row">:</th>
-                  <td>${loc.nama}</td>
+                  <td>${nama}</td>
                 </tr>
                 <tr>
                   <th scope="row">Kota</th>
                   <th scope="row">:</th>
-                  <td>${loc.kota}</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <th scope="row">provinsi</th>
                   <th scope="row">:</th>
-                  <td>${loc.provinsi}</td>
+                  <td></td>
                 </tr>
               </tbody>
             </table>
@@ -267,37 +281,187 @@
                 </tr>
               </tbody>
             </table>`);
-              infowindow.open(map, marker);
-          });
+                infowindow.open(map,marker);
+            });
         }
-  
-      // ITERATE ALL LOCATIONS. Pass every location to placeMarker
-          locations.forEach( placeMarker );
 
-          // var infowindow = new google.maps.InfoWindow({
-          //   content: features[i].content
-          // });
 
-          // marker.addListener('click', function() {
-          //   infowindow.open(map, marker);
-          // });
-        // };
+       // }
+        
 
-        // google.maps.event.addListener(map, 'click', function(event) {
-        //   placeMarker(map, event.latLng);
-        // });
+        // var locations = [
+        //  {  id: "103",
+        //     id_stasiun: "KLHK-SURABAYA-TANDES",
+        //     nama: "Surabaya, Balongsari, Tandes, Kota Surabaya, Jawa Timur 60186",
+        //     lat: "-7.25899764",
+        //     lng: "112.67793493",
+        //     alamat: "Surabaya, Balongsari, Tandes, Kota Surabaya, Jawa Timur 60186",
+        //     kota: "Surabaya",
+        //     provinsi: "Jawa Timur",
+        //     icon: "",
+        //     geojson: null,
+        //     use_internet: "0",
+        //     dbsource: "http://iku.menlhk.go.id/aqms/",
+        //     old_id: null,
+        //     xtimetimes: "2020-04-08 10:30:04"
+        //   },
+        //   { id: "104",
+        //     id_stasiun: "KLHK-SEMARANG",
+        //     nama: "Jl. Raya Semarang-Boja, Tambangan, Kec. Mijen, Kota Semarang, Jawa Tengah",
+        //     lat: "-7.076239",
+        //     lng: "110.30954",
+        //     alamat: "Jl. Raya Semarang-Boja, Tambangan, Kec. Mijen, Kota Semarang, Jawa Tengah",
+        //     kota: "Semarang",
+        //     provinsi: "Jawa Tengah",
+        //     icon: "",
+        //     geojson: null,
+        //     use_internet: "0",
+        //     dbsource: "http://iku.menlhk.go.id/aqms/",
+        //     old_id: null,
+        //     xtimetimes: "2020-04-08 10:30:04"
+        //   },
+        // ];
 
-        // function placeMarker(map, location) {
+        // console.log(locations);
+        // Create markers.
+        // for (var i = 0; i < features.length; i++) {
         //   var marker = new google.maps.Marker({
-        //     position: location,
+        //     position: features[i].position,
+        //     icon: icons[features[i].type].icon,
         //     map: map
         //   });
-        //   var infowindow = new google.maps.InfoWindow({
-        //     content: 'Latitude: ' + location.lat() +
-        //     '<br>Longitude: ' + location.lng()
-        //   });
-        //   infowindow.open(map,marker);
-        // }
+
+
+        
+
+      //   function placeMarker( loc ) {
+      //     var marker = new google.maps.Marker({
+      //       position : new google.maps.LatLng( loc.lat, loc.lng ),
+      //       map : map
+      //     });
+      //     google.maps.event.addListener(marker, 'click', function(){
+      //         infowindow.close(); // Close previously opened infowindow
+      //         infowindow.setContent(`<table class="table">
+      //         <thead>
+      //           <tr>
+      //             <th scope="col" style="width: 100px;"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/ic_emote_baik.png" style="width: 50px;"></img></th>
+      //             <th scope="col" style="vertical-align: inherit;"><h3 style="margin: 0 0 0px 0;">Status : <kondisi></h3></th>
+      //           </tr>
+      //         </thead>
+      //         </table>
+      //         <table class="table">
+      //         <tbody>
+      //           <tr>
+      //             <th scope="row" style="width: 106px;">Nama Stasiun</th>
+      //             <th scope="row">:</th>
+      //             <td>${loc.nama}</td>
+      //           </tr>
+      //           <tr>
+      //             <th scope="row">Kota</th>
+      //             <th scope="row">:</th>
+      //             <td>${loc.kota}</td>
+      //           </tr>
+      //           <tr>
+      //             <th scope="row">provinsi</th>
+      //             <th scope="row">:</th>
+      //             <td>${loc.provinsi}</td>
+      //           </tr>
+      //         </tbody>
+      //       </table>
+      //       <table class="table">
+      //         <tbody>
+      //           <tr>
+      //             <th scope="row" style="width: 106px;">PM10</th>
+      //             <td>0</td>
+      //             <th scope="row">O3</th>
+      //             <td>0</td>
+      //           </tr>
+      //           <tr>
+      //             <th scope="row" style="width: 106px;">SO2</th>
+      //             <td>0</td>
+      //             <th scope="row">N02</th>
+      //             <td>0</td>
+      //           </tr>
+      //           <tr>
+      //             <th scope="row" style="width: 106px;">CO</th>
+      //             <td>0</td>
+      //             <th scope="row" style="width: 106px;"></th>
+      //             <td></td>
+      //           </tr>
+      //           <tr>
+      //             <th scope="row"></th>
+      //             <th scope="row"></th>
+      //             <th scope="row"></th>
+      //             <th scope="row"></th>
+      //           </tr>
+      //         </tbody>
+      //       </table>
+      //       <table class="table">
+      //         <tbody>
+      //           <tr>
+      //             <th class="text-center" class="align-middle" scope="row" style="border-top: 0px;"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/pressure.png" style="width: 25px;"></img></th>
+      //             <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/temparature.png" style="width: 25px;"></img></th>
+      //             <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/wind_direction.png" style="width: 25px;"></img></th>
+      //             <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/wind_speed.png" style="width: 25px;"></img></th>
+      //           </tr>
+      //           <tr>
+      //             <td class="text-center" style="border-top: 0px;">0</td>
+      //             <td class="text-center" style="border-top: 0px;">0</td>
+      //             <td class="text-center" style="border-top: 0px;">0</td>
+      //             <td class="text-center" style="border-top: 0px;">0</td>
+      //           </tr>
+      //         </tbody>
+      //       </table>
+      //       <table class="table">
+      //         <tbody>
+      //           <tr>
+      //             <th class="text-center" class="align-middle" scope="row" style="border-top: 0px;"></th>
+      //             <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/humidity.png" style="width: 25px;"></img></th>
+      //             <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/rain_rate.png" style="width: 25px;"></img></th>
+      //             <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/solar_radiation.png" style="width: 25px;"></img></th>
+      //             <th class="text-center" scope="row" style="border-top: 0px"></th>
+      //           </tr>
+      //           <tr>
+      //             <td class="text-center" style="border-top: 0px;"></td>
+      //             <td class="text-center" style="border-top: 0px;">0</td>
+      //             <td class="text-center" style="border-top: 0px;">0</td>
+      //             <td class="text-center" style="border-top: 0px;">0</td>
+      //             <td class="text-center" style="border-top: 0px;"></td>
+      //           </tr>
+      //         </tbody>
+      //       </table>`);
+      //         infowindow.open(map, marker);
+      //     });
+      //   }
+  
+      // // ITERATE ALL LOCATIONS. Pass every location to placeMarker
+
+      //     locations.forEach( placeMarker );
+
+      //     var infowindow = new google.maps.InfoWindow({
+      //       content: features[i].content
+      //     });
+
+      //     marker.addListener('click', function() {
+      //       infowindow.open(map, marker);
+      //     });
+      //   };
+
+      //   google.maps.event.addListener(map, 'click', function(event) {
+      //     placeMarker(map, event.latLng);
+      //   });
+
+      //   function placeMarker(map, location) {
+      //     var marker = new google.maps.Marker({
+      //       position: location,
+      //       map: map
+      //     });
+      //     var infowindow = new google.maps.InfoWindow({
+      //       content: 'Latitude: ' + location.lat() +
+      //       '<br>Longitude: ' + location.lng()
+      //     });
+      //     infowindow.open(map,marker);
+      //   }
     
     
     // isi content
@@ -363,6 +527,7 @@
     //       infowindow.open(map, marker1);
     //     });
       }
+       
 
     </script>
     <script async defer
