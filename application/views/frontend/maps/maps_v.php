@@ -160,13 +160,13 @@
         // }
         var latitude_api = -7.25899764;
         var longitude_api = 112.67793493; 
-        let url = "https://cors-anywhere.herokuapp.com/http://ispumaps.id/ispumapapi/api/aqmstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==";
-        let url_detail = "https://cors-anywhere.herokuapp.com/http://http://ispumaps.id/ispumapapi/api/aqmdetailstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==&lat=" + latitude_api +"&lon="+longitude_api;
+        let url = "http://ispumaps.id/ispumapapi/api/aqmstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==";
+        // let url_detail = "https://cors-anywhere.herokuapp.com/http://ispumaps.id/ispumapapi/api/aqmdetailstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==&lat=" + latitude_api +"&lon="+longitude_api;
 
         // var url = "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=ecd69f2e5c6f47039e492deedbf8223a";
         var content = [];
         $.getJSON(url, function(data){
-          console.log(data);
+          // console.log(data);
           content = data.data;
             for(var x =0; x < content.length; x++){
               let id_stasiun = content[x].id_stasiun;
@@ -176,8 +176,26 @@
 
               dropMarker(latitude,longitude,id_stasiun,nama);
 
+              let url_detail = "http://ispumaps.id/ispumapapi/api/aqmdetailstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==&lat=" + latitude +"&lon="+longitude;
+              var contentdetail = [];
+              $.getJSON(url_detail, function(data1){
+                // console.log(data1);
+                // content = data.data;
+                  
+                    let id_stasiun = data1.category;
+                    let nama = data1.stasiun_name;
+                    let latitude1 = latitude;
+                    let longitude1 = longitude; 
+
+                    clickListener(latitude1,longitude1,id_stasiun,nama);
+
+                  
+              });
+
             }
         });
+
+        
 
         function dropMarker(lat,lng,id_stasiun,nama){
           var location = {lat: lat, lng: lng};
@@ -190,8 +208,116 @@
               title : id_stasiun
             });
               
+            // marker.addListener('click', function(){
+            //   infowindow.close();
+              
+            //   infowindow.setContent(`<table class="table">
+            //   <thead>
+            //     <tr>
+            //       <th scope="col" style="width: 100px;"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/ic_emote_baik.png" style="width: 50px;"></img></th>
+            //       <th scope="col" style="vertical-align: inherit;"><h3 style="margin: 0 0 0px 0;">Status : <kondisi></h3></th>
+            //     </tr>
+            //   </thead>
+            //   </table>
+            //   <table class="table">
+            //   <tbody>
+            //     <tr>
+            //       <th scope="row" style="width: 106px;">Nama Stasiun</th>
+            //       <th scope="row">:</th>
+            //       <td>${nama}</td>
+            //     </tr>
+            //     <tr>
+            //       <th scope="row">Kota</th>
+            //       <th scope="row">:</th>
+            //       <td></td>
+            //     </tr>
+            //     <tr>
+            //       <th scope="row">provinsi</th>
+            //       <th scope="row">:</th>
+            //       <td></td>
+            //     </tr>
+            //   </tbody>
+            // </table>
+            // <table class="table">
+            //   <tbody>
+            //     <tr>
+            //       <th scope="row" style="width: 106px;">PM10</th>
+            //       <td>0</td>
+            //       <th scope="row">O3</th>
+            //       <td>0</td>
+            //     </tr>
+            //     <tr>
+            //       <th scope="row" style="width: 106px;">SO2</th>
+            //       <td>0</td>
+            //       <th scope="row">N02</th>
+            //       <td>0</td>
+            //     </tr>
+            //     <tr>
+            //       <th scope="row" style="width: 106px;">CO</th>
+            //       <td>0</td>
+            //       <th scope="row" style="width: 106px;"></th>
+            //       <td></td>
+            //     </tr>
+            //     <tr>
+            //       <th scope="row"></th>
+            //       <th scope="row"></th>
+            //       <th scope="row"></th>
+            //       <th scope="row"></th>
+            //     </tr>
+            //   </tbody>
+            // </table>
+            // <table class="table">
+            //   <tbody>
+            //     <tr>
+            //       <th class="text-center" class="align-middle" scope="row" style="border-top: 0px;"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/pressure.png" style="width: 25px;"></img></th>
+            //       <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/temparature.png" style="width: 25px;"></img></th>
+            //       <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/wind_direction.png" style="width: 25px;"></img></th>
+            //       <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/wind_speed.png" style="width: 25px;"></img></th>
+            //     </tr>
+            //     <tr>
+            //       <td class="text-center" style="border-top: 0px;">0</td>
+            //       <td class="text-center" style="border-top: 0px;">0</td>
+            //       <td class="text-center" style="border-top: 0px;">0</td>
+            //       <td class="text-center" style="border-top: 0px;">0</td>
+            //     </tr>
+            //   </tbody>
+            // </table>
+            // <table class="table">
+            //   <tbody>
+            //     <tr>
+            //       <th class="text-center" class="align-middle" scope="row" style="border-top: 0px;"></th>
+            //       <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/humidity.png" style="width: 25px;"></img></th>
+            //       <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/rain_rate.png" style="width: 25px;"></img></th>
+            //       <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/solar_radiation.png" style="width: 25px;"></img></th>
+            //       <th class="text-center" scope="row" style="border-top: 0px"></th>
+            //     </tr>
+            //     <tr>
+            //       <td class="text-center" style="border-top: 0px;"></td>
+            //       <td class="text-center" style="border-top: 0px;">0</td>
+            //       <td class="text-center" style="border-top: 0px;">0</td>
+            //       <td class="text-center" style="border-top: 0px;">0</td>
+            //       <td class="text-center" style="border-top: 0px;"></td>
+            //     </tr>
+            //   </tbody>
+            // </table>`);
+            //     infowindow.open(map,marker);
+            // });
+        }
+
+        function clickListener(lat,lng,id_stasiun,nama){
+          var location = {lat: lat, lng: lng};
+          // var contentString = "<h4>" + nama + "</h4>";
+          
+            
+            var marker = new google.maps.Marker({
+              position : location,
+              map : map,
+              title : id_stasiun
+            });
+              
             marker.addListener('click', function(){
               infowindow.close();
+              
               infowindow.setContent(`<table class="table">
               <thead>
                 <tr>
