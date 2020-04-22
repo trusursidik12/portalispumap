@@ -322,7 +322,7 @@
               <thead>
                 <tr>
                   <th scope="col" style="width: 100px;"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/ic_emote_baik.png" style="width: 50px;"></img></th>
-                  <th scope="col" style="vertical-align: inherit;"><h3 style="margin: 0 0 0px 0;">Status : <kondisi></h3></th>
+                  <th scope="col" style="vertical-align: inherit;"><h3 style="margin: 0 0 0px 0;">Status : ${id_stasiun}</h3></th>
                 </tr>
               </thead>
               </table>
