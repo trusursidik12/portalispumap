@@ -27,180 +27,70 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
-      <script>
-// const http = new XMLHttpRequest()
-
-// http.open("GET", "http://ispumaps.id/ispumapapi/api/aqmdetailstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==&lat=-7.25899764&lon=112.67793493")
-// http.send()
-
-// http.onload = () => console.log(http.responseText)
-
-
-
-// You can use jQuery .getJSON() function:
-
-
-    // $.get(
-    // "http://loopinc.id/api/jenis-assessment",
-    
-    // function(data) {
-    //    alert('page content: ' + data);
-    //   }
-    // );
-
-  // var map;
-  
-  //     function initMap() {
-  //       map = new google.maps.Map(document.getElementById('map'), {
-  //         zoom: 2,
-  //         center: new google.maps.LatLng(2.8,-187.3),
-  //         mapTypeId: 'terrain'
-  //       });
-
-  //       // Create a <script> tag and set the USGS URL as the source.
-  //       var script = document.createElement('script');
-  //       // This example uses a local copy of the GeoJSON stored at
-  //       // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-  //       var url = 'http://ispumaps.id/ispumapapi/api/aqmstasiun?trusur_api_key=';
-  //       var key = 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==';
-  //       script.src = url + key;
-  //       // script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
-  //       document.getElementsByTagName('head')[0].appendChild(script);
-  //     }
-
-  //     // Loop through the results array and place a marker for each
-  //     // set of coordinates.
-  //     function tes(results) {
-  //       for (var i = 0; i < results.data.length; i++) {
-  //         var coords = results.data[i];
-  //         var latLng = new google.maps.LatLng(coords[3],coords[4]);
-  //         var marker = new google.maps.Marker({
-  //           position: latLng,
-  //           map: map
-  //         });
-  //       }
-      // }
-      // This example displays a marker at the center of Australia.
-      // When the user clicks the marker, an info window opens.
-
-      
-
+    </section>
+    <!-- End Contact Section -->
+    <script>
         
 
       function initMap() {
         var infowindow = new google.maps.InfoWindow({
             maxWidth: 350
         });
-        // var infowindow = new google.maps.InfoWindow({
-        //       // maxWidth: 350,
-
-        //       // content : contentString
-        //     });
+       
         var jakarta = {lat: -6.200000, lng: 106.816666};
         var tangerang = {lat: -6.178306, lng: 106.631889};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 7,
           center: jakarta
         });
-
-
-    //     function tester(){
-    //         var request = $.ajax({
-    //           url: "http://ispumaps.id/ispumapapi/api/aqmstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==",
-    //           data: {f: "data"},
-    //           datatype: 'json'
-    //         });
-
-    //         console.log(tester);
-    //     }
-      // console.log(contents)
-
-        // var iconBase =
-        //     'https://developers.google.com/maps/documentation/javascript/examples/full/images/';
-
-        // var icons = {
-        //   parking: {
-        //     icon: iconBase + 'parking_lot_maps.png'
-        //   },
-        //   library: {
-        //     icon: iconBase + 'library_maps.png'
-        //   },
-        //   info: {
-        //     icon: iconBase + 'info-i_maps.png'
-        //   }
-        // };
-
-        // var features = [
-        //   {
-        //     position: new google.maps.LatLng(-6.200000, 106.816666),
-        //     type: 'info',
-        //     content : 'tes'
-        //   }, {
-        //     position: new google.maps.LatLng(-6.178306, 106.631889),
-        //     type: 'info',
-        //     content : 'kocak'
-        //   }
-        // ];
-
-        // var locations_ = [
-        //   { lat: -7.786879,lng: 110.387862},
-        //   { lat: -7.25899764,lng: 112.67793493},
-        // ];
-        // var locations = tester();
-
-        // function tester(){
-        // const proxyurl = "https://cors-anywhere.herokuapp.com/";
-        // const url = "http://ispumaps.id/ispumapapi/api/aqmdetailstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==&lat=-7.25899764&lon=112.67793493"; // site that doesn’t send Access-Control-*
-        // fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
-        // .then(response => response.json())
-        // .then(contents => console.log(contents))
-        // .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
-        // // return contents;
-        // }
-        var latitude_api = -7.25899764;
-        var longitude_api = 112.67793493; 
+   
         let url = "http://ispumaps.id/ispumapapi/api/aqmstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==";
-        // let url_detail = "https://cors-anywhere.herokuapp.com/http://ispumaps.id/ispumapapi/api/aqmdetailstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==&lat=" + latitude_api +"&lon="+longitude_api;
-
-        // var url = "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=ecd69f2e5c6f47039e492deedbf8223a";
         var content = [];
         $.getJSON(url, function(data){
           // console.log(data);
           content = data.data;
             for(var x =0; x < content.length; x++){
+
               let id_stasiun = content[x].id_stasiun;
               let nama = content[x].nama;
               let latitude = parseFloat(content[x].lat);
               let longitude = parseFloat(content[x].lon); 
 
-              dropMarker(latitude,longitude,id_stasiun,nama);
+              // dropMarker(latitude,longitude,id_stasiun,nama);
 
               let url_detail = "http://ispumaps.id/ispumapapi/api/aqmdetailstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==&lat=" + latitude +"&lon="+longitude;
               var contentdetail = [];
+
               $.getJSON(url_detail, function(data1){
-                // console.log(data1);
-                // content = data.data;
-                  
-                    let id_stasiun = data1.category;
-                    let nama = data1.stasiun_name;
+                    
+                    let category = data1.category;
+                    let stasiun_name = data1.stasiun_name;
+                    let city = data1.city;
+                    let province = data1.province;
+                    let pm25 = data1.pm25;
+                    let pm10 = data1.pm10;
+                    let so2 = data1.so2;
+                    let co = data1.co;
+                    let o3 = data1.o3;
+                    let no2 = data1.no2;
+                    let pressure = parseFloat(data1.pressure);
+                    let temperature = parseFloat(data1.temperature);
+                    let wind_direction = parseInt(data1.wind_direction);
+                    let wind_speed = parseInt(data1.wind_speed);
+                    let humidity = parseInt(data1.humidity);
+                    let rain_rate = parseFloat(data1.rain_rate);
+                    let solar_radiation = parseInt(data1.solar_radiation);
                     let latitude1 = latitude;
                     let longitude1 = longitude; 
 
-                    clickListener(latitude1,longitude1,id_stasiun,nama);
-
+                    clickListener(latitude1,longitude1,category,stasiun_name,city,province,pm25,pm10,so2,co,o3,no2,pressure,temperature,wind_direction,wind_speed,humidity,rain_rate,solar_radiation);
                   
               });
-
             }
         });
 
-        
-
         function dropMarker(lat,lng,id_stasiun,nama){
           var location = {lat: lat, lng: lng};
-          // var contentString = "<h4>" + nama + "</h4>";
-          
             
             var marker = new google.maps.Marker({
               position : location,
@@ -208,111 +98,34 @@
               title : id_stasiun
             });
               
-            // marker.addListener('click', function(){
-            //   infowindow.close();
-              
-            //   infowindow.setContent(`<table class="table">
-            //   <thead>
-            //     <tr>
-            //       <th scope="col" style="width: 100px;"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/ic_emote_baik.png" style="width: 50px;"></img></th>
-            //       <th scope="col" style="vertical-align: inherit;"><h3 style="margin: 0 0 0px 0;">Status : <kondisi></h3></th>
-            //     </tr>
-            //   </thead>
-            //   </table>
-            //   <table class="table">
-            //   <tbody>
-            //     <tr>
-            //       <th scope="row" style="width: 106px;">Nama Stasiun</th>
-            //       <th scope="row">:</th>
-            //       <td>${nama}</td>
-            //     </tr>
-            //     <tr>
-            //       <th scope="row">Kota</th>
-            //       <th scope="row">:</th>
-            //       <td></td>
-            //     </tr>
-            //     <tr>
-            //       <th scope="row">provinsi</th>
-            //       <th scope="row">:</th>
-            //       <td></td>
-            //     </tr>
-            //   </tbody>
-            // </table>
-            // <table class="table">
-            //   <tbody>
-            //     <tr>
-            //       <th scope="row" style="width: 106px;">PM10</th>
-            //       <td>0</td>
-            //       <th scope="row">O3</th>
-            //       <td>0</td>
-            //     </tr>
-            //     <tr>
-            //       <th scope="row" style="width: 106px;">SO2</th>
-            //       <td>0</td>
-            //       <th scope="row">N02</th>
-            //       <td>0</td>
-            //     </tr>
-            //     <tr>
-            //       <th scope="row" style="width: 106px;">CO</th>
-            //       <td>0</td>
-            //       <th scope="row" style="width: 106px;"></th>
-            //       <td></td>
-            //     </tr>
-            //     <tr>
-            //       <th scope="row"></th>
-            //       <th scope="row"></th>
-            //       <th scope="row"></th>
-            //       <th scope="row"></th>
-            //     </tr>
-            //   </tbody>
-            // </table>
-            // <table class="table">
-            //   <tbody>
-            //     <tr>
-            //       <th class="text-center" class="align-middle" scope="row" style="border-top: 0px;"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/pressure.png" style="width: 25px;"></img></th>
-            //       <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/temparature.png" style="width: 25px;"></img></th>
-            //       <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/wind_direction.png" style="width: 25px;"></img></th>
-            //       <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/wind_speed.png" style="width: 25px;"></img></th>
-            //     </tr>
-            //     <tr>
-            //       <td class="text-center" style="border-top: 0px;">0</td>
-            //       <td class="text-center" style="border-top: 0px;">0</td>
-            //       <td class="text-center" style="border-top: 0px;">0</td>
-            //       <td class="text-center" style="border-top: 0px;">0</td>
-            //     </tr>
-            //   </tbody>
-            // </table>
-            // <table class="table">
-            //   <tbody>
-            //     <tr>
-            //       <th class="text-center" class="align-middle" scope="row" style="border-top: 0px;"></th>
-            //       <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/humidity.png" style="width: 25px;"></img></th>
-            //       <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/rain_rate.png" style="width: 25px;"></img></th>
-            //       <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/solar_radiation.png" style="width: 25px;"></img></th>
-            //       <th class="text-center" scope="row" style="border-top: 0px"></th>
-            //     </tr>
-            //     <tr>
-            //       <td class="text-center" style="border-top: 0px;"></td>
-            //       <td class="text-center" style="border-top: 0px;">0</td>
-            //       <td class="text-center" style="border-top: 0px;">0</td>
-            //       <td class="text-center" style="border-top: 0px;">0</td>
-            //       <td class="text-center" style="border-top: 0px;"></td>
-            //     </tr>
-            //   </tbody>
-            // </table>`);
-            //     infowindow.open(map,marker);
-            // });
         }
 
-        function clickListener(lat,lng,id_stasiun,nama){
-          var location = {lat: lat, lng: lng};
-          // var contentString = "<h4>" + nama + "</h4>";
-          
-            
+        function clickListener(lat,lng,category,stasiun_name,city,province,pm25,pm10,so2,co,o3,no2,pressure,temperature,wind_direction,wind_speed,humidity,rain_rate,solar_radiation){
+            var location = {lat: lat, lng: lng};
+            // var contentString = "<h4>" + nama + "</h4>";
+            // let color = "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png";
+            if(category == "BAIK"){
+                color = "http://maps.google.com/mapfiles/ms/icons/green-dot.png";
+                var emote = "ic_emote_baik.png";
+            } else if(category == "SEDANG"){
+                color = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png";
+                var emote = "ic_emote_sedang.png";
+            } else if(category == "TIDAK SEHAT"){
+                color = "http://maps.google.com/mapfiles/ms/icons/orange-dot.png";
+                var emote = "ic_emote_tidak_sehat.png";
+            } else if(category == "SANGAT TIDAK SEHAT"){
+                color = "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
+                var emote = "ic_emote_sangat_tidak.png";
+            } else if(category == "BERBAHAYA"){
+                color = "http://maps.google.com/mapfiles/ms/icons/purple-dot.png";
+                var emote = "ic_emote_berbahaya.png";
+            }
+              
             var marker = new google.maps.Marker({
               position : location,
               map : map,
-              title : id_stasiun
+              title : category,
+              icon : color
             });
               
             marker.addListener('click', function(){
@@ -321,8 +134,8 @@
               infowindow.setContent(`<table class="table">
               <thead>
                 <tr>
-                  <th scope="col" style="width: 100px;"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/ic_emote_baik.png" style="width: 50px;"></img></th>
-                  <th scope="col" style="vertical-align: inherit;"><h3 style="margin: 0 0 0px 0;">Status : ${id_stasiun}</h3></th>
+                  <th scope="col" style="width: 100px;"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/${emote}" style="width: 50px;"></img></th>
+                  <th scope="col" style="vertical-align: inherit;"><h3 style="margin: 0 0 0px 0;font-size: 20px;">Status : ${category}</h3></th>
                 </tr>
               </thead>
               </table>
@@ -331,39 +144,39 @@
                 <tr>
                   <th scope="row" style="width: 106px;">Nama Stasiun</th>
                   <th scope="row">:</th>
-                  <td>${nama}</td>
+                  <td>${stasiun_name}</td>
                 </tr>
                 <tr>
                   <th scope="row">Kota</th>
                   <th scope="row">:</th>
-                  <td></td>
+                  <td>${city}</td>
                 </tr>
                 <tr>
                   <th scope="row">provinsi</th>
                   <th scope="row">:</th>
-                  <td></td>
+                  <td>${province}</td>
                 </tr>
               </tbody>
             </table>
             <table class="table">
               <tbody>
                 <tr>
+                  <th scope="row" style="width: 106px;">PM25</th>
+                  <td>${pm25}</td>
+                  <th scope="row">CO</th>
+                  <td>${co}</td>
+                </tr>
+                <tr>
                   <th scope="row" style="width: 106px;">PM10</th>
-                  <td>0</td>
+                  <td>${pm10}</td>
                   <th scope="row">O3</th>
-                  <td>0</td>
+                  <td>${o3}</td>
                 </tr>
                 <tr>
                   <th scope="row" style="width: 106px;">SO2</th>
-                  <td>0</td>
-                  <th scope="row">N02</th>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <th scope="row" style="width: 106px;">CO</th>
-                  <td>0</td>
-                  <th scope="row" style="width: 106px;"></th>
-                  <td></td>
+                  <td>${so2}</td>
+                  <th scope="row" style="width: 106px;">NO2</th>
+                  <td>${no2}</td>
                 </tr>
                 <tr>
                   <th scope="row"></th>
@@ -382,10 +195,10 @@
                   <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/wind_speed.png" style="width: 25px;"></img></th>
                 </tr>
                 <tr>
-                  <td class="text-center" style="border-top: 0px;">0</td>
-                  <td class="text-center" style="border-top: 0px;">0</td>
-                  <td class="text-center" style="border-top: 0px;">0</td>
-                  <td class="text-center" style="border-top: 0px;">0</td>
+                  <td class="text-center" style="border-top: 0px;">${pressure}<br>mBar</td>
+                  <td class="text-center" style="border-top: 0px;">${temperature}<br>°C</td>
+                  <td class="text-center" style="border-top: 0px;">${wind_speed}°</td>
+                  <td class="text-center" style="border-top: 0px;">${wind_speed}<br>Km/h</td>
                 </tr>
               </tbody>
             </table>
@@ -400,9 +213,9 @@
                 </tr>
                 <tr>
                   <td class="text-center" style="border-top: 0px;"></td>
-                  <td class="text-center" style="border-top: 0px;">0</td>
-                  <td class="text-center" style="border-top: 0px;">0</td>
-                  <td class="text-center" style="border-top: 0px;">0</td>
+                  <td class="text-center" style="border-top: 0px;">${humidity}%</td>
+                  <td class="text-center" style="border-top: 0px;">${rain_rate}<br>mm/jam</td>
+                  <td class="text-center" style="border-top: 0px;">${solar_radiation}<br>watt/m2</td>
                   <td class="text-center" style="border-top: 0px;"></td>
                 </tr>
               </tbody>
@@ -410,250 +223,7 @@
                 infowindow.open(map,marker);
             });
         }
-
-
-       // }
-        
-
-        // var locations = [
-        //  {  id: "103",
-        //     id_stasiun: "KLHK-SURABAYA-TANDES",
-        //     nama: "Surabaya, Balongsari, Tandes, Kota Surabaya, Jawa Timur 60186",
-        //     lat: "-7.25899764",
-        //     lng: "112.67793493",
-        //     alamat: "Surabaya, Balongsari, Tandes, Kota Surabaya, Jawa Timur 60186",
-        //     kota: "Surabaya",
-        //     provinsi: "Jawa Timur",
-        //     icon: "",
-        //     geojson: null,
-        //     use_internet: "0",
-        //     dbsource: "http://iku.menlhk.go.id/aqms/",
-        //     old_id: null,
-        //     xtimetimes: "2020-04-08 10:30:04"
-        //   },
-        //   { id: "104",
-        //     id_stasiun: "KLHK-SEMARANG",
-        //     nama: "Jl. Raya Semarang-Boja, Tambangan, Kec. Mijen, Kota Semarang, Jawa Tengah",
-        //     lat: "-7.076239",
-        //     lng: "110.30954",
-        //     alamat: "Jl. Raya Semarang-Boja, Tambangan, Kec. Mijen, Kota Semarang, Jawa Tengah",
-        //     kota: "Semarang",
-        //     provinsi: "Jawa Tengah",
-        //     icon: "",
-        //     geojson: null,
-        //     use_internet: "0",
-        //     dbsource: "http://iku.menlhk.go.id/aqms/",
-        //     old_id: null,
-        //     xtimetimes: "2020-04-08 10:30:04"
-        //   },
-        // ];
-
-        // console.log(locations);
-        // Create markers.
-        // for (var i = 0; i < features.length; i++) {
-        //   var marker = new google.maps.Marker({
-        //     position: features[i].position,
-        //     icon: icons[features[i].type].icon,
-        //     map: map
-        //   });
-
-
-        
-
-      //   function placeMarker( loc ) {
-      //     var marker = new google.maps.Marker({
-      //       position : new google.maps.LatLng( loc.lat, loc.lng ),
-      //       map : map
-      //     });
-      //     google.maps.event.addListener(marker, 'click', function(){
-      //         infowindow.close(); // Close previously opened infowindow
-      //         infowindow.setContent(`<table class="table">
-      //         <thead>
-      //           <tr>
-      //             <th scope="col" style="width: 100px;"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/ic_emote_baik.png" style="width: 50px;"></img></th>
-      //             <th scope="col" style="vertical-align: inherit;"><h3 style="margin: 0 0 0px 0;">Status : <kondisi></h3></th>
-      //           </tr>
-      //         </thead>
-      //         </table>
-      //         <table class="table">
-      //         <tbody>
-      //           <tr>
-      //             <th scope="row" style="width: 106px;">Nama Stasiun</th>
-      //             <th scope="row">:</th>
-      //             <td>${loc.nama}</td>
-      //           </tr>
-      //           <tr>
-      //             <th scope="row">Kota</th>
-      //             <th scope="row">:</th>
-      //             <td>${loc.kota}</td>
-      //           </tr>
-      //           <tr>
-      //             <th scope="row">provinsi</th>
-      //             <th scope="row">:</th>
-      //             <td>${loc.provinsi}</td>
-      //           </tr>
-      //         </tbody>
-      //       </table>
-      //       <table class="table">
-      //         <tbody>
-      //           <tr>
-      //             <th scope="row" style="width: 106px;">PM10</th>
-      //             <td>0</td>
-      //             <th scope="row">O3</th>
-      //             <td>0</td>
-      //           </tr>
-      //           <tr>
-      //             <th scope="row" style="width: 106px;">SO2</th>
-      //             <td>0</td>
-      //             <th scope="row">N02</th>
-      //             <td>0</td>
-      //           </tr>
-      //           <tr>
-      //             <th scope="row" style="width: 106px;">CO</th>
-      //             <td>0</td>
-      //             <th scope="row" style="width: 106px;"></th>
-      //             <td></td>
-      //           </tr>
-      //           <tr>
-      //             <th scope="row"></th>
-      //             <th scope="row"></th>
-      //             <th scope="row"></th>
-      //             <th scope="row"></th>
-      //           </tr>
-      //         </tbody>
-      //       </table>
-      //       <table class="table">
-      //         <tbody>
-      //           <tr>
-      //             <th class="text-center" class="align-middle" scope="row" style="border-top: 0px;"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/pressure.png" style="width: 25px;"></img></th>
-      //             <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/temparature.png" style="width: 25px;"></img></th>
-      //             <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/wind_direction.png" style="width: 25px;"></img></th>
-      //             <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/wind_speed.png" style="width: 25px;"></img></th>
-      //           </tr>
-      //           <tr>
-      //             <td class="text-center" style="border-top: 0px;">0</td>
-      //             <td class="text-center" style="border-top: 0px;">0</td>
-      //             <td class="text-center" style="border-top: 0px;">0</td>
-      //             <td class="text-center" style="border-top: 0px;">0</td>
-      //           </tr>
-      //         </tbody>
-      //       </table>
-      //       <table class="table">
-      //         <tbody>
-      //           <tr>
-      //             <th class="text-center" class="align-middle" scope="row" style="border-top: 0px;"></th>
-      //             <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/humidity.png" style="width: 25px;"></img></th>
-      //             <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/rain_rate.png" style="width: 25px;"></img></th>
-      //             <th class="text-center" scope="row" style="border-top: 0px"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/solar_radiation.png" style="width: 25px;"></img></th>
-      //             <th class="text-center" scope="row" style="border-top: 0px"></th>
-      //           </tr>
-      //           <tr>
-      //             <td class="text-center" style="border-top: 0px;"></td>
-      //             <td class="text-center" style="border-top: 0px;">0</td>
-      //             <td class="text-center" style="border-top: 0px;">0</td>
-      //             <td class="text-center" style="border-top: 0px;">0</td>
-      //             <td class="text-center" style="border-top: 0px;"></td>
-      //           </tr>
-      //         </tbody>
-      //       </table>`);
-      //         infowindow.open(map, marker);
-      //     });
-      //   }
-  
-      // // ITERATE ALL LOCATIONS. Pass every location to placeMarker
-
-      //     locations.forEach( placeMarker );
-
-      //     var infowindow = new google.maps.InfoWindow({
-      //       content: features[i].content
-      //     });
-
-      //     marker.addListener('click', function() {
-      //       infowindow.open(map, marker);
-      //     });
-      //   };
-
-      //   google.maps.event.addListener(map, 'click', function(event) {
-      //     placeMarker(map, event.latLng);
-      //   });
-
-      //   function placeMarker(map, location) {
-      //     var marker = new google.maps.Marker({
-      //       position: location,
-      //       map: map
-      //     });
-      //     var infowindow = new google.maps.InfoWindow({
-      //       content: 'Latitude: ' + location.lat() +
-      //       '<br>Longitude: ' + location.lng()
-      //     });
-      //     infowindow.open(map,marker);
-      //   }
-    
-    
-    // isi content
-    //     var contentString = '<table class="table">'+
-    //        '<thead>'+
-    //         '<tr>'+
-    //           '<th scope="col">#</th>'+
-    //           '<th scope="col">First</th>'+
-    //           '<th scope="col">Last</th>'+
-    //           '<th scope="col">Handle</th>'+
-    //         '</tr>'+
-    //       '</thead>'+
-    //       '<tbody>'+
-    //         '<tr>'+
-    //           '<th scope="row">1</th>'+
-    //           '<td>Mark</td>'+
-    //           '<td>Otto</td>'+
-    //           '<td>@mdo</td>'+
-    //         '</tr>'+
-    //         '<tr>'+
-    //           '<th scope="row">2</th>'+
-    //           '<td>Jacob</td>'+
-    //           '<td>Thornton</td>'+
-    //           '<td>@fat</td>'+
-    //         '</tr>'+
-    //         '<tr>'+
-    //           '<th scope="row">3</th>'+
-    //           '<td>Larry</td>'+
-    //           '<td>the Bird</td>'+
-    //           '<td>@twitter</td>'+
-    //         '</tr>'+
-    //       '</tbody>'+
-    //     '</table>';
-
-    //     var infowindow = new google.maps.InfoWindow({
-    //       content: contentString
-    //     });
-
-    // //marker
-    //     var marker = new google.maps.Marker({
-    //       position: jakarta,
-    //       map: map,
-    //       title: 'Jakarta',
-    //     // icon: '/maps/icons/titik-48.png'
-    //     icon:  '<?= base_url() ?>assets/frontend/assets/img/titik-48.png'
-    //     // icon: '/maps/icons/titik-48.png'
-    //     });
-    
-    //     var marker1 = new google.maps.Marker({
-    //       position: tangerang,
-    //       map: map,
-    //       title: 'Tangerang',
-    //       // url(<?= base_url() ?>assets/frontend/assets/img/hero-bg.jpg)
-    //       icon:  '<?= base_url() ?>assets/frontend/assets/img/titik-48.png'
-    //     });
-    
-    // //Function Click
-    //     marker.addListener('click', function() {
-    //       infowindow.open(map, marker);
-    //     });
-    
-    //     marker1.addListener('click', function() {
-    //       infowindow.open(map, marker1);
-    //     });
       }
-       
 
     </script>
     <script async defer
