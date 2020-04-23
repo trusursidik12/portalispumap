@@ -15,4 +15,22 @@ class F_home extends CI_Controller {
 
 		$this->temp_frontend->load('frontend/theme/template_v', 'frontend/home/home_v', $data);
 	}
+
+	function ajax_aqmstasiun()
+	{
+		$stasiun = $this->f_home_m->get_aqmstasiun();
+
+		$data = array();
+        foreach ($stasiun as $list) {
+            $row = array();
+            $row[] = $list['lat'];
+            $row[] = $list['lon'];
+            $data[] = $row;
+        }
+        $output = array(
+                    "data" => $data,
+                );
+        // output to json format
+        echo json_encode($output);
+	}
 }
