@@ -1,32 +1,17 @@
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero-blog">
-    <div class="hero-container" data-aos="fade-up">
-      <h1>Maps</h1>
-    </div>
-  </section><!-- End Hero -->
 
   <main id="main">
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
-      <div class="container">
+    <section id="contact" class="contact section-bg" style="margin-top: 20px;">
 
-        
-        
+        <div class="">
 
-        <div class="row" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-12 ">
-            <!-- <iframe class="mb-4 mb-lg-0" src="https://maps.google.com/maps?q=PT%20Trusur%20Unggul%20Teknusa&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe> -->
-            <div id="map" style="border:0; width: 100%; height: 500px;"></div>
+          <div class="">
+            <div id="map" style="border:0; width: 100%; height: 700px;"></div>
           </div>
 
-          
-
         </div>
-
-      </div>
     </section>
     <!-- End Contact Section -->
     <script>
