@@ -3,7 +3,7 @@
   <main id="main">
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg" style="margin-top: 20px;">
+    <section id="contact" class="contact section-bg" style="margin-top: 20px; padding-bottom: 0px;">
 
         <div class="">
 
