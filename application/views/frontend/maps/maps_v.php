@@ -44,7 +44,7 @@
           center: jakarta
         });
    
-        let url = "http://ispumaps.id/ispumapapi/api/aqmstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==";
+        let url = "<?= site_url() ?>ajax/stasiun";
         var content = [];
         $.getJSON(url, function(data){
           // console.log(data);
@@ -58,7 +58,7 @@
 
               // dropMarker(latitude,longitude,id_stasiun,nama);
 
-              let url_detail = "http://ispumaps.id/ispumapapi/api/aqmdetailstasiun?trusur_api_key=VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA==&lat=" + latitude +"&lon="+longitude;
+              let url_detail = "<?= site_url() ?>ajax/stasiunlatlon?lat=" + latitude +"&lon="+longitude;
               var contentdetail = [];
 
               $.getJSON(url_detail, function(data1){

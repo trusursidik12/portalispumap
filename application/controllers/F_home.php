@@ -42,8 +42,11 @@ class F_home extends CI_Controller {
 		// echo $slug;
 		// $slug = $this->post('slug');
 		$stasiun = $this->f_home_m->get_lat_lon($lat,$lon);
-			
+		// $str  = str_replace('\"', '"', $stasiun);
         // output to json format
-        echo json_encode($stasiun);
+        // $output = array(
+        // 	$stasiun
+        // );
+        echo $stasiun;
 	}
 }
