@@ -200,7 +200,7 @@ class F_home_m extends CI_model
 
 			$result = json_decode($response->getBody()->getContents(), true);
 
-			return json_encode($result);
+			return $result;
 		}
 		catch (GuzzleHttp\Exception\ClientException $e)
 		{

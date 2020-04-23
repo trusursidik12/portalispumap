@@ -47,6 +47,6 @@ class F_home extends CI_Controller {
         // $output = array(
         // 	$stasiun
         // );
-        echo $stasiun;
+        echo json_encode($stasiun);
 	}
 }
