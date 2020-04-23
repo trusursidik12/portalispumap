@@ -23,8 +23,8 @@ class F_home extends CI_Controller {
 		$data = array();
         foreach ($stasiun as $list) {
             $row = array();
-            $row[] = $list['lat'];
-            $row[] = $list['lon'];
+             $row['lat'] = $list['lat'];
+             $row['lon'] = $list['lon'];
             $data[] = $row;
         }
         $output = array(
@@ -32,5 +32,18 @@ class F_home extends CI_Controller {
                 );
         // output to json format
         echo json_encode($output);
+	}
+
+	function ajax_var()
+	{
+		$lat = @$_GET['lat'];
+		$lon = @$_GET['lon'];
+		// print_r($_GET);
+		// echo $slug;
+		// $slug = $this->post('slug');
+		$stasiun = $this->f_home_m->get_lat_lon($lat,$lon);
+			
+        // output to json format
+        echo json_encode($stasiun);
 	}
 }
