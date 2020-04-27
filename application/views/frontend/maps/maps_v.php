@@ -8,7 +8,7 @@
         <div class="">
 
           <div class="">
-            <div id="map" style="border:0; width: 100%; height: 700px;"></div>
+            <div id="map" style="border:0; width: 100%; height: 850px;"></div>
           </div>
 
         </div>
@@ -25,7 +25,7 @@
         var jakarta = {lat: -6.200000, lng: 106.816666};
         var tangerang = {lat: -6.178306, lng: 106.631889};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 7,
+          zoom: 6,
           center: jakarta
         });
    
