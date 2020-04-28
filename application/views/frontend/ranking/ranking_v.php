@@ -29,7 +29,55 @@
     <section id="services" class="services">
         <div class="container">
             <div class="container">
-                <div class="row">
+                <div class="container-table100" style="height: 450px;">
+                    <div class="wrap-table100">
+                        <div class="table100 ver1 m-b-110">
+                            <div class="table100-head">
+                                <table>
+                                    <thead>
+                                        <tr class="row100 head">
+                                            <th class="cell100 column1"><b>NO</b></th>
+                                            <th class="cell100 column2"><b>ISPU</b></th>
+                                            <th class="cell100 column3"><b>RANGE NILAI 🌡</b></th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="table100-body js-pscroll">
+                                <table>
+                                    <tbody>
+                                       <tr class="row100 body">
+                                        <td class="cell100 column1">1</td>
+                                        <td class="cell100 column2">Baik &#128515;</td>
+                                        <td class="cell100 column3"><div class="btn btn-info btn-sm" style="border-radius: 10px;background: #28a745;border: 2px solid #28a745;margin-bottom: 0px;">0 - 50</div></td>
+                                    </tr>
+                                     <tr class="row100 body">
+                                        <td class="cell100 column1">2</td>
+                                        <td class="cell100 column2">Sedang &#128578;</td>
+                                        <td class="cell100 column3"><div class="btn btn-info btn-sm" style="border-radius: 10px;background: #007bff;border: 2px solid #007bff;margin-bottom: 0px;">51 - 100</td>
+                                    </tr>   
+                                     <tr class="row100 body">
+                                        <td class="cell100 column1">3</td>
+                                        <td class="cell100 column2">Tidak Sehat &#128552;</td>
+                                        <td class="cell100 column3"><div class="btn btn-info btn-sm" style="border-radius: 10px;background: #ffc107;border: 2px solid #ffc107;margin-bottom: 0px;">101 - 200</td>
+                                    </tr> 
+                                     <tr class="row100 body">
+                                        <td class="cell100 column1">4</td>
+                                        <td class="cell100 column2">Sangat Tidak Sehat &#129319;</td>
+                                        <td class="cell100 column3"><div class="btn btn-info btn-sm" style="border-radius: 10px;background: #dc3545;border: 2px solid #dc3545;margin-bottom: 0px;">201 - 300</td>
+                                    </tr>    
+                                     <tr class="row100 body">
+                                        <td class="cell100 column1">5</td>
+                                        <td class="cell100 column2">Berbahaya &#128567;</td>
+                                        <td class="cell100 column3"><div class="btn btn-info btn-sm" style="border-radius: 10px;background: #343a40;border: 2px solid #343a40;margin-bottom: 0px;"> >300 </td>
+                                    </tr> 
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row">
                     <div class="col-12">
                         <div class="table-responsive">
                             <table border="1" width="100%" class="text-center">
@@ -70,7 +118,7 @@
                             </table>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="section-title" style="margin-bottom: -40px;">
