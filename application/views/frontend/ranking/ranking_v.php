@@ -149,7 +149,7 @@
                             <!-- nav content start -->
                             <div class="row row-pb-md">
                                 <div class="col-12">
-                                    <h5 class="text-center">Update : <?= date('d-M-Y') ?></h5>
+                                    <h5 class="text-center">Update : <?= date("d-M-Y", mktime(0, 0, 0, date("m") , date("d")-1,date("Y"))) ?></h5>
                                     <div class="d-flex nav nav-tabs justify-content-center" style="padding-bottom: 5px;margin-bottom: 10px;">
 
                                         <a href="#pm10-kemarin" class="btn btn-info btn-sm"> PM10</a>
@@ -182,26 +182,26 @@
                                                             <div class="table100-body js-pscroll">
                                                                 <table>
                                                                     <tbody>
-                                                                        <?php $no=1; rsort($aqmrankpm10); foreach($aqmrankpm10 as $datapm10) : ?>
+                                                                        <?php $no=1; rsort($aqmrankpm10yesterday); foreach($aqmrankpm10yesterday as $datapm10yesterday) : ?>
                                                                             <?php foreach($aqmprovinsi as $provinsi) : ?>
-                                                                                <?php if($provinsi['id_stasiun'] == $datapm10['id_stasiun']) : ?>
+                                                                                <?php if($provinsi['id_stasiun'] == $datapm10yesterday['id_stasiun']) : ?>
                                                                                     <tr class="row100 body">
                                                                                         <td class="cell100 column1"><?= $no++; ?></td>
-                                                                                        <td class="cell100 column2"><?= $datapm10['id_stasiun'] ?></td>
+                                                                                        <td class="cell100 column2"><?= $datapm10yesterday['id_stasiun'] ?></td>
                                                                                         <td class="cell100 column3"><?= $provinsi['provinsi'] ?></td>
                                                                                         <td class="cell100 column4">
-                                                                                            <?php if($datapm10['pm10'] >= 0 & $datapm10['pm10'] <= 50) : ?>
+                                                                                            <?php if($datapm10yesterday['pm10'] >= 0 & $datapm10yesterday['pm10'] <= 50) : ?>
                                                                                                 <?php $color = '#28a745;'; ?>
-                                                                                            <?php elseif($datapm10['pm10'] >= 51 & $datapm10['pm10'] <= 100) : ?>
+                                                                                            <?php elseif($datapm10yesterday['pm10'] >= 51 & $datapm10yesterday['pm10'] <= 100) : ?>
                                                                                                 <?php $color = '#007bff;'; ?>
-                                                                                            <?php elseif($datapm10['pm10'] >= 101 & $datapm10['pm10'] <= 200) : ?>
+                                                                                            <?php elseif($datapm10yesterday['pm10'] >= 101 & $datapm10yesterday['pm10'] <= 200) : ?>
                                                                                                <?php $color = '#ffc107;'; ?>
-                                                                                            <?php elseif($datapm10['pm10'] >= 201 & $datapm10['pm10'] <= 300) : ?>
+                                                                                            <?php elseif($datapm10yesterday['pm10'] >= 201 & $datapm10yesterday['pm10'] <= 300) : ?>
                                                                                                 <?php $color = '#dc3545;'; ?>
-                                                                                            <?php elseif($datapm10['pm10'] > 300) : ?>
+                                                                                            <?php elseif($datapm10yesterday['pm10'] > 300) : ?>
                                                                                                 <?php $color = '#343a40;'; ?>
                                                                                             <?php endif ?>
-                                                                                        <div class="btn btn-info btn-sm" style="border-radius: 10px;background: <?=$color;?>border: 2px solid <?=$color;?>;"><?= $datapm10['pm10'] ?></td>
+                                                                                        <div class="btn btn-info btn-sm" style="border-radius: 10px;background: <?=$color;?>border: 2px solid <?=$color;?>;"><?= $datapm10yesterday['pm10'] ?></td>
                                                                                     </tr>
                                                                                 <?php endif ?>
                                                                             <?php endforeach ?>
@@ -233,26 +233,26 @@
                                                             <div class="table100-body js-pscroll">
                                                                 <table>
                                                                     <tbody>
-                                                                        <?php $no=1; rsort($aqmrankpm25); foreach($aqmrankpm25 as $datapm25) : ?>
+                                                                        <?php $no=1; rsort($aqmrankpm25yesterday); foreach($aqmrankpm25yesterday as $datapm25yesterday) : ?>
                                                                             <?php foreach($aqmprovinsi as $provinsi) : ?>
-                                                                                <?php if($provinsi['id_stasiun'] == $datapm25['id_stasiun']) : ?>
+                                                                                <?php if($provinsi['id_stasiun'] == $datapm25yesterday['id_stasiun']) : ?>
                                                                                     <tr class="row100 body">
                                                                                         <td class="cell100 column1"><?= $no++; ?></td>
-                                                                                        <td class="cell100 column2"><?= $datapm25['id_stasiun'] ?></td>
+                                                                                        <td class="cell100 column2"><?= $datapm25yesterday['id_stasiun'] ?></td>
                                                                                         <td class="cell100 column3"><?= $provinsi['provinsi'] ?></td>
                                                                                         <td class="cell100 column4">
-                                                                                            <?php if($datapm25['pm25'] >= 0 & $datapm25['pm25'] <= 50) : ?>
+                                                                                            <?php if($datapm25yesterday['pm25'] >= 0 & $datapm25yesterday['pm25'] <= 50) : ?>
                                                                                                 <?php $color = '#28a745;'; ?>
-                                                                                            <?php elseif($datapm25['pm25'] >= 51 & $datapm25['pm25'] <= 100) : ?>
+                                                                                            <?php elseif($datapm25yesterday['pm25'] >= 51 & $datapm25yesterday['pm25'] <= 100) : ?>
                                                                                                 <?php $color = '#007bff;'; ?>
-                                                                                            <?php elseif($datapm25['pm25'] >= 101 & $datapm25['pm25'] <= 200) : ?>
+                                                                                            <?php elseif($datapm25yesterday['pm25'] >= 101 & $datapm25yesterday['pm25'] <= 200) : ?>
                                                                                                <?php $color = '#ffc107;'; ?>
-                                                                                            <?php elseif($datapm25['pm25'] >= 201 & $datapm25['pm25'] <= 300) : ?>
+                                                                                            <?php elseif($datapm25yesterday['pm25'] >= 201 & $datapm25yesterday['pm25'] <= 300) : ?>
                                                                                                 <?php $color = '#dc3545;'; ?>
-                                                                                            <?php elseif($datapm25['pm25'] > 300) : ?>
+                                                                                            <?php elseif($datapm25yesterday['pm25'] > 300) : ?>
                                                                                                 <?php $color = '#343a40;'; ?>
                                                                                             <?php endif ?>
-                                                                                        <div class="btn btn-info btn-sm" style="border-radius: 10px;background: <?=$color;?>border: 2px solid <?=$color;?>;"><?= $datapm25['pm25'] ?></td>
+                                                                                        <div class="btn btn-info btn-sm" style="border-radius: 10px;background: <?=$color;?>border: 2px solid <?=$color;?>;"><?= $datapm25yesterday['pm25'] ?></td>
                                                                                     </tr>
                                                                                 <?php endif ?>
                                                                             <?php endforeach ?>
@@ -284,26 +284,26 @@
                                                             <div class="table100-body js-pscroll">
                                                                 <table>
                                                                     <tbody>
-                                                                        <?php $no=1; rsort($aqmrankso2); foreach($aqmrankso2 as $dataso2) : ?>
+                                                                        <?php $no=1; rsort($aqmrankso2yesterday); foreach($aqmrankso2yesterday as $dataso2yesterday) : ?>
                                                                             <?php foreach($aqmprovinsi as $provinsi) : ?>
-                                                                                <?php if($provinsi['id_stasiun'] == $dataso2['id_stasiun']) : ?>
+                                                                                <?php if($provinsi['id_stasiun'] == $dataso2yesterday['id_stasiun']) : ?>
                                                                                     <tr class="row100 body">
                                                                                         <td class="cell100 column1"><?= $no++; ?></td>
-                                                                                        <td class="cell100 column2"><?= $dataso2['id_stasiun'] ?></td>
+                                                                                        <td class="cell100 column2"><?= $dataso2yesterday['id_stasiun'] ?></td>
                                                                                         <td class="cell100 column3"><?= $provinsi['provinsi'] ?></td>
                                                                                         <td class="cell100 column4">
-                                                                                            <?php if($dataso2['so2'] >= 0 & $dataso2['so2'] <= 50) : ?>
+                                                                                            <?php if($dataso2yesterday['so2'] >= 0 & $dataso2yesterday['so2'] <= 50) : ?>
                                                                                                 <?php $color = '#28a745;'; ?>
-                                                                                            <?php elseif($dataso2['so2'] >= 51 & $dataso2['so2'] <= 100) : ?>
+                                                                                            <?php elseif($dataso2yesterday['so2'] >= 51 & $dataso2yesterday['so2'] <= 100) : ?>
                                                                                                 <?php $color = '#007bff;'; ?>
-                                                                                            <?php elseif($dataso2['so2'] >= 101 & $dataso2['so2'] <= 200) : ?>
+                                                                                            <?php elseif($dataso2yesterday['so2'] >= 101 & $dataso2yesterday['so2'] <= 200) : ?>
                                                                                                <?php $color = '#ffc107;'; ?>
-                                                                                            <?php elseif($dataso2['so2'] >= 201 & $dataso2['so2'] <= 300) : ?>
+                                                                                            <?php elseif($dataso2yesterday['so2'] >= 201 & $dataso2yesterday['so2'] <= 300) : ?>
                                                                                                 <?php $color = '#dc3545;'; ?>
-                                                                                            <?php elseif($dataso2['so2'] > 300) : ?>
+                                                                                            <?php elseif($dataso2yesterday['so2'] > 300) : ?>
                                                                                                 <?php $color = '#343a40;'; ?>
                                                                                             <?php endif ?>
-                                                                                        <div class="btn btn-info btn-sm" style="border-radius: 10px;background: <?=$color;?>border: 2px solid <?=$color;?>;"><?= $dataso2['so2'] ?></td>
+                                                                                        <div class="btn btn-info btn-sm" style="border-radius: 10px;background: <?=$color;?>border: 2px solid <?=$color;?>;"><?= $dataso2yesterday['so2'] ?></td>
                                                                                     </tr>
                                                                                 <?php endif ?>
                                                                             <?php endforeach ?>
@@ -335,26 +335,26 @@
                                                             <div class="table100-body js-pscroll">
                                                                 <table>
                                                                     <tbody>
-                                                                        <?php $no=1; rsort($aqmrankco); foreach($aqmrankco as $dataco) : ?>
+                                                                        <?php $no=1; rsort($aqmrankcoyesterday); foreach($aqmrankcoyesterday as $datacoyesterday) : ?>
                                                                             <?php foreach($aqmprovinsi as $provinsi) : ?>
-                                                                                <?php if($provinsi['id_stasiun'] == $dataco['id_stasiun']) : ?>
+                                                                                <?php if($provinsi['id_stasiun'] == $datacoyesterday['id_stasiun']) : ?>
                                                                                     <tr class="row100 body">
                                                                                         <td class="cell100 column1"><?= $no++; ?></td>
-                                                                                        <td class="cell100 column2"><?= $dataco['id_stasiun'] ?></td>
+                                                                                        <td class="cell100 column2"><?= $datacoyesterday['id_stasiun'] ?></td>
                                                                                         <td class="cell100 column3"><?= $provinsi['provinsi'] ?></td>
                                                                                         <td class="cell100 column4">
-                                                                                            <?php if($dataco['co'] >= 0 & $dataco['co'] <= 50) : ?>
+                                                                                            <?php if($datacoyesterday['co'] >= 0 & $datacoyesterday['co'] <= 50) : ?>
                                                                                                 <?php $color = '#28a745;'; ?>
-                                                                                            <?php elseif($dataco['co'] >= 51 & $dataco['co'] <= 100) : ?>
+                                                                                            <?php elseif($datacoyesterday['co'] >= 51 & $datacoyesterday['co'] <= 100) : ?>
                                                                                                 <?php $color = '#007bff;'; ?>
-                                                                                            <?php elseif($dataco['co'] >= 101 & $dataco['co'] <= 200) : ?>
+                                                                                            <?php elseif($datacoyesterday['co'] >= 101 & $datacoyesterday['co'] <= 200) : ?>
                                                                                                <?php $color = '#ffc107;'; ?>
-                                                                                            <?php elseif($dataco['co'] >= 201 & $dataco['co'] <= 300) : ?>
+                                                                                            <?php elseif($datacoyesterday['co'] >= 201 & $datacoyesterday['co'] <= 300) : ?>
                                                                                                 <?php $color = '#dc3545;'; ?>
-                                                                                            <?php elseif($dataco['co'] > 300) : ?>
+                                                                                            <?php elseif($datacoyesterday['co'] > 300) : ?>
                                                                                                 <?php $color = '#343a40;'; ?>
                                                                                             <?php endif ?>
-                                                                                        <div class="btn btn-info btn-sm" style="border-radius: 10px;background: <?=$color;?>border: 2px solid <?=$color;?>;"><?= $dataco['co'] ?></td>
+                                                                                        <div class="btn btn-info btn-sm" style="border-radius: 10px;background: <?=$color;?>border: 2px solid <?=$color;?>;"><?= $datacoyesterday['co'] ?></td>
                                                                                     </tr>
                                                                                 <?php endif ?>
                                                                             <?php endforeach ?>
@@ -386,26 +386,26 @@
                                                             <div class="table100-body js-pscroll">
                                                                 <table>
                                                                     <tbody>
-                                                                        <?php $no=1; rsort($aqmranko3); foreach($aqmranko3 as $datao3) : ?>
+                                                                        <?php $no=1; rsort($aqmranko3yesterday); foreach($aqmranko3yesterday as $datao3yesterday) : ?>
                                                                             <?php foreach($aqmprovinsi as $provinsi) : ?>
-                                                                                <?php if($provinsi['id_stasiun'] == $datao3['id_stasiun']) : ?>
+                                                                                <?php if($provinsi['id_stasiun'] == $datao3yesterday['id_stasiun']) : ?>
                                                                                     <tr class="row100 body">
                                                                                         <td class="cell100 column1"><?= $no++; ?></td>
-                                                                                        <td class="cell100 column2"><?= $datao3['id_stasiun'] ?></td>
+                                                                                        <td class="cell100 column2"><?= $datao3yesterday['id_stasiun'] ?></td>
                                                                                         <td class="cell100 column3"><?= $provinsi['provinsi'] ?></td>
                                                                                         <td class="cell100 column4">
-                                                                                            <?php if($datao3['o3'] >= 0 & $datao3['o3'] <= 50) : ?>
+                                                                                            <?php if($datao3yesterday['o3'] >= 0 & $datao3yesterday['o3'] <= 50) : ?>
                                                                                                 <?php $color = '#28a745;'; ?>
-                                                                                            <?php elseif($datao3['o3'] >= 51 & $datao3['o3'] <= 100) : ?>
+                                                                                            <?php elseif($datao3yesterday['o3'] >= 51 & $datao3yesterday['o3'] <= 100) : ?>
                                                                                                 <?php $color = '#007bff;'; ?>
-                                                                                            <?php elseif($datao3['o3'] >= 101 & $datao3['o3'] <= 200) : ?>
+                                                                                            <?php elseif($datao3yesterday['o3'] >= 101 & $datao3yesterday['o3'] <= 200) : ?>
                                                                                                <?php $color = '#ffc107;'; ?>
-                                                                                            <?php elseif($datao3['o3'] >= 201 & $datao3['o3'] <= 300) : ?>
+                                                                                            <?php elseif($datao3yesterday['o3'] >= 201 & $datao3yesterday['o3'] <= 300) : ?>
                                                                                                 <?php $color = '#dc3545;'; ?>
-                                                                                            <?php elseif($datao3['o3'] > 300) : ?>
+                                                                                            <?php elseif($datao3yesterday['o3'] > 300) : ?>
                                                                                                 <?php $color = '#343a40;'; ?>
                                                                                             <?php endif ?>
-                                                                                        <div class="btn btn-info btn-sm" style="border-radius: 10px;background: <?=$color;?>border: 2px solid <?=$color;?>;"><?= $datao3['o3'] ?></td>
+                                                                                        <div class="btn btn-info btn-sm" style="border-radius: 10px;background: <?=$color;?>border: 2px solid <?=$color;?>;"><?= $datao3yesterday['o3'] ?></td>
                                                                                     </tr>
                                                                                 <?php endif ?>
                                                                             <?php endforeach ?>
@@ -437,26 +437,26 @@
                                                             <div class="table100-body js-pscroll">
                                                                 <table>
                                                                     <tbody>
-                                                                        <?php $no=1; rsort($aqmrankno2); foreach($aqmrankno2 as $datano2) : ?>
+                                                                        <?php $no=1; rsort($aqmrankno2yesterday); foreach($aqmrankno2yesterday as $datano2yesterday) : ?>
                                                                             <?php foreach($aqmprovinsi as $provinsi) : ?>
-                                                                                <?php if($provinsi['id_stasiun'] == $datano2['id_stasiun']) : ?>
+                                                                                <?php if($provinsi['id_stasiun'] == $datano2yesterday['id_stasiun']) : ?>
                                                                                     <tr class="row100 body">
                                                                                         <td class="cell100 column1"><?= $no++; ?></td>
                                                                                         <td class="cell100 column2"><?= $datano2['id_stasiun'] ?></td>
                                                                                         <td class="cell100 column3"><?= $provinsi['provinsi'] ?></td>
                                                                                         <td class="cell100 column4">
-                                                                                            <?php if($datano2['no2'] >= 0 & $datano2['no2'] <= 50) : ?>
+                                                                                            <?php if($datano2yesterday['no2'] >= 0 & $datano2yesterday['no2'] <= 50) : ?>
                                                                                                 <?php $color = '#28a745;'; ?>
-                                                                                            <?php elseif($datano2['no2'] >= 51 & $datano2['no2'] <= 100) : ?>
+                                                                                            <?php elseif($datano2yesterday['no2'] >= 51 & $datano2yesterday['no2'] <= 100) : ?>
                                                                                                 <?php $color = '#007bff;'; ?>
-                                                                                            <?php elseif($datano2['no2'] >= 101 & $datano2['no2'] <= 200) : ?>
+                                                                                            <?php elseif($datano2yesterday['no2'] >= 101 & $datano2yesterday['no2'] <= 200) : ?>
                                                                                                <?php $color = '#ffc107;'; ?>
-                                                                                            <?php elseif($datano2['no2'] >= 201 & $datano2['no2'] <= 300) : ?>
+                                                                                            <?php elseif($datano2yesterday['no2'] >= 201 & $datano2yesterday['no2'] <= 300) : ?>
                                                                                                 <?php $color = '#dc3545;'; ?>
-                                                                                            <?php elseif($datano2['no2'] > 300) : ?>
+                                                                                            <?php elseif($datano2yesterday['no2'] > 300) : ?>
                                                                                                 <?php $color = '#343a40;'; ?>
                                                                                             <?php endif ?>
-                                                                                        <div class="btn btn-info btn-sm" style="border-radius: 10px;background: <?=$color;?>border: 2px solid <?=$color;?>;"><?= $datano2['no2'] ?></td>
+                                                                                        <div class="btn btn-info btn-sm" style="border-radius: 10px;background: <?=$color;?>border: 2px solid <?=$color;?>;"><?= $datano2yesterday['no2'] ?></td>
                                                                                     </tr>
                                                                                 <?php endif ?>
                                                                             <?php endforeach ?>

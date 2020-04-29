@@ -376,4 +376,130 @@ class F_home_m extends CI_model
 			$responseBodyAsString = $response->getBody()->getContents();
 		}
 	}
+
+	public function get_aqmrankpm10_yesterday()
+	{
+		try
+		{
+			$response = $this->_client->request('GET', 'api/aqmrankpm10yesterday', [
+				'query' => [
+					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
+				],
+			]);
+
+			$result = json_decode($response->getBody()->getContents(), true);
+
+			return $result['data'];
+		}
+		catch (GuzzleHttp\Exception\ClientException $e)
+		{
+			$response = $e->getResponse();
+			$responseBodyAsString = $response->getBody()->getContents();
+		}
+	}
+
+	public function get_aqmrankpm25_yesterday()
+	{
+		try
+		{
+			$response = $this->_client->request('GET', 'api/aqmrankpm25yesterday', [
+				'query' => [
+					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
+				],
+			]);
+
+			$result = json_decode($response->getBody()->getContents(), true);
+
+			return $result['data'];
+		}
+		catch (GuzzleHttp\Exception\ClientException $e)
+		{
+			$response = $e->getResponse();
+			$responseBodyAsString = $response->getBody()->getContents();
+		}
+	}
+
+	public function get_aqmrankso2_yesterday()
+	{
+		try
+		{
+			$response = $this->_client->request('GET', 'api/aqmrankso2yesterday', [
+				'query' => [
+					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
+				],
+			]);
+
+			$result = json_decode($response->getBody()->getContents(), true);
+
+			return $result['data'];
+		}
+		catch (GuzzleHttp\Exception\ClientException $e)
+		{
+			$response = $e->getResponse();
+			$responseBodyAsString = $response->getBody()->getContents();
+		}
+	}
+
+	public function get_aqmrankco_yesterday()
+	{
+		try
+		{
+			$response = $this->_client->request('GET', 'api/aqmrankcoyesterday', [
+				'query' => [
+					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
+				],
+			]);
+
+			$result = json_decode($response->getBody()->getContents(), true);
+
+			return $result['data'];
+		}
+		catch (GuzzleHttp\Exception\ClientException $e)
+		{
+			$response = $e->getResponse();
+			$responseBodyAsString = $response->getBody()->getContents();
+		}
+	}
+
+	public function get_aqmranko3_yesterday()
+	{
+		try
+		{
+			$response = $this->_client->request('GET', 'api/aqmranko3yesterday', [
+				'query' => [
+					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
+				],
+			]);
+
+			$result = json_decode($response->getBody()->getContents(), true);
+
+			return $result['data'];
+		}
+		catch (GuzzleHttp\Exception\ClientException $e)
+		{
+			$response = $e->getResponse();
+			$responseBodyAsString = $response->getBody()->getContents();
+		}
+	}
+
+	public function get_aqmrankno2_yesterday()
+	{
+		try
+		{
+			$response = $this->_client->request('GET', 'api/aqmrankno2yesterday', [
+				'query' => [
+					'trusur_api_key' => 'VHJ1c3VyVW5nZ3VsVGVrbnVzYV9wVA=='
+				],
+			]);
+
+			$result = json_decode($response->getBody()->getContents(), true);
+
+			return $result['data'];
+		}
+		catch (GuzzleHttp\Exception\ClientException $e)
+		{
+			$response = $e->getResponse();
+			$responseBodyAsString = $response->getBody()->getContents();
+		}
+	}
 }
