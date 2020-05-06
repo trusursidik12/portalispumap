@@ -442,7 +442,7 @@
                                                                                 <?php if($provinsi['id_stasiun'] == $datano2yesterday['id_stasiun']) : ?>
                                                                                     <tr class="row100 body">
                                                                                         <td class="cell100 column1"><?= $no++; ?></td>
-                                                                                        <td class="cell100 column2"><?= $datano2['id_stasiun'] ?></td>
+                                                                                        <td class="cell100 column2"><?= $datano2yesterday['id_stasiun'] ?></td>
                                                                                         <td class="cell100 column3"><?= $provinsi['provinsi'] ?></td>
                                                                                         <td class="cell100 column4">
                                                                                             <?php if($datano2yesterday['no2'] >= 0 & $datano2yesterday['no2'] <= 50) : ?>
