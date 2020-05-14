@@ -16,7 +16,7 @@
     <!-- End Contact Section -->
     <script>
         
-
+      
       function initMap() {
         var infowindow = new google.maps.InfoWindow({
             maxWidth: 350
@@ -40,39 +40,47 @@
               let nama = content[x].nama;
               let latitude = parseFloat(content[x].lat);
               let longitude = parseFloat(content[x].lon); 
+              
 
               // dropMarker(latitude,longitude,id_stasiun,nama);
 
               let url_detail = "<?= site_url() ?>ajax/stasiunlatlon?lat=" + latitude +"&lon="+longitude;
+              let url_dampak = "<?= site_url() ?>ajax/dampak?id_stasiun=" + id_stasiun;
+              
               var contentdetail = [];
 
               $.getJSON(url_detail, function(data1){
                     
-                    let category = data1.category;
-                    let stasiun_name = data1.stasiun_name;
-                    let city = data1.city;
-                    let province = data1.province;
-                    let pm25 = data1.pm25;
-                    let pm10 = data1.pm10;
-                    let so2 = data1.so2;
-                    let co = data1.co;
-                    let o3 = data1.o3;
-                    let no2 = data1.no2;
-                    let pressure = parseFloat(data1.pressure);
-                    let temperature = parseFloat(data1.temperature);
-                    let wind_direction = parseInt(data1.wind_direction);
-                    let wind_speed = parseInt(data1.wind_speed);
-                    let humidity = parseInt(data1.humidity);
-                    let rain_rate = parseFloat(data1.rain_rate);
-                    let solar_radiation = parseInt(data1.solar_radiation);
-                    let latitude1 = latitude;
-                    let longitude1 = longitude; 
+              let category = data1.category;
+              let stasiun_name = data1.stasiun_name;
+              let city = data1.city;
+              let province = data1.province;
+              let pm25 = data1.pm25;
+              let pm10 = data1.pm10;
+              let so2 = data1.so2;
+              let co = data1.co;
+              let o3 = data1.o3;
+              let no2 = data1.no2;
+              let pressure = parseFloat(data1.pressure);
+              let temperature = parseFloat(data1.temperature);
+              let wind_direction = parseInt(data1.wind_direction);
+              let wind_speed = parseInt(data1.wind_speed);
+              let humidity = parseInt(data1.humidity);
+              let rain_rate = parseFloat(data1.rain_rate);
+              let solar_radiation = parseInt(data1.solar_radiation);
+              let latitude1 = latitude;
+              let longitude1 = longitude; 
 
-                    clickListener(latitude1,longitude1,category,stasiun_name,city,province,pm25,pm10,so2,co,o3,no2,pressure,temperature,wind_direction,wind_speed,humidity,rain_rate,solar_radiation);
-                  
+                $.getJSON(url_dampak, function(data2){
+
+                let effect = data2.effect;
+
+                clickListener(latitude1,longitude1,category,stasiun_name,city,province,pm25,pm10,so2,co,o3,no2,pressure,temperature,wind_direction,wind_speed,humidity,rain_rate,solar_radiation,effect);
+                
+                });
               });
             }
-        });
+          });
 
         function dropMarker(lat,lng,id_stasiun,nama){
           var location = {lat: lat, lng: lng};
@@ -85,7 +93,7 @@
               
         }
 
-        function clickListener(lat,lng,category,stasiun_name,city,province,pm25,pm10,so2,co,o3,no2,pressure,temperature,wind_direction,wind_speed,humidity,rain_rate,solar_radiation){
+        function clickListener(lat,lng,category,stasiun_name,city,province,pm25,pm10,so2,co,o3,no2,pressure,temperature,wind_direction,wind_speed,humidity,rain_rate,solar_radiation,effect){
             var location = {lat: lat, lng: lng};
             // var contentString = "<h4>" + nama + "</h4>";
             // let color = "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png";
@@ -114,9 +122,9 @@
             });
               
             marker.addListener('click', function(){
-              infowindow.close();
+            infowindow.close();
               
-              infowindow.setContent(`<table class="table">
+            infowindow.setContent(`<table class="table">
               <thead>
                 <tr>
                   <th scope="col" style="width: 100px;"><img src="<?= base_url() ?>assets/frontend/assets/img/logo/${emote}" style="width: 50px;"></img></th>
@@ -124,7 +132,7 @@
                 </tr>
               </thead>
               </table>
-              <table class="table">
+            <table class="table">
               <tbody>
                 <tr>
                   <th scope="row" style="width: 106px;">Nama Stasiun</th>
@@ -202,6 +210,15 @@
                   <td class="text-center" style="border-top: 0px;">${rain_rate}<br>mm/jam</td>
                   <td class="text-center" style="border-top: 0px;">${solar_radiation}<br>watt/m2</td>
                   <td class="text-center" style="border-top: 0px;"></td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Dampak</th>
+                  <th scope="row">:</th>
+                  <td>${effect}</td>
                 </tr>
               </tbody>
             </table>`);

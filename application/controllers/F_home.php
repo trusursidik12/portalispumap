@@ -23,8 +23,9 @@ class F_home extends CI_Controller {
 		$data = array();
         foreach ($stasiun as $list) {
             $row = array();
-             $row['lat'] = $list['lat'];
-             $row['lon'] = $list['lon'];
+             $row['lat'] 		= $list['lat'];
+             $row['lon'] 		= $list['lon'];
+             $row['id_stasiun'] = $list['id_stasiun'];
             $data[] = $row;
         }
         $output = array(
@@ -48,5 +49,20 @@ class F_home extends CI_Controller {
         // 	$stasiun
         // );
         echo json_encode($stasiun);
+	}
+
+	function ajax_dampak()
+	{
+		$id_stasiun = @$_GET['id_stasiun'];
+		// print_r($_GET);
+		// echo $slug;
+		// $slug = $this->post('slug');
+		$dampak = $this->f_home_m->get_dampak($id_stasiun);
+		// $str  = str_replace('\"', '"', $stasiun);
+        // output to json format
+        // $output = array(
+        // 	$stasiun
+        // );
+        echo json_encode($dampak);
 	}
 }

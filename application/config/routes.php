@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // frontend
 $route['ajax/stasiun']				= 'f_home/ajax_aqmstasiun';
 $route['ajax/stasiunlatlon']		= 'f_home/ajax_var';
+$route['ajax/dampak']				= 'f_home/ajax_dampak';
 
 $route['pages/news']					= 'f_news/index';
 $route['pages/news/(:any)']				= 'f_news/readmore/$1';
