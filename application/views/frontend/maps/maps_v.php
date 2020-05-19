@@ -97,6 +97,10 @@
             var location = {lat: lat, lng: lng};
             // var contentString = "<h4>" + nama + "</h4>";
             // let color = "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png";
+            if(effect == null){
+              effect  = "tidak ada dampak";
+            }
+
             if(category == "BAIK"){
                 color = "http://maps.google.com/mapfiles/ms/icons/green-dot.png";
                 var emote = "ic_emote_baik.png";
